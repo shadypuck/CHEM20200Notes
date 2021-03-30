@@ -1,0 +1,25 @@
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{marginnote}
+\usepackage[style=apa]{biblatex}
+\usepackage{xr}
+\usepackage{amsthm}
+\usepackage[hidelinks]{hyperref}
+
+\fancypagestyle{main}{
+    \fancyhf{}
+    \fancyfoot[R]{Labalme \thepage}
+    \fancyhead[L]{\leftmark}
+    \fancyhead[R]{CHEM 20200}
+}
+\fancypagestyle{plain}{
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+\reversemarginpar
+
+\addbibresource{../main.bib}
+\DefineBibliographyStrings{english}{bibliography={References}}
+
+\usepackage{subfiles}
