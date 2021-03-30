@@ -11,7 +11,177 @@
 \chapter{???}
 \section{Lecture 1: Introduction/Key Trends}
 \begin{itemize}
-    \item \marginnote{3/29:}hi
+    \item \marginnote{3/29:}Largely asynchronous, but synchronous discussions, office hours, and tests.
+    \begin{itemize}
+        \item Refer to the Canvas site for all information; it's the class hub.
+    \end{itemize}
+    \item To understand transition metal trends and properties, start with \emph{atomic} properties and trends.
+    \item \textbf{Electronegativity}: The energy that an atom will gain when it gains an electron.
+    \begin{itemize}
+        \item Fluorine really wants to gain an electron; thus, it has high electronegativity.
+        \begin{itemize}
+            \item Do you mean electron affinity?
+        \end{itemize}
+        \item Increases across a row; decreases down a column.
+        \begin{itemize}
+            \item Transition metals, in general, are an exception to this rule.
+            \item This is because of the \textbf{lanthanide contraction}.
+        \end{itemize}
+        \item Discontinuities in the transition metals (\ce{Mn} and \ce{Ni}) correspond to half-filled and filled $d$ shells, respectively.
+        \begin{itemize}
+            \item Extra stability means less of a desire to gain an electron.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Ionization potential}: The energy required to remove an electron.
+    \begin{itemize}
+        \item Varies with the identity of an element \emph{and} its oxidation state.
+        \item Increases across a row; decreases down a column.
+    \end{itemize}
+    \item Size:
+    \begin{itemize}
+        \item Many different definitions (depending on the specific thing you're interested in, one may be more useful than another). For example,
+        \begin{itemize}
+            \item Atomic radius: Specific to an element.
+            \item Ionic radius: Specific to an oxidation state; as in salts and coordination complexes.
+            \item Covalent radius: Distance that one would expect for a bond; varies with bond order.
+        \end{itemize}
+        \item Decreases across a row; increases down a column (a notable exception to the latter trend follows from the lanthanide contraction).
+        \item Things that affect size:
+        \begin{itemize}
+            \item Oxidation state.
+            \item Spin state (high spin [larger; this is because the $e_g$ orbitals are antibonding, and antibonding electrons both push the bounds of the atom and weaken bonds, increasing the covalent radius] vs. low spin [smaller]).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Lanthanide contration}: In the transition metals, there is a small/no increase in size between the second and third rows.
+    \begin{itemize}
+        \item This is because the shell added in between contains the $f$ orbitals, which are small, do not extend past the noble gas core, and do not provide good shielding.
+        \item $Z$ goes up a lot with little shielding, so the $5d$ orbitals are contracted; thus, $4d$/$5d$ orbitals are similar in size.
+    \end{itemize}
+    \item \textbf{Oxidation state}: The number of electrons a metal center is below its valence.
+    \begin{itemize}
+        \item Typically, the maximum oxidation state is defined by the $d$-count for the 0-valent metal.
+    \end{itemize}
+    \item Having discussed four trends, how are they related?
+    \begin{itemize}
+        \item As oxidation state increases, "electronegativity" and ionization potential will increase, and the radius will decrease.
+        \begin{itemize}
+            \item This is because removing an electron $\Rightarrow$ reduces shielding $\Rightarrow$ higher positive charge $\Rightarrow$ all orbitals decrease in energy $\Rightarrow$ all orbitals decrease in size (hence radius decreases, too).
+            \item Watch out for discontinuities such as \ce{Mn^2+}.
+        \end{itemize}
+    \end{itemize}
+    \item Magnetic properties: Unique to the transition metals and the $f$ block.
+    \begin{itemize}
+        \item Consider \ce{Fe^{II}L6^2+} ($d^6$).
+        \item Possible states: Low spin ($S=0$), intermediate spin ($S=1$; rare), and high spin ($S=2$).
+        \item We predict which state dominates by the:
+        \begin{itemize}
+            \item \textbf{Pairing energy}.
+            \item \textbf{Ligand field stabilization energy}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Pairing energy}: The energy cost of putting two electrons in the same orbital. \emph{Also known as} \textbf{PE}.
+    \begin{itemize}
+        \item Trends with orbital size/radius.
+        \item Decreases down a column.
+    \end{itemize}
+    \item \textbf{Ligand field stabilization energy}: \emph{Also known as} \textbf{LFSE}.
+    \begin{itemize}
+        \item Can be thought of in terms of crystal field theory.
+        \begin{itemize}
+            \item Extra thoughts on Figure VI.10 of \textcite{bib:CHEM20100Notes}: Donating negative charge to a free metal ion in a spherically symmetric fashion uniformly raises the energy of the $d$ orbitals by increasing repulsions and size.
+            \item Low-spin LFSE: $6\cdot\SI{-4}{Dq}+\SI{3}{PE}=\SI{-24}{Dq}+\SI{3}{PE}$.
+            \item Intermediate-spin LFSE: $5\cdot\SI{-4}{Dq}+1\cdot\SI{6}{Dq}+\SI{2}{PE}=\SI{-14}{Dq}+\SI{2}{PE}$.
+            \item High-spin LFSE: $4\cdot\SI{-4}{Dq}+2\cdot\SI{6}{Dq}+\SI{1}{PE}=\SI{-4}{Dq}+\SI{1}{PE}$.
+            \item Thus, the energy difference between the low-spin and high-spin configurations is $\SI{20}{Dq}+\SI{2}{PE}$. It follows that if $\SI{10}{Dq}>\SI{1}{PE}$, then the complex will be low spin; and if $\SI{10}{Dq}<\SI{1}{PE}$, then the complex will be high spin.
+            \item This also explains why the intermediate spin state is rare: if $\Delta_o$ is large enough to make $\SI{10}{Dq}>\SI{1}{PE}$, then it will likely take the complex all the way to a low-spin configuration (and vice versa for high spin).
+            \item Lastly, this means that \ce{Fe^{II}} is a good \textbf{spin-crossover} ion.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Spin-crossover} (ion): An ion that can have both high- and low-spin states.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[
+            every node/.style={black}
+        ]
+            \small
+            \draw (4,0) -- node[below]{$T$} (0,0) -- node[left]{$\chi T$} (0,3);
+    
+            \footnotesize
+            \draw [blx,thick] (0,0) -- (0.3,0) to[out=0,in=180] node[near start,right]{$S=0$ L.S.} (2.8,2.5) -- (3.5,2.5) node[below]{$S=2$ H.S.};
+    
+        \end{tikzpicture}
+        \caption{Magnetic moment vs. temperature for the \ce{Fe^{II}} ion.}
+        \label{fig:FeIIspin-crossover}
+    \end{figure}
+    \begin{itemize}
+        \item The graph of the magnetic moment $\chi T$ of \ce{Fe^{II}} vs. temperature $T$ (see Figure \ref{fig:FeIIspin-crossover}) moves from $S=0$ at the bottom left to $S=2$ at the top right.
+        \item $d^2$ ions are never spin-crossover ions: $\SI{-8}{Dq}+\SI{0}{PE}$ for high spin vs. $\SI{-8}{Dq}+\SI{1}{PE}$ for low spin.
+    \end{itemize}
+    \item Dq and PE values depend on:
+    \begin{itemize}
+        \item Ligand field strength.
+        \begin{itemize}
+            \item $\Delta O_h$ increases as $\sigma$ donation increases.
+            \item $\Delta O_h$ increases as $\pi$ acceptance increases.
+            \item $\Delta O_h$ decreases as $\pi$ donation increases.
+            \item To what extent do we need to have the spectrochemical series memorized?
+        \end{itemize}
+        \item Metal center.
+        \begin{itemize}
+            \item Larger, more diffuse metals (i.e., second- and third-row transition metals) have better overlap with the ligands, giving rise to larger $\Delta O_h$.
+            \item Note that pairing energy decreases in second- and third-row transition metals (due to the larger orbitals).
+            \item These two factors imply that second- and third-row transition metals are almost always low spin.
+        \end{itemize}
+        \item Oxidation state.
+        \begin{itemize}
+            \item As oxidation state increases, $\Delta O_h$ increases (due to better energy matching, higher "electronegativity," the role of electrostatics, and the electron configuration [$d^5$ is almost always high spin, and $d^6$ is often low spin]).
+            \item Why do $d^5$ and $d^6$ exhibit the above behavior? Shouldn't the stabilized orbitals be split more?
+            \item See the below spectrochemical series for metals.
+        \end{itemize}
+        \item Geometry.
+        \begin{itemize}
+            \item In a $\sigma$-only sense, lower coordination numbers tend to have smaller LFSEs.
+            \item $T_d<C_{4v}\approx D_{3h}<O_h<D_{4h}$.
+            \item $\Delta_\text{sq. pl.}\approx 1.74\, \Delta O_h$.
+        \end{itemize}
+    \end{itemize}
+    \item Spectrochemical series for metals (not as precise as the one for ligands, but a decent approximation):
+    \begin{equation*}\hspace{-3em}
+        \ce{Mn^2+} < \ce{Ni^2+}
+        < \ce{Co^2+}
+        < \ce{Fe^2+}
+        < \ce{V^2+}
+        < \ce{Fe^3+}
+        < \ce{Co^3+}
+        < \ce{Mn^4+}
+        < \ce{Mo^3+}
+        < \ce{Rh^3+}
+        < \ce{Ru^3+}
+        < \ce{Pd^4+}
+        < \ce{Ir^3+}
+        < \ce{Pd^4+}
+    \end{equation*}
+    \item Hard/soft acid-base theory:
+    \begin{itemize}
+        \item Common Lewis acids:
+        \begin{itemize}
+            \item Proton: \ce{H+}.
+            \item Molecules with no octet: \ce{AlCl3}, \ce{BR3} (boranes), \ce{BeH2}.
+            \item Metal cations: \ce{Na+}, \ce{Ti^4+}.
+            \item $\pi$ acids: \ce{CO2}, \ce{CO}, \ce{PR3}.
+        \end{itemize}
+        \item Common Lewis bases:
+        \begin{itemize}
+            \item Carbanions: \ce{CR3}.
+            \item Hydrides: \ce{KH}, \ce{NaH}, \ce{LiAlH4}.
+            \item Amines, amides, and phosphines: \ce{NH3}, \ce{PR4}, \ce{NH2-}.
+            \item \ce{OH2}, \ce{SR2}, \ce{OH-}.
+            \item Halides: \ce{F-}, \ce{Cl-}, \ce{Br-}.
+            \item Carbonyl: \ce{CO} (means \ce{CO} is amphoteric).
+            \item Olefins: \ce{C2H4}.
+        \end{itemize}
+        \item Distinguishes hard vs. soft\footnote{Hard vs. soft is the basis for the solubility rules!}.
+    \end{itemize}
 \end{itemize}
 
 

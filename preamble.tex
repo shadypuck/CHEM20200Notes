@@ -1,9 +1,16 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{csquotes}
 \usepackage{marginnote}
+\usepackage{scrextend}
+\usepackage[bottom]{footmisc}
 \usepackage[style=apa]{biblatex}
+\usepackage{enumitem}
 \usepackage{xr}
-\usepackage{amsthm}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{siunitx}
+\usepackage{mhchem}
+\usepackage{tikz}
 \usepackage[hidelinks]{hyperref}
 
 \fancypagestyle{main}{
@@ -17,9 +24,18 @@
     \renewcommand{\headrulewidth}{0pt}
 }
 
+\MakeOuterQuote{"}
+
 \reversemarginpar
+
+\deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
+\deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
 
 \addbibresource{../main.bib}
 \DefineBibliographyStrings{english}{bibliography={References}}
+
+\setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\colorlet{blx}{blue!40!black!80}
 
 \usepackage{subfiles}
