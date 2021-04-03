@@ -210,5 +210,421 @@
 
 
 
+\section[Lecture 2: Electron Counting, \texorpdfstring{$18\,\text{e}^-$}{TEXT} Rule]{Lecture 2: Electron Counting, \texorpdfstring{$\bm{18\,\textbf{e}^-}$}{TEXT} Rule}
+\begin{itemize}
+    \item \marginnote{3/31:}Organometallic chemistry: Strictly speaking, compounds containing metal-carbon bonds. More broadly, it's homogeneous transition metal chemistry ([frequently diamagnetic] metals bonded to light atoms).
+    \begin{itemize}
+        \item Deeply related to catalysis (both fine and bulk chemical synthesis, and biology).
+    \end{itemize}
+    \item Transition metal trends:
+    \begin{enumerate}
+        \item Early transition metals tend to have higher oxidation states.
+        \begin{itemize}
+            \item It's easier to remove electrons from less electronegative elements (electronegativity increases across a period).
+        \end{itemize}
+        \item Size: $\text{1st row}<\text{2nd row}\approx\text{3rd row}$.
+        \item \ce{M-L} bond strengths increase down a column.
+        \begin{itemize}
+            \item Two reasons: Size (larger, more diffuse orbitals have better overlap) and electronegativity (increases down a column; this trend is unique to the transition metals).
+        \end{itemize}
+        \item Higher coordination numbers are found for heavier metals.
+        \item More high-spin species in the first row.
+        \item First row transition metals prefer $1\,\e[-]$ coupled.
+        \begin{itemize}
+            \item Why?
+        \end{itemize}
+        \item More difficult to reduce as you go down a triad (column).
+    \end{enumerate}
+    \item Common structures:
+    \begin{itemize}
+        \item 4 coordinate:
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \chemfig{M(-L)(>:[1]L)(-[4]L)(<[5]L)}
+                \caption{Structure.}
+                \label{fig:4-sqPlna}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    every node/.style={black}
+                ]
+                    \footnotesize
+                    \draw [ultra thick,blx]
+                        (-0.25,2) -- node[below]{$x^2-y^2$} ++(0.5,0)
+                        (-0.25,0.6) -- node[below]{$z^2$} ++(0.5,0)
+                        (-0.85,0) -- node[below]{$xy$} ++(0.5,0) ++(0.1,0) -- node[below]{$xz$} ++(0.5,0) ++(0.1,0) -- node[below]{$yz$} ++(0.5,0)
+                    ;
+                \end{tikzpicture}
+                \caption{$d$ orbitals.}
+                \label{fig:4-sqPlnb}
+            \end{subfigure}
+            \caption{Square planar information.}
+            \label{fig:4-sqPln}
+        \end{figure}
+        \begin{itemize}
+            \item Square planar (note that the $z^2$ orbital can swap with the three degenerate orbitals beneath it fairly easily; what's important is that $x^2-y^2$ is higher).
+            \begin{figure}[h!]
+                \centering
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \chemfig{M(-[2]L)(-[:-30]L)(<[:-110]L)(>:[:-150]L)}
+                    \caption{Structure.}
+                    \label{fig:4-tetraa}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}[
+                        every node/.style={black}
+                    ]
+                        \footnotesize
+                        \draw [ultra thick,blx]
+                            (-0.85,1) -- node[below]{$xy$} ++(0.5,0) ++(0.1,0) -- node[below]{$xz$} ++(0.5,0) ++(0.1,0) -- node[below]{$yz$} ++(0.5,0)
+                            (-0.55,0) -- node[below]{$z^2$} ++(0.5,0) ++(0.1,0) -- node[below,xshift=3mm]{$x^2-y^2$} ++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                    \caption{$d$ orbitals.}
+                    \label{fig:4-tetrab}
+                \end{subfigure}
+                \caption{Tetrahedral information.}
+                \label{fig:4-tetra}
+            \end{figure}
+            \item Tetrahedral (much smaller splitting energy than some of the others).
+        \end{itemize}
+        \item 5 coordinate:
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \chemfig{M(-L)(-[2]L)(-[6]L)(>:[:160]L)(<[:-150]L)}
+                \caption{Structure.}
+                \label{fig:5-trigBipyraa}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.3\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    every node/.style={black}
+                ]
+                    \footnotesize
+                    \draw [ultra thick,blx]
+                        (-0.25,2) -- node[below]{$z^2$} ++(0.5,0)
+                        (-0.55,1) -- node[below]{$xy$} ++(0.5,0) ++(0.1,0) -- node[below,xshift=3mm]{$x^2-y^2$} ++(0.5,0)
+                        (-0.55,0) -- node[below]{$xz$} ++(0.5,0) ++(0.1,0) -- node[below]{$yz$} ++(0.5,0)
+                    ;
+                \end{tikzpicture}
+                \caption{$d$ orbitals.}
+                \label{fig:5-trigBipyrab}
+            \end{subfigure}
+            \caption{Trigonal bipyramidal information.}
+            \label{fig:5-trigBipyra}
+        \end{figure}
+        \begin{itemize}
+            \item Trigonal bipyramidal (the axial ligands push $d_{z^2}$ high in energy, $d_{xy,x^2-y^2}$ are degenerate by the threefold $D_{3h}$ symmetry, and $d_{xz,yz}$ are nonbonding and thus lowest in energy; note also that this geometry has \textbf{fluxional ligands}).
+            \begin{figure}[H]
+                \centering
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \chemfig{M(-L)(>:[1]L)(-[2]L)(-[4]L)(<[5]L)}
+                    \caption{Structure.}
+                    \label{fig:5-sqPyraa}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}[
+                        every node/.style={black}
+                    ]
+                        \footnotesize
+                        \draw [ultra thick,blx]
+                            (-0.25,2) -- node[below]{$x^2-y^2$} ++(0.5,0)
+                            (-0.25,1.4) -- node[below]{$z^2$} ++(0.5,0)
+                            (-0.85,0) -- node[below]{$xy$} ++(0.5,0) ++(0.1,0) -- node[below]{$xz$} ++(0.5,0) ++(0.1,0) -- node[below]{$yz$} ++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                    \caption{$d$ orbitals.}
+                    \label{fig:5-sqPyrab}
+                \end{subfigure}
+                \caption{Square pyramidal information.}
+                \label{fig:5-sqPyra}
+            \end{figure}
+            \item Square pyramidal (think of it either as square planar with an axial ligand on top, or as octahedral missing one axial ligand on the bottom; thinking of it this way also rationalizes Figure \ref{fig:5-sqPyrab} as the mean of Figures \ref{fig:4-sqPlnb} and \ref{fig:6-octab}).
+        \end{itemize}
+        \item 6 coordinate.
+        \begin{itemize}
+            \begin{figure}[h!]
+                \centering
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \chemfig{M(-L)(>:[1]L)(-[2]L)(-[4]L)(<[5]L)(-[6]L)}
+                    \caption{Structure.}
+                    \label{fig:6-octaa}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}[
+                        every node/.style={black}
+                    ]
+                        \footnotesize
+                        \draw [ultra thick,blx]
+                            (-0.55,1) -- node[below]{$z^2$} ++(0.5,0) ++(0.1,0) -- node[below,xshift=3mm]{$x^2-y^2$} ++(0.5,0)
+                            (-0.85,0) -- node[below]{$xy$} ++(0.5,0) ++(0.1,0) -- node[below]{$xz$} ++(0.5,0) ++(0.1,0) -- node[below]{$yz$} ++(0.5,0)
+                        ;
+                    \end{tikzpicture}
+                    \caption{$d$ orbitals.}
+                    \label{fig:6-octab}
+                \end{subfigure}
+                \caption{Octahedral information.}
+                \label{fig:6-octa}
+            \end{figure}
+            \item Octahedral ($d_{xy,xz,yz}$ are nonbonding in a $\sigma$-only framework, but can take on bonding character when $\pi$ interactions are considered).
+            \begin{figure}[h!]
+                \centering
+                \chemfig{M(-[:40]L)(>:[:-20]L)(<[:-45]L)(-[:140]L)(>:[:-160]L)(<[:-135]L)}
+                \caption{Trigonal biprysmatic information (structure).}
+                \label{fig:6-trigBiprys}
+            \end{figure}
+            \item Trigonal biprysmatic (each pyramid is eclipsed, rather than staggered as in octahedral; \textcite{bib:trigonalBiprysmatic} explores this geometry in greater depth).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Fluctional ligands}: A set of ligands that readily exchange positions around the molecular center via a \textbf{Berry pseudorotation}.
+    \item Ligand types (see \textcite[93]{bib:CHEM20100Notes}).
+    \item \textbf{X-type} (ligand): Typically anionic, covalent donors.
+    \item \textbf{L-type} (ligand): Typically neutral. \emph{Also known as} \textbf{dative donor}.
+    \item \textbf{Z-type} (ligand): Typically neutral, but can be cationic (no electrons to donate; these are acceptors).
+    \item Note that a carbonyl group can be both an L- and a Z-type ligand (L if it participates in $\sigma$ donation, and Z if it participates in $\pi$ acceptance).
+    \begin{itemize}
+        \item Similar to how \ce{Cl-} can be both a $\sigma$ and $\pi$ donor.
+    \end{itemize}
+    \item On hard/soft matching: remember that harder ligands will prefer harder metals, and vice versa.
+    \item Electron counting:
+    \item Organic chemistry concerns itself with an octet.
+    \item But the octet rule is really a large HOMO-LUMO gap rule; filling stable orbitals and leaving the unstable orbitals empty.
+    \begin{itemize}
+        \item In \ce{CH4} for example, we want to fill the $\sigma$ and $\pi$ MOs with all 8 electrons that they can hold, but leave $\sigma^*$ and $\pi^*$ unfilled (see Figure III.17 in \textcite{bib:CHEM20100Notes}).
+        \item However, in \ce{ML6} for example (considering only $d$ orbital/ligand $\sigma$ orbital interactions), we have nine $\sigma$/nonbonding orbitals that are ok to fill up and two $\sigma^*$ orbitals that we should try to avoid filling up (see Figure \ref{fig:6-octab} as well as Figure VI.2 from \textcite{bib:CHEM20100Notes} for a decent approximation).
+    \end{itemize}
+    \item The nine orbitals that are ok to fill up in an \ce{ML6} compound can hold 18 electrons; this gives rise to the \textbf{18 electron rule}.
+    \item \textbf{18 electron rule}: An octahedral \ce{ML6} transition metal complex with 18 electrons is fairly energetically favorable.
+    \item Low-spin square planar:
+    \begin{itemize}
+        \item 4 $\sigma$/NB ligand orbitals plus 4 nonbonding metal $d$ orbitals gives 8 $\sigma$/NB orbitals that can hold 16 electrons in total (see Figure \ref{fig:4-sqPlnb}).
+        \item Figure VI.13 of \textcite{bib:CHEM20100Notes} says that \emph{two} metal orbitals form bonding/antibonding orbitals with the ligand orbitals, so why does Dr. Anderson assert that only \emph{one} does? Is it because of what he said about $d_{z^2}$ being practically interchangeable with the $d_{xy,xz,yz}$ ligands in square planar complexes?
+    \end{itemize}
+    \item \textbf{16 electron rule}: A square planar \ce{ML4} transition metal complex with 16 electrons is fairly energetically favorable.
+    \item Note that the 18 and 16 electron rules respectively imply that octahedral complexes prefer $d^6$ configurations and square planar complexes prefer $d^8$ configurations.
+    \item Note also that since the HOMOs in both 18-electron octahedral and 16-electron square planar complexes are nonbonding, the 18/16 electron rules are more of a suggestion.
+    \begin{itemize}
+        \item In general, these numbers are more of a maximum; lower counts can still be stable.
+        \item However, there are cases of 19 and 20 electron systems.
+    \end{itemize}
+    \item 2 schools of thought on electron counting: the \textbf{ionic method} and the \textbf{covalent method}.
+    \begin{itemize}
+        \item Dr. Anderson prefers the covalent method; he's of the opinion that it's a bit more foolproof.
+        \item Proponents of the ionic method argue that it's nice because it gives you the oxidation state of the metal center throughout the process, but it can run into snags with certain ligands (in step 1 below, it is not always clear what splitting electronegativity dictates).
+    \end{itemize}
+\end{itemize}
+\begin{tchart}{1.4}{Ionic Method}{Covalent Method}
+    1. Break all \ce{M-L} bonds according to electronegativity (or accordingly, to form the most stable fragments). Note that \ce{M-L} bonds split homolytically.
+        & 1. Draw a legitimate Lewis structure (no half bonds or circles [as in benezene]). Don't forget lone pairs.\\
+    2. The charge on the metal after step 1 is its oxidation state.
+        & 2. Assign formal charges (in a dative bond, these belong to the ligand).\\
+    3. From 2, assign a $d$-electron count.
+        & 3. The number of electrons that a given ligand donates is equal to its formal charge plus twice the number of dative bonds plus the number of covalent bonds.\\
+    4. The electron count equals the $d^n$ count plus the ligand donors (typically 2 electrons per ligand).
+        & 4. The electron count is that $d^n$ count for \ce{M^0} plus the sum of the ligand electron donations minus the charge on the complex.
+\end{tchart}
+\begin{itemize}
+    \item Gain familiarity with the $d$ counts of common transition metals.
+    \item A metal can actually have multiple oxidation states in resonance with each other, whereas the electron count is indisputable, i.e., the only number that you can definitively assign to a complex.
+    \begin{itemize}
+        \item This is why it's better to use the covalent method; it goes straight to assigning the electron count, foregoing any possible issues with the oxidation state.
+    \end{itemize}
+    \item If you apply each method correctly, they should both give the same answer.
+    \item Examples (ligands):
+    \begin{itemize}
+        \item A phosphine \ce{PR3}.
+        \begin{itemize}
+            \item The phosphine has a lone pair to donate to the metal center, forming a \textbf{dative bond}.
+            \item Alternatively, the formal charge on phosphorous in a \ce{M-PR3} situation is $+1$ and there is 1 covalent bond.
+            \item Either way, the phosphine is a 2-electron donor; this is further confirmed by the fact that phosphines are L-type ligands.
+        \end{itemize}
+        \item \ce{CO}.
+        \begin{itemize}
+            \item We have multiple possible resonance structures for a \ce{M-C#O} bond, but we can robustly treat this with the covalent method.
+            \item \chemfig[atom sep=1.2em]{M-C~\charge{0=\:,45=$\oplus$}{O}}\quad has a $+1$ formal charge and 1 covalent bond, suggesting that \ce{CO} is a 2-electron donor.
+            \item \chemfig[atom sep=1.2em]{M=C=\charge{45=\:,-45=\:}{O}}\quad has no formal charge and 2 covalent bonds, suggesting that \ce{CO} is a 2-electron donor.
+            \item \chemfig[atom sep=1.2em]{M~C-\charge{90=\:,45=$\ominus$,0=\:,-90=\:}{O}}\quad has a $-1$ formal charge and 3 covalent bonds, suggesting that \ce{CO} is a 2-electron donor.
+            \item \chemfig[atom sep=1.2em]{M-[,1.2,,,<-]\charge{180=\:,90=$\ominus$}{C}~\charge{90=$\oplus$,0=\:}{O}}\quad has a net 0 formal charge and 1 dative bond, suggesting that \ce{CO} is a 2-electron donor.
+        \end{itemize}
+        \item \ce{NO}.
+        \begin{itemize}
+            \item If \ce{NO} bonds linearly, it's a 3-electron donor (take \chemfig[atom sep=1.2em]{M-\charge{90=$\oplus$}{N}~\charge{90=$\oplus$,0=\:}{O}}\quad as a possible resonance structure).
+            \item If \ce{NO} bonds bent, it's a 1-electron donor (take \chemfig[atom sep=1.2em]{M-[:30]\charge{90=\:}{N}=[:-30]\charge{0=\:,-90=\:}{O}}\quad for example).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Dative bond}: A covalent bond between two atoms where one of the atoms provides both of the electrons that form the bond.
+    \item Examples (metal complexes):
+    \begin{itemize}
+        \item Ferrocene, a sandwich compound with an iron atom between two cyclopentadienyl (or Cp) groups (covalent method).
+        \begin{itemize}
+            \item Each carbon atom forms a single covalent bond to iron. This gives each iron four covalent bonds (two to its neighbors in the ring, one to its hydrogen, and one to iron), so there are no formal charges.
+            \item Thus, each Cp ligand donates 5 electrons by the covalent method, and iron as a $d^8$ compound donates 8 electrons.
+            \item Therefore, this is an 18 electron complex.
+        \end{itemize}
+        \item Ferrocene (ionic method):
+        \begin{itemize}
+            \item The cyclopentadienyl anion has a $1-$ charge, making it a $6\pi$-electron aromatic system.
+            \item There are two of these anions, with a total charge of $2-$ between them, so iron must be in the \ce{Fe^2+} oxidation state to compensate.
+            \item This makes iron $d^6$, which plays well with 18 electron systems.
+        \end{itemize}
+        \item Hexamethyl tungsten \ce{W(CH3)6} (covalent method):
+        \begin{itemize}
+            \item Each \ce{CH3} ligand forms a single covalent bond with \ce{W} without formal charge; thus, each donates 1 electron.
+            \item \ce{W} is $d^6$.
+            \item Thus, the $d$ count is 12, making it a pretty reactive compound.
+        \end{itemize}
+        \item \ce{W(CH3)6} (ionic method):
+        \begin{itemize}
+            \item For each ligand, we split to \ce{W+} and \ce{CH3-}.
+            \item This makes the metal center oxidation state \ce{W^{VI}}, with a resultant $d^0$ configuration.
+        \end{itemize}
+        \item \ce{W(CO)6} (covalent method).
+        \begin{itemize}
+            \item From above, \ce{CO} is a 2-electron donor. Thus, the 6 \ce{CO}'s donate 12 electrons. This combined with the fact that \ce{W} is $d^6$ makes this an 18 electron system, i.e., pretty stable.
+        \end{itemize}
+        \item \ce{W(CO)6} (ionic method):
+        \begin{itemize}
+            \item We split \ce{W-CO} into \ce{W^0 + CO}.
+        \end{itemize}
+        \item \ce{Pt(Cl)4^2-} (covalent method):
+        \begin{itemize}
+            \item Each chloride forms 1 covalent bond (donates 1 electron).
+            \item Platinum is $d^{10}$ (because it's chemically bound, the $6s$ electrons fall to the $d$ orbitals; what would the $d$ count of copper or zinc be? 10 as well?).
+            \item The charge on the complex is $2-$, so the electron count is $4\cdot 1+10-(-2)=16\,\e[-]$'s.
+        \end{itemize}
+        \item \ce{Pt(Cl)4^2-} (ionic method):
+        \begin{itemize}
+            \item \ce{Pt-Cl -> Pt+ + Cl-}.
+            \item Thus, we have \ce{Pt^4+}. But the charge is $2-$, so we actually have \ce{Pt^2+}, which is $d^8$, which plays well with the 16-electron system.
+        \end{itemize}
+        \item An enzymatic cofactor (covalent method):
+        \begin{figure}[h!]
+            \centering
+            \chemfig{
+                Fe?[Fel]
+                (-[:152]\chemabove{P}{Ph_2}-[:-165,0.7]-[6]-[:-15,0.7]\chembelow{P}{Ph_2}?[Fel])
+                (-[6]C~[6]O)
+                -[:-40,1.5]C(=[6]O)-[:40,1.5]
+                Fe?[Fer]
+                (-[:28]\chemabove{P}{Ph_2}-[:-15,0.7]-[6]-[:-165,0.7]\chembelow{P}{Ph_2}?[Fer])
+                (-[2]H)
+                (-[:150,1.2]S?[S]?[Fel])
+                -[:175,1.5]S?[Fel]-[:100]-[:70,0.7]N(-[1]H)(-[3]H)-[:-40,0.3]?[S]
+            }
+            \caption{An enzymatic cofactor.}
+            \label{fig:e-count-enzymaticCofactor}
+        \end{figure}
+        \begin{itemize}
+            \item Each phosphine and each carbonyl is a 2-electron donor.
+            \item The hydride is an X-type ligand with a covalent bond, and thus a 1-electron donor.
+            \item Now for the big bulky center bridging ligand: The sulfurs each carry a $+1$ formal charge and form two covalent bonds to the metal centers, so they each contribute three electrons. The nitrogen has an additional $+1$ formal charge, so the ligand overall is a $2\cdot 3+1=6$-electron donor.
+            \item Summing all of this gives us 20 electrons.
+            \item Now for the metal centers: Each iron is $d^8$.
+            \item Thus, that's 36 electrons in total, but divided over two iron centers.
+            \item Therefore, the electron count for each iron is 18.
+        \end{itemize}
+    \end{itemize}
+    \item Metal-metal bonds:
+    \begin{itemize}
+        \item Assume that each metal will want to get to an electron count of 18.
+        \item Thus, the number of \ce{M-M} bonds you would expect is
+        \begin{equation*}
+            \text{\# of \ce{M-M} bonds} = (18\,\e[-]\text{'s}\cdot\text{\# of metals}-\text{\# of }\e[-]\text{'s from L's and \ce{M^0}'s})/2
+        \end{equation*}
+        \item Essentially, one \ce{M-M} covalent bond contributes one electron to each \ce{M}, or two electrons to the complex as a whole.
+    \end{itemize}
+    \item As we can see, this number would be 0 for the enzymatic cofactor in Figure \ref{fig:e-count-enzymaticCofactor}, which is why we'd expect no metal-metal bonding between the two iron centers.
+    \item Bridging hydrides and halides:
+    \begin{itemize}
+        \item We can treat this by putting a $+1$ formal charge on the bridging atom: \chemfig[atom sep=1.2em]{M-[:30]\charge{45=$\oplus$}{X}-[:-30]M}.
+        \item Alternatively, we can recognize what the nature of the interaction is: \tikz[baseline={(0,-0.3)}]{\node{\chemfig[atom sep=1.2em]{M-[:30]\charge{-45=\:,45=\:,135=\:}{X}}};\node at (1.1,-0.2) {M};\draw [->] (0.6,-0.05) -- (0.9,-0.2);}.
+        \begin{itemize}
+            \item From the above picture, it is clear that there is one covalent and one dative bond at play, making the bridging X-type ligand a 3-electron donor.
+        \end{itemize}
+    \end{itemize}
+    \item We are now prepared to treat one final example:
+    \vspace{1em}
+    \begin{figure}[h!]
+        \centering
+        \chemfig{
+            {(}OC{)}_3Os?-[:35,1.4]\chemabove{Os}{(CO)_4}-[:-35,1.4]Os?[,,dotted,thick]{(}CO{)}_3
+            (-[:-170,1]H?)
+            (-[:-150,1.4]H?)
+        }
+        \caption{Electron counting for \ce{Os3(CO)10($\mu_2${-}H)2}.}
+        \label{fig:e-count-osmiumCompound}
+    \end{figure}
+    \begin{itemize}
+        \item Each carbonyl ligand is a 2-electron donor.
+        \item Each bridging hydride is a 3-electron donor.
+        \item Each \ce{Os-Os} bond contributes 2 electrons.
+        \item Thus, the ligands donate 30 electrons in total.
+        \item Each osmium is $d^8$.
+        \item Thus, the metal centers donate 24 electrons in total.
+        \item Therefore, the number of \ce{Os-Os} bonds is $\frac{18\cdot 3-(30+24)}{2}=0$, i.e., there are no \ce{Os-Os} bonds.
+        \item Now this question could just be a relic of my previous understanding of bonding, and the answer may just be "MO theory," but I'm still gonna ask: Where do the electrons in all of the bonds come from? It seems like if the osmiums are giving electrons to \ce{Os-Os} and \ce{Os-H} bonds, and we still count osmium as $d^8$, we are counting some electrons twice.
+    \end{itemize}
+    \item Isolobal/isoelectronic analogy:
+    \begin{itemize}
+        \item We can assume based on the fact that \ce{Cr(CO)6} has 18 electrons and is stable that the isoelectronic compounds \ce{V(CO)6-} and \ce{Mn(CO)6+} have identical electron counts and similar properties.
+        \begin{itemize}
+            \item Note that all of these compounds are both isoelectronic and isolobal. What does isolobal mean?
+        \end{itemize}
+        \item We can do the same thing between \ce{Ni(CO)4}, \ce{Co(NO)(CO)3}, and \ce{Fe(NO)2(CO)2}.
+        \item Also \ce{Mn(CO)5}, \ce{[CpMn(CO)2]-}, and \ce{CpFe(CO)2} (these are isoelectronic, but not isolobal).
+    \end{itemize}
+    \item We can also consider isolobal analogies between transition-metal-complex electron counts and organic fragments.
+    \begin{itemize}
+        \item For example,
+        \begin{align*}
+            18\,\e[-] &\ch{<o>} \ce{CH4}\\
+            17\,\e[-] &\ch{<o>} \ce{\charge{180=\.}{C}H3}\\
+            16\,\e[-] &\ch{<o>} \ce{\charge{180=\:}{C}H2}\\
+            15\,\e[-] &\ch{<o>} \ce{\charge{[circle]135=\.,180=\.,-135=\.}{C}H}\\
+            14\,\e[-] &\ch{<o>} \charge{[extra sep=2pt]0=\.,90=\.,180=\.,-90=\.}{C}
+        \end{align*}
+        \item We can also make analogies between other atoms/metal fragments: $\charge{[circle]90=\.,-30=\.,-150=\.}{P}\ch{<o>}\ce{\charge{[circle]135=\.,180=\.,-135=\.}{C}H}\ch{<o>}\ce{(CO)3Co}$.
+        \item Multiply bonded fragments can also work: $\ce{M=O}\ch{<o>}\ce{M=N-R}\ch{<o>}\ce{R2C=O}$ for double bonds, and for triple bonds: $\ce{M#O}\ch{<o>}\ce{M#N-R}\ch{<o>}\ce{[R-C#N-H]^+}$.
+    \end{itemize}
+    \item \textbf{Oxidation state}: The number of electrons a metal has given up or acquired.
+    \item \textbf{Chemical valence}: The number of electrons from the metal that are engaged in bonding.
+    \item In many cases, the valence and oxidation state are the same, but they can differ.
+    \begin{itemize}
+        \item They notably differ when \ce{M-M} bonds and Z-type ligands are in play.
+    \end{itemize}
+    \item Consider the structure formed by two dimerized fic (is this the right spelling? Does it have a charge by itself?) fragments (a fic fragment is \ce{CpFe(CO)2}).
+    \begin{figure}[h!]
+        \centering
+        \chemfig{Fe?(-[3]Cp)(-[5]OC)-[1]C(=[2]O)-[7]Fe?(-[1]CO)(-[7]Cp)-[5]C?(=[6]O)}
+        \caption{Two dimerized fic fragments.}
+        \label{fig:ficFragments}
+    \end{figure}
+    \begin{itemize}
+        \item The oxidation state of each iron is \ce{Fe^I} (since \ce{Cp} is the only electronegative ligand).
+        \item The valence of each iron is \ce{Fe^{II}} (since \ce{Cp} takes 1 electron and the \ce{Fe-Fe} bond takes another).
+        \item Note that as this is an 18-electron complex, it makes sense that the bound "iron ion" should be $d^6$ (\ce{Fe^{II}}), not $d^7$ (\ce{Fe^I}).
+        \item Does the iron have tetrahedral or square planar geometry and why?
+    \end{itemize}
+    \item Now consider the compound \ce{[CpFe(CO)2AlMe3]-}.
+    \begin{itemize}
+        \item The oxidation state of the iron is \ce{Fe^{II}}.
+        \item The valence of the iron is \ce{Fe^{III}} (confirm this?).
+        \item Here, unlike the last example, the oxidation state is a better descriptor (we can think of the iron as donating two electrons to \ce{AlMe3}).
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}

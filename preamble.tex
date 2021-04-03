@@ -8,9 +8,11 @@
 \usepackage{enumitem}
 \usepackage{xr}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{siunitx}
-\usepackage{mhchem}
+\usepackage{siunitx,bm}
+\usepackage{mhchem,chemfig,chemformula}
 \usepackage{tikz}
+\usepackage{float,subcaption}
+\usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 
 \fancypagestyle{main}{
@@ -36,6 +38,21 @@
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
 
+\setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
+
 \colorlet{blx}{blue!40!black!80}
+
+\newcommand{\e}[1][]{\text{e}^{#1}}
+
+\newenvironment{tchart}[3]
+{
+    \renewcommand{\arraystretch}{#1}
+    \tabularx{\linewidth}{X|X}
+    \multicolumn{1}{c|}{\textbf{#2}} & \multicolumn{1}{c}{\textbf{#3}}\\
+    \hline
+}{
+    \endtabularx
+    \renewcommand{\arraystretch}{1}
+}
 
 \usepackage{subfiles}
