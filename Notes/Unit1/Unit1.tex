@@ -663,5 +663,272 @@
 
 
 
+\section{Lecture 3: TM Magnetism}
+\begin{itemize}
+    \item \marginnote{4/2:}Magnetism is unique to the transition metals, and actually predominantly the lanthanides.
+    \item Goes through the "Theoretical background for determining magnetic spins experimentally" derivation from Module 34.
+    \begin{itemize}
+        \item $\kappa$ can also be denoted by $\chi_V$.
+        \item More on $\chi_M$: Copies Table VI.2 from \textcite{bib:CHEM20100Notes}. Some differences?
+    \end{itemize}
+    \item Diamagnetism:
+    \begin{itemize}
+        \item Arises from the circulation of paired electrons.
+        \item These currents generate a field opposite of $H$, which implies that $\chi_\text{dia}$ is negative.
+        \item Contributions from atoms, bonds, and molecules (anything with paired electrons). These can just be summed for a given molecule (see Pascal's constants).
+    \end{itemize}
+    \item Paramagnetism:
+    \begin{itemize}
+        \item Arises from the spin-orbit angular momentum of unpaired electrons.
+        \item Note that $\chi_\text{para}=\chi_\text{measured}-\chi_\text{dia}$.
+        \item We can consider a value called the magnetic moment $\mu$ of the electron. We define
+        \begin{equation*}
+            \mu = -g\beta\vec{s}
+        \end{equation*}
+        where $g$ is the $g$-factor of the free electron (\emph{also known as} the gyromagnetic ratio in \textcite[119]{bib:CHEM20100Notes}), $\beta$ is the Bohr magneton, and $\vec{s}$ is the spin angular momentum.
+        \item The Hamiltonian $\mathcal{H}$ describing the energy of the interaction of the magnetic field with the magnetic moment of the electron is as follows:
+        \begin{equation*}
+            \mathcal{H} = -\vec{\mu}\cdot\vec{H}
+            = g\beta\vec{s}\cdot\vec{H}
+        \end{equation*}
+        \item We can visualize this with a Zeeman splitting diagram.
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black}
+            ]
+                \footnotesize
+                \draw (5,0) node[below]{$\infty$} -- node[below=3mm]{\small$H$} (0,0) node[below]{0} -- (0,4);
+                \draw (0.1,2.5) -- ++(-0.2,0) node[left]{$m_s=\pm\frac{1}{2}$};
+                \draw [blx,thick] (0,2.5) -- (3,3.5) (0,2.5) -- (3,1.5);
+                \draw [blx,ultra thick]
+                    (3,1.5) -- ++(0.5,0) node[right]{$-\frac{1}{2}g\beta H$}
+                    (3,3.5) -- ++(0.5,0) node[right]{$+\frac{1}{2}g\beta H$}
+                ;
+                \draw [<->] (3.25,1.55) -- node[right]{$\Delta E=g\beta H$} ++(0,1.9);
+            \end{tikzpicture}
+            \caption{A Zeeman splitting diagram for a single electron.}
+            \label{fig:zeemanSplitting-1e}
+        \end{figure}
+        \begin{itemize}
+            \item Consider a single electron.
+            \item Under zero magnetic field ($H=0$), there will be no preference for spin-up or spin-down ($M_s=\pm\frac{1}{2}$).
+            \item However, as we apply a magnetic field of increasing strength, a preference develops (and the diagram splits). Indeed, under some nonzero magnetic field $H$, the system will be higher energy if the electron spin is $+\frac{1}{2}$ and lower energy if the electron spin is $-\frac{1}{2}$ (why these specific spins to higher and lower energy? Or is it arbitrary?). This effect is heightened by increasing $H$.
+        \end{itemize}
+        \item The magnitude of $\Delta E$ in Figure \ref{fig:zeemanSplitting-1e}.
+        \begin{itemize}
+            \item Let $H=\SI{25}{kG}=\SI{2.5}{\tesla}$. We know that $g=2.0023$. Thus, $\Delta E=\SI{2.3}{\per\centi\meter}$ (which is very small).
+            \item What is a Boltzmann population?
+            \item When we sum the magnetic contributions from all possible spin states, we find that the magnetization constant can be written as
+            \begin{equation*}
+                M = \frac{Ng^2\beta^2}{4k_BT}H
+            \end{equation*}
+            where $N$ is Avogadro's number, $k_B$ is the Boltzmann constant, and $T$ is temperature.
+            \item But since $\chi_M=\frac{M}{H}$, this implies that
+            \begin{equation*}
+                \chi_M = \frac{Ng^2\beta^2}{4k_B}\cdot\frac{1}{T}
+                = C\cdot\frac{1}{T}
+            \end{equation*}
+            where $C=\frac{Ng^2\beta^2}{4k_B}$ is the Curie constant. How does this relate to Curie's law from last quarter?
+            \item The above relationship is useful because it tells us that we can get a linear relationship through the origin between magnetic susceptibility and $\frac{1}{T}$. Additionally, it tells us that as temperature increases, magnetic susceptibility decreases (inversely proportionally).
+        \end{itemize}
+    \end{itemize}
+    \item Ferromagnetism and antiferromagnetism:
+    \begin{itemize}
+        \item Temperature's influences on these types of magnetism vary from their effects on paramagnetism.
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.4\linewidth}
+                \centering
+                \begin{tikzpicture}
+                    \footnotesize
+                    \draw (5,0) -- node[below=5mm]{\small$T$} (0,0) -- node[left]{$\chi_M$} (0,4);
+                    \draw
+                        (1,0.1) -- ++(0,-0.2) node[below]{$T_N$}
+                        (1.9,0.1) -- ++(0,-0.2) node[below]{$T_C$}
+                    ;
+            
+                    \draw [blx,thick] plot[domain=0.25:5,samples=100,smooth] (\x,{1/\x});
+                    \draw [grx,thick] plot[domain=0:5,smooth] (\x,{1.5*\x*e^(-\x)});
+                    \draw [rex,thick] (1.3,4) to[out=-85,in=150,in looseness=0.3] (1.9,0.8) to[out=-60,in=178,out looseness=0.3] (5,0.3);
+                \end{tikzpicture}
+                \caption{Direct proportionality.}
+                \label{fig:tempMagneticSusceptibilitya}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.4\linewidth}
+                \centering
+                \begin{tikzpicture}
+                    \footnotesize
+                    \draw (5,0) -- node[below=5mm]{\small$T$} (0,0) -- node[left]{$\frac{1}{\chi_M}$} (0,4);
+            
+                    \draw [blx,thick] (0,0) -- (4,4);
+                    \draw [grx,thick] (0,1) -- (3,4);
+                    \draw [rex,thick] (1.9,0) -- (5,3.1);
+                \end{tikzpicture}
+                \caption{Inverse proportionality.}
+                \label{fig:tempMagneticSusceptibilityb}
+            \end{subfigure}
+            \caption{Temperature vs. magnetic susceptibility in different magnets.}
+            \label{fig:tempMagneticSusceptibility}
+        \end{figure}
+        \begin{itemize}
+            \item The blue lines correspond to paramagnetism, the red lines correspond to ferromagnetism (which, under direct proportionality, have an abrupt inflection point at the Curie temperature $T_C$), and the green lines correspond to antiferromagnetism (which, under direct proportionality, have a maximum at the Neel temperature $T_N$).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Curie-Weiss law}: The relationship
+    \begin{equation*}
+        \chi_M = \frac{C}{T-\theta}
+    \end{equation*}
+    where $\theta$ is the Weiss temperature. $\theta>0$ for a ferromagnet and $\theta<0$ for an antiferromagnet.
+    \item Measuring and observing magnetism:
+    \begin{itemize}
+        \item Goes through the $\mu_S$ derivation on \textcite[119]{bib:CHEM20100Notes}.
+        \item Arrives at the following important equations (defining our observables $\chi T$ and $\mu_\text{eff}$):
+        \begin{align*}
+            \mu_\text{eff} &= g\sqrt{S(S+1)}&
+            \chi T &= \frac{g^2}{8}(S(S+1))
+        \end{align*}
+        \item Allows us to experimentally determine if a complex is high- or low-spin.
+        \item However, experimental values actually deviate substantially from from the spin-only predicted values.
+        \begin{itemize}
+            \item This is because of \textbf{spin-orbit coupling}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Spin-orbit coupling}: A phenomenon where a single electron hops between degenerate orbitals, generating a ring current that either reinforces or opposes the applied magnetic field. \emph{Also known as} \textbf{S.O.C.}
+    \item To account for S.O.C., we need a new Hamiltonian with $L,S$.
+    \begin{equation*}
+        \mathcal{H} = \lambda L\cdot S
+    \end{equation*}
+    \begin{itemize}
+        \item In the above equation, $\lambda$ is the S.O.C. constant.
+        \item Because the equation contains the product of $L$ and $S$, $L$ and $S$ are no longer good quantum numbers. Thus, we need a new quantum number, namely $J$.
+        \item Adding $J$ into our new Hamiltonian gives us
+        \begin{equation*}
+            \mathcal{H} = \lambda L\cdot S+\beta(L+g_eS)\cdot H
+        \end{equation*}
+        where $g_e$ is the free-electron $g$ value and $H$ is the applied magnetic field.
+        \item Let's break the above Hamiltonian down.
+        \begin{itemize}
+            \item It tells us that the energy $E$ that we get from an applied magnetic field is
+            \begin{equation*}
+                E = \vec{B}\cdot\vec{m}
+                = \mu\vec{m}\cdot\vec{H}
+            \end{equation*}
+            where $\vec{B}$ is the induced magnetic field and $\vec{m}$ is the magnetization.
+            \item Additionally, we have that $\chi=\frac{m}{H}$, so
+            \begin{equation*}
+                \Delta m = -\dv{E_i}{H}
+                = -E_i^1-2w_i^2\cdot H
+            \end{equation*}
+            \item Thus, the total energy $E_\text{total}$ is given by
+            \begin{equation*}
+                E_\text{total} = E_i^0+HE_i^1+H^2E_i^2
+            \end{equation*}
+            where $HE_i^1$ is the first-order term, and $H^2E_i^2$ is the second-order term.
+        \end{itemize}
+        \item We can break this down even further.
+        \begin{itemize}
+            \item We find that
+            \begin{equation*}
+                m_i = \dv{H}(E_i^0+E_i^0H+E_i^2H^2+\cdots)
+                = -E_i^1+2E_i^2H
+            \end{equation*}
+            \item Additionally, we know that $\chi=\frac{m_i}{H}$, so
+            \begin{equation*}
+                \chi_i = \left( -\dv{E_i}{H} \right)\frac{1}{H}
+            \end{equation*}
+        \end{itemize}
+        \item The final result above tells us that that the magnetic susceptibility depends on the magnetic field. This is rooted in the fact that there are different Boltzmann populations in different ligand field states.
+        \item Now we can account for all of the Boltzmann populations and math that back to the observed $\chi$.
+        \item To begin,
+        \begin{equation*}
+            \chi = \frac{N}{H}
+            = \frac{\sum_i[-E_i^1-2E_i^2H]\exp\left( -\frac{E_i}{k_BT} \right)}{\sum_i\exp\left( \frac{E_i}{k_BT} \right)}
+        \end{equation*}
+        where $N$ is the number of atoms (if it's molar, $N$ is Avogadro's number).
+        \item Additionally, we know that
+        \begin{align*}
+            \e[-E_i/k_BT] &= 1-\frac{E_i}{k_BT}\\
+            &= \e[-(E_i^0+E_i^1H+E_i^2H^2+\cdots)/k_BT]\\
+            &= \e[-E_i/k_BT]\left( 1-\frac{E_i^1H}{k_BT} \right)\left( 1-\frac{E_i^2H^2}{k_BT} \right)(\cdots)
+        \end{align*}
+        \begin{itemize}
+            \item Note that if $E_i^1<<k_BT$, then $\e[-x]=1-x$ for small $x$. This is what allows us to get from the second to the third line above.
+        \end{itemize}
+        \item Combining the above two equations, we have
+        \begin{equation*}
+            \chi = \frac{N}{H}\cdot\frac{(-E_i^1-2E_i^2H)\e[-E_i/k_BT]\left( 1-\frac{E_i^1H}{k_BT} \right)\left( 1-\frac{E_i^2H^2}{k_BT} \right)}{\sum_i\e[-E_i^0k_BT]\left( 1-\frac{E_i^1H}{k_BT} \right)\left( 1-\frac{E_i^2H^2}{k_BT} \right)}
+        \end{equation*}
+        \item If we measure at a constant field, we can simplify the above to
+        \begin{equation*}
+            \chi = \frac{N\beta^2}{3k_BT}{\mu_\text{eff}}^2
+        \end{equation*}
+        \item This implies that
+        \begin{equation*}
+            \mu_\text{eff} = \sqrt{\frac{8+\left( \frac{3\lambda}{k_BT}-8 \right)\left( \exp(\frac{-3\lambda}{2k_BT}) \right)}{\frac{\lambda}{k_BT}\left[ 2+\exp(\frac{-3\lambda}{k_BT}) \right]}\cdot\beta^2}
+        \end{equation*}
+    \end{itemize}
+    \item \textbf{Van Vleck equation}: The above equation\footnote{Having seen this equation is all that is required for this course (it's good to have seen it). The derivation will never come up again.}.
+    \begin{itemize}
+        \item It is only valid for $S=\frac{1}{2}$ (single electron terms).
+        \begin{itemize}
+            \item Multi-electron terms are too complicated to do by hand and must be handled by computer modeling.
+        \end{itemize}
+        \item You can explicitly account for S.O.C. with a known $\lambda$.
+        \begin{itemize}
+            \item For \ce{Ti^3+} for example, $\lambda=\SI{154}{\per\centi\meter}$.
+            \item For \ce{Zr^3+} for example, $\lambda=\SI{500}{\per\centi\meter}$.
+        \end{itemize}
+    \end{itemize}
+    \item S.O.C. constants increase for heavier elements. Elements with large relativistic effects have large S.O.C. constants.
+    \item Intuitive insight into the conditions surrounding a large degree of spin-orbit coupling:
+    \begin{itemize}
+        \item An applied magnetic field causes the electron to rotate through the $d$-orbitals.
+        \begin{itemize}
+            \item If an electron hops between $d_{x^2-y^2}$ and $d_{xy}$ for instance, this creates rotation (and a ring current).
+        \end{itemize}
+        \item The ring current will create a magnetic field $B$ around the $z$ axis that opposes $H$.
+        \item This opposing magnetic field gives a lower magnetic moment than spin-only calculations would predict.
+        \item Note that rotation of a single electron in a $d^1$ complex lowers the magnetic moment, but rotation of a single "hole" (positive charge) in a $d^9$ complex raises the magnetic moment.
+        \begin{itemize}
+            \item In $d^5$ (and technically $d^{10}$), no electrons can move without violating the Pauli exclusion principle, so we would expect the observed moment to be closed to the spin-only value. (Quantum mechanical explanation: The electronic symmetry of a totally symmetric state precludes any mixing of the orbital angular momentum with the spin angular momentum.)
+        \end{itemize}
+    \end{itemize}
+    \item A first approximation of S.O.C.:
+    \begin{itemize}
+        \item For a less than half-filled set of orbitals, expect $\mu_\text{eff}$ / $\chi T$ to be lower than the spin-only value, i.e., $g<2$.
+        \begin{itemize}
+            \item Typically $\mu_\text{eff}$ / $\chi T$ is close to the spin-only value.
+        \end{itemize}
+        \item For a greater than half-filled set of orbitals, expect $\mu_\text{eff}$ / $\chi T$ to be larger than the spin-only value, i.e., $g>2$.
+        \begin{itemize}
+            \item $\mu_\text{eff}$ / $\chi T$ can be much larger.
+        \end{itemize}
+        \item For a half-filled set of orbitals, we expect little to no S.O.C. Thus, $\mu_\text{eff}$ / $\chi T$ should be roughly equal to the spin-only value, i.e., $g\approx 2$.
+    \end{itemize}
+    \item The magnitude of S.O.C.: The key is orbital degeneracy.
+    \begin{itemize}
+        \item For example, if we have a $d^3$ \ce{Cr^3+} complex, we would predict more S.O.C. in the tetrahedral state (Figure \ref{fig:4-tetrab}) than in the octahedral state (Figure \ref{fig:6-octab}).
+        \begin{itemize}
+            \item This is because in the tetrahedral orbitals, there is only one electron in the upper orbitals; thus, we have a set of degenerate orbitals with a non-degenerate electron configuration, which promotes S.O.C. Note that $d^3$ octahedral is totally degenerate by contrast.
+        \end{itemize}
+        \item Note that this is totally dependent on the ligand field: Stronger ligand fields increasingly break degeneracy, thus quenching S.O.C.
+    \end{itemize}
+    \item S.O.C. trends:
+    \begin{enumerate}
+        \item Heavy elements have larger S.O.C.
+        \item Lanthanides have larger S.O.C. from larger $\lambda$'s.
+        \begin{itemize}
+            \item Lanthanides in general also just have very large S.O.C. effects; this effect arises from the degenerate $f$ set.
+            \begin{itemize}
+                \item Since the $f$ orbitals do not extend beyond the noble gas core to engage in bonding, they do not split; thus, they are totally generate; thus, there is large S.O.C.
+            \end{itemize}
+            \item Note that neodymium magnets are strong because they combine a lanthanide that contributes massive S.O.C. effects, lots of electrons, and anisotropy (neodymium) and a transition metal that effectively couples with orbitals that aren't as buried as neodymium's $f$ orbitals (iron).
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+
+
 
 \end{document}
