@@ -11,7 +11,6 @@
 
 \chapter{???}
 \section{Lecture 4: Substitution Reactions}
-% Go through and delete stuff/cite other notes (reread swaths of Labalme (2021)). Get rid of questions and reformulate as statements.
 \begin{itemize}
     \item \marginnote{4/5:}Association/dissociation reactions.
     \item Fairly related to organic S\textsubscript{N}2 and S\textsubscript{N}1 reactions, respectively.
@@ -419,6 +418,308 @@
         which implies that as $\lambda\to -\Delta G$, $\Delta G^\ddagger\to 0$. Furthermore, as $\lambda$ passes $-\Delta G$, $\Delta G^\ddagger$ increases.
         \item This has important implications in biology, catalysis, etc. For example, if you want to slow down an undesirable side reaction and speed up your main reaction, provide more driving force. This accelerates your main reaction and moves your side reaction into the inverted region.
     \end{itemize}
+\end{itemize}
+
+
+
+\section{Lecture 6: Oxidative Addition and Reductive Elimination}
+\begin{itemize}
+    \item \marginnote{4/9:}Even further detached from organic chemistry (but scientists are looking for this reactivity in phosphorous and other $p$-block main group elements).
+    \item General form:
+    \begin{equation*}
+        \ce{L_nM^Q + A-B <=>[{ox. adn.}][{red. elim.}] L_nM^{Q+2}AB}
+    \end{equation*}
+    \item Changes at the metal center during these two reactions (generically).
+    \begin{itemize}
+        \item Oxidative addition: Oxidation state, electron count, and coordination number increase by 2.
+        \item Vice versa for reductive elimination.
+    \end{itemize}
+    \item Some notes on this reactivity:
+    \begin{enumerate}
+        \item Concerted reductive elimination must occur from a \emph{cis}-arrangement of ligands.
+        \begin{itemize}
+            \item Not true if it's stepwise.
+        \end{itemize}
+        \item Reductive elimination is favored by bulky ligands.
+        \begin{itemize}
+            \item Naturally: The more sterically crowded it is, the faster it will want to go.
+        \end{itemize}
+        \item Reductive elimination is disfavored for early metals.
+        \begin{itemize}
+            \item Since the early metals are very electropositive and don't want to access their lower oxidation states.
+        \end{itemize}
+        \item \ce{H-} as a reductive-elimination ligand is faster than other ligands.
+        \begin{itemize}
+            \item Due to it's spherically symmetric electron density.
+            \item Hydrides kinetically (not thermodynamically) tend to react faster.
+        \end{itemize}
+        \item Oxidative addition can occur to give \emph{cis} or \emph{trans} products.
+        \begin{itemize}
+            \item The relative distribution of the stereochemistries gives us mechanistic information.
+        \end{itemize}
+    \end{enumerate}
+    \item Classic studies: On Vaska's complex.
+    \begin{figure}[h!]
+        \centering
+        \chemfig{Ir^{I}(-Cl)(-[1]PPh_3)(-[4]OC)(-[5]Ph_3P)}
+        \caption{Vaska's complex.}
+        \label{fig:vaskasComplex}
+    \end{figure}
+    \begin{itemize}
+        \item Characteristics of the reactant: $d^8$, $16\,\e[-]$, canary yellow color.
+        \item Characteristics of the product (after reacting with \ce{MeI}, \ce{H2}, or \ce{O2}): $d^6$, $18\,\e[-]$.
+        \item \ce{MeI} bonds \emph{trans}, \ce{H2} bonds \emph{cis}, and \ce{O2} forms a peroxide.
+        \item \ce{Ir^{III}} is inert, so we observe the kinetic products. These give us mechanistic information.
+        \item Mechanistics can vary from S\textsubscript{N}2, to radical, to concerted, and so on.
+        \begin{itemize}
+            \item Classifying this reaction can get blurry. For instance, is \ce{M^Q + H^+ -> M^{Q+2}-H^+} an oxidative addition?
+        \end{itemize}
+    \end{itemize}
+    \item Types of mechanisms:
+    \begin{enumerate}
+        \item Concerted.
+        \begin{figure}[H]
+            \centering
+            \schemestart
+                \chemfig{M}\arrow{0}[,0]\+{,,-1.25em}\chemfig{A-[6]B}
+                \arrow
+                \chemleft{[}
+                    \chemfig{M?-[:30,,,,dashed]A-[6,,,,dashed]B?[,,dashed]}
+                \chemright{]^\ddagger}
+                \arrow
+                \chemfig{M(-[:30]A)(-[:-30]B)}
+            \schemestop
+            \caption{The concerted mechanism for oxidative addition.}
+            \label{fig:oxAdn-concerted-mechanism}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}[b]{0.35\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7]
+                    \footnotesize
+                    \fill [fill=blz] ({-6^0.5/4+0.2},0) circle (6^0.5/4);
+                    \fill [fill=blz] ({6^0.5/4-0.2},0) circle (6^0.5/4);
+                    \draw [semithick] ({-6^0.5/4+0.2},0) circle (6^0.5/4);
+                    \draw [semithick] ({6^0.5/4-0.2},0) circle (6^0.5/4);
+                    \node at (-1.3,0) {A};
+                    \node at (1.3,0) {B};
+                    \draw [semithick] (-2,0) circle (4mm);
+                    \draw [semithick] (2,0) circle (4mm);
+        
+                    \begin{scope}[yshift=-3.6cm]
+                        \node {M};
+                        \filldraw [semithick,fill=blz,scale=1.5,xshift=-2mm] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=blz,scale=1.5,xshift=2mm] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \draw [semithick,scale=1.5,rotate=90,xshift=-2mm] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \draw [semithick,scale=1.5,rotate=90,xshift=2mm] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                    \end{scope}
+        
+                    \node [rotate=-90] at (0,-1.2) {\normalsize$:\longrightarrow$};
+                \end{tikzpicture}
+                \caption{HOMO interaction.}
+                \label{fig:oxAdn-concerted-orbitalsa}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.35\linewidth}
+                \centering
+                \begin{tikzpicture}[scale=0.7]
+                    \footnotesize
+                    \filldraw [semithick,fill=blz] ({-6^0.5/4-1.6},0) circle (6^0.5/4);
+                    \filldraw [semithick,fill=white] ({6^0.5/4+1.6},0) circle (6^0.5/4);
+                    \node at (-1.3,0) {A};
+                    \node at (1.3,0) {B};
+                    \filldraw [semithick,fill=white] (-0.6,0) circle (4mm);
+                    \filldraw [semithick,fill=blz] (0.6,0) circle (4mm);
+        
+                    \begin{scope}[yshift=-3.6cm]
+                        \node {M};
+                        \filldraw [semithick,fill=white,scale=2,xshift=-1.5mm,yshift=-1.5mm] plot [domain=-pi:-pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                        \filldraw [semithick,fill=blz,scale=2,xshift=-1.5mm,yshift=1.5mm] plot [domain=-pi/2:0,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                        \filldraw [semithick,fill=white,scale=2,xshift=1.5mm,yshift=1.5mm] plot [domain=0:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                        \filldraw [semithick,fill=blz,scale=2,xshift=1.5mm,yshift=-1.5mm] plot [domain=pi/2:pi,smooth,variable=\thta] ({\thta r}:{15^0.5/2*cos(\thta r)*sin(\thta r)});
+                    \end{scope}
+        
+                    \node [rotate=110] at (-1.8,-1.2) {\normalsize$\cdot\longrightarrow$};
+                    \node [rotate=70] at (1.8,-1.2) {\normalsize$\cdot\longrightarrow$};
+                \end{tikzpicture}
+                \caption{LUMO interaction.}
+                \label{fig:oxAdn-concerted-orbitalsb}
+            \end{subfigure}
+            \caption{Orbital interactions in concerted oxidative addition.}
+            \label{fig:oxAdn-concerted-orbitals}
+        \end{figure}
+        \begin{itemize}
+            \item \emph{cis} products.
+            \begin{itemize}
+                \item If you see a \emph{trans} product, this is not the mechanism.
+            \end{itemize}
+            \item HOMO interaction: The \ce{A-B} $\sigma$-bonding orbital donates to an empty metal $d_{x^2-y^2}$-symmetry orbital.
+            \item LUMO interaction: The metal $d_{xy}$ orbital backbonds into the \ce{A-B} $\sigma^*$ antibonding orbital. It is these electrons that depopulate the $\sigma$ bond and allow the \ce{A-B} bond to split.
+        \end{itemize}
+        \item S\textsubscript{N}2.
+        \begin{equation*}
+            \ce{\charge{0=\:}{M}\; + R-X -> M^+-R + \charge{90=\:}{X}^- -> X-M-R}
+        \end{equation*}
+        \begin{itemize}
+            \item \emph{cis} or \emph{trans}; no clear preference.
+            \item One signature of this reactivity is a steric preference where $\text{primary}>\text{secondary}>\text{tertiary}$.
+            \begin{itemize}
+                \item Some of the trends of organic reactions can appear in inorganic reactions!
+            \end{itemize}
+        \end{itemize}
+        \item Radical chain.
+        \begin{align*}
+            \ce{M + In} &\ce{->} \ce{MIn*}\\
+            &\ce{->[R-X]} \ce{InM-X + R*}\\
+            &\ce{->[M]} \ce{R-M*}\\
+            &\ce{->[R-X]} \ce{R-M-X + R*}
+        \end{align*}
+        \begin{itemize}
+            \item We begin with a metal and an initiator (denoted In).
+            \begin{itemize}
+                \item These react to form the adduct \ce{MIn*}, which is a radical.
+                \item This radical grabs an \ce{X} from \ce{R-X} to form \ce{InM-X} (this product is worthless and the final step of initiation). A \ce{R*} is also generated in this step (this is the radical to be propagated).
+                \item The \ce{R*} reacts with another equivalent of the metal to create an \ce{R-M*} radical which can then grab a halide, generating an \ce{R-M-X} and an \ce{R*}, the former of which is the desired product and the latter of which can continue propagating.
+            \end{itemize}
+            \item Pretty common.
+        \end{itemize}
+        \item Electron transfer.
+        \begin{align*}
+            \ce{M^0 + R-X} &\ce{->} \ce{[M^+* + RX^-*]}\\
+            &\ce{->} \ce{M^+* + R* + X^-}\\
+            &\ce{->} \ce{M^+-R + X^-}\\
+            &\ce{->} \ce{X-M-R}
+        \end{align*}
+        \begin{itemize}
+            \item Related to S\textsubscript{N}2 again.
+            \item This is not a radical chain process (no propagation); it's just an electron transfer followed by fragmentation and recombination.
+        \end{itemize}
+    \end{enumerate}
+    \item Jack Halpern of UChicago writes \textcite{bib:HalpernVaska}.
+    \begin{itemize}
+        \item Studies \ce{L2IrClCo ->[MeX] L2IrClCoMeX}, specifically the reaction rates as a function of \ce{X}.
+        \item Determines that $\ce{I-}>\ce{Br-}>>\ce{Cl-}$, and that $\text{Rate}=k\ce{[CH3X][Ir]}$.
+        \item $\Delta S^\ddagger=\SI{-43}{{e.u.}}$ (where an e.u. is an entropy unit).
+        \item Solvent effects are also consistent with an ionic mechanism.
+        \item There is a 5-coordinate intermediate, and the two new ligands end up adding \emph{trans}.
+        \item If you use \ce{EtI}, this reaction proceeds through a radical mechanism.
+        \begin{itemize}
+            \item You have mechanistic switching based on the identity of the substrate.
+        \end{itemize}
+    \end{itemize}
+    \item Bimolecular oxidative addition:
+    \begin{equation*}
+        \ce{2L_nM^0 + R-X -> L_nM^I-R + L_nM^I-X}
+    \end{equation*}
+    \item Jack Halpern again writes \textcite{bib:HalpernBimolecularOxAdn}.
+    \begin{itemize}
+        \item Studies the reaction \ce{2Co^{II}(CN)5^3- + MeI -> Co^{III}(CN)5Me^3- + Co^{III}(CN)5I^3-}.
+        \item Follows some transition metal trends:
+        \begin{itemize}
+            \item Heavier metals (such as iridium above) do 2-electron chemistry.
+            \item Lighter metals (such as this one) do 1-electron chemistry.
+        \end{itemize}
+        \item We can also see radical-type reactivity.
+    \end{itemize}
+    \item Another parallel example: \ce{2L_nM + 2RX -> 2L_nM-X + R-R}.
+    \begin{itemize}
+        \item For example, \ce{Cp^*_2Yb(OEt2) + CH2Cl2 -> 2Cp^*_2Yb-Cl + ClCH2-CH2Cl}.
+        \item This can also occur through a radical mechanism. We form an \ce{R*} radical that can recombine to form \ce{R-R} or make \ce{M-R}.
+    \end{itemize}
+    \item Stereochemistry of S\textsubscript{N}2 type reactivity.
+    \item George Whitesides writes \textcite{bib:WhitesidesHDFpInversion}.
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]{\emph{t}-}Bu)-(<[:60]H)(>:[:20]D)-[:-60]OTs}
+            \vspace{2em}
+            \caption{The reactant.}
+            \label{fig:SN2-stereochemistrya}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.6\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={circle}
+            ]
+                \begin{scope}
+                    \draw circle (0.5cm);
+                    \draw 
+                        (0,0) -- (90:0.8) node[above=-2mm]{$t$-Bu}
+                        (30:0.5) -- (30:0.8) node[anchor=-150]{H}
+                        (0,0) -- (-30:0.8) node[anchor=150]{H}
+                        (-90:0.5) -- (-90:0.8) node[anchor=113,yshift=2mm]{OTs}
+                        (0,0) -- (-150:0.8) node[anchor=30]{D}
+                        (150:0.5) -- (150:0.8) node[anchor=-30]{D}
+                    ;
+                \end{scope}
+                \draw [semithick,-stealth] (1.5,0) -- node[above=-2mm]{\small\ce{Fp-}} (2.5,0);
+                \begin{scope}[xshift=4cm]
+                    \draw circle (0.5cm);
+                    \draw 
+                        (0,0) -- (90:0.8) node[above=-2mm]{$t$-Bu}
+                        (30:0.5) -- (30:0.8) node[anchor=-150]{D}
+                        (0,0) -- (-30:0.8) node[anchor=150]{H}
+                        (-90:0.5) -- (-90:0.8) node[below=-1mm]{Fp}
+                        (0,0) -- (-150:0.8) node[anchor=30]{D}
+                        (150:0.5) -- (150:0.8) node[anchor=-30]{H}
+                    ;
+                \end{scope}
+            \end{tikzpicture}
+            \caption{The reaction.}
+            \label{fig:SN2-stereochemistryb}
+        \end{subfigure}
+        \caption{S\textsubscript{N}2 stereochemistry.}
+        \label{fig:SN2-stereochemistry}
+    \end{figure}
+    \begin{itemize}
+        \item Observes inversion (by looking at $\text{J}_{\ce{H-H}}$ coupling by NMR) of \ce{H} and \ce{D} at a single stereocenter.
+        \item React the compound in Figure \ref{fig:SN2-stereochemistrya} with a \ce{Fp-} fragment.
+        \item Observe inversion, as in Figure \ref{fig:SN2-stereochemistryb}, so it's S\textsubscript{N}2.
+    \end{itemize}
+    \item Another synthesis:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{(<[:-120]D)(>:[:-160]H)(-[:120]TsO)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
+            \arrow{->[{Pd\textsuperscript{0}}]}
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Pd-[1]OTs)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
+            \arrow{->[PhMgBr]}
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Pd-[1]Ph)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
+            \arrow{->[red. elim.]}
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Ph)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
+        \schemestop
+        \caption{An additional way of probing S\textsubscript{N}2 addition/elimination.}
+        \label{fig:SN2-additionalSynthesis}
+    \end{figure}
+    \begin{itemize}
+        \item This one shows us that palladium causes an inversion once again, but reductive elimination does not.
+    \end{itemize}
+    \item Radical mechanisms.
+    \begin{itemize}
+        \item We probe these with \textbf{radical clocks}.
+        \item The unzipping of the methylcyclopropane radical ring happens so fast that it will necessarily be faster than any recombination with \ce{M-Cl}.
+        \item Since iodides are easier to reduce than bromides, bromomethylcyclopropane will react in a straightforward manner with \ce{Fp-}, but iodomethylcyclopropane and \ce{Fp-} will pursue a radical mechanism to a competitive degree. Why does the reduction potential of iodides and bromides matter?
+    \end{itemize}
+    \item \textbf{Radical clock}: A reagent such that if a radical is generated on it, it will undergo a rapid isomerization or redistribution to generate different product(s).
+    \item A few notes.
+    \begin{enumerate}
+        \item Similar rules to those in orgo apply.
+        \begin{itemize}
+            \item For example, \ce{I-} is a better leaving group than \ce{Cl-}.
+            \item However, there are exceptions, too: \ce{CN} is a terrible leaving group in inorganic chemistry, whereas you can sometimes kick it out in orgo.
+        \end{itemize}
+        \item Sterics matter.
+        \begin{itemize}
+            \item Oxidative addition is slower for sterically encumbered substrates.
+            \item If you want to favor a radical reaction over a concerted or nucleophilic mechanism, make the compound bulky. This will disfavor the two undesired mechanisms but not an electron transfer step.
+        \end{itemize}
+        \item First row metals will be faster than second and third row metals.
+        \begin{itemize}
+            \item This is because they're much more reactive. However, they will also go down competitive side paths more readily (can be good or bad).
+            \item Because of this, second and third row metals are more often used. Plus, you can just heat them up a bit to speed up the reaction.
+        \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 
