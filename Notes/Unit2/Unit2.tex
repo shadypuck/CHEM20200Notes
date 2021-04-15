@@ -1,0 +1,200 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{1}
+
+\begin{document}
+
+
+
+
+\chapter{???}
+\section{Lecture 4: Substitution Reactions}
+% Go through and delete stuff/cite other notes (reread swaths of Labalme (2021)). Get rid of questions and reformulate as statements.
+\begin{itemize}
+    \item \marginnote{4/5:}Association/dissociation reactions.
+    \item Fairly related to organic S\textsubscript{N}2 and S\textsubscript{N}1 reactions, respectively.
+    \item General form:
+    \begin{equation*}
+        \ce{ML6 + L$'$ <=> ML5L$'$ + L}
+    \end{equation*}
+    \item We investigate the position of the equilibrium with the three main characteristics that determine reactivity.
+    \begin{enumerate}
+        \item Sterics.
+        \begin{itemize}
+            \item Related to the metal coordination number.
+            \begin{itemize}
+                \item $\text{C.N.}>6$ is typically disfavored.
+                \item $\text{C.N.}<6$ is possible.
+            \end{itemize}
+            \item The size of \ce{L$'$} is also important: If $\ce{L$'$}=\ce{PPh3}$ for example, this is hard to get to $\text{C.N.}>4$.
+        \end{itemize}
+        \item Ligand character.
+        \begin{itemize}
+            \item In nonpolar media, dissociation of charged groups (e.g., \ce{Cl-}) will be disfavored. However, the opposite is true in polar media.
+            \begin{itemize}
+                \item This is because of the issue of making charge/ionizing.
+            \end{itemize}
+            \item The match between \ce{M} and \ce{L} (e.g., hard/soft, electron rich/poor) is also important.
+            \begin{itemize}
+                \item For example, \ce{Fe^0} will bind \ce{CO} strongly since \ce{Fe^0} is electron rich and \ce{CO} is a $\pi$ acceptor.
+                \item However, \ce{Fe^{IV}} will not (as a hard, electron-poor metal center).
+            \end{itemize}
+        \end{itemize}
+        \item Electronic structure of the metal center (whether or not the metal is electronically saturated [has 18 electrons]).
+        \begin{itemize}
+            \item $18\,\e[-]$: it will not want to coordinate an additional \ce{L$'$}.
+            \item $20\,\e[-]$: it will want to dissociate.
+            \item $16\,\e[-]$: it \emph{can} associate.
+            \begin{itemize}
+                \item However, it may not want to given that $16\,\e[-]$ square-planar complexes are fairly stable.
+                \item The associated state may be a transition state in a square-planar ligand substitution or otherwise not a ground state.
+            \end{itemize}
+        \end{itemize}
+    \end{enumerate}
+    \item Ligand substitution reactions terms: \textbf{Kinetic} and \textbf{thermodynamic}.
+    \item \textbf{Kinetic} (considerations): Elements are inert (slow) or labile (fast).
+    \item \textbf{Thermodynamic} (considerations): Which side of an equilibrium will be favored. Elements are stable or reactive.
+    \item In ligand substitution reactions, there are two limiting regimes:
+    \begin{enumerate}
+        \item Associative substitution.
+        \begin{itemize}
+            \item See the related discussion in \textcite{bib:CHEM20100Notes}.
+            \item This is the most general reaction type, even for coordinatively saturated complexes.
+            \item Rate law:
+            \begin{equation*}
+                \dv{\ce{[ML5L$'$]}}{t} = k_\text{obs}\ce{[ML6][L$'$]}
+            \end{equation*}
+        \end{itemize}
+        \item Dissociative mechanism.
+        \begin{itemize}
+            \item See the related discussion in \textcite{bib:CHEM20100Notes}.
+            \item There are many things that look dissociative that are associative (e.g., instead of forming a 5-coordinate species, you could just have a molecule of the solvent displace a ligand).
+            \item This mechanism is rare and hard to prove.
+            \item Rate law:
+            \begin{equation*}
+                \dv{\ce{[ML5L$'$]}}{t} = \frac{k_2k_1\ce{[ML6][L]}}{k_{-1}\ce{[L]}+k_2\ce{[L$'$]}}
+            \end{equation*}
+            \item Experimentally, we swamp the reaction with \ce{L$'$} so that $\ce{[L$'$]}>>>$ than all other reagents. This makes it so that the rate is just $k_\text{obs}\ce{[ML6]}$, i.e., pseudo-first order conditions.
+        \end{itemize}
+    \end{enumerate}
+    \item Unfortunately, much like in orgo, very few cases are at these extremes and we can have hybrids called\dots
+    \begin{enumerate}[resume]
+        \item Interchange mechanisms.
+        \begin{itemize}
+            \item See the related discussion in \textcite{bib:CHEM20100Notes}.
+            \item Within this category, we can have $I_a$ (associative interchange) and $I_d$ (dissociative interchange).
+            \item In the transition state, we have \ce{L$'$} coming in and \ce{L} leaving at the same time.
+        \end{itemize}
+    \end{enumerate}
+    \item Kinetics and rates of these mechanisms.
+    \item Several categories (measure with water exchange rates; see \textcite{bib:CHEM20100Notes}):
+    \begin{enumerate}[label={\Roman*)}]
+        \item Very fast.
+        \begin{itemize}
+            \item Alkali metals (species that primarily engage in ionic bonding; little covalent character).
+            \item $\SI{e8}{\per\second}$; close to the diffusion limit.
+        \end{itemize}
+        \item Fast.
+        \begin{itemize}
+            \item Higher valent ions; often \ce{M^3+} such as \ce{Al^3+}.
+            \begin{itemize}
+                \item Higher charge $\Rightarrow$ higher ligand affinity $\Rightarrow$ slightly slower but still pretty fast.
+            \end{itemize}
+            \item $\num{e3}$-$\SI{e8}{\per\second}$.
+        \end{itemize}
+        \item Slower.
+        \begin{itemize}
+            \item Getting into the transition metals: \ce{Fe^3+}, \ce{V^3+}, \ce{Ti^3+}.
+            \begin{itemize}
+                \item $d$-orbital splitting $+$ covalency $\Rightarrow$ stronger bonding $\Rightarrow$ slower exchange rate.
+            \end{itemize}
+            \item $\num{e1}$-$\SI{e4}{\per\second}$.
+        \end{itemize}
+        \item Inert.
+        \begin{itemize}
+            \item \ce{Co^3+}, \ce{Cr^3+}, \ce{Pt^2+}, and \ce{Fe^2+}(L.S.).
+            \item $\num{e-8}$-$\SI{e-4}{\per\second}$.
+        \end{itemize}
+    \end{enumerate}
+    \item The overlap between the rates reflects the fact that there is no hard and fast cut off between categories.
+    \item The identity of \ce{L$'$} also influences rates.
+    \begin{itemize}
+        \item Reaction rates increase with the ligand field strength of \ce{L$'$}\footnote{Goes over Table IX.1 from \textcite{bib:CHEM20100Notes}.}.
+    \end{itemize}
+    \item Characteristics of the metal that control the observed rates.
+    \begin{itemize}
+        \item Ranking L.S. metal centers (slowest to fastest): $\ce{Co^{III}}<\ce{Cr^{III}}<\ce{Mn^{III}}<\ce{Fe^{III}}<\ce{Ti^{III}}<\ce{V^{III}}$.
+        \item Considering the $d$ counts, we have $d^6<d^3<d^4<d^5<d^1<d^2$.
+        \item Now think of this in terms of the $d$-orbitals splitting diagram (Figure \ref{fig:6-octab}).
+        \begin{itemize}
+            \item As the antibonding orbitals get filled, $\sigma$ bonds will weaken, promoting a faster exchange.
+            \item Full and half-full $t_{2g}$ also provides stability.
+        \end{itemize}
+    \end{itemize}
+    \item Thus, we list the following configurations as inert and labile (see the related discussion in \textcite{bib:CHEM20100Notes}):
+    \begin{itemize}
+        \item Inert: $d^3$, L.S. $d^{4,5,6}$, and square planar $d^8$.
+        \item Labile: $d^0$, $d^1$, $d^2$, H.S. $d^{4,5,6}$, $d^7$, $d^9$, $d^{10}$.
+    \end{itemize}
+    \item Other important kinetic factors:
+    \begin{enumerate}
+        \item Oxidation state.
+        \begin{itemize}
+            \item As oxidation state increases, exchange rate decreases (becomes more inert).
+        \end{itemize}
+        \item Size.
+        \begin{itemize}
+            \item Smaller ions are more inert.
+            \item However, first row ions are almost always labile (because they more readily populate higher spin states).
+        \end{itemize}
+        \item Chelate effect.
+        \begin{itemize}
+            \item Reviews some info from \textcite{bib:CHEM20100Notes}.
+            \item Chelating ligands form a ring or a \textbf{metallacycle} (this is why 4,5-membered ligands are stable; because 5,6-membered rings are favorable).
+            \item Binding of a chelating ligand is typically favored, primarily due to entropic reasons (effective concentration is secondary).
+            \item Example: Gives actual $\Delta G=\Delta H-T\Delta S$ thermodynamic data for the formation reaction of \ce{Cu(MeNH2)4^2+} vs. \ce{Cu(en)2^2+} to emphasize the importance of entropy (see the related discussion in the notes on Chapter 10 in \textcite{bib:CHEM20100Notes}).
+            \item EDTA is a hexadentate ligand that is commonly used in biology to pull all metal centers out of solution.
+            \begin{itemize}
+                \item For \ce{Fe^3+} for example, $K_f=\SI{e25}{\per\mole}$. What is $\si{\per\mole}$ and why is it here?
+                \item Sidenophones and euterobactin are biology's own chelaters ($K_f=\SI{e52}{\per\mole}$).
+                \item These chelaters involved because if bacteria are going to invade a host, they need to scavenge iron, but iron is pretty tightly regulated. Thus, there has been an arms race of molecules that can scavenge iron or prevent iron from being scavenged.
+            \end{itemize}
+            \item Chelation therapy: If exposed to a heavy metal, you will be given chelating agents that will bind to metal ions and cause them to be excreted from the body.
+        \end{itemize}
+        \item Trans effect.
+        \begin{itemize}
+            \item Reviews some info from \textcite{bib:CHEM20100Notes}.
+            \item Helps predict the \textbf{regiochemistry} of where a given ligand will substitute.
+            \item Cis-platin reaction mechanism: \ce{{\emph{cis}-}Pt(NH3)2(Cl)2 -> {\emph{cis}-}Pt(NH3)2(H2O)2} in the body, which binds to DNA on the \emph{cis}-water side, causing a kink, stopping transcription, and initiating apoptosis.
+            \begin{itemize}
+                \item Cis-platin is quite toxic (people are trying to develop formulations that are less so), but highly effective at stopping cancer.
+                \item Can't have \emph{trans} because it doesn't have the \emph{cis}-water side. Thus, this synthesis mechanism doesn't work: \ce{[PtCl4]^2- ->[2NH3] {\emph{trans}-}Pt(NH3)2Cl2}.
+                \item Therefore, we synthesize it as follows.
+                \begin{align*}
+                    \ce{K2PtCl4} &\ce{->[4KI]} \ce{PtI4^2-}\\
+                    &\ce{->[2NH3]} \ce{{\emph{cis}-}Pt(NH3)2(I)2}\\
+                    &\ce{->[1) AgNO3][2) XS KCl]} \ce{{\emph{cis}-}Pt(NH3)2(Cl)2}
+                \end{align*}
+                \item Note that we start from tetrachloroplatinate because it is the most common form of platinum.
+                \item Also note that XS stands for "excess."
+            \end{itemize}
+            \item Trans-effect order listed.
+            \item The trans-effect is kinetic; concerned with rates of exchange.
+            \begin{itemize}
+                \item Stronger \emph{trans}-directors \textbf{labelize} the ligands opposite them.
+            \end{itemize}
+            \item The trans influence is thermodynamic.
+            \begin{itemize}
+                \item It influences the ground state structure, causing lengthening of bonds \emph{trans} to a strong-field ligand (think of this in terms of competition for electrons on the central atom; a strong-field ligand will attract more of these, making the other bond weaker).
+            \end{itemize}
+        \end{itemize}
+    \end{enumerate}
+    \item Note that intramolecular reactions (such as a second binding of a bidentate chelating ligand) are highly favored.
+\end{itemize}
+
+
+
+
+\end{document}
