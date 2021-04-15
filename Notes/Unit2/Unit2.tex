@@ -196,5 +196,232 @@
 
 
 
+\section{Lecture 5: Electron Transfer Reactions}
+\begin{itemize}
+    \item \marginnote{4/7:}More unique to inorganic chemistry since metal atoms have access to many more electrons than common organic atoms.
+    \item General form:
+    \begin{equation*}
+        \ce{M^n+ <=>[$-\e[-]$][$+\e[-]$] M^{(n+1)+}}
+    \end{equation*}
+    \begin{itemize}
+        \item The forward reaction is known as \textbf{oxidation} (metal oxidation state increases), while the reverse is known as \textbf{reduction} (metal oxidation state decreases).
+        \item This is different than the oxidation/reduction reactions of organic chemistry, which involve removing or adding, respectively, a hydrogen.
+    \end{itemize}
+    \item This redox chemistry is important because many transition metals have access to multiple oxidation states.
+    \item Two Nobel prizes in this area:
+    \begin{itemize}
+        \item Henry Taube (1983): Electron transfer in metals.
+        \item Rudy Marcus (1992): Marcus theory of electron transfer.
+    \end{itemize}
+    \item 2 general flavors of electron transfer reactions: \textbf{inner sphere} and \textbf{outer sphere}.
+    \item \textbf{Inner sphere}: Bonds are formed.
+    \item \textbf{Outer sphere}: No bonds are formed.
+    \item Example:
+    \begin{itemize}
+        \item Consider the reaction \ce{Fe(CN)6^4- + Mo(CN)8^3- -> Fe(CN)6^3- + Mo(CN)8^4-} (electron transfer from iron to molybdenum).
+        \item The energies at play: \ce{A^{(n+1)} + B^n -> [A^{(n+1)} + B^n] -> [A^n + B^{(n+1)}]^* -> A^n + B^{(n+1)}}.
+        \item Reactants $\to$ encounter complex $\to$ electron transfer state (an excited state) $\to$ products.
+    \end{itemize}
+    \item Energies:
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \small
+                \draw (5,0) -- node[below=5mm]{Potential ($V$)} (0,0) -- node[rotate=90,above]{Current ($I$)} (0,4);
+                \footnotesize
+                \draw [dashed,semithick] (2.5,3.5) -- (2.5,0);
+                \draw [semithick] (2.5,0.1) -- ++(0,-0.2) node[below]{$E_{1/2}$};
+    
+                \draw [thick,blx,decoration={markings,mark=between positions 0.1 and 0.95 step 8mm with {\arrow{stealth}}},postaction={decorate}] (1,1.5) node[circle,fill,inner sep=1.5pt]{}
+                    -- (1.8,1.5)
+                    to[out=0,in=180] (3.2,3)
+                    to[out=0,in=180] (4,2.5)
+                    -- (3.5,2.5)
+                    to[out=180,in=0] (1.8,1)
+                    to[out=180,in=0] cycle
+                ;
+            \end{tikzpicture}
+            \caption{Thermodynamics.}
+            \label{fig:e-transferEnergya}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.4\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black}
+            ]
+                \small
+                \draw (5,0) -- node[below=5mm]{Reaction Coordinate} (0,0) -- node[rotate=90,above]{Energy ($E$)} (0,4);
+                \footnotesize
+    
+                \draw [thick,blx] (0.5,2.5)
+                    -- node[below]{\ce{A^{n+1} + B^n}} (1.5,2.5)
+                    to[out=0,in=180] (2.4,3.3)
+                    to[out=0,in=180] (3.5,1.5)
+                    -- node[below]{\ce{A^n + B^{n+1}}} (4.5,1.5)
+                ;
+    
+                \begin{scope}[on background layer]
+                    \draw [very thin] (1.5,2.5) -- (4.5,2.5);
+                \end{scope}
+                \draw [semithick,<->] (2.4,2.5) -- node[right,fill=white,inner sep=2pt]{$\Delta G^\ddagger$} (2.4,3.3);
+                \draw [semithick,<->] (4,1.5) -- node[right]{$\Delta G$} (4,2.5);
+            \end{tikzpicture}
+            \caption{Kinetics.}
+            \label{fig:e-transferEnergyb}
+        \end{subfigure}
+        \caption{Electron transfer reaction energies.}
+        \label{fig:e-transferEnergy}
+    \end{figure}
+    \begin{enumerate}
+        \item Thermodynamic:
+        \begin{itemize}
+            \item The difference in the potentials of \ce{A^{n+1}} and \ce{A^n}, and \ce{B^{n+1}} and \ce{B^n}.
+            \begin{itemize}
+                \item These can be measured electrochemically.
+                \item We can measure the electrochemical driving force for these processes (i.e., the change in free energy during the reaction) with cyclic voltammetry.
+            \end{itemize}
+            \item In a cyclic voltammetry experiment\dots
+            \begin{itemize}
+                \item As we increase the potential to the point where the redox reaction will occur, we will see an increase as oxidation occurs.
+                \item Then as we decrease the potential again to where the redox reaction will occur in the reverse direction, we will see a decrease as reduction occurs.
+            \end{itemize}
+            \item The midpoint $E_{1/2}$ is the thermodynamic potential (where redox is at equilibrium and you have equal amounts of both species). Is this $\Delta G$? What is going on here? Why are the equilibria misaligned?
+        \end{itemize}
+        \item Kinetics:
+        \begin{itemize}
+            \item $\Delta G=E_{1/2_\text{A}}-E_{1/2_\text{B}}$ where $E_{1/2_\text{X}}$ is the thermodynamic potential of substance X.
+            \begin{itemize}
+                \item $\Delta G$ is the thermodynamic contribution.
+            \end{itemize}
+            \item $\Delta G^\ddagger$ is the kinetic barrier, or activation energy.
+        \end{itemize}
+    \end{enumerate}
+    \item The role of $\Delta G^\ddagger$ in an electron transfer.
+    \begin{itemize}
+        \item Electrons move very quickly and are highly delocalized with respect to the nuclei, so what dictates kinetics in these processes is nuclear motion (recall reorganization energy).
+        \item In a simplistic sense, the key is the \ce{[A^n + B^{(n+1)}]^*} encounter complex.
+        \item Electron transfer changes bond length.
+        \begin{itemize}
+            \item There is a kinetic barrier to the electron transfer because the thermodynamic energy is based on minimizing the energy in the reduced and oxidized forms.
+        \end{itemize}
+        \item Bond lengths change upon redox, so the solvent and countercations have to reorganize.
+        \item This \textbf{reorganization energy} leads to a kinetic barrier (i.e., $\Delta G^\ddagger$).
+        \item You can see evidence of the reorganization energy in Figure \ref{fig:e-transferEnergya}.
+        \begin{itemize}
+            \item You must go past the thermodynamic potential to observe the maximum/minimum current and attain complete oxidation/reduction.
+        \end{itemize}
+    \end{itemize}
+    \item Measuring the reorganization energy.
+    \begin{itemize}
+        \item We do a self-exchange reaction with radiolabeled metal centers (see \textcite{bib:CHEM20100Notes}).
+        \item Think of the energy scale on Figure IX.1 in \textcite{bib:CHEM20100Notes}) as discrete. To get over $\Delta G^\ddagger$, we must change vibrational states.
+        \begin{itemize}
+            \item Indeed, the short- and long-bond iron complexes have two vibrational states, but their combined transition state with medium bonds has a new vibrational state.
+        \end{itemize}
+        \item With electronic coupling, the two parabolas split into an upper loop and a lower loop with a bump.
+        \item To treat this, we use the equation $\Delta G^\ddagger=\Delta G^\ddagger_t+\Delta G^\ddagger_v+\Delta G^\ddagger_0$.
+        \begin{itemize}
+            \item $\Delta G^\ddagger_t$ is the translational energy, which is moving the two species together.
+            \item $\Delta G^\ddagger_v$ is vibrational, which is concerned with the bond lengths of the irons' matching structures.
+            \item $\Delta G^\ddagger_0$ is the solvent, dipole, counterion, etc. This can be large (so one of the greatest contributors is the environment in which the system lies).
+        \end{itemize}
+    \end{itemize}
+    \item Example:
+    \begin{itemize}
+        \item \ce{Co(NH3)^2+} / \ce{Co(NH3)6^3+} is H.S. $d^7$ / L.S. $d^6$.
+        \item Self-exchange is slow because nuclear reorganization is large ($\SI{0.2}{\angstrom}$ difference in bond length, which is significant).
+        \begin{itemize}
+            \item Note that this arises from the different electronic configurations.
+        \end{itemize}
+        \item The ion is getting smaller \emph{and} going low-spin during reorganization.
+    \end{itemize}
+    \item Another example:
+    \begin{itemize}
+        \item \ce{Ru(NH3)6^2+} / \ce{Ru(NH3)6^3+}.
+        \item $k_\text{exch}$ is eight orders of magnitude faster than the previous example.
+        \item This is because ruthenium is low-spin throughout ($\Delta(\ce{Ru-N})\approx\SI{0.04}{\angstrom}$ which is much smaller, so there is a smaller reorganization energy).
+    \end{itemize}
+    \item Key take aways:
+    \begin{itemize}
+        \item Electrons move fast, so what actually induces a kinetic barrier is the movement of the nuclei which have to reorganize in order to accommodate the electron popping between the two atoms.
+        \item Can be accelerated by electron coupling, as in inner sphere mechanisms.
+    \end{itemize}
+    \item Inner sphere electron transfer: Some bonds are involved in the electron transfer.
+    \begin{itemize}
+        \item Accelerated by electron coupling, but hindered by greater nuclear reorganization energy (a bridging bond must be formed).
+    \end{itemize}
+    \item Example:
+    \begin{itemize}
+        \item Consider the reaction
+        \begin{align*}
+            \ce{Co(NH3)5Cl^2+ + Cr(H2O)5^2+} &\ce{->} \ce{Co(NH3)5^2+ + Cr(H2O)5Cl^2+}\\
+            &\ce{->[H2O]} \ce{Co(H2O)6^2+ + Cr(H2O)5Cl^2+}
+        \end{align*}
+        \item The intermediates are \ce{[(H3N)5Co^{III}-Cl-Cr^{II}(OH2)5]^4+ -> [(H3N)5Co^{II}-Cl-Cr^{III}(OH2)5]^4+}.
+        \item The rate is reasonably fast ($\SI{6e5}{\per\mole\per\second}$).
+        \item How does this vary as a function of \ce{X-}?
+        \begin{itemize}
+            \item As ligand size (more diffuse; better at bridging) and charge (more electrostatic influences) increase, so does rate ($\ce{Br-}>\ce{Cl-}>\ce{F-}>\ce{H2O}>\ce{NH3}$).
+        \end{itemize}
+    \end{itemize}
+    \item Inner-sphere electron transfer: Mixed valency.
+    \item Consider the Creutz-Taube ion.
+    \begin{figure}[H]
+        \centering
+        \chemleft{[}
+            \chemfig{{(NH_3)_5}Ru-N**6(---N(-Ru{(NH_3)_5})---)}
+        \chemright{]^{5+}}
+        \caption{The Creutz-Taube ion.}
+        \label{fig:CreutzTaube}
+    \end{figure}
+    \begin{itemize}
+        \item The bridging ligand is a pyrazole.
+        \item The electron transfer is very fast; thus, the oxidation state is approximately \ce{Ru2^{2.5}}.
+    \end{itemize}
+    \item Such electron transfers are measured with Near-IR spectroscopy, which can see inter-valence charge transfer bands (IVCT), which include bonds.
+    \begin{itemize}
+        \item This very low energy form of spectroscopy observes the energy that it takes to excite an electron between the two ruthenium centers.
+    \end{itemize}
+    \item Robin-Day classification:
+    \begin{enumerate}[label={\Roman*)}]
+        \item Completely localized.
+        \begin{itemize}
+            \item Regardless of the spectroscopic technique used, a difference between \ce{Ru^{II}} and \ce{Ru^{III}} can be observed.
+        \end{itemize}
+        \item Evidence of some delocalization.
+        \begin{itemize}
+            \item Most common.
+        \end{itemize}
+        \item Completely delocalized.
+    \end{enumerate}
+    \item If you go fast enough (ultrafast spectroscopy; femtosecond lasers), almost any system looks localized.
+    \item Marcus theory:
+    \begin{itemize}
+        \item Built off of the Bell-Evans-Polanyi Relationship.
+        \item See Figure IX.2 and the related discussion in \textcite{bib:CHEM20100Notes}.
+        \item Two big insights:
+        \begin{itemize}
+            \item When $\Delta G=-\lambda$, $\Delta G^\ddagger=0$.
+            \item When $\Delta G<-\lambda$, $\Delta G^\ddagger>0$.
+        \end{itemize}
+        \item The case where $\Delta G^\circ<-\lambda$ is called the \textbf{Marcus inverted region}.
+        \item \textbf{Marcus equation}:
+        \begin{equation*}
+            k_\text{ET} = \nu_Nk_e\e[-\Delta G^\ddagger/RT]
+        \end{equation*}
+        where $\nu_N$ is the nuclear frequency (how accessible vibrational excited states are; related to the width of the parabolas in Figure IX.2 of \textcite{bib:CHEM20100Notes}) and $k_e$ is the electronic factor (related to overlap, probability of transfer, etc.; usually set to 1).
+        \item More importantly, Marcus discovered that
+        \begin{equation*}
+            \Delta G^\ddagger = \frac{(\lambda+\Delta G)^2}{4\lambda}
+        \end{equation*}
+        which implies that as $\lambda\to -\Delta G$, $\Delta G^\ddagger\to 0$. Furthermore, as $\lambda$ passes $-\Delta G$, $\Delta G^\ddagger$ increases.
+        \item This has important implications in biology, catalysis, etc. For example, if you want to slow down an undesirable side reaction and speed up your main reaction, provide more driving force. This accelerates your main reaction and moves your side reaction into the inverted region.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
