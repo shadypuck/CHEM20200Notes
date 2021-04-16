@@ -1004,5 +1004,55 @@
 
 
 
+\section{Office Hours (Anderson)}
+\begin{itemize}
+    \item Explain cyclic voltammetry.
+    \begin{itemize}
+        \item SOP for CV in the modules explains cyclic voltammetry.
+        \item You have a working and a reference electrode, as well as an auxiliary platinum wire. All of these are submerged in the same solution (of a polar solvent and your compound).
+        \item You apply a voltage across the working and auxiliary electrodes.
+        \item With nothing in your solution, you have pseudo-capacitance/polar something-or-other. It's basically just a loop with spikes on the end ($D_{2h}$ symmetry) in your voltage vs. current graph.
+        \item However, if we have a compound, we pass some current in the forward and reverse directions at the thermodynamic potential point (the free energy of the reduction/oxidation vs. some other reduction/oxidation process; we can convert to $\Delta G$ with the Nernst equation); the spikes aren't entirely superimposable because we must push the equilibrium a bit past to get something to happen.
+    \end{itemize}
+    \item How do you handle ligands with charges? Like \ce{SO4^2-} in question 8 of the last homework or the allyl group in 1.16. Where do the electrons come from?
+    \begin{itemize}
+        \item 1.16:
+        \begin{itemize}
+            \item Redraw as a legitimate Lewis structure.
+            \begin{center}
+                \chemleft{[}
+                    \chemfig{Pd?(-[:150]-[:-110]=[:-60]-[:120,0.3,,,white]\phantom{i}?[,,{stealth-}])(-[1]PCy_3)(-[7]OEt_2)}
+                \chemright{]^+}
+            \end{center}
+            \item Allyl is 1 covalent, 1 dative; the other two ligands are each dative donors.
+            \item Thus, palladium's oxidation state is \ce{Pd^2+}.
+            \item The synthetic route by which we get to this compound has no bearing on it's properties (electron count, oxidation state, etc.).
+            \item In one reaction mechanism, it's \ce{C3H5+} before, and then it's \ce{C3H5-} after splitting.
+        \end{itemize}
+        \item 8:
+        \begin{itemize}
+            \item 8b: Solve with electron counts? \ce{MoL2X4} is $14\,\e[-]$, whereas \ce{MoL4X2} is $16\,\e[-]$.
+            \item 8d: Donates the same number of electrons in each case! They're just different resonance structures!!
+            \item 8e: Cp is an \ce{L2X}-type ligand with $\text{L.B.N.}=3$, for example.
+            \item 8f: Ligand domains are useful, but not every inorganic chemist uses them.
+        \end{itemize}
+    \end{itemize}
+    \item Intuition for reductive elimination?
+    \begin{itemize}
+        \item Yes, it is the reverse of oxidative addition.
+        \item Generally, you break the \ce{M-B} bond and then the \ce{M-A} bond.
+        \item You could also break \ce{M-B} and \ce{A-B}, and then have \ce{B-} nucleophilically attack \ce{[M-A]+}.
+        \item You could also do this radical-wise: \ce{M-A$\cdot$ + $\cdot$B -> M + A-B}.
+        \item Could be thought of as concerted, but probably best not to.
+    \end{itemize}
+    \item To do one-electron chemistry, you have to stabilize radicals.
+    \begin{itemize}
+        \item You have more one-electron chemistry in high-spin first-row transition metals.
+    \end{itemize}
+    \item There is a synthesis question on the Homework 2, so start looking at that sooner as opposed to later.
+\end{itemize}
+
+
+
 
 \end{document}
