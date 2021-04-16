@@ -1310,5 +1310,199 @@
 
 
 
+\section{Lecture 9: Olefins, Carbonyls, and Phosphines}
+\begin{itemize}
+    \item \marginnote{4/16:}Top $\pi$-acceptors: \ce{CO}, \ce{NO+}, and \ce{PF3}.
+    \begin{itemize}
+        \item \ce{CO} is also a decent $\sigma$ donor.
+    \end{itemize}
+    \item \ce{CO} provides a great IR handle, enabling characterization.
+    \begin{itemize}
+        \item $\nu_{\ce{CO}}$ is a measure of the electron density on the metal center.
+    \end{itemize}
+    \item We generally consider \ce{CO} in the resonance structure\ \ \chemfig{\charge{180=\:,90[yshift=1mm]=$\ominus$}{C}~\charge{0=\:,90[yshift=1mm]=$\oplus$}{O}}\ .
+    \begin{itemize}
+        \item Each atom in \ce{CO} has four $\pi^*$ lobes in the plane perpendicular to the bond axis and slightly oriented away from those on the other atom (note that the lobes on the carbon are significantly bigger than those on the oxygen). Additionally, there is a nonbonding $\sigma$ orbital originating from atomic $p$ orbitals that runs along the bond axis.
+        \item Recall the \ce{CO} resonance structures.
+    \end{itemize}
+    \item Free \ce{CO} has a stretching frequency of $\nu_{\ce{CO}}=\SI{2143}{\per\centi\meter}$.
+    \begin{itemize}
+        \item This is also a range of the spectrum with little else going on, making these peaks easily identifiable.
+        \item \ce{CO} has a large dipole (about $\mu=\SI{4.80}{D}$). This also really helps it stick to transition metals.
+    \end{itemize}
+    \item In \ce{Mn(CO)5Me}, the \ce{Mn-Me} bond is $\SI{2.18}{\angstrom}$ and the \ce{Mn-CO} bonds are $\SI{1.86}{\angstrom}$, so these latter bonds clearly have some multiple bond character.
+    \begin{itemize}
+        \item The trans effect is also partially at play.
+    \end{itemize}
+    \item Synthesis:
+    \begin{itemize}
+        \item In 1890, the Mond process is discovered: \ce{NH3 + NaCl + CO2 -> Na2CO3 + NH4Cl}.
+        \begin{itemize}
+            \item After a year however, the plant built to run this process was trashed! The nickel in the steel pipes was reacting with \ce{CO} to form \ce{Ni(CO)4}, a volitle compound.
+            \item Leaching the nickel weakened the pipes, causing them to fall apart.
+            \item Take away: metal-carbonyl complexes can be pretty easy to form (as a general synthetic scheme, just add \ce{CO} and apply pressure, as in the following mechanisms).
+        \end{itemize}
+        \item Pressurized \ce{CO}:
+        \begin{itemize}
+            \item \ce{Co + CO ->[{35 atm}][RT] Co2(CO)8}\footnote{RT is short for room temperature.}.
+            \item \ce{Fe + CO ->[{300 atm}][$\SI{300}{\celsius}$] Fe(CO)5}.
+        \end{itemize}
+        \item Reduce with \ce{CO}:
+        \begin{itemize}
+            \item \ce{Re2O7 ->[CO] Re2(CO)10 + CO2}. \ce{CO2} is given off by reductive elimination from an intermediate.
+            \item More syntheses listed.
+        \end{itemize}
+    \end{itemize}
+    \item We predict stoichiometry (i.e., constitutinal isomerism) with the $18\,\e[-]$ rule (except for square planar).
+    \begin{itemize}
+        \item Group 9: \ce{M4(CO)12} is common.
+        \item Group 8: \ce{M3(CO)12} is common.
+    \end{itemize}
+    \item IR signatures.
+    \begin{itemize}
+        \item Ketones are usually $\num{1750}$-$\SI{1720}{\per\centi\meter}$.
+        \item \ce{R3COH} compounds are usually $\SI{1100}{\per\centi\meter}$.
+        \item $\nu_{\ce{CO}}$ will increase if there is no backbonding, and will decrease if there is strong backbonding.
+    \end{itemize}
+    \item Influences on backbonding:
+    \begin{itemize}
+        \item Primarily the metal oxidation state and electronegativity.
+        \item Electron count does not matter as much, aside from $d^0$ (obviously no backbonding can occur in this case).
+        \item Second and third row metals tend to backbond more strongly (stems from their larger orbital radius).
+    \end{itemize}
+    \item Thus, we can predict that low-valent, early metals are strong backbonders, and high-valent, late metals are weak backbonders.
+    \item "Extreme" carbonyls (those with a high degree of backbonding, resulting from a very reduced/comparably early metal center):
+    \begin{itemize}
+        \item \ce{Fe(CO)5 ->[2Na / THF][-CO] Na2Fe(CO)4^2-}.
+        \item \ce{M(CO)_n ->[2Na][-CO] Na2M(CO)_{n-1}^2-}.
+        \item \ce{Re2(CO)10 ->[Na] Na+Re(CO)5-}.
+        \item \ce{Re2(CO)10 ->[6Na / HMPA][-2CO] Na3Re(CO)4^3-}.
+        \item \ce{Mo(CO)6 ->[2Na] Mo(CO)5^2-}.
+        \item \ce{Mo(CO)6 ->[$\Delta$ TMEDA] (CO)4Mo(EPA) ->[4NaNH3] Na4Mo(CO)4^4-}.
+        \begin{itemize}
+            \item This is $d^0$ and thus $\nu_{\ce{CO}}<<<\SI{2000}{\per\centi\meter}$.
+            \item TMEDA is tetramethylethylenediammine.
+        \end{itemize}
+    \end{itemize}
+    \item We can also go the other direction to find carbonyls with a very low degree of backbonding.
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemleft{[}
+                \chemfig{Zr(-[3]Cp)(-[5]Cp)(-[7]CO)(-[:30](=[2]O)-[:-30])}
+            \chemright{]^+}
+            \arrow{<=>}
+            \chemleft{[}
+                \chemfig{Zr(-[3]Cp)(-[5]Cp)(-[7]CO)(-[:30](-[2])=[:-30]O)}
+            \chemright{]^+}
+        \schemestop
+        \caption{Low backbonding carbonyl complexes.}
+        \label{fig:extremeCarbonyl}
+    \end{figure}
+    \begin{itemize}
+        \item The reactant has $\nu_{\ce{CO}}=\SI{2123}{\per\centi\meter}$, which is slightly lower than that of free \ce{CO} due to some $\sigma$ donation from the acetyl ligand.
+        \begin{itemize}
+            \item The product has $\nu_{\ce{CO}}=\SI{2176}{\per\centi\meter}$, which is slightly higher because the acetyl's oxygen is pushing more electron density off of the \ce{CO} ligand.
+        \end{itemize}
+        \item Higher $d$ counts can also lead to higher stretching frequencies.
+        \begin{itemize}
+            \item It may seem counterintuitive that compounds with more electrons backbond less, but backbonding is actually dictated by reduction potentials, electronegativity, and oxidation states.
+            \item Indeed, both \emph{cis}- and \emph{trans}-\ce{PtCl2(CO)2} exhibit \ce{CO} stretching frequencies that are very similar to that of free \ce{CO}.
+        \end{itemize}
+        \item More extreme: \ce{2IrF6 + 15CO + HSbF5 ->[SbF5][$\SI{60}{\celsius}$, $\SI{12}{\hour}$] 2[Ir(CO)6]^3+}.
+        \begin{itemize}
+            \item This gives us $\nu_{\ce{CO}}=\SI{2254}{\per\centi\meter}$.
+            \item We also have \ce{Au(CO)2+} at $\SI{2217}{\per\centi\meter}$.
+        \end{itemize}
+        \item Reducing extreme:
+        \begin{itemize}
+            \item \ce{Zr(CO)6^2-} is $\SI{1757}{\per\centi\meter}$.
+            \item \ce{W(CO)6} is $\SI{1983}{\per\centi\meter}$.
+        \end{itemize}
+    \end{itemize}
+    \item Neutral L-type olefins: \ce{M-||}.
+    \item Dewar-Chatt-Duncanson model: Very related to Figure \ref{fig:oxAdn-concerted-orbitals}.
+    \begin{itemize}
+        \item Thus, the ethylene is both a $\sigma$ donor and $\pi$ acceptor.
+        \begin{itemize}
+            \item This relates it to \ce{CO} as a ligand. Of course, \ce{CO} is $C_{\infty v}$ and \ce{CO} has 2 $\pi$-accepting orbitals instead of just one, but there is a relation nonetheless.
+        \end{itemize}
+    \end{itemize}
+    \item Use ionization potential to measure the magnitude of $\sigma$ donation:
+    \begin{itemize}
+        \item Ethylene: $\SI{10.5}{eV}$.
+        \item \ce{CO}: $\SI{14}{eV}$.
+    \end{itemize}
+    \item Thus, ethylene is a better $\sigma$ donor but worse $\pi$ acceptor.
+    \item Comparing \ce{C=C} bond length in Zeise's salt (see Figure \ref{fig:ZeisesSalt}), \ce{(Ph3P)2Pt-||}, and \ce{C2H4}.
+    \begin{itemize}
+        \item Bond length is significantly elongated (close to a \ce{C-C} single bond) for \ce{(Ph3P)2Pt-||} but similar for the other two.
+        \item We can also see that the \ce{C-H} bonds are bent back by $\ang{15}$ in \ce{(Ph3P)2Pt-||}, which is consistent with $sp^3$ hybridization.
+    \end{itemize}
+    \item There are two resonance structures for an olefin: An olefin adduct and a metallacyclopropane.
+    \begin{itemize}
+        \item The olefin adduct is an L-type ligand and the metallacyclopropane is an \ce{X2}-type ligand, but by convention we almost always treat olefins as L-type ligands.
+        \item Both are $2\,\e[-]$ donors.
+    \end{itemize}
+    \item Polyolefins.
+    \item Example: Butadiene.
+    \begin{figure}[h!]
+        \centering
+        \chemfig{M-[2]-[:-157,0.85,,,white]=[1]-=[5]}
+        \caption{Butadiene.}
+        \label{fig:butadiene}
+    \end{figure}
+    \begin{itemize}
+        \item We have four bonding modes: $\sigma$, $\pi$, $\pi^*$, and $\delta^*$.
+        \begin{itemize}
+            \item Each corresponds to a different orientation of the $p_z$ orbitals at each carbon and has a different number of nodes.
+        \end{itemize}
+        \item $\pi$ and $\pi^*$ orbitals are the major contributors.
+        \begin{itemize}
+            \item The metal $d$ orbitals will project toward butadiene in a $\pi$-symmetry fashion, and the $s$ orbitals (which would bond with the butadiene $\sigma$ orbital) are more secondary for a transition metal.
+            \item $\sigma$ contributions are reduced because of symmetry.
+        \end{itemize}
+        \item $\sigma$ and $\pi$ orbitals are $\sigma$ donors; $\pi^*$ engages in backbonding.
+        \item Lowering the energy of the $\pi$ orbital and populating the $\pi^*$ orbital favors new resonance structures that distort the bonds in butadiene (why to the resonance structure shown?).
+        \begin{itemize}
+            \item Originally, the bonds are distorted. However, after bonding, all bonds in butadiene are the same length.
+        \end{itemize}
+    \end{itemize}
+    \item Review of insertion, nucleophilic attacks, and electrophilic attacks.
+    \item \ce{M#C-OE} where \ce{E} is an electrophile is a Fischer carbyne.
+    \item The relative backbonding plays a crucial role in determining reactivity.
+    \item Olefin limiting cases: Metallacyclopropane and direct $\pi$-bonding.
+    \begin{itemize}
+        \item Different resonance structures are more suitable for different kinds of attacks.
+        \item The stronger the backbonding, the easier it is to get the ligands to play nice with electrophiles.
+    \end{itemize}
+    \item Orbitals in bridging \ce{CO}.
+    \begin{itemize}
+        \item A bridging \ce{CO} is a $\sigma$ donor, and donates into $d_{xy}$ metal orbitals.
+        \item It's also a $\pi$ acceptor, and accepts electrons from $d_{x^2-y^2}$ orbitals.
+        \item Bridging is typically much more activated (in terms of \ce{CO} stretching frequencies).
+    \end{itemize}
+    \item \ce{CO} activation.
+    \begin{itemize}
+        \item All renewables technology boils down to finding ways to reduce \ce{CO} into multiple carbon products.
+        \item \ce{C-O} $\text{BDE}=\SI[per-mode=symbol]{1075}{\kilo\joule\per\mole}$\footnote{Note that BDE is short for boond dissociation energy.}.
+        \begin{itemize}
+            \item This is an even higher BDE than that of the \ce{N#N} triple bond.
+            \item \ce{CO} is easier to activate due to the dipole (more on this on Canvas).
+        \end{itemize}
+        \item There is a lot of interest in deoxygenating \ce{CO} and forming \ce{C-C} bonds from the products. The classic way to do this used highly reduced transition metal centers:
+        \begin{equation*}
+            \ce{Ta^{III}(OSi({$t$-}Bu)3)3 ->[2CO] 2R3SiO3Ta^V=O + (R3SiO)3Ta=C=C=Ta(OSiR3)3}
+        \end{equation*}
+        \begin{itemize}
+            \item The latter product exhibits significant variation in its double bond lengths (the \ce{C=C} one is much shorter than the two \ce{Ta=C} ones).
+        \end{itemize}
+    \end{itemize}
+    \item Lists a few more syntheses.
+    \item Don't worry about memorizing all these reactions; just know the general types and reagents.
+\end{itemize}
+
+
+
 
 \end{document}
