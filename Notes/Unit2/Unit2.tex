@@ -724,5 +724,285 @@
 
 
 
+\section{Lecture 7: Insertion/Deinsertion and Kinetics}
+\begin{itemize}
+    \item \marginnote{4/12:}Migratory insertion/deinsertion.
+    \item Also pretty unique to the transition metals.
+    \item General form:
+    \begin{equation*}
+        \ce{L-M^Q-X <=>[{insertion}][{deinsertion}] M^Q-L-X}
+    \end{equation*}
+    \begin{itemize}
+        \item In the course of this reaction, the \ce{L} is converted into an X-type ligand.
+    \end{itemize}
+    \item Characteristics of insertion: Electron count decreases by 2, coordination number decreases by 1, and the oxidation state does not change.
+    \item Examples:
+    \begin{itemize}
+        \item 1,1-insertion: \ce{Me-M-CO <=> M-C(=O)-Me}.
+        \begin{itemize}
+            \item So named because the metal and the migrating group end up at the same position on the carbonyl ligand (the 1 position).
+        \end{itemize}
+        \item 1,2-migration: \ce{Cp2Zr(-||)Me <=> Cp2ZrPr}.
+        \begin{itemize}
+            \item So named because the metal ends up on the 1 position of the ethylene olefin and the migrating group ends up on the 2 position of the ethylene olefin (remember that we number substituents from the metal center outwards).
+        \end{itemize}
+    \end{itemize}
+    \item More groups than methyl can migrate; it's just that methyl commonly migrates.
+    \item Insertions into \ce{M-C} bonds are common.
+    \begin{itemize}
+        \item Insertions into \ce{M-H} bonds are common for olefins, but uncommon for \ce{CO} because metal carbonyl species are unstable.
+        \item You can also insert into \ce{M-O} bonds (note that dppe stands for diphenylphosphinoethane):
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \chemfig{Pt?(-[3]\chemabove{P}{Ph_2}-[:-150]-[6,0.9]-[:-30]\chembelow{P}{Ph_2}?)(-[7]Me)(-[1]OMe)}
+                \arrow(.east--.-173){->[CO]}
+                \chemfig{{(dppe)}Pt(-[7]Me)(-[:30](=[2,0.7]O)-[:-30]OMe)}
+            \schemestop
+            \vspace{1em}
+            \caption{Insertion into an \ce{M-O} bond.}
+            \label{fig:insertion-M-O}
+        \end{figure}
+    \end{itemize}
+    \item A note on the mechanism:
+    \begin{itemize}
+        \item We can either take the perspective that the X group migrates or that the L group inserts itself into the \ce{M-X} bond.
+        \item Thus, either the $\sigma$ bond of the migrating ligand attacks the site to which it bonds or the L group moves into the $\sigma$ bond.
+        \item We call this a migratory insertion, but there are two possible mechanisms (it's hard to know what is migrating and what is staying put).
+        \item Answer: The X-type ligand is migrating. We can test this by radiolabeling one of the carbonyls in \ce{Mn(CO)5Me}?
+    \end{itemize}
+    \item $\beta$-\ce{H} elimination: \ce{L2NiEt <=> L2Ni(-||)H}.
+    \begin{figure}[H]
+        \centering
+        \chemleft{[}
+            \chemfig{\charge{-30=\:}{Ni}?-[1]-[:-30]-[:-110]H?[,,dashed]}
+        \chemright{]^\ddagger}
+        \caption{The transition state in a $\beta$-\ce{H} elimination.}
+        \label{fig:betaHydrideTransState}
+    \end{figure}
+    \begin{itemize}
+        \item The transition state (see Figure \ref{fig:betaHydrideTransState}) shows an \textbf{agostic interaction}.
+    \end{itemize}
+    \item $\alpha$-elimination.
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{Pt?(-[3]\chemabove{P}{R_2}-[:-150]-[6,0.9]-[:-30]\chembelow{P}{R_2}?)(-[1]SiAr_2(-[:120,0.7,1]H))(-[7]Me)}
+            \+
+            \chemfig{B{(C_6F_5)_3}}
+            \arrow(.-7--.west){->[][\small{-MeB(ArF)\textsubscript{3}\textsuperscript{--}}]}[0,1.5]
+            \chemleft{[}
+                \chemfig{\charge{120[yshift=1mm]=$\oplus$}{Pt}?-[1]\chemabove{Si}{Ar_2}-[7]H?[,,dashed]}
+            \chemright{]^\ddagger}
+            \arrow
+            \chemleft{[}
+                \chemfig{Pt?(-[3]\chemabove{P}{R_2}-[:-150]-[6,0.9]-[:-30]\chembelow{P}{R_2}?)(-[7]H)(=[1]SiAr_2)}
+            \chemright{]^+}
+        \schemestop
+        \caption{An example of $\alpha$-elimination.}
+        \label{fig:alphaElimination}
+    \end{figure}
+    \item External attack at a ligand.
+    \begin{figure}[H]
+        \centering
+        \ce{L_nM^Q=X + Nu- <=> [L_nM^{Q-2}-X-Nu]-}\\[1em]
+        \schemestart
+            \chemfig{L_{\emph{n}}M^{\emph{Q}}-\phantom{i}-[6,0.3]Y=[2]X}
+            \arrow{->[Nu\textsuperscript{--}]}
+            \chemleft{[}
+                \chemfig{L_{\emph{n}}M^{\emph{Q}}-[:30]X-[:-30]Y-[:30]Nu}
+            \chemright{]^-}
+        \schemestop\\[1em]
+        \schemestart
+            \chemfig{L_{\emph{n}}M^{\emph{Q}}-X~Y}
+            \arrow{->[Nu\textsuperscript{--}]}
+            \chemleft{[}
+                \chemfig{L_{\emph{n}}M^{\emph{Q}}-[:30]X(=[2]Y)-[:-30]Nu}
+            \chemright{]^-}
+        \schemestop
+        \caption{Types of external attack at a ligand.}
+        \label{fig:externalLigandAttack}
+    \end{figure}
+    \begin{itemize}
+        \item Somewhat more related to organic chemistry.
+        \item Lists some examples.
+    \end{itemize}
+    \item \ce{Tp} is trispyrazolylborate.
+    \begin{itemize}
+        \item It's a \ce{Cp} analogue, meaning that it has the same electron count and similar sterics.
+    \end{itemize}
+    \item Be aware of Fischer carbenes.
+    \item There could be a radical process.
+    \begin{itemize}
+        \item \textcite{bib:CrevierMayer} tells us that an osmium-nitrido external attack at a ligand must be a 2-electron process, not a radical mechanism.
+    \end{itemize}
+    \item Electrophilic attack on a ligand.
+    \item Example: \ce{Ir^{II}(PPh3)2HCl(NO) ->[HCl] Ir^{III}(PPh3)2HCl2(N(=O)H)}.
+    \begin{itemize}
+        \item The reactant is a $16\,\e[-]$ species.
+        \item The nitrogen-containing ligand is a nitroxyl ligand.
+    \end{itemize}
+    \item Gives some other examples.
+    \item \ce{Tp^*} is a \ce{Tp} group where each pyrazole is 3,5-dimethyl substituted.
+    \item Sometimes we create a positive metal cation. This can be accomplished either via a direct electrophilic attack on an attached R group or via an attack at the metal followed by reductive elimination.
+    \item $\sigma$-bond metathesis: \ce{L_nM^Q-X + Y-Z <=> L_nM^Q-Y + X-Z}.
+    \begin{itemize}
+        \item Usually observed for $d^0$ systems.
+    \end{itemize}
+    \item Example: \ce{Zr^{IV}(N(SiR3)H)3Me -> Zr(N(SiR3)H)2(=N-SiR3) + CH4}.
+    \begin{itemize}
+        \item \ce{C-H} activation is a big thing in synthetic chemistry, and a lot of the pathways go through $d^0$, early, reactive transition metals.
+    \end{itemize}
+    \item More on $\sigma$-bond metathesis:
+    \begin{enumerate}
+        \item Most common for early metals.
+        \begin{itemize}
+            \item Especially $d^0$ metals.
+        \end{itemize}
+        \item Thought to go through a 4-membered transition state.
+        \item There is likely a continuum between "pure" $\sigma$-bond metathesis and oxidative addition/reductive elimination.
+        \item This still requires an open coordination site and $\leq 16\,\e[-]$.
+        \begin{itemize}
+            \item Because the first step is coordination, usually to form some kind of $\sigma$-adduct.
+        \end{itemize}
+    \end{enumerate}
+    \item Kinetics of associative substitution.
+    \begin{equation*}
+        \text{rate} = -\dv{\ce{[ML_x]}}{t}
+        = \dv{\ce{[ML_{x-1}L$'$]}}{t}
+        = k\ce{[ML_x][L$'$]}
+    \end{equation*}
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black}
+            ]
+                \small
+                \draw (5,0) -- (0,0) -- node[left]{$\ln\ce{[ML_x]}$} (0,4);
+                \footnotesize
+                \draw (2,0.1) -- ++(0,-0.2) node[below]{$t_{1/2}$};
+    
+                \draw [blx,thick] (0.2,3.7) -- (4.3,0.5);
+                \draw [grx,thick] (0.2,3.5) -- (1.9,0.2) node[above right,yshift=-1mm]{high \ce{[L$'$]}};
+                \draw [rex,thick] (0.35,3.7) -- (4.3,2.5) node[below]{Low \ce{[L$'$]}};
+            \end{tikzpicture}
+            \caption{Reaction coordinate and \ce{[ML_x]}.}
+            \label{fig:associativeKineticsa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black}
+            ]
+                \small
+                \draw (5,0) -- node[below]{\ce{[L$'$]}} (0,0) -- node[left]{$k_\text{obs}$} (0,4);
+                \footnotesize
+    
+                \draw [blx,thick] (0.2,0.2) -- (4,3.4) node[below right,yshift=1mm]{Theory};
+                \draw [grx,thick] (0.2,0.2) to[out=52,in=-140] (4,3.8) node[above right,yshift=-1mm]{Experiment};
+            \end{tikzpicture}
+            \caption{Rate and \ce{[L$'$]}.}
+            \label{fig:associativeKineticsb}
+        \end{subfigure}
+        \caption{Kinetics of associative substitution.}
+        \label{fig:associativeKinetics}
+    \end{figure}
+    \begin{itemize}
+        \item Experimentally, we can use a large \ce{[L$'$]} to get to pseudo-first order conditions.
+        \item This gives us $\text{rate}=k_\text{obs}\ce{[ML_x]}$ where $k_\text{obs}=k\ce{[L$'$]}$.
+        \item In Figure \ref{fig:associativeKineticsa}, $t_{1/2}$ is a midpoint, and the rate gets faster (steeper slope) with more \ce{[L$'$]} and slower (more gradual slope) with less \ce{[L$'$]}.
+        \item There is a discrepancy between theory and experiment in Figure \ref{fig:associativeKineticsb}.
+        \begin{itemize}
+            \item This is because of the presence of a solvent-assisted mechanism.
+            \item \ce{L_xM + {solv} <=>[$k_s$] L_{x-1}ML({solv}) ->[L$'$][{fast}] L_{x-1}ML$'$ + {solv} + L}.
+            \item Note that $k_s$ is the rate of solvent association.
+        \end{itemize}
+        \item The solvent-assisted mechanism dominates at low \ce{[L$'$]}, and vice versa for the normal mechanism.
+    \end{itemize}
+    \item Kinetics of dissociative substitutions.
+    \begin{enumerate}[label={\roman*)}]
+        \item \ce{ML_x <=>[$k_1$][$k_{-1}$] [ML_{x-1}] + L}.
+        \item \ce{[ML_{x-1}] + L$'$ ->[$k_2$] ML_{x-1}L$'$} (assume irreversible).
+    \end{enumerate}
+    \begin{itemize}
+        \item There are now two cases:
+        \begin{enumerate}[label={\alph*)}]
+            \item Fast pre-equilibrium, i.e., $k_1,k_{-1}>>k_2$. This gives us
+            \begin{equation*}
+                \text{rate} = k_1k_2\cdot\frac{\ce{[ML_x][L$'$]}}{\ce{[L]}}
+            \end{equation*}
+            \item Steady state approximation: $
+                \dv*{\ce{[ML_{x-1}]}}{t} = 0
+                = k_1\ce{[ML_x]}-k_{-1}\ce{[ML_{x-1}]}-k_2\ce{[ML_{x-1}][L$'$]}
+            $. If we solve the above for \ce{[ML_{x-1}]}, then we get
+            \begin{equation*}
+                \text{rate} = \frac{k_1k_2\ce{[ML_x][L$'$]}}{k_{-1}\ce{[L]}+k_2\ce{[L$'$]}}
+            \end{equation*}
+            If we now assume that $k_2\ce{[L$'$]}$ is large, then we get $\text{rate}=k_1\ce{[ML_x]}$.
+            \begin{itemize}
+                \item The steady state approximation is a good assumption to make because if you see a buildup of the dissociative intermediate, you can measure the rates. Alternatively, if you don't see it, you can assume that $\ce{[ML_{x-1}]}=0$.
+            \end{itemize}
+        \end{enumerate}
+        \item To do this experimentally, we add a large concentration of \ce{[L$'$]}, or \ce{[L]} in some cases.
+        \begin{itemize}
+            \item This gives us $\text{rate}=k_\text{obs}\ce{[ML_x]}$ where $k_\text{obs}$ denotes the mess from the above equation.
+        \end{itemize}
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}
+                \small
+                \draw (5,0) -- node[below]{\ce{[L$'$]}} (0,0) -- node[left]{$k_\text{obs}$} (0,4);
+                \footnotesize
+        
+                \draw [semithick,dashed] (0,2.5) -- (4.5,2.5);
+                \draw [blx,thick] (0,0) to[out=60,in=-175] (4.5,2.3);
+        
+                \node [anchor=south west] at (1.3,0.1) {2nd order region}
+                    edge [->,out=180,in=-60] (0.7,0.8)
+                ;
+                \node [anchor=south east] at (3.5,2.6) {1st order region}
+                    edge [->,out=0,in=120] (4,2.35)
+                ;
+            \end{tikzpicture}
+            \caption{The effect of \ce{[L$'$]} on rate.}
+            \label{fig:LPrimeRate}
+        \end{figure}
+        \item If we plot $k_\text{obs}$ vs. \ce{[L$'$]}, we get Figure \ref{fig:LPrimeRate}.
+        \begin{itemize}
+            \item In the second order region, \ce{ML_x <=>[{fast}] ML_{x-1}} many times before product formation.
+            \item In the first order region, every time \ce{ML_{x-1}} forms, it goes on to become a product.
+        \end{itemize}
+        \item In other words, $k_\text{obs}$ should approach $k_1$ when $k_2\ce{[L$'$]}>>k_{-1}\ce{[L]}$.
+        \item Importantly, as \ce{L$'$} is varied with different ligands, $k_1$ should stay constant (assuming the mechanism doesn't change).
+        \item A double reciprocal plot can be used to obtain still more information about the reaction.
+        \begin{itemize}
+            \item If you plot $\frac{1}{k_\text{obs}}$ vs. $\frac{\ce{[L]}}{\ce{[L$'$]}}$ and run a linear regression, the slope will be $\frac{k_{-1}}{k_1k_2}$ and the $y$-intercept will be $\frac{1}{k_1}$.
+        \end{itemize}
+    \end{itemize}
+    \item Transition state theory basics:
+    \begin{itemize}
+        \item In 1887, Arrhenius comes up with the Arrhenius equation $k=A\e[-E_A/RT]$, which can be algebraically manipulated into
+        \begin{equation*}
+            \ln k = \ln A-\frac{E_A}{RT}
+        \end{equation*}
+        where $E_A$ is the activation energy, $R$ is the gas constant, and $T$ is temperature.
+        \begin{itemize}
+            \item This allows us to create a linear $\ln k$ vs. $\frac{1}{T}$ plot from which we can pull out important information.
+        \end{itemize}
+        \item In the 1930s, Eyring comes up with the Eyring equation
+        \begin{equation*}
+            \ln\left( \frac{k}{T} \right) = \frac{-\Delta H^\ddagger}{RT}+\ln\left( \frac{k_B}{h} \right)+\frac{\Delta S^\ddagger}{R}
+        \end{equation*}
+        where we can calculate that $\ln(k_B/h)\approx 23.76$.
+        \begin{itemize}
+            \item This allows us to create a linear $\ln(k/T)$ vs. $\frac{1}{T}$ plot from which we can pull out additional important information.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
