@@ -783,7 +783,7 @@
     \begin{itemize}
         \item The transition state (see Figure \ref{fig:betaHydrideTransState}) shows an \textbf{agostic interaction}.
     \end{itemize}
-    \item $\alpha$-elimination.
+    \item $\alpha$-elimination\footnote{Note that Ar stands for an aryl group.}.
     \begin{figure}[H]
         \centering
         \schemestart
@@ -1090,6 +1090,222 @@
     \item I can send discussion topics ahead of time or post in the Discussion on Canvas.
     \item More information will be forthcoming on where Sophie took off points on our homework.
     \item Zirconium is quasi-stable at $16\,\e[-]$.
+\end{itemize}
+
+
+
+\section{Lecture 8: Alkyls, Aryls, and Multiple Bonds}
+\begin{itemize}
+    \item \marginnote{4/14:}Done with reactions; we're now onto ligand types.
+    \item Alkyls and aryls are the quintessential organometallic ligands.
+    \item \textbf{Alkyl}: An \ce{M-CR3} ligand where the carbon is $sp^3$ hybridized.
+    \item Historically, the stability of these compounds has hindered their isolation.
+    \item The first alkyl compound to be characterized was \ce{ZnEt2}, synthesized in 1847 by E. Franklin at Imperial College.
+    \begin{itemize}
+        \item He reacted \ce{Zn^0 + EtI -> ZnEt2(l)}.
+        \item \ce{ZnEt2} is extremely flammable, can be distilled, and is a good alkylating agent.
+    \end{itemize}
+    \item 50 years later, Victor Grignard reacts
+    \begin{equation*}
+        \ce{Mg^0 + R-X -> XMgR({solv})2 <=> MgR2 + MgX2 ->[{dioxane}] X2Mg-{diox}-MgX2}
+    \end{equation*}
+    \begin{itemize}
+        \item The equilibrium between the solvate and \ce{MgR2 + MgX2} is called the \textbf{Schlenk equilibrium}. It can be pushed one way or the other with certain reagents.
+        \item For example, adding dioxane precipitates out the magnesium halides, leaving you with only the desired alkyl halide Grignard reagent in solution.
+        \item Note that dioxane is a six-membered single-bonded ring with para-oxygens in the ring. It has the formula \ce{C4H8O2}.
+    \end{itemize}
+    \item You can have lithium, sodium, potassium, thalium, aluminum, etc. alkyls.
+    \item Transition metal alkyls:
+    \begin{itemize}
+        \item $\beta$-\ce{H} elimination is a problem (this is why TM alkyls were only discovered later).
+        \begin{itemize}
+            \item An elecronically and coordinatively unsaturated metal ethyl complex reacts in a way that heavily favors the ethylene olefin product.
+            \item Note, however, that this reaction is less favored for $d^0$ metals.
+        \end{itemize}
+        \item First characterized in the early 1900s.
+        \begin{itemize}
+            \item \ce{I_xPt-Me_{4-x}^2-} and \ce{IPt-Me3^2-} were partially characterized.
+        \end{itemize}
+        \item First quasi-stable example: \ce{FeCp(CO)2Et} has $18\,\e[-]$. Over time, however, UV light causes it to lose a carbonyl group and form an ethylene olefin hydride (as from a reverse 1,2-migration).
+        \item They began to use alkyl ligands with no $\beta$-hydrogens or unreactive $\beta$-hydrogens.
+        \begin{itemize}
+            \item They made compounds such as \ce{W(CH3)6}, \ce{M-CH2-Ph}, \ce{M-CH2-{$t$-}Bu}, and \ce{M-CH2-TMS}.
+            \item 1-adamantyl, norbornyl have $\beta$-hydrogens, but elimination is disfavored by ring strain.
+            \item Fluoroalkyls and metallacycles were also attractive. A fluoroalkyl will not undergo hydride elimination [obviously], but halide elimination is a possible issue. Metallacycles cannot adopt a syn-coplanar arrangement to eliminate.
+            \item \ce{M-C#C-H} as well (the $\beta$-hydrogen is once again in the wrong position).
+        \end{itemize}
+    \end{itemize}
+    \item Types of synthesis of transition metal alkyls.
+    \begin{enumerate}
+        \item Nucleophilic attack on \ce{M}:
+        \begin{equation*}
+            \ce{$y$R- + MX_y -> MR_y + $y$X-}
+        \end{equation*}
+        \begin{itemize}
+            \item For example, \ce{WCl6 + 6MeLi -> WMe6 + 6LiCl}.
+            \item Electron transfer can also be an issue (alkyl lithium agents can be strongly reducing).
+            \item There is also the possibility of productive radical mechanisms, but there is lots of side reactivity in radical mechanisms, too. We can limit side reactions with a less reducing nucleophile.
+        \end{itemize}
+        \item Electrophilic attack on \ce{M}.
+        \begin{itemize}
+            \item For example, \ce{Mn(CO)5- + MeI -> MnMe(CO)5 + I-}.
+            \item Also, \ce{Fp- + Ph2I+ -> CpFe(CO)2Ph + IPh}. Note that \ce{Ph2I+} is an \textbf{arylating reagent}.
+        \end{itemize}
+        \item Oxidative addition.
+        \begin{itemize}
+            \item Vaska's complex and \ce{MeI}.
+            \item Also \ce{C-H} activation: \ce{M + H-CR3 -> H-M-CR3}.
+            \begin{itemize}
+                \item This is much more difficult than oxidative addition to alkyl halides and is a big area of interest to organic chemistry.
+            \end{itemize}
+        \end{itemize}
+        \item Insertion of olefins or alkynes.
+        \begin{equation*}
+            \ce{X-M-|| -> M-CH2-CH2-X}
+        \end{equation*}
+        \begin{itemize}
+            \item X can be an alkyl or a hydride.
+            \item \ce{(Et3P)2Pt^{II}ClH ->[||] (Et3P)2PtClEt}.
+            \item \ce{(Et3P)2Pt^{II}ClH ->[|||] (Et3P)2PtCl{Vinyl}}.
+            \begin{itemize}
+                \item Insertion almost always happens with a \emph{trans} disposition to the metal so the \ce{H} that was originally attached to the metal ends up on the vinylic group \emph{cis} to the metal.
+            \end{itemize}
+            \item Also, \ce{Cp(CO)3MoH ->[N2CH2] Cp(CO)3Mo-CH3} (note that the compound above the arrow is diazomethane, a common \ce{CR2} transfer reagent).
+            \item All of these require an open coordination site.
+        \end{itemize}
+        \item External nucleophilic attack on an olefin.
+        \begin{equation*}
+            \ce{M-|| +\; \charge{180=\:}{Nu} -> M-CH2-CH2-Nu}
+        \end{equation*}
+    \end{enumerate}
+    \item \textbf{Aryl}: Similar to an alkyl group, but no $\beta$-\ce{H}'s to eliminate.
+    \item \ce{M-C} multiple bonds.
+    \item Three typse of compounds: Carbenes/alkylidenes (\ce{M=CR2}), carbynes/alkylidynes, and carbides.
+    \begin{itemize}
+        \item We will focus on carbenes today.
+    \end{itemize}
+    \item Two limiting regimes (for carbenes):
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \schemestart[-90]
+                \chemfig{L_{\emph{n}}M=C(-[1]XR_1)(-[7]R_2)}
+                \arrow(.south--.north){<->}
+                \chemfig{L_{\emph{n}}\charge{90[yshift=1mm]=$\ominus$}{M}-C(=[1]\charge{90[yshift=1mm]=$\oplus$}{X}R_1)(-[7]R_2)}
+            \schemestop
+            \caption{Fischer carbenes.}
+            \label{fig:carbeneResonancea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \schemestart[-90]
+                \chemfig{L_{\emph{n}}M=C(-[1]R_1)(-[7]R_2)}
+                \arrow(.south--.north){<->}
+                \chemfig{L_{\emph{n}}\charge{90[yshift=1mm]=$\oplus$}{M}-\charge{90[yshift=1mm]=$\ominus$}{C}(-[1]R_1)(-[7]R_2)}
+            \schemestop
+            \caption{Schrock alkylidenes.}
+            \label{fig:carbeneResonanceb}
+        \end{subfigure}
+        \caption{Carbene regime resonance structures.}
+        \label{fig:carbeneResonance}
+    \end{figure}
+    \begin{enumerate}
+        \item Fischer carbenes: \ce{L_nM=C(XR1)(R2)}.
+        \begin{itemize}
+            \item Electrophilic at \ce{C}.
+            \item $\ce{X}=\ce{O},\ce{NR},\ce{S}$.
+            \item Lower valent metals from the middle-late transition metals.
+            \item $\pi$-acceptors, L-type ligands.
+        \end{itemize}
+        \item Schrock alkylidenes: \ce{L_nM=C(R1)(R2)}.
+        \begin{itemize}
+            \item Nucleophilic at \ce{C}.
+            \item High valent metals from the early-middle transition metals.
+            \item $\pi$-donors, \ce{X2}-type ligand.
+            \item \ce{R1},\ce{R2} are typically alkyls or aryls.
+        \end{itemize}
+    \end{enumerate}
+    \begin{itemize}
+        \item Both are two electron donors.
+    \end{itemize}
+    \item Synthesis of carbenes:
+    \begin{itemize}
+        \item Fischer carbenes were made first historically.
+        \item For example, \ce{W(CO)6 + MeLi -> Li+[(CO)5W-C(=O)(Me)]- ->[Me3O+BF4-] (CO)5W=C(OMe)(Me)}.
+        \item Also, \ce{W(CO)6 + MeLi ->[2KC8][-CO] K2[W(CO)5] ->[Cl-C(=O)-OR][R-X] (CO)5W=C(OMe)(Me)}.
+        \begin{itemize}
+            \item Note that a carbonyl group is lost after the first step to maintain an electron count of 18, instead of forcing one of 20. Is this method of reducing a compound to remove ligands common?
+        \end{itemize}
+        \item Also, \ce{W(CO)6 + MeLi ->[2KC8][-CO] K2[W(CO)5] ->[R1-C(=O)-NR2] (CO)5W-C(O-)(R1)(NR2) ->[TMSCl] (CO)5W=C(NR2)(R1)}.
+        \item More syntheses listed.
+    \end{itemize}
+    \item Classic alkylidenes:
+    \begin{itemize}
+        \item \ce{TaCl5 + $\frac{3}{2}$Np2Zn -> (Np)3TaCl2 ->[2NpLi] Np3Ta=C({$t$-}Bu)(H)}\footnote{Note that we are using \ce{Np} to denote a neopentyl group.}.
+        \item \ce{TaCl5 + Np2Zn -> Np2TaCl3 ->[2L] Ta(=C({$t$-}Bu)(H))Cl3L2}.
+        \item More syntheses listed.
+        \item Essentially, in every synthesis, you make a transiently saturated penta- or hexa-coordinated tantalum center and then do an alkyl elimination to give you the desired alkylidene.
+        \item These syntheses were discovered in Dick Schrock's attempts to synthesize \ce{TaMe5}, which actually can't be done because it's so unstable (because of its tendency to participate in bimolecular elimination).
+    \end{itemize}
+    \item Olefin metathesis (see Figure \ref{fig:olefinMetathesis-W}).
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{W(-Cl)(-[1]Cl)(-[2]Cl)(-[4]MeO)(-[5]MeO)(-[6]OMe)}
+            \arrow{->[\small 6 ClMgNp]}[,1.5]
+            \chemfig{W(-[2]Np)(~[:-30]-[::0]{\emph{t}-}Bu)(<[:-110]Np)(>:[:-150]Np)}
+            \arrow{->[\small 3 HCl][\footnotesize\chemfig{MeO-[1]--[7]OMe}]}[,2]
+            \chemfig{W?(~-{\emph{t}-}Bu)(-[1]Cl)(-[2]Cl)(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
+            \arrow{->[][*{0}\footnotesize\chemfig{**6(---(-(-[2])(-[:-30]))-(-[,,,2]HNTMS)-(-(-[2])(-[:-150]))-)}]}[-90,2]
+            \chemfig{W?(~-{\emph{t}-}Bu)(-[1]Cl)(-[2,,,2]HNAr)(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
+            \arrow{->[\small\ce{NEt3}]}[180]
+            \chemfig{W?(=[:30]-[:-30]{\emph{t}-}Bu)(=[2]\chemabove{N}{Ar})(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
+            \arrow{->[\small MOR]}[180]
+            \chemfig{W(=[2]\chemabove{N}{Ar})(=[:-30]X)(<[:-110]RO)(>:[:-150]RO)}
+        \schemestop
+        \caption{Tungsten olefin metathesis.}
+        \label{fig:olefinMetathesis-W}
+    \end{figure}
+    \begin{itemize}
+        \item We'll talk about what this is later.
+        \item Done with tungsten and molybdenum in Dick Schrock's lab as well.
+        \item The second step contains an alkylidyne that is very resilient throughout the rest of the mechanism.
+    \end{itemize}
+    \item Grubbs type alkylidenes are synthetically much more useful and ruthenium based.
+    \item Tebbe's reagents:
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{Cp_2TiCl_2}
+            \+
+            \chemfig{Me_3Al}
+            \arrow
+            \chemfig{Cp_2Ti?=CH_2-[6,,1]Al(-Me)(-[6]Me)-[4]Cl?[,,dashed]}
+        \schemestop
+        \caption{Tebbe's reagents.}
+        \label{fig:tebbeReagent}
+    \end{figure}
+    \begin{itemize}
+        \item If you treat a Tebbe's reagent with an olefin in the presence of DMAP, you can form a 4-membered ring.
+    \end{itemize}
+    \item N-heterocyclic carbenes (NHC complexes).
+    \begin{itemize}
+        \item Neutral L-type ligands that are very strong $\sigma$-donors (much stronger than phosphines), but very weak $\pi$-acceptors.
+    \end{itemize}
+    \item Reactivity:
+    \begin{itemize}
+        \item $2+2$ addition: The defining reactivity of carbenes.
+        \begin{itemize}
+            \item React a carbene with an olefin to make a metallacycle, which can then collapse into olefin metathesis.
+            \item It allows us to swap the two \ce{CR2} fragments, which is pretty useful.
+        \end{itemize}
+        \item Cyclopropanation: Occurs through electrophilic, Fischer carbenes.
+        \begin{itemize}
+            \item Allows us to create a cyclopropane compound with both of the carbene R groups attatched to one of the cyclopropane carbons.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Carbide}: A terminal carbon atom; a \ce{C^4-} ligand.
 \end{itemize}
 
 
