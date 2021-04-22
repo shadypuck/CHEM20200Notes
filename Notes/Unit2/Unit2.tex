@@ -1570,5 +1570,415 @@
 
 
 
+\section{Lecture 10: Nitrosyls, Allyls, and More}
+\begin{itemize}
+    \item \marginnote{4/19:}First off, a survery of other $\pi$ acceptors.
+    \begin{itemize}
+        \item Many of these are analogous to \ce{CO}.
+    \end{itemize}
+    \item \ce{C#S} (carbon sulfide).
+    \begin{itemize}
+        \item $2\,\e[-]$ L-type donor.
+        \item Not stable unless it's ligated to a metal (will decompose as a free gas).
+        \item Due to the weak \ce{C-S} binding, it can be more of a $\pi$ acceptor than \ce{CO} even though the polarization is a bit off.
+    \end{itemize}
+    \item \ce{[C#N]-} (cyanide).
+    \begin{itemize}
+        \item $1\,\e[-]$ X-type.
+        \item Much better $\sigma$ donor, but a much weaker $\pi$ acceptor.
+    \end{itemize}
+    \item \ce{C#N-R} (isocyanides).
+    \begin{itemize}
+        \item Quite similar to \ce{CO} (via the isolobal/isoelectronic analogy).
+        \item Slightly stronger $\sigma$ donor, but a slightly weaker $\pi$ acid.
+    \end{itemize}
+    \item \ce{PR3} (phosphines).
+    \begin{itemize}
+        \item Good $\sigma$ donors (better than \ce{CO}), and ok $\pi$ acceptors.
+        \item $\pi$ acceptance occurs through the $\sigma^*$ orbitals.
+        \begin{itemize}
+            \item More polarized the \ce{P-R} bond $\Rightarrow$ more $\pi^*$ character on the phosphorous $\Rightarrow$ better $\pi$ acceptor \ce{PR3} will be.
+            \item Phosphines with strong electron-donating R groups will be better $\sigma$ donors but worse $\pi$ acceptors.
+        \end{itemize}
+        \item Know \ce{P(OR)3} ligands (phosphites).
+        \begin{itemize}
+            \item Very good $\pi$ acceptors.
+        \end{itemize}
+        \item \ce{PF3} is almost as good as \ce{CO} in terms of its $\pi$-acceptance.
+    \end{itemize}
+    \item \ce{[N#O]+} (nitrosyls).
+    \begin{itemize}
+        \item Isoelectronic/isolobal to \ce{CO}, so it engages in the same types of interactions.
+        \item Probably the strongest $\pi$ acceptor known.
+        \item Two main modes of binding (linear and bent).
+        \item Bioinorganic chemistry of \ce{NO+}: An important signaling molecule; a potent vasodilator (i.e., a molecule that when released in the bloodstream causes blood vessels to expand); important in blood pressure.
+    \end{itemize}
+\end{itemize}
+\begin{tchart}{1.4}{Linear}{Bent}
+    \chemfig[atom sep=1.2em]{M-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{90[yshift=1mm]=$\oplus$,0=\:}{O}} & \chemfig[atom sep=1.2em]{M-[:30]\charge{90=\:}{N}=[:-30]\charge{0=\:,-90=\:}{O}}\rule{0pt}{0.9cm}\\
+    LX-type. & X-type.\\
+    $3\,\e[-]$ donor. & $1\,\e[-]$ donor.\\
+    3 CO's provide similar stability to 2 NO's (in terms of electron counting). & \\
+    Oxidation state: Formally \ce{NO+} but this is not a good description (it would imply \ce{M^-}). & Oxidation state: Formally anionic, so \ce{M^+}.\\
+\end{tchart}
+\begin{itemize}
+    \item Oxidation state debates led to the development of \textbf{Enemark-Feltham notation}.
+    \item \textbf{Enemark-Feltham notation}: Considers the $d$ count of the metal center and any extra electrons beyond \ce{NO+} that the \ce{NO} brings.
+    \item Consider heme centers.
+    \begin{itemize}
+        \item Hemes bind to porphyrins.
+        \begin{itemize}
+            \item Porphyrins are the macrocyclic aromatic ligands that bind iron and magnesium in a fashion hemoglobin and chlorophyll, respectively.
+            \item Porphyrins are very common in biology in general, too.
+        \end{itemize}
+        \item Formally a square-planar binding ligand with a $2^-$ charge when deprotonated.
+        \item Thus, heme iron is $2+$, i.e., $d^6$.
+        \item If heme \ce{FeNO} is neutral, \ce{*NO} bound as a radical: \ce{\{FeNO\}^7}.
+        \item If heme \ce{FeNO-} is anionic, \ce{NO-} bound as an anion: \ce{\{FeNO\}^8}.
+        \item If heme \ce{FeNO+} is cationic, \ce{NO+} bound as a cation: \ce{\{FeNO\}^6}.
+    \end{itemize}
+    \item Nitrosyl geometry (linear vs. bent) is sensitive to the $d$ count of the metal.
+    \begin{itemize}
+        \item If the metal wants to get an extra $3\,\e[-]$, \ce{NO+} will be linear. Otherwise, \ce{NO+} will be bent. 
+        \item An example of a limiting case: When bonding to benzene, \ce{NO+} will be bent because there is no possible $\pi$ bonding.
+    \end{itemize}
+    \item Synthesis of nitrosyls:
+    \begin{itemize}
+        \item Two main routes:
+        \begin{gather*}
+            \ce{M^0 + NO+X- -> [M-NO]+X-}\\
+            \ce{M^0 + *NO -> M-NO}
+        \end{gather*}
+        \begin{itemize}
+            \item In the first case, we react a reduced metal center with a nitrosonium salt to in-situ oxidize the metal center to make a metal-nitrosyl cation with the \ce{X-} as a counteranion.
+            \item In the second case, we react a metal center with \ce{NO*} gas, which is a radical and pretty nasty.
+        \end{itemize}
+        \item One less common route:
+        \begin{gather*}
+            \ce{R-O-N=O ->[H+] ROH + NO+}
+        \end{gather*}
+        \begin{itemize}
+            \item An analogous reaction with metals is \ce{M-N(=O)-O ->[PR3] M-NO + R3PO}.
+        \end{itemize}
+    \end{itemize}
+    \item Note that in general, because \ce{NO} and \ce{CO} are both such strong $\pi$ acceptors, they do not go \emph{trans} to each other.
+    \begin{itemize}
+        \item One notable exception: \ce{V(CO)5(NO)}.
+    \end{itemize}
+    \item Allyls:
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{=[:30]-[:-30]\charge{-90[yshift=-1.5mm]=$\ominus$}{}}
+            \vspace{1em}
+            \caption{The ligand.}
+            \label{fig:ligand-Allyla}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node [yshift=3cm] {\chemfig{(-[2,0.15]{-})-[:30](-[2,0.15]+)-[:-30](-[2,0.15]{-})}};
+                \node [yshift=1.5cm] {\chemfig{(-[2,0.15]+)-[:30]-[:-30](-[2,0.15]{-})}};
+                \node [yshift=0cm] {\chemfig{(-[2,0.15]+)-[:30](-[2,0.15]+)-[:-30](-[2,0.15]+)}};
+    
+                \draw [dashed] (-1,2.25) -- ++(2,0);
+                \draw [dashed] (-1,0.75) -- ++(2,0);
+    
+                \footnotesize
+                \node [anchor=west] at (2,3) {Totally antibonding};
+                \node [anchor=west] at (2,1.5) {Totally nonbonding};
+                \node [anchor=west] at (2,0) {Totally bonding};
+            \end{tikzpicture}
+            \caption{The $\pi$ system.}
+            \label{fig:ligand-Allylb}
+        \end{subfigure}
+        \caption{The allyl ligand.}
+        \label{fig:ligand-Allyl}
+    \end{figure}
+    \begin{itemize}
+        \item $3\,\e[-]$ LX-type donor.
+        \item Barry Trost's palladium allyls: Changing side-on vinyl ethers into allyls (structures shown).
+    \end{itemize}
+    \item Synthesis of allyls:
+    \begin{itemize}
+        \item We can synthesize allyls (from olefins) that bind to their metal center from above and below the molecular plane.
+        \item We can synthesize allyls by oxidizing a butadiene with acid.
+        \item There also exist allyls in the form of isobutane with conjugated electron systems between each carbon. This bonds to metal centers from above.
+        \item More syntheses listed.
+    \end{itemize}
+    \item Note: Sodium is a possible reductant (\ce{Mn2(CO)10 ->[Na] 2Mn(CO)5-}).
+    \item Allyl reactivity:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node{
+                    \schemestart
+                        \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
+                        \arrow{->[$\ce{Nu}^-$]}
+                        \chemleft{[}
+                            \chemfig{M-\phantom{i}-[2,0.35,,,white]=[6]-[:-60]-[6]Nu}
+                        \chemright{]^-}
+                    \schemestop
+                };
+                \draw [dashed] (-2,-0.56) arc (-35:35:1);
+            \end{tikzpicture}
+            \caption{Nucleophilic attack.}
+            \label{fig:allylReactivitya}
+        \end{subfigure}
+        \vspace{1em}
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node{
+                    \schemestart
+                        \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
+                        \arrow{->[$\ce{E}^+$]}
+                        \chemleft{[}
+                            \chemfig{M-\phantom{i}-[2,0.35,,,white]=[6]-[:-60]-[6]E}
+                        \chemright{]^+}
+                    \schemestop
+                };
+                \draw [dashed] (-1.95,-0.56) arc (-35:35:1);
+            \end{tikzpicture}
+            \caption{Electrophilic attack.}
+            \label{fig:allylReactivityb}
+        \end{subfigure}
+        \vspace{1em}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node{
+                    \schemestart
+                        \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
+                        \arrow{->[\ce{CO2}]}
+                        \chemfig{M-O-[:30](=[2]O)-[:-30]-[:30]=[:-30]}
+                    \schemestop
+                };
+                \draw [dashed] (-2.53,-0.56) arc (-35:35:1);
+            \end{tikzpicture}
+            \caption{Insertion (1).}
+            \label{fig:allylReactivityc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node{
+                    \schemestart
+                        \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
+                        \arrow{->[\ce{CO}]}
+                        \chemfig{M-[:30](=[2]O)-[:-30]-[:30]=[:-30]}
+                    \schemestop
+                };
+                \draw [dashed] (-2.05,-0.56) arc (-35:35:1);
+            \end{tikzpicture}
+            \caption{Insertion (2).}
+            \label{fig:allylReactivityd}
+        \end{subfigure}
+        \vspace{1em}
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node{
+                    \schemestart
+                        \chemfig{M(-[1]\phantom{i}-[::-100,0.7,,,white]-[::160]-[::60]-[::-60]R)(-[7]\phantom{i}-[::-100,0.7,,,white](-[::40]R)-[::160]-[::60])}
+                        \arrow{->}
+                        \chemfig{M^0}
+                        \arrow{0}[,0]\+{,,1.6cm}
+                        \chemfig{R-[2]=[:150]-[2]=[:30]-[2]R}
+                    \schemestop
+                };
+                \draw [dashed,xshift=9.3mm,rotate=45] (-1.5,1.71) arc (-35:35:1);
+                \draw [dashed,xshift=9.3mm,rotate=-45] (-1.47,-2.78) arc (-35:35:1);
+            \end{tikzpicture}
+            \caption{Coupling/reductive elimination.}
+            \label{fig:allylReactivitye}
+        \end{subfigure}
+        \caption{Allyl reactivity.}
+        \label{fig:allylReactivity}
+    \end{figure}
+    \item Other extended $\pi$ systems.
+    \item Cyclopentadienyl (Cp).
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{[:18]*5(-=-\charge{90[yshift=1.5mm]=$\ominus$}{}-=)}
+            \caption{The ligand.}
+            \label{fig:ligand-Cpa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.6\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node [yshift=4cm] at (-1.5,0) {\chemfig{[:18]*5((-[,0.15]{-})-(-[,0.15]{-})-(-[,0.15]+)-(-[,0.15]{\color{white}-})-(-[,0.15]+)-)}};
+                \node [yshift=4cm] at (1.5,0)  {\chemfig{[:18]*5((-[,0.15]{-})-(-[,0.15]{-})-(-[,0.15]+)-(-[,0.15]{-})-(-[,0.15]+)-)}};
+                \node [yshift=2cm] at (-1.5,0) {\chemfig{[:18]*5((-[,0.15]+)-(-[,0.15]{-})-(-[,0.15]{-})-(-[,0.15]{\color{white}+})-(-[,0.15]+)-)}};
+                \node [yshift=2cm] at (1.5,0)  {\chemfig{[:18]*5((-[,0.15]{-})-(-[,0.15]{-})-(-[,0.15]+)-(-[,0.15]+)-(-[,0.15]+)-)}};
+                \node [yshift=0cm] at (0,0)    {\chemfig{[:18]*5((-[,0.15]+)-(-[,0.15]+)-(-[,0.15]+)-(-[,0.15]+)-(-[,0.15]+)-)}};
+    
+                \draw [dashed] (-2.5,3) -- ++(5,0);
+                \draw [dashed] (-2.5,1) -- ++(5,0);
+    
+                \footnotesize
+                \node [anchor=west] at (3,4) {$\pi$ acceptor};
+                \node [anchor=west] at (3,2) {$\pi$ donor};
+                \node [anchor=west] at (3,0) {$\sigma$ donor};
+            \end{tikzpicture}
+            \caption{The $\pi$ system.}
+            \label{fig:ligand-Cpb}
+        \end{subfigure}
+        \caption{The cyclopentadienyl ligand.}
+        \label{fig:ligand-Cp}
+    \end{figure}
+    \begin{itemize}
+        \item Strong field ligand.
+        \item $5\,\e[-]$ \ce{L2X}-type donor.
+    \end{itemize}
+    \item Ferrocene is a classic example of a Cp-containing compound.
+    \item In 1951, Pauson (very respected, famous chemist) showed that a \ce{Cp-MgBr} Grignard (a Cp anion source) becomes a radical when treated with an oxidant and then dimerizes. This product when heated would lose \ce{H2} and become a fulvalene.
+    \begin{itemize}
+        \item However, if you use \ce{FeCl3} as the oxidant, you get a compound with the formula \ce{(C5H5)2Fe} (as determined by elemental analysis, or EA).
+        \item This compound had a number of interesting properties, all demonstrating that it was very stable.
+        \begin{itemize}
+            \item Orange solid.
+            \item Air stable.
+            \item Temperature stable.
+            \item Base stable (at $10\%\,\ce{NaOH}$).
+            \item Melting point of $\SI{173}{\celsius}$ (thus, a clean melting point transition).
+            \item Stable up to $\SI{500}{\celsius}$.
+            \item Water stable.
+        \end{itemize}
+        \item To characterize it as a sandwich compound, scientists used the fact that it has 1 $\nu_{\ce{C-H}}$ stretch in the IR spectrum, 1 peak in \ce{{}^1H} (proton) NMR, and no Diels-Alder reactivity.
+        \item Pauson missed this in his initial analysis. Woodward and E. O. Fischer proposed the real structure, which was later confirmed by X-ray diffraction (XRD) crystallography.
+    \end{itemize}
+    \item There are tons of Cp complexes.
+    \item However, almost any $\pi$ system can bond to a metal center in a face-on fashion. For example, there are\dots
+    \begin{itemize}
+        \item Benzene and tropylium (cycloheptatrienyl cation) aromatic adducts.
+        \item Butadiene and borazine nonaromatic adducts.
+    \end{itemize}
+    \item \textbf{Ring-slipping}: When an aromatically bonded ring redistributes its electron density to localize it and only bind through some of its ring.
+    \begin{itemize}
+        \item For example, \ce{Ru($\eta^6${-}C6H6)2 -> Ru($\eta^6${-}C6H6)($\eta^4${-}C6H6)}. The driving force is a $20\,\e[-]$ to $18\,\e[-]$ transition.
+    \end{itemize}
+    \item Triple bonds:
+    \begin{itemize}
+        \item $\sigma$ donation, (weak) $\pi$ donation, and $\pi$ acceptance (same idea, orbitally, as answer to Homework 2, problem 11a).
+        \item Upon binding, we see lengthening of the \ce{C#C} bond and the \ce{C-H} bonds bending backwards away from the metal center.
+    \end{itemize}
+    \item Phosphines (and derivatives):
+    \begin{itemize}
+        \item \ce{PR3}: Bulky, soft, good donors, strong field ligands.
+        \item \ce{P(OR)3}: Harder (due to the oxygens), weaker donors, stronger acceptors.
+        \item Compares basicity in a number of phosphines (phosphines with a greater ability to delocalize the electron pair on the phosphorous are weaker bases [i.e., \ce{PPh3} is weak while \ce{PMe3} is strong]).
+    \end{itemize}
+    \item \textbf{Tolman electronic parameter}: The $\nu_{\ce{CO}}$ value for \ce{(CO)3NiL} where \ce{L} is some ligand.
+    \begin{itemize}
+        \item Allows us to guage the $\pi$-accepting character of different ligands: Stronger $\pi$ acceptors will invoke a higher $\nu_{\ce{CO}}$ value.
+        \item Weakly basic ligands do not do much $\sigma$ or $\pi$ donation and thus do a lot of $\pi$ acceptance. It follows that these ligands will have a higher Tolman electronic parameter.
+        \item There is a good Wikipedia page for this.
+        \item Judges $\sigma$/$\pi$ donation/acceptance properties all together (i.e., their ratio), not each individually.
+        \begin{itemize}
+            \item For example, a ligand that is a strong $\sigma$ donor and a strong $\pi$ acceptor will have a middling Tolman electronic paramenter, whereas a ligand that is a weak $\sigma$ donor and a strong $\pi$ acceptor will have a high Tolman electronic parameter.
+        \end{itemize}
+    \end{itemize}
+    \item $\pi$-accepting character of various ligands:
+    \begin{equation*}
+        \ce{NMe2}
+        < \ce{NH3}
+        << \ce{py}
+        < \ce{PR3}
+        < \ce{P(OR)3}
+        << \ce{PF3}
+        < \ce{PCl3}
+        <<< \ce{CO}
+    \end{equation*}
+    \begin{itemize}
+        \item Ranked on a scale of 0-100 where the $\pi$-accepting character of \ce{CO} is defined to equal 100.
+    \end{itemize}
+    \item \textbf{Tolman cone angle}: The angle for the cone that encapsulates all of the \ce{R} groups.
+    \begin{equation*}
+        \ce{PMe3}
+        < \ce{P(Ph3)3}
+        < \ce{P($t${-}Bu)3}
+    \end{equation*}
+    \begin{itemize}
+        \item Describes the sterics of the phosphine.
+        \item Lists the cone angles of several common phosphines.
+    \end{itemize}
+    \item \ce{AsR3} (arsenes):
+    \begin{itemize}
+        \item Isoelectronic/isolobal to phosphines.
+        \item Not as common, but typically better $\pi$ acceptors.
+    \end{itemize}
+    \item N-heterocyclic carbenes:
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{R-N=[:-60]-=[:60]N-R}
+            \arrow{0}[,0]\+{,,6.7mm}
+            \chemfig{H-[:30](=[2]O)-[:-30]H}
+            \arrow
+            \chemfig{[:18]*5(-=N(-R)-(-H)=N(-R)=)}
+            \arrow{->[\ce{-H+}]}
+            \chemfig{[:18]*5(=-NR-\charge{90=\:}{}-RN-)}
+        \schemestop
+        \caption{Synthesis of N-heterocyclic carbenes.}
+        \label{fig:NHeterocyclicCarbeneSynthesis}
+    \end{figure}
+    \begin{itemize}
+        \item A new class of ligands that are extremely strong donors.
+        \item Many resonance structures.
+        \item A very strong $\sigma$ donor and a very weak $\pi$ acceptor. Essentially pure $\sigma$ donors.
+        \begin{itemize}
+            \item $\sigma$ donor properties: Orignate from the lone pair on the carbon.
+            \item $\pi$ acceptor properties: These exist in principle since the carbon has an empty $p$ orbital, but in practice, it's $\pi$ acceptor abilities are very weak since the carbon $p$ orbital is donated into by the lone pairs on the neighboring nitrogens. Thus, N-heterocyclic carbenes aren't really $\pi$ acceptors.
+            \item $\pi$ donor properties: Nonexistent.
+        \end{itemize}
+        \item Stronger $\sigma$ donors than phosphines.
+    \end{itemize}
+    \item Other $\pi$-bound ligands.
+    \item \ce{CO2} / \ce{CS2}.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{M?-[:30]O-[6]C?=[:-60]O}
+            \caption{$\eta^2$ bonding.}
+            \label{fig:CO2-M-bondinga}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node{
+                    \chemfig{M-C(-[:60]O-[,,,,dashed]M)(-[:-60]O-[,,,,dashed]M)}
+                };
+                \draw [dashed] (0.18,0.56) arc (145:215:1);
+            \end{tikzpicture}
+            \caption{$\kappa^1$ bonding.}
+            \label{fig:CO2-M-bondingb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{M-O=C=O}
+            \caption{End-on bonding.}
+            \label{fig:CO2-M-bondingc}
+        \end{subfigure}
+        \caption{Bonding of \ce{CO2} to metal centers.}
+        \label{fig:CO2-M-bonding}
+    \end{figure}
+    \begin{itemize}
+        \item There's a lot of interest in bonding \ce{CO2} to transition metals in terms of catalytic reduction/functionalization of \ce{CO2}.
+    \end{itemize}
+    \item Aldehydes / ketones.
+    \begin{itemize}
+        \item Binding $\eta^2$ and end-on through the oxygen.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
