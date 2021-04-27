@@ -1,0 +1,345 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{2}
+
+\begin{document}
+
+
+
+
+\chapter{???}
+\section{Lecture 12: Intro to Catalysis}
+\begin{itemize}
+    \item \marginnote{4/26:}We're now moving from theoretical chemistry to some applications (namely catalysis) of the theory we've been learning.
+    \item History of defining catalysts:
+    \begin{itemize}
+        \item Berzelius (in 1836) becomes interested in this behavior.
+        \item Ostwald (in 1894) defines a \textbf{catalyst}.
+    \end{itemize}
+    \item \textbf{Catalyst}: A substance that increases the rate of a chemical reaction without being consumed.
+    \item Energetically, this must happen by altering the transition state (this is a simplistic explanation).
+    \begin{itemize}
+        \item The thermodynamics ($\Delta G$, $\Delta S$, and $\Delta H$) are unaffected.
+        \item The kinetics ($\Delta G^\ddagger$, $\Delta S^\ddagger$, and $\Delta H^\ddagger$) are reduced.
+    \end{itemize}
+    \item More realistically, a catalyst often substantially changes the reaction coordinate (one big hump in the energy diagram to many small humps).
+    \begin{itemize}
+        \item The general set of intermediates during the reaction is the starting material plus the catalyst ($S+C$), the starting material-catalyst complex ($S\cdot C$), the product-catalyst complex ($P\cdot C$), and the product plus the catalyst ($P+C$).
+        \item Note that $\Delta G^\ddagger$ is the activation energy for the highest barrier step, as measured against the free energy of the reactants. This notably implies that $\Delta G^\ddagger$ is not necessarily the $E_A$ of the \emph{first} step; only the biggest. See Figure \ref{fig:catalysisEnergyDiagramsb}.
+        \item Even though there are more steps, the rate increases because $\Delta G^\ddagger$ decreases.
+    \end{itemize}
+    \item If you get stuck at a low energy intermediate, this can reduce reaction rate, and the process is no longer being catalyzed.
+    \begin{itemize}
+        \item Indeed, if your catalyst is a different structure at the end of the reaction, it's not a catalyst but a reagent.
+        \item Excessively stabilizing the starting materials can create a higher energy barrier to the products.
+    \end{itemize}
+    \item Example:
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{R-[:30]=[:-30]}
+            \arrow{->[\small\ce{HB(OR)2}]}[,1.4]
+            \chemfig{R-[:30](-[2]H)-[:-30]-[:30]B{(}OR{)_2}}
+        \schemestop
+        \caption{A process to be catalyzed.}
+        \label{fig:reactionBeforeCatalysis}
+    \end{figure}
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.98\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every node/.style={black}
+            ]
+                \footnotesize
+                \draw [very thin] (0,2.2) -- (4.8,2.2);
+                \draw [<->] (0.5,0) -- node[right]{$\Delta G^\ddagger$} (0.5,2.2);
+    
+                \draw [blx,thick] (0,0)
+                    -- node[below]{
+                        \schemestart
+                            \chemfig{R-[:30]=[:-30]}
+                            \arrow(.south--.north){0[*{90}+]}[-90,0.4]
+                            \chemfig{HB{(}OR{)_2}}
+                        \schemestop
+                    } (1,0)
+                    to[out=0,in=180] (2,0.6)
+                    to[out=0,in=180] (3,-0.2) node[below]{
+                        \chemfig{R-[:30]=[:-30]-[:150,0.4,,,white]\phantom{i}-[:60,,,,dashed]B{(}OR{)_2}-[:160,,1,,dashed]H}
+                    }
+                    to[out=0,in=180,out looseness=0.6,in looseness=0.8] (4.8,2.2)
+                    to[out=0,in=180,out looseness=0.8] (7,-1.5)
+                    -- node[below]{
+                        \chemfig{R-[:30](-[2]H)-[:-30]-[:30]B{(}OR{)_2}}
+                    } (8,-1.5)
+                ;
+            \end{tikzpicture}
+            \caption{Before catalysis.}
+            \label{fig:catalysisEnergyDiagramsa}
+        \end{subfigure}\\
+        \vspace{2em}
+        \begin{subfigure}[b]{0.98\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                xscale=1.3,
+                every node/.style={black}
+            ]
+                \footnotesize
+                \draw [very thin] (0,0.8) -- (8.5,0.8);
+                \draw [<->] (0.5,0) -- node[right]{$\Delta G^\ddagger$} (0.5,0.8);
+    
+                \draw [rex,thick] (0,0)
+                    -- node[below]{
+                        \schemestart
+                            \chemfig{R-[:30]=[:-30]}
+                            \arrow(.south--.north){0[*{90}+]}[-90,0.4]
+                            \chemfig{HB{(}OR{)_2}}
+                            \arrow(.south--.north){0[*{90}+]}[-90,0.4]
+                            \chemfig{M}
+                        \schemestop
+                    } (1,0)
+                    to[out=0,in=180] (2,0.6)
+                    to[out=0,in=180] (3,-0.3) node[below]{
+                        \schemestart
+                            \chemfig{R-[:30]=[:-30]}
+                            \arrow(.south--.north){0[*{90}+]}[-90,0.4]
+                            \chemfig{M(-[1]B{(}OR{)_2})(-[7]H)}
+                        \schemestop
+                    }
+                    to[out=0,in=180] (4,0.4)
+                    to[out=0,in=180] (5,-0.7) node[below]{
+                        \chemfig{M(-[1]B{(}OR{)_2})(-[7]H)(-[6]\phantom{i}-[,0.4,,,white]=[4]-[:-120]R)}
+                    }
+                    to[out=0,in=180] (6,-0.1)
+                    to[out=0,in=180] (7,-1.1) node[below]{
+                        \chemfig{M(-[1]B{(}OR{)_2})(-[6]-[:-150]-[6]R)}
+                    }
+                    to[out=0,in=180] (8.5,0.8)
+                    to[out=0,in=180] (10,-1.5)
+                    -- node[below]{
+                        \schemestart
+                            \chemfig{R-[:30](-[2]H)-[:-30]-[:30]B{(}OR{)_2}}
+                            \arrow(.south--.north){0[*{90}+]}[-90,0.4]
+                            \chemfig{M}
+                        \schemestop
+                    } (11,-1.5)
+                ;
+            \end{tikzpicture}
+            \caption{With catalysis.}
+            \label{fig:catalysisEnergyDiagramsb}
+        \end{subfigure}
+        \caption{Catalysis energy diagrams.}
+        \label{fig:catalysisEnergyDiagrams}
+    \end{figure}
+    \begin{itemize}
+        \item With transition metal catalysts, we have many more steps but potentially a lower $\Delta G^\ddagger$.
+    \end{itemize}
+    \item Anatomy/terminology of a catalytic cycle.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.35\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every path/.append style={blx,semithick},
+                every node/.append style={black}
+            ]
+                \footnotesize
+                \node (1) at (90:2) {\ce{L_nM}};
+                \node (2) at (0:2.2) {\ce{L_nM*S}}
+                    edge [stealth-,out=90,in=0] (1)
+                ;
+                \node (3) at (-90:2) {\ce{L_nM*I}}
+                    edge [stealth-,out=0,in=-90] (2)
+                ;
+                \node (4) at (180:2.2) {\ce{L_nM*P}}
+                    edge [stealth-,out=-90,in=180] (3)
+                    edge [-stealth,out=90,in=180] (1)
+                ;
+    
+                \draw [-stealth] (135:2.24) to[out=45,in=-90] (-1,3) node[above]{\ce{P}};
+            \end{tikzpicture}
+            \caption{A typical catalytic cycle.}
+            \label{fig:catalyticCyclesa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.63\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                every path/.append style={blx,semithick},
+                every node/.append style={black}
+            ]
+                \footnotesize
+                \node (1) at (90:2) {\ce{L_nM}};
+                \node (2) at (0:2.2) {\ce{L_nM*S}}
+                    edge [stealth-,out=90,in=0] (1)
+                ;
+                \node (3) at (-90:2) {\ce{L_nM*I}}
+                    edge [stealth-,out=0,in=-90] (2)
+                ;
+                \node (4) at (180:2.2) {\ce{L_nM*P}}
+                    edge [stealth-,out=-90,in=180] (3)
+                ;
+    
+                \node (5) at (0:4.2) {\ce{[L_nM*S]2}};
+                \draw [arrows={-Stealth[harpoon]}] (2.5) -- (5.176);
+                \draw [arrows={-Stealth[harpoon]}] (5.-176) -- (2.-5);
+                \node (6) at (180:4.2) {\ce{L_nMX}};
+                \draw [-stealth] (4) -- node[above]{\ce{X*}} (6);
+    
+                \draw [-stealth] (-1,3) node[above]{\ce{L_nMX}} to[out=-90,in=150] node[above right]{activation} (1.north west);
+            \end{tikzpicture}
+            \caption{An obstructed catalytic cycle.}
+            \label{fig:catalyticCyclesb}
+        \end{subfigure}
+        \caption{The anatomy of catalytic cycles.}
+        \label{fig:catalyticCycles}
+    \end{figure}
+    \begin{itemize}
+        \item Simplistically, a catalytic cycle occurs as in Figure \ref{fig:catalyticCyclesa}.
+        \item However, catalytic cycles can be complicated by \textbf{catalyst precursors}, \textbf{inactive off-cycles}, and \textbf{inactive poisoned states}.
+    \end{itemize}
+    \item \textbf{Catalyst precursor}: A complex that must go through an activation step before it can be used as a catalyst.
+    \begin{itemize}
+        \item See the reactant that becomes \ce{L_nM} in Figure \ref{fig:catalyticCyclesb}.
+    \end{itemize}
+    \item \textbf{Inactive off-cycle}: A reversible reaction that an intermediate participates in that is different from the intended reaction.
+    \begin{itemize}
+        \item See the alternate pathway that \ce{L_nM*S} participates in in Figure \ref{fig:catalyticCyclesb}.
+    \end{itemize}
+    \item \textbf{Inactive poisoned state}: When an intermediate follows an alternate nonreversible reaction pathway.
+    \begin{itemize}
+        \item See the alternate pathway that \ce{L_nM*P} participates in in Figure \ref{fig:catalyticCyclesb}.
+    \end{itemize}
+    \item Gives two examples of activating a catalyst (just a chemical reaction where one product is the catalyst).
+    \begin{itemize}
+        \item A \ce{Pd^2+} precursor must often be activated into a \ce{Pd^0} catalyst.
+    \end{itemize}
+    \item \textbf{Turnover number}: The quotient of the moles of product and the moles of catalyst. \emph{Also known as} \textbf{TON}.
+    \item \textbf{Turnover frequency}: The quotient of the TON and time. \emph{Also known as} \textbf{TOF}.
+    \item Kinetics:
+    \begin{itemize}
+        \item The rate constant for individual steps can vary, but at a steady state (where the catalyst is transforming the substrate as fast as possible), the rates must be identical.
+    \end{itemize}
+    \item \textbf{Catalyst resting state}: The highest concentration form of the catalyst.
+    \begin{itemize}
+        \item Can also be off-cycle or dormant.
+        \item The rate constant after it (i.e., the rate constant of the \textbf{turnover limiting step}) is the smallest among all rate constants for steps.
+    \end{itemize}
+    \item \textbf{Turnover limiting step}: The step which proceeds from the catalyst resting state. \emph{Also known as} \textbf{rate-determining step}.
+    \item Heterogeneous vs. homogeneous catalysis:
+\end{itemize}
+\begin{tchart}{1.4}{Heterogeneous}{Homogeneous}
+    Solid state (2 phases). & Solution phase.\\
+    Robust (high pressures and temperatures are ok). & Selective.\\
+    Low-cost. & Tunable.\\
+    Easy separation. & Easy to study (comparatively).
+\end{tchart}
+\begin{itemize}
+    \item We distinguish between the two with \textbf{transmission-electron microscopy}, kinetics, a \textbf{filtration test}, a \textbf{mercury drop test}, and/or a \textbf{three-phase test}.
+    \item \textbf{Transmission-electron microscopy}: Looks for nanoparticles. \emph{Also known as} \textbf{TEM}.
+    \item Kinetics: We need to observe soluble intermediates and show that they are \textbf{kinetically competent}.
+    \item \textbf{Kinetically competent}: The step from the soluble intermediates to the products under another reagent must be at least as fast as the overall rate of catalysis.
+    \item \textbf{Filtration test}: For heterogeneous catalysts. Do the reaction over the heterogeneous catalyst, filter out the solid heterogeneous catalyst, add in more substrate and see if the mother liquor or supernatant still catalyzes the reaction. If so, then something is leaching out of the catalyst.
+    \item \textbf{Mercury drop test}: Mercury can typically block the pores of high-surface area catalysts or poison the cycle by forming TM alloys. \emph{Also known as} \textbf{Hg-drop test}.
+    \item \textbf{Three-phase test}: Attach a substrate to an insoluble support. If the catalyst is solid state, we see no reaction (poor phase mixing).
+    \begin{itemize}
+        \item The gold standard.
+    \end{itemize}
+    \item Asymmetric catalysis:
+    \begin{itemize}
+        \item Propene is pro-chiral (it has a Re and a Si face) at the central carbon.
+    \end{itemize}
+    \item \textbf{Dynamic kinetic resolution}: When a racemic mixture goes to an enantioenriched product.
+    \begin{itemize}
+        \item Occurs when an achiral intermediate is accessed and selectively filtered into an enantioenriched product.
+    \end{itemize}
+    \item \textbf{Kinetic resolution}. When a racemic mixture goes to an enantioenriched starting material and enantioenriched product.
+    \begin{itemize}
+        \item Arises from selective reaction with one enantiomer over another.
+    \end{itemize}
+    \item \textbf{Enantiomeric excess}: The quantity given by the following formula. \emph{Also known as} \textbf{ee}.
+    \begin{equation*}
+        \frac{\ce{[{major en.}]}-\ce{[{minor en.}]}}{\ce{[{major en.}]}+\ce{[{minor en.}]}}\times 100\%
+    \end{equation*}
+    \item Enantiomeric ratio:
+    \begin{equation*}
+        \frac{\ce{[{major en.}]}}{\ce{[{minor en.}]}} = \e[-\Delta\Delta G^\ddagger/RT]
+    \end{equation*}
+    \begin{itemize}
+        \item Note that $\Delta\Delta G^\ddagger$ is the difference in the $\Delta G^\ddagger$ values for the major and minor enantiomers.
+    \end{itemize}
+    \item Ee is dependent on $\Delta\Delta G^\ddagger$ and $T$:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}[scale=1.3]
+                \small
+                \draw (4,0) -- node[below=5mm]{$\Delta\Delta G^\ddagger$} (0,0) -- node[left=7mm]{ee} (0,3.3);
+                \footnotesize
+                \node [anchor=north east] {0};
+                \foreach \x in {0.5,1,...,3} {
+                    \draw (\x,0.1) -- ++(0,-0.2) node[below]{$\x$};
+                }
+                \foreach \y/\val in {0.75/25,1.5/50,2.25/75,3/100} {
+                    \draw (0.1,\y) -- ++(-0.2,0) node[left]{$\val$};
+                }
+    
+                \draw [blx,thick] plot[domain=0:3.7,smooth] (\x,{3-3*e^(-\x)});
+            \end{tikzpicture}
+            \caption{Dependence on $\Delta\Delta G^\ddagger$.}
+            \label{fig:ee-DeltaDelta-Ta}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}[
+                scale=1.3,
+                every node/.style={black}
+            ]
+                \small
+                \draw (-3,0) -- node[pos=0.6,below=5mm]{$T\,\si{\celsius}$} (2,0);
+                \draw (0,0) -- (0,3.3) node[above]{ee};
+                \node [align=center] at (1.8,3.3) {$\Delta\Delta G^\ddagger$\\$(\si[per-mode=symbol]{kcal\per\mole})$};
+                \footnotesize
+                \node [below=1mm] {0};
+                \foreach [evaluate=\x as \val using {int(\x*40)}] \x in {-2.5,-2,-1.5,-1,-0.5,0.5,1,1.5} {
+                    \draw (\x,0.1) -- ++(0,-0.2) node[below]{$\val$};
+                }
+    
+                \draw [blx,thick]
+                    (-2.5,2.95) -- (1.5,2.75) node[right]{1.6}
+                    (-2.5,2.75) -- (1.5,2.4) node[right]{1.4}
+                    (-2.5,2.5) -- (1.5,2.1) node[right]{1}
+                    (-2.5,0.8) -- (1.5,0.3) node[right]{0.2}
+                ;
+    
+                \foreach \y/\val in {0.75/25,1.5/50,2.25/75,3/100} {
+                    \draw (0.1,\y) -- ++(-0.2,0) node[left,fill=white,inner sep=2pt]{$\val$};
+                }
+            \end{tikzpicture}
+            \caption{Dependence on $T$.}
+            \label{fig:ee-DeltaDelta-Tb}
+        \end{subfigure}
+        \caption{Dependence of ee on $\Delta\Delta G^\ddagger$ and $T$.}
+        \label{fig:ee-DeltaDelta-T}
+    \end{figure}
+    \item Some enantiomers have differing catalytic properties.
+    \begin{itemize}
+        \item Furthermore, chirality is not necessarily set at the RDS.
+        \item If A and B are two enantiomers, then it is possible that $\Delta G^\ddagger$ will differ for the formation of \ce{M*A + B} vs. \ce{M*B + A} (remember that this difference is $\Delta\Delta G^\ddagger$).
+        \item If the activation energy required to form \ce{M*A + B} (for example) is greater than that required to get from \ce{M*A + B} to the products, formation of the \ce{M*A + B} intermediate will be irreversible.
+        \begin{itemize}
+            \item In this case, the kinetic product will be favored.
+        \end{itemize}
+        \item If the activation energy required to form \ce{M*A + B} (for example) is less than that required to get from \ce{M*A + B} to the products, formation of the \ce{M*A + B} intermediate will be reversible.
+        \begin{itemize}
+            \item In this case, the thermodynamic product will be favored (we may see more of the intermediate that forms quickly, but in time, more of the other product will be formed because formation of the other product is irreversible\footnote{Think the Mrs. Meer pens example.}).
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
