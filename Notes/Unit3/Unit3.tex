@@ -341,5 +341,78 @@
 
 
 
+\section{Office Hours (Anderson)}
+\begin{itemize}
+    \item What does kinetically competent mean?
+    \begin{center}
+        \begin{tikzpicture}
+            \node{
+                \schemestart
+                    \chemfig{[:45]=}
+                    \arrow{0}[,0]\+ {$\tfrac{1}{2}$}
+                    \chemfig{O_2}
+                    \arrow{->[cat]}
+                    \chemfig{-[:30](=[2]O)-[:-30]H}
+                \schemestop
+            };
+    
+            \draw [-stealth] (-1.78,-0.3) -- (-1.78,-1.5) -- (-0.6,-1.5);
+            \node at (0.1,-1.5) {\chemfig{?-[,1.2]-[:120]O?}};
+            \draw [-stealth] (0.8,-1.5) -- (1.8,-1.5) -- (1.8,-0.7);
+    
+            \node at (0,-3.5) {
+                \schemestart
+                    \chemfig{?-[,1.2]-[:120]O?}
+                    \arrow{->[cat]}
+                    \chemfig{-[:30](=[2]O)-[:-30]H}
+                \schemestop
+                \quad\LARGE ?
+            };
+        \end{tikzpicture}
+    \end{center}
+    \begin{itemize}
+        \item Consider the reaction of ethylene and \ce{$\frac{1}{2}$O2} with a catalyst to make acetaldehyde.
+        \item We propose that the intermediate is an epoxide.
+        \item To test this hypothesis, we take ethylene oxide and react it with the catalyst to see if it makes acetaldehyde.
+        \item If it does, that's a good first step. If it reacts with a rate at least as fast or faster than the overall catalyzed reaction, then we know that this intermediate \emph{is} an intermediate in a catalytic cycle.
+        \item Essentially, this test confirms that an intermediate is one. If the rate of epoxide to product is at least as fast as the overall rate, then we're good.
+    \end{itemize}
+    \item What do all of those tests test for? I.e., if we find nanoparticles with TEM, what does this mean?
+    \begin{itemize}
+        \item We need all of these tests because none of them are definitive.
+        \item You can never prove a mechanism; you can only disprove it.
+        \item If you see nanoparticles with TEM, it might make you ask if a heterogeneous pathway is present.
+        \item You go through these experiments to try to determine that it's \emph{not} homogeneous or \emph{not} heterogeneous.
+    \end{itemize}
+    \item Resources for synthesis?
+    \begin{itemize}
+        \item Inorganic is not like organic where we're pushing electrons and stuff.
+        \item Don't worry about step efficiency.
+        \item Don't worry about reactive fragments.
+        \item For syntheses, completely ignore mechanism. Just balance the reaction.
+        \begin{itemize}
+            \item Balance in terms of electrons and atoms.
+            \item Just focus on stoichiometry to start.
+            \item $99\%$ of the time, this will get you to the right conclusion.
+        \end{itemize}
+        \item If you have methyl iodide and you want to methylate the metal center, you want to make the metal nucleophilic and then react it.
+        \item If you want to be really lazy, just show the reagents that will give you the products and be done.
+        \begin{itemize}
+            \item You'll probs lose a few points for this, but that's ok.
+            \item Try and show the intermediates.
+        \end{itemize}
+    \end{itemize}
+    \item Time crunch?
+    \begin{itemize}
+        \item Skip a question.
+        \item Go through the easiest questions first.
+        \item You can probably get $80\%$ of the points on the first question without writing a single synthesis.
+        \item Do the easy things fast and then move on.
+        \item View it as a scavenger hunt for points.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
