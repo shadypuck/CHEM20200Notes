@@ -433,5 +433,333 @@
 
 
 
+\section{Lecture 13: Cross Coupling}
+\begin{itemize}
+    \item \marginnote{4/28:}Probably the single most-employed catalytic reaction in synthetic chemistry.
+    \begin{itemize}
+        \item More important in pharmaceuticals and fine chemical synthesis, not industrial processes.
+        \item Nobel prize (2010) to Heck, Negishi, and Suzuki for aryl-type couplings.
+    \end{itemize}
+    \item Dominated by \ce{Pd^0} / \ce{Pd^{II}} ("God's Metal" - John Bercaw).
+    \begin{itemize}
+        \item There are also examples with \ce{Ni}, \ce{Rh}, \ce{Ir}, and \ce{Cu}.
+        \item These metals are so good because the reactivity is often based in oxidative addition and reductive elimination, but radical reactions are also useful (particularly with nickel).
+    \end{itemize}
+    \item General form:
+    \begin{equation*}
+        \ce{R-X + R$'$-M ->[{cat.}] R-R$'$ + M-X}
+    \end{equation*}
+    \begin{itemize}
+        \item Basically a nucleophilic attack.
+        \begin{itemize}
+            \item But since substrates like \ce{ArI} don't have very good reactivity for nucleophilic aromatic substitutions (despite the fact that iodide is a great leaving group), we need this mechanism.
+        \end{itemize}
+        \item \ce{R}, \ce{R$'$} are typically carbon-based, but carbon-heteroatom (where the heteroatom is \ce{N}, \ce{O}, \ce{S}, or something else) couplings are also advancing.
+    \end{itemize}
+    \item History:
+    \begin{itemize}
+        \item Kumada and Corriu report \ce{ArBr + RMgX ->[Et2O, $\SI{25}{\celsius}$][{\emph{substance}}] Ph-C=C-R + R$'$-C=C-R}\footnote{Note that Anderson often uses $\emptyset$ instead of \ce{Ph} to denote a phenyl group.}.
+        \begin{itemize}
+            \item The \emph{substance} is \ce{Ni(acac)2}, dppe, \ce{NiCl2}, \ce{FeCl3}, \ce{CoCl2}, or \ce{CrCl2}.
+            \item Note that the aryl group can be phenyl, but it can also be vinylic or allylic (basically any $sp^2$-hybridized carbon).
+        \end{itemize}
+    \end{itemize}
+    \item There are many named reactions (usually defined by the nucleophile).
+    \begin{itemize}
+        \item This is a con of this field.
+        \item Negishi: \ce{RZnX}.
+        \item Stille: \ce{RSnR3$'$}.
+        \item Hiyama: \ce{RSiMe2F}.
+        \item Suzuki: \ce{RB(OH)2} or \ce{RBF3-}.
+        \item Mizoroki/Heck: \ce{Ph-Br + C=C-R ->[cat][base] Ph-C=C-R}.
+    \end{itemize}
+    \item Alkynes can also be coupled.
+    \item Enolates can also be used as nucleophiles.
+    \item Most cross coupling reactions involve aryl nucleophiles, but we can also use aliphatic ones.
+    \item Aliphatic couplings:
+    \begin{itemize}
+        \item Alkyl electrophiles: \ce{CRR$'$X + Ar-M ->[{Ni or Pd}] CRR$'$Ar}.
+        \begin{itemize}
+            \item These frequently go through a radical mechanism.
+            \item $\beta$-\ce{H} can be a problem.
+        \end{itemize}
+    \end{itemize}
+    \item Cyanide couplings:
+    \begin{itemize}
+        \item \ce{Ph-X + M(CN)_n} or \ce{CMe2(CN)(OH)} can react with a palladium catalyst to form \ce{Ph-CN}.
+        \begin{itemize}
+            \item Note that $\ce{M}=\ce{K},\ce{Zn},\ce{K4Fe(CN)6}$.
+        \end{itemize}
+    \end{itemize}
+    \item Enantioselective cross couplings:
+    \begin{itemize}
+        \item The nucleophile racemizes quickly.
+        \item $93\%$ ee with nickel.
+        \item $99\%$ ee with palladium.
+    \end{itemize}
+    \item Homo-couplings:
+    \begin{itemize}
+        \item An alkyl/aryl halide plus that same substance but as a Grignard forming a "dimer" at the place where the Grignard is attached.
+        \item Use nickel as a catalyst here.
+    \end{itemize}
+    \item Heteroarene coupling partners:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{[:-18]*5(-X-=--)}
+            \+
+            \chemfig{PhOTf}
+            \arrow{->[Pd][base]}
+            \chemfig{[:-18]*5(-X-(-Ph)-=-)}
+        \schemestop
+        \caption{Heteroarene coupling partners.}
+        \label{fig:heteroareneCoupling}
+    \end{figure}
+    \begin{itemize}
+        \item Note that \ce{TfO} is triflate, an abbreviation of trifluoromethanesulfonate, which is an excellent leaving group.
+        \item Also with enolates.
+    \end{itemize}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \node (1) at (90:2) {\ce{L_{n-1}Pd^0}};
+                \node (2) at (0:2.2) {\chemfig{{\ce{L_{n-1}}Pd^{II}(-[1]Ar)(-[7]X)}}}
+                    ([yshift=-4mm]2.north) edge [blx,semithick,stealth-,out=90,in=0] node[black,above right]{\ce{Ar-X}} (1)
+                ;
+                \node (3) at (180:2.2) {\chemfig{{\ce{L_{n-1}}Pd^{II}(-[1]Ar)(-[7]Nu)}}}
+                    ([yshift=4mm]3.south) edge [blx,semithick,stealth-,out=-90,in=-90,looseness=1.4] ([yshift=5mm]2.south)
+                    ([yshift=-4mm]3.north) edge [blx,semithick,-stealth,out=90,in=180] (1)
+                ;
+    
+                \draw [blx,semithick,-stealth] (150:2.35) to[out=60,in=-90] (-1.75,2.5) node[black,above]{\ce{Ar-Nu}};
+    
+                \node (4) at (90:3.4) {\ce{L_nPd^0}};
+                \draw [blx,semithick,arrows={-Stealth[harpoon]}] (1.98) -- node[black,left]{\ce{L}} (4.-98);
+                \draw [blx,semithick,arrows={-Stealth[harpoon]}] (4.-82) -- node[black,right]{\ce{-L}} (1.82);
+    
+                \node (5) [align=center] at (2.1,-3.2) {\ce{Nu-H}, base\\ or\\ \ce{Nu-M}};
+                \node (6) [align=center] at (-2,-3.2) {\ce{H-X}\\ or\\ \ce{M-X}}
+                    (6.45) edge [blx,semithick,stealth-,bend left=33] (5.150)
+                    (6.144) edge [blx,semithick,-stealth] node[black,above]{base} ++(-1,0)
+                ;
+            \end{tikzpicture}
+            \caption{Basic.}
+            \label{fig:mechanismCCa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \node (1) at (90:2) {\ce{L_nNi^IX}};
+                \node (2) at (0:2.2) {\chemfig{{\ce{L_n}Ni^{III}(-[:30]Ar)(-[6,,2]X)(-[:-30]X)}}}
+                    ([yshift=-4mm]2.north) edge [blx,semithick,stealth-,out=90,in=0] node[black,above right]{\ce{Ar-X}} (1)
+                ;
+                \node (3) at (180:2) {\chemfig{{\ce{L_n}Ni^{III}(-[:30]Ar)(-[6,,2]X)(-[:-30]Ar)}}}
+                    (3.south) edge [blx,semithick,stealth-,out=-90,in=-90,looseness=1.4] (2.south)
+                    ([yshift=-4mm]3.north) edge [blx,semithick,-stealth,out=90,in=180] (1)
+                ;
+    
+                \draw [blx,semithick,-stealth] (150:2.2) to[out=65,in=-90] (-1.6,2.5) node[black,above]{\ce{Ar-Ar}};
+    
+                \node (5) at (2.2,-4.8) {\chemfig{L_\emph{n}Ni(-[1]Ar)(-[7]X)}};
+                \node (6) at (-1.8,-4.8) {\chemfig{L_\emph{n}Ni(-[1]X)(-[7]X)}}
+                    ([xshift=-1mm,yshift=-4mm]6.north) edge [blx,semithick,stealth-,out=90,in=90,looseness=1.42] ([xshift=-1mm,yshift=-4mm]5.north)
+                ;
+                \node (7) at (0.2,-6.8) {\ce{L_nNi^0}}
+                    edge [blx,semithick,stealth-,out=180,in=-90] ([xshift=-1mm,yshift=4mm]6.south)
+                    edge [blx,semithick,-stealth,out=0,in=-90] node[black,below right]{\ce{Ar-X}} ([xshift=-1mm,yshift=4mm]5.south)
+                ;
+    
+                \node (8) at (-2.8,-5.8) {\ce{M^0}};
+                \node (9) at (-0.8,-7.8) {\ce{MX2}}
+                    edge [blx,semithick,stealth-,bend right=36] (8)
+                ;
+            \end{tikzpicture}
+            \caption{Homocoupling.}
+            \label{fig:mechanismCCb}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{0.8\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \footnotesize
+                \node (1) at (90:3) {\ce{L_{n-1}Pd^0}};
+                \node (2) at (18:3) {\chemfig{{\ce{L_{n-1}}Pd(-[1]Ar)(-[7]X)}}}
+                    edge [blx,semithick,stealth-,bend right=30] node[black,above right]{\ce{Ar-X}} (1)
+                ;
+                \node (3) at (-54:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30]Ar)(-[6,,2]\phantom{i}-[4,0.4,,,white]=-[:-60]R)(-[:-30]X)}}}
+                    edge [blx,semithick,stealth-,bend right=15] node[left]{\ce{-L}} node[black,thin,-,right]{\chemfig{[:-30]=[:30]-R}} (2)
+                ;
+                \node (4) at (-126:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30](-[2]R)-[:-30]-[:30]Ar)(-[7]X)}}}
+                    edge [blx,semithick,stealth-,bend right=15] (3)
+                ;
+                \node (5) at (162:3) {\chemfig{{\ce{L_{n-2}}Pd(-[1]X)(-[7]H)}}}
+                    edge [blx,semithick,stealth-,bend right=19] (4)
+                    edge [blx,semithick,-stealth,bend left=30] node[black,below right]{L, base} (1)
+                ;
+    
+                \draw [blx,semithick,-stealth] (-162:2.924) to[out=110,in=-15] (-4,0) node[black,thin,-,left]{\chemfig{R-[:30]=[:-30]-[:30]Ar}};
+    
+                \draw [blx,semithick,-stealth] (140:3.08) to[out=58,in=-87] (-1.8,3.8) node[black,above]{\ce{H-X}};
+    
+                \node (6) at (90:4.4) {\ce{L_nPd^0}};
+                \draw [blx,semithick,arrows={-Stealth[harpoon]}] (1.98) -- node[black,left]{\ce{L}} (6.-98);
+                \draw [blx,semithick,arrows={-Stealth[harpoon]}] (6.-82) -- node[black,right]{\ce{-L}} (1.82);
+            \end{tikzpicture}
+            \caption{Mizoroki-Heck.}
+            \label{fig:mechanismCCc}
+        \end{subfigure}
+        \caption{Cross coupling mechanisms.}
+        \label{fig:mechanismCC}
+    \end{figure}
+    \begin{itemize}
+        \item Basic (see Figure \ref{fig:mechanismCCa}):
+        \begin{itemize}
+            \item We must first activate our palladium catalyst by causing it to lose a ligand, thus becoming lower-coordinate.
+            \item Our aryl hydride will now oxidatively add to the activated catalyst.
+            \item Next, we have transmetallation (the most complicated step of the cycle). There are two possible paths by which we can introduce our nucleophile into the system and remove an X (to make space for it). First, we can use a hydride of the nucleophile which will do what we want and then form an acid with \ce{X-}; this acid can then be neutralized by the base. Alternatively, we can bond a metal to the nucleophile and simply have the metal swap \ce{Nu-} for \ce{X-} with the palladium center, forming a metal salt as a byproduct.
+            \item The last step is reductive elimination, which yields our product and regenerates our starting material.
+        \end{itemize}
+        \item Homocoupling (see Figure \ref{fig:mechanismCCb}):
+        \begin{itemize}
+            \item Once again, we first oxidatively add our aryl hydride.
+            \item Then we transmetallate. Note that to regenerate our transmetallating nucleophile, we must treat it with some reductant (typically zinc metal); it can then oxidatively add \ce{Ar-X}.
+            \item Finally, we reductively eliminate agin.
+        \end{itemize}
+        \item Mizoroki-Heck (see Figure \ref{fig:mechanismCCc}):
+        \begin{itemize}
+            \item As in the basic cycle, we must activate our palladium catalyst.
+            \item Next, we oxidatively add \ce{Ar-X} once again.
+            \item This time, however, we use an olefin as our electrophile. Note that $\ce{R}=\ce{H},\ce{CN}$, a ketone, etc. Additionally, note that we show in Figure \ref{fig:mechanismCCc} that we dissociate a ligand \ce{L} at this point, but we could also dissociate an \ce{X-} and carry that through. Overall, this step is a ligand substitution.
+            \item A 1,2-migration follows. However, different types of migratory insertion can also occur as dictated by sterics.
+            \item After this, we do a $\beta$-\ce{H} elimination to kick out our product (note that the product doesn't have to be \emph{trans} but it typically is) and bring us closer to regenerating the catalyst.
+            \item Lastly, we can regenerate our initial catalyst with the reductive elimination of an acid (which will then be neutralized by an added base) as triggered by the addition of a ligand. Alternatively, the base can deprotonate the \ce{L_{n-2}XH} intermediate before pulling off the \ce{X-} group.
+            \item Note that this reaction must be carried out in basic media.
+        \end{itemize}
+    \end{itemize}
+    \item Oxidative addition:
+    \begin{itemize}
+        \item Occurs from a coordinatively and electronically unsaturated metal center
+        \item Thus, we usually use either a monoligated or diligated neutral palladium center.
+        \item Large, bulky monodentate ligands (e.g., phosphines) are good.
+        \begin{itemize}
+            \item More steric hindrance enhances oxidative addition because we need easy dissociation later.
+        \end{itemize}
+        \item Influence of the electrophile on the speed of oxidative addition:
+        \begin{equation*}
+            \ce{ArI}
+            > \ce{ArBr}
+            > \ce{ArCl}
+            > \ce{ArOTf}
+            > \ce{ArOTs}
+        \end{equation*}
+        \begin{itemize}
+            \item This shows that electron poor substrates are faster.
+            \item Note that this makes sense because in an oxidative addition, the substrate is reduced, and more electron poor substrates will want to be reduced more.
+        \end{itemize}
+        \item \ce{Ni} is generally faster than \ce{Pd}.
+    \end{itemize}
+    \item Transmetallation:
+    \begin{itemize}
+        \item By far the most complicated step in cross coupling mechanisms. The least is known about it and it exhibits great variability. Thus, the following is just a couple notes; there's not necessarily anything definite that you should take away.
+        \item General form:
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \chemfig{L_\emph{n}MX}
+                \+
+                \chemfig{RMgX{(}THF{)_\emph{n}}}
+                \arrow
+                \chemleft{[}
+                    \chemfig{L_\emph{n}M?-[,,,,dashed]X-[6,,,,dashed]Mg(-X)(-[6]solv)-[4,0.89,,,dashed]R?[,,dashed]}
+                \chemright{]^\ddagger}
+                \arrow
+                \chemfig{L_\emph{n}MR}
+                \+
+                \chemfig{MgX_2{(}sol{)_\emph{n}}}
+            \schemestop
+            \caption{The general form of transmetallation.}
+            \label{fig:transmetallationReaction}
+        \end{figure}
+        \item Some examples listed.
+        \item On the subject of boronic acids, Negishi proposes the following: \ce{L2PhPdBr ->[KOH] [LPhPd($\mu${-}OH)]2 ->[Ar(BOH)2] Ar-Ph}, $70\%$.
+        \begin{itemize}
+            \item Negishi's conclusion: You typically need a base/nucleophile (such as hydroxide, water, or fluoride) to do the transfer of aryl boronic acids.
+        \end{itemize}
+        \item Stille (\ce{Sn}): Requires either a closed (such as in Figure \ref{fig:transmetallationReaction}) or open (as from a standard nucleophilic attack) transition state.
+    \end{itemize}
+    \item Reductive elimination:
+    \begin{itemize}
+        \item Steric pressure favors reductive elimination, yet it typically occurs from a less stable 3-coordinate intermediate.
+        \item Such an intermediate can be generated after ligand dissociation.
+        \item The two groups that reductively eliminate must be \emph{cis}.
+        \item Aryl and vinyl groups are typically faster than alkyls.
+    \end{itemize}
+    \item Ligands:
+    \begin{itemize}
+        \item A huge number.
+        \begin{itemize}
+            \item These are typically phosphines, though.
+        \end{itemize}
+        \item Tri(\emph{tert}-butyl)phosphine is also known as tri(chicken foot)phosphine!
+        \item Each ligand has very specific properties (better for one cross coupling than another).
+        \item Very bulky phosphines tend to be good for these reactions, but chelating phosphines can be good, too.
+        \item The reaction of a butyl Grignard in a cross coupling reaction gives us a couple of products (i.e., 1-Rbutane, 2-Rbutane).
+        \begin{itemize}
+            \item Yields are poor with phosphines as \ce{L} ligands.
+            \item Yields are much better with dppf.
+        \end{itemize}
+        \item Dppf is ferrocene with a \ce{PPh2} off of each \ce{Cp} group. It's a chelating ligand (through the phosphines) with a very wide bite angle.
+        \item Dppf is better because\dots
+        \begin{itemize}
+            \item With phosphines, during the reductive elimination step of the basic cycle (Figure \ref{fig:mechanismCCa}), we have interference from $\beta$-\ce{H} elimination (and sometimes ensuing migratory insertion of the eliminated hydride).
+            \item $\beta$-\ce{H} elimination occurs with phosphine ligands because $\text{C.N.}=3$, so there are open axial coordination sites to which the hydride can migrate.
+            \item However, with the bidentate dppf ligand, we essentially have a square-planar palladium species, which is very stable and will not easily form a 5-coordinate intermediate.
+        \end{itemize}
+        \item Note that because dppf yields a 4-coordinate species, reductive elimination will be a bit slower, but we'll happily sacrifice speed for the much greater yield.
+        \begin{itemize}
+            \item However, the large bite angle of dppf forces the aryl and R groups attached to the metal closer together, which promotes reductive elimination.
+            \item Thus, the decrease in speed is not that significant.
+        \end{itemize}
+    \end{itemize}
+    \item Alternative schemes for cross coupling: Heteroatoms.
+    \begin{itemize}
+        \item With nitrogen, we can do this with \ce{HNR2}, \ce{H2NR}, \ce{NH3}, imines, hydrosomes, etc.
+        \item Heterocycles, azoles, carbonates, sulfoximines, amides, etc.
+        \item Note that as \ce{N-} becomes less donating, reductive elimination slows down.
+        \begin{itemize}
+            \item There's not really a transmetallation step here.
+            \item The issue is that these nucleophiles are not as basic as carbon-based ones.
+        \end{itemize}
+        \item We still need to worry about $\beta$-\ce{H} elimination.
+    \end{itemize}
+    \item Alternate mechanisms: Radicals.
+    \begin{itemize}
+        \item Happens more with first-row transition metals (they're better at 1-electron redox chemistry).
+        \item Ullmann coupling (often with copper, but sometimes with nickel, too): \ce{2Ph-X ->[Cu][$>\SI{200}{\celsius}$] Ph2} Cu salts, diamines, diols.
+        \begin{itemize}
+            \item The temperature can be lowered with an appropriate ligand.
+        \end{itemize}
+        \item More flexibility in terms of the coupling partner.
+        \begin{itemize}
+            \item We can do \ce{C-O}, \ce{C-S}, and \ce{C-N} coupling in addition to \ce{C-C} coupling.
+        \end{itemize}
+        \item Possible mechanisms (note that $\ce{Y}=\ce{Ar},\ce{R}$):
+        \begin{itemize}
+            \item \ce{Ar-X + Cu^IY -> YCu^{III}XAr ->[{red. elim.}] Ar-Y + CuX}.
+            \item \ce{Ar-X + Cu^IY -> Cu^{II}Y(XAr*) -> Cu^{II}XY + Ar* -> Ar-Y + CuX} (most likely).
+            \item \ce{Ar-X + Cu^IY -> Cu^{II}Y(XAr*) -> Cu^{II}ArY- + X* -> Ar-Y + CuX}.
+        \end{itemize}
+        \item Ullmann couplings can be photoactivated (suggests a radical mechanism).
+        \item \ce{Cu^{III}} is uncommon (suggests a radical mechanism).
+        \item Radical mechanisms can enable $sp^3$-$sp^3$ couplings, even bulky ones (outer sphere radical attacks aren't as affected by steric bulk).
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
