@@ -333,10 +333,10 @@
                     \begin{tikzpicture}[scale=0.7]
                         \footnotesize
                         \node {M};
-                        \draw [semithick,scale=1.5,xshift=-2mm] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
-                        \draw [semithick,scale=1.5,xshift=2mm] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
-                        \filldraw [semithick,fill=blz,scale=1.5,rotate=90,xshift=-2mm] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
-                        \filldraw [semithick,fill=blz,scale=1.5,rotate=90,xshift=2mm] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=blz,scale=1.5,xshift=-2mm] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=blz,scale=1.5,xshift=2mm] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \draw [semithick,scale=1.5,rotate=90,xshift=-2mm] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \draw [semithick,scale=1.5,rotate=90,xshift=2mm] plot [domain=-pi/2:pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
                 
                         \begin{scope}[xshift=4.6cm]
                             \fill [fill=blz] ({6^0.5/4-1.5},0) circle (6^0.5/4);
