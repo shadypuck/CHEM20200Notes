@@ -565,17 +565,17 @@
     
                 \draw [blx,semithick,-stealth] (150:2.2) to[out=65,in=-90] (-1.6,2.5) node[black,above]{\ce{Ar-Ar}};
     
-                \node (5) at (2.2,-4.8) {\chemfig{L_\emph{n}Ni(-[1]Ar)(-[7]X)}};
-                \node (6) at (-1.8,-4.8) {\chemfig{L_\emph{n}Ni(-[1]X)(-[7]X)}}
-                    ([xshift=-1mm,yshift=-4mm]6.north) edge [blx,semithick,stealth-,out=90,in=90,looseness=1.42] ([xshift=-1mm,yshift=-4mm]5.north)
+                \node (5) at (2.2,-4.7) {\chemfig{L_\emph{n}Ni(-[1]Ar)(-[7]X)}};
+                \node (6) at (-1.8,-4.7) {\chemfig{L_\emph{n}Ni(-[1]X)(-[7]X)}}
+                    ([xshift=-1mm,yshift=-4mm]6.north) edge [blx,semithick,stealth-,out=90,in=90,looseness=1.4] ([xshift=-1mm,yshift=-4mm]5.north)
                 ;
-                \node (7) at (0.2,-6.8) {\ce{L_nNi^0}}
+                \node (7) at (0.2,-6.7) {\ce{L_nNi^0}}
                     edge [blx,semithick,stealth-,out=180,in=-90] ([xshift=-1mm,yshift=4mm]6.south)
                     edge [blx,semithick,-stealth,out=0,in=-90] node[black,below right]{\ce{Ar-X}} ([xshift=-1mm,yshift=4mm]5.south)
                 ;
     
-                \node (8) at (-2.8,-5.8) {\ce{M^0}};
-                \node (9) at (-0.8,-7.8) {\ce{MX2}}
+                \node (8) at (-2.8,-5.7) {\ce{M^0}};
+                \node (9) at (-0.8,-7.7) {\ce{MX2}}
                     edge [blx,semithick,stealth-,bend right=36] (8)
                 ;
             \end{tikzpicture}
@@ -591,7 +591,7 @@
                     edge [blx,semithick,stealth-,bend right=30] node[black,above right]{\ce{Ar-X}} (1)
                 ;
                 \node (3) at (-54:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30]Ar)(-[6,,2]\phantom{i}-[4,0.4,,,white]=-[:-60]R)(-[:-30]X)}}}
-                    edge [blx,semithick,stealth-,bend right=15] node[left]{\ce{-L}} node[black,thin,-,right]{\chemfig{[:-30]=[:30]-R}} (2)
+                    edge [blx,semithick,stealth-,bend right=15] node[black,left]{\ce{-L}} node[black,thin,-,right]{\chemfig{[:-30]=[:30]-R}} (2)
                 ;
                 \node (4) at (-126:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30](-[2]R)-[:-30]-[:30]Ar)(-[7]X)}}}
                     edge [blx,semithick,stealth-,bend right=15] (3)
@@ -756,6 +756,397 @@
         \item Ullmann couplings can be photoactivated (suggests a radical mechanism).
         \item \ce{Cu^{III}} is uncommon (suggests a radical mechanism).
         \item Radical mechanisms can enable $sp^3$-$sp^3$ couplings, even bulky ones (outer sphere radical attacks aren't as affected by steric bulk).
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Lecture 14: Olefin Metathesis}
+\begin{itemize}
+    \item \marginnote{4/30:}Applies to both alkenes and alkynes.
+    \begin{itemize}
+        \item Metal carbene, alkylidene, and alkylidyne complexes are also important for their catalytic applications to olefin metathesis.
+    \end{itemize}
+    \item Nobel prize (2005) to Richard Schrock, Bob Grubbs, and Yves Chauvin.
+    \item General form:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{A-[1](-[3]A)=(-[1]A)(-[7]A)}
+            \+{,,1.8em}
+            \chemfig{B-[1](-[3]B)=(-[1]B)(-[7]B)}
+            \arrow{<=>}
+            \chemfig{2} \arrow{0}[,0.2] \chemfig{A-[1](-[3]A)=(-[1]B)(-[7]B)}
+        \schemestop
+        \caption{The general form of olefin metathesis.}
+        \label{fig:olefinMetathesis}
+    \end{figure}
+    \begin{itemize}
+        \item The olefins are not always tetrasubstituted, but we draw it as in Figure \ref{fig:olefinMetathesis} to illustrate the point.
+        \item Alkyne metathesis is symmetric; just with disubstituted alkynes.
+        \item Equilibrium reaction (we need a thermodynamic driving force to favor specific products).
+        \begin{itemize}
+            \item Can be limiting, but there are simple workarounds in the reaction types we are going to discuss.
+        \end{itemize}
+    \end{itemize}
+    \item Not as widely used as cross coupling, but still important.
+    \item Six basic classes of reactions:
+    \begin{enumerate}
+        \item Distribution.
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \subscheme{
+                    \chemfig{R_1-[:30]=[:-30]-[:30]R_2}
+                    \arrow(.south--.north){0[*{180}+]}[-90,0.4]
+                    \chemfig{R_3-[:30]=[:-30]-[:30]R_4}
+                }
+                \arrow{<=>}\subscheme{
+                    \chemfig{R_1-[:30]=[:-30]-[:30]R_3}
+                    \arrow(.south--.north){0[*{180}+]}[-90,0.4]
+                    \chemfig{R_2-[:30]=[:-30]-[:30]R_4}
+                    \arrow(.south--.north){0[*{180}+]}[-90,0.4]
+                    \chemfig{R_1-[:30]=[:-30]-[:30]R_4}
+                    \arrow(.south--.north){0[*{180}+]}[-90,0.4]
+                    \chemfig{R_2-[:30]=[:-30]-[:30]R_3}
+                }
+            \schemestop
+            \caption{Olefin metathesis classes: Distribution.}
+            \label{fig:olefinMetathesis-distribution}
+        \end{figure}
+        \begin{itemize}
+            \item Two reactants form all possible permutations of the carbene fragments.
+            \item Not often useful, but\dots
+            \item Useful applications:
+            \begin{itemize}
+                \item 2 propylenes make 2-butene and ethene, the latter of which is volatile and can be distilled off. Thus, distribution allows us to selectively make 2-butene from propylene, a widely available, mass-produced compound.
+                \item Shell higher olefin process (SHOP): Used to selectively make higher-mass olefins and distill off lighter ones.
+            \end{itemize}
+        \end{itemize}
+        \item Ring Opening Metathesis Polymerization (ROMP).
+        \begin{figure}[H]
+            \centering
+            \schemestart
+                \chemfig{[:30]*6(=-----)}
+                \arrow{->}
+                \chemleft{(}
+                    \chemfig{=[,0.5]-[:120]-[:60]--[:-60]-[:-120]=[,0.5]}
+                \chemright{)_n}
+            \schemestop
+            \caption{Olefin metathesis classes: ROMP.}
+            \label{fig:olefinMetathesis-ROMP}
+        \end{figure}
+        \begin{itemize}
+            \item A ring with one double bond opens and polymerizes at the double bond.
+            \item Note that this reaction can proceed with rings containing any number of carbons.
+            \item Driving force: Release of ring strain.
+        \end{itemize}
+        \item Addition Metathesis Polymerization (ADMET).
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \chemfig{=[:30]-[:-30]-[:30]-[:-30]=[:30]}
+                \arrow
+                \chemleft{(}
+                    \chemfig{=[:30,0.5]-[:-30]-[:30]-[:-30]=[:30,0.5]}
+                \chemright{)_n}
+                \arrow{0}[,0]\+{,,0.5em}
+                \chemfig{[:45]=}
+            \schemestop
+            \caption{Olefin metathesis classes: ADMET.}
+            \label{fig:olefinMetathesis-ADMET}
+        \end{figure}
+        \begin{itemize}
+            \item A diolefin (under metathesis conditions) breaks off ethylene at both ends and polymerizes.
+            \item Not as broadly useful as ROMP due to competitive ring-closing metathesis.
+        \end{itemize}
+        \item Ring-closing metathesis.
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \chemfig{=[:-30]-[:30]-[:-30]X-[:30]-[:-30]=[:30]}
+                \arrow{->}
+                \chemfig{[:18]*5(=--X--)}
+                \arrow{0}[,0]\+{,,0.6em}
+                \chemfig{[:45]=}
+            \schemestop
+            \caption{Olefin metathesis classes: Ring-closing metathesis.}
+            \label{fig:olefinMetathesis-ringClosing}
+        \end{figure}
+        \begin{itemize}
+            \item A diolefin (under metathesis conditions) makes a cyclic heterocycle and ethylene.
+            \item Driving force: Release of a gas (ethene).
+            \item Has utility in natural product synthesis (as a last step to close macrocyclic rings).
+        \end{itemize}
+        \item Cross metathesis.
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \chemfig{R-[:30]=[:-30]}
+                \+{,,0.6em}
+                \chemfig{R'-[:30]=[:-30]}
+                \arrow{->}
+                \chemfig{R-[:30]=[:-30]-[:30]R'}
+                \+{,,0.6em}
+                \chemfig{[:45]=}
+            \schemestop
+            \caption{Olefin metathesis classes: Cross metathesis.}
+            \label{fig:olefinMetathesis-cross}
+        \end{figure}
+        \begin{itemize}
+            \item Two terminal olefins break of their end carbons (which combine to form ethene) and then combine, themselves, as carbene fragments to form an internal olefin.
+            \item An equilibrium process; must compete with homometathesis (forming \ce{R-R} and \ce{R$'$-R$'$}).
+            \item Driving force: Release of a gas (ethene).
+        \end{itemize}
+        \item Enyne metathesis.
+        \begin{figure}[H]
+            \centering
+            \schemestart
+                \chemfig{R-~-R}
+                \arrow{0}[,0]\+{,,0.4em}
+                \chemfig{[:45]=}
+                \arrow
+                \chemfig{R-[2](=[:150])-[:30](=[:-30])-[2]R}
+            \schemestop
+            \caption{Olefin metathesis classes: Enyne metathesis.}
+            \label{fig:olefinMetathesis-enyneMet}
+        \end{figure}
+        \begin{itemize}
+            \item An alkyne and ethylene makes a diene.
+        \end{itemize}
+    \end{enumerate}
+    \pagebreak
+    \item Alkyne metathesis polymerization.
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{~-**6(---(-~)---)}
+            \arrow
+            \chemleft{(}
+                \chemfig{~[,0.5]-**6(---(-~[,0.5])---)}
+            \chemright{)_n}
+            \+
+            \chemfig{H-~-H}
+        \schemestop
+        \caption{Alkyne metathesis polymerization.}
+        \label{fig:alkyneMetathesisPolymerization}
+    \end{figure}
+    \begin{itemize}
+        \item A dialkyne makes a polymer and acetylene.
+        \item Very similar to ADMET.
+    \end{itemize}
+    \item Ring-closing alkyne metathesis exists as well.
+    \item Catalysts:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.25\linewidth}
+            \centering
+            \chemfig{Mo(~[2]N-[2]Ar)(=[:-30]-[:30]Bu^\emph{t})(<[:-110]RO)(>:[:-150]RO)}
+            \caption{A Schrock catalyst.}
+            \label{fig:olefinMetathesisCatalystsa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{Ru(=-[:-60]Ph)(>:[1]Cl)(-[2]PR_3)(<[5]Cl)(-[6]PR_3)}
+            \caption{Grubbs I.}
+            \label{fig:olefinMetathesisCatalystsb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.26\linewidth}
+            \centering
+            \chemfig{Ru(=-[:-60])(>:[1]Cl)(-[2]*5(-N(-Ar)---N(-Ar)-))(<[5]Cl)(-[6]PR_3)}
+            \begin{tikzpicture}[remember picture,overlay]
+                \draw [dashed] (-2.21,1.27) arc (-130:-50:0.5);
+            \end{tikzpicture}
+            \caption{Grubbs II.}
+            \label{fig:olefinMetathesisCatalystsc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.27\linewidth}
+            \centering
+            \chemfig{Ru?(=-[:-60]**6(-(-[,1.13]O?-[:-120]R)--(-R)---))(>:[1]Cl)(-[2]L)(<[5]Cl)}
+            \caption{Grubbs-Hoveyda.}
+            \label{fig:olefinMetathesisCatalystsd}
+        \end{subfigure}
+        \caption{Olefin metathesis catalysts.}
+        \label{fig:olefinMetathesisCatalysts}
+    \end{figure}
+    \begin{enumerate}
+        \item Schrock catalysts (general form of Figure \ref{fig:olefinMetathesisCatalystsa}).
+        \begin{itemize}
+            \item Many of these exist.
+            \begin{itemize}
+                \item The metal center, as well as the amido and alkoxide ligands can be varied.
+                \item Note that any X-type ligand can be substituted for the alkoxides.
+            \end{itemize}
+            \item Molybdenum or tungsten based (molybdenum is more active).
+            \item Since molybdenum is an early transition metal, the catalyst is very electropositive. Thus, it's an alkylidene with strong nucleophilic character at the carbon.
+            \item Extremely reactive. This is\dots
+            \begin{itemize}
+                \item Good for hard reactions.
+                \item Bad because they're air sensitive and don't have a lot of functional group tolerance.
+            \end{itemize}
+        \end{itemize}
+        \item Grubbs catalysts (Figures \ref{fig:olefinMetathesisCatalystsb}, \ref{fig:olefinMetathesisCatalystsc}, and \ref{fig:olefinMetathesisCatalystsd}).
+        \begin{itemize}
+            \item Ruthenium based.
+            \item Less active, but more tolerant of air and water.
+            \item Note that the top ligand on Grubs II (Figure \ref{fig:olefinMetathesisCatalystsc}) is called an NHC ligand, and that it is the same ligand that is typically present where "\ce{L}" is written on Grubbs-Hoveyda (Figure \ref{fig:olefinMetathesisCatalystsd}).
+            \item Note also that the big bidentate ligand on the the Grubbs-Hoveyda catalyst (Figure \ref{fig:olefinMetathesisCatalystsd}) is a tethered alkylidene.
+            \item There has probably been a lot more utility in these since they're initially less reactive.
+        \end{itemize}
+    \end{enumerate}
+    \item General rule in inorganic chemistry: You can often make things more reactive (e.g., by heating them up), but rarely less (cooling things down can make the chemistry less reliable).
+    \item Two mechanisms that were proposed early-on (related to Figure \ref{fig:mechanism-alkyneMetathesisb}):
+    \begin{enumerate}
+        \item Metal-diolefin adduct to $\eta^4$-cyclobutadiene adducct, then refragmentation.
+        \item Metal-diolefin adduct reductively couples into a 5-membered metallacycle, then to a metallacycle butane alkylidene, then rearrangement and separation.
+    \end{enumerate}
+    \item Actual mechanism:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{L_{\emph{n}}M=-[:60]R}
+            \arrow{->[\small\chemfig{R'-[:30]=[:-30]}]}[,1.5]
+            \chemleft{[}
+                \chemfig{L_{\emph{n}}M?=(<[:-30,0.8]R)-[6,1.2,,,dashed](>:[:-20,0.7]R')=[4,1.23]?[,,dashed]}
+            \chemright{]^\ddagger}
+            \arrow
+            \chemfig{[7]L_{\emph{n}}M*4(--(>:R')-(<[2]R)-)}
+            \arrow{-U>[][*{0.-160}\small\subscheme{
+                \chemfig{R-[:-60]=-[:60]R'}
+                \arrow{0[*{0.135}or]}[-90,0.4]
+                \chemfig{R-[:30]=[:-30]-[:30]R'}
+            }][][][135]}[-90,2]
+            \chemfig{L_{\emph{n}}M=CH_2}
+            \arrow{->[\small\chemfig{R-[:30]=[:-30]}]}[180,4.5]
+            \chemfig{[7]L_{\emph{n}}M*4(-(-R)---)}
+            \arrow{-U>[][*{0.-20}\small\chemfig{[:45]=}][][][110]}[90,1.8]
+        \schemestop
+        \caption{Olefin metathesis mechanism.}
+        \label{fig:mechanism-olefinMetathesis}
+    \end{figure}
+    \begin{itemize}
+        \item Chauvin proposes this; Schrock and Grubbs prove it.
+        \item Every step is an equilibrium reaction, but Figure \ref{fig:mechanism-olefinMetathesis} has monodirectional arrows for simplicity.
+        \item On the transition state of the first step.
+        \begin{itemize}
+            \item A $2+2$ cycloaddition.
+            \item Forbidden in organic chemistry, but allowed in inorganic because of the symmetry of the $d$ orbitals.
+        \end{itemize}
+        \item The first intermediate is a metallacyclobutane, which is a very important intermediate.
+        \item The second intermediate is a terminal methylidene, which is highly reactive.
+        \item Note that the mechanism drawn in Figure \ref{fig:mechanism-olefinMetathesis} is technically that of cross metathesis.
+        \item There is frequently an activation step involving the loss of a ligand to free up a coordination site.
+        \item There is also a degenerate pathway.
+        \begin{itemize}
+            \item This starts with the formation of a \emph{trans} metallacyclobutate in step 1. Thus, this pathway is actually favored sterically.
+            \item This metallacyclobutane can then collapse back down to an olefin and a metal alkylidene, possibly with \ce{R$'$} on the metal alkylidene instead of \ce{R$'$}.
+            \item This does indeed happen quite often, but it's clearly pretty harmless (also because this pathway is an equilibrium one, too).
+            \item If we have a means of siphoning off ethylene, we can favor the primary pathway.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanistic probes (things that indicated the actual mechanism over the other proposed ones):
+    \begin{itemize}
+        \item Take a diphenyl compound with two styrenyl ligands (one with hydrogens; one with deuteriums).
+        \item The products are a cyclized olefin and distribution products.
+        \item A statistical mixture of \ce{CR2} fragments is observed; this is only possible with the mechanism in Figure \ref{fig:mechanism-olefinMetathesis}.
+    \end{itemize}
+    \item Decomposition:
+    \begin{itemize}
+        \item Where the catalysis can go wrong (and how to shut down these alternate pathways).
+        \item Primarily caused by the electrophilic methylidenes.
+        \item What happens is a nucleophylic attack by a phosphine on the electrophilic alkylidenes.
+    \end{itemize}
+    \item Notes on stereochemistry.
+    \begin{itemize}
+        \item Monoalkoxide pyridine (MAP) catalysts (recently reported by Schrock).
+        \begin{itemize}
+            \item Chiral at \ce{Mo}.
+            \item Can resolve enantiomers.
+            \item 100 times more active than bis-alkoxides (owing to the pyrilide ligand, which can coordinate face-on with a Cp and do some other odd things).
+        \end{itemize}
+        \item \emph{trans} metallacyclobutanes (which lead to \emph{trans} products) are preferred, but \emph{cis} metallacyclobutanes can be favored with sterics.
+        \begin{itemize}
+            \item For example, with respect to a Schrock catalyst (Figure \ref{fig:olefinMetathesisCatalystsa}), making the alkoxides large and the nitrido small can force both R groups above the plane of the metallacyclobutane.
+        \end{itemize}
+    \end{itemize}
+    \item Alkyne metathesis.
+    \begin{itemize}
+        \item Again, largely developed by Schrock.
+    \end{itemize}
+    \item \ce{RC#Mo(OR)3} is the active catalyst.
+    \begin{itemize}
+        \item The method of generating this catalyst is shown.
+    \end{itemize}
+    \item Mechanisms:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \schemestart
+                \chemfig{W?(>:[:30]Cl)(~[2]-[2]Bu^\emph{t})(>:[:150]O(-[2])-[:-160,0.9]-[6,0.8]-[:-20,0.9]O?[,5](-[6]))(-[6]Cl)(<[:-30]Cl)}
+                \arrow{->[\small\chemfig{R-~-R}]}[,2.5]
+                \chemfig{W(-[2]Cl)(-[4]Cl)(-[6]Cl)**4(-(-R)-(-R)-(-Bu^\emph{t})-)}
+            \schemestop
+            \caption{The likely mechanism.}
+            \label{fig:mechanism-alkyneMetathesisa}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \schemestart
+                \chemfig{\ce{L_n}M}
+                \arrow{->[\small\chemfig{R-~-R}]}[,2.5]
+                \chemfig{[:-36]\ce{L_n}M*5(-(-B)=(-B)-(-A)=(-A)-)}
+                \arrow
+                \chemfig{**4((-[:-120]B)-(-[:-60]B)-(-[:60]A)-(-[:120]A)-)-[1,0.7,,,opacity=0]-[4,1.5]\ce{L_n}M}
+                \arrow
+                \chemfig{[:-36]\ce{L_n}M*5(-(-A)=(-B)-(-B)=(-A)-)}
+            \schemestop
+            \caption{A possible alternate mechanism.}
+            \label{fig:mechanism-alkyneMetathesisb}
+        \end{subfigure}
+        \caption{Alkyne metathesis mechanisms.}
+        \label{fig:mechanism-alkyneMetathesis}
+    \end{figure}
+    \begin{itemize}
+        \item By Schrock.
+        \item In Figure \ref{fig:mechanism-alkyneMetathesisa}, a tungsten alkylidyne reacts with an alkyne to generate an isolable metallacyclobutadiene in a pathway quite similar to Figure \ref{fig:mechanism-olefinMetathesis}.
+        \item However, the pathway in Figure \ref{fig:mechanism-alkyneMetathesisb} has also been observed, although not yet in a mechanistically, kinetically competent manner.
+    \end{itemize}
+    \item Note that alkyne metathesis polymerization is a really interesting area being worked on by Adam Veige.
+    \item Enyne metathesis.
+    \item General form (related to Figure \ref{fig:olefinMetathesis-enyneMet}):
+    \begin{equation*}
+        \ce{R-#-H + =-R ->[Ru] R-C(=Me)-C=-R}
+    \end{equation*}
+    \begin{itemize}
+        \item This chemistry is once again dominated by ruthenium.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{\ce{L_n}Ru=-[:60]R}
+            \arrow{->[\small\chemfig{~-R'}]}[,1.5]
+            \chemfig{\ce{L_n}Ru(=-[:60]R)-[6]\phantom{i}-[,0.4,,,white]~[4]-[4]R'}
+            \arrow
+            \chemfig{*4((-R')=-(-R)-\ce{L_n}Ru-[,,2])}
+            \arrow[-90,1.5]
+            \chemfig{\ce{L_n}Ru=[6,,2](-[:-150]R')-[:-30]=[:30]-[:-30]R}
+            \arrow{->[\small\chemfig{R-[:30]=[:-30]}]}[180,4]
+            \chemfig{*4((-[:-150]R')(-[:-80,0.9]=[0]-[:-60]R)--(-R)-\ce{L_n}Ru-[,,2])}
+            \arrow{-U>[][*{0.40}\small\chemfig{R'-[:30](=[2])-[:-30]=[:30]-[:-30]R}][][][135]}[90,1.5]
+        \schemestop
+        \caption{Enyne metathesis mechanism.}
+        \label{fig:mechanism-enyneMet}
+    \end{figure}
+    \begin{itemize}
+        \item The second step is a $2+2$ cycloaddition, and yields a metallacyclobutene.
+        \begin{itemize}
+            \item For the reaction to proceed, we must have a 1,3-regioisomer, as shown.
+        \end{itemize}
+        \item The third step sees the double bond electrons push up and to the right, and the electrons from the top bond in the ring push down and to the left.
+        \item The final step occurs partially because of the instability of the tertiary carbon.
+        \item The product is often \emph{trans} (as shown), but can be \emph{cis}.
     \end{itemize}
 \end{itemize}
 
