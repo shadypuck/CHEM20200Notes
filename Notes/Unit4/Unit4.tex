@@ -281,5 +281,269 @@
 
 
 
+\section{Lecture 16: Hydrogenation}
+\begin{itemize}
+    \item \marginnote{5/5:}Nobel prize (2001) to Knowles and Noyori, but could have gone to Jack Halpern.
+    \begin{itemize}
+        \item A hugely important reaction.
+    \end{itemize}
+    \item General form:
+    \begin{equation*}
+        \ce{Y=X + H2 ->[{cat}] H-Y-X-H}
+    \end{equation*}
+    \item Both reagents are activated by the catalyst.
+    \item The chemo, regio, and stereo selectivity has been determined for many of the mechanisms.
+    \item History:
+    \begin{itemize}
+        \item Melvin Calvin reports the first hydrogenation reaction in 1938.
+        \begin{itemize}
+            \item Iguchi also studied rhodium-amine complexes around the same time.
+        \end{itemize}
+        \item Wilkinson discovers Wilkinson's catalyst (\ce{Rh(PPh3)3Cl}) in the 1960s and does other foundational research in this area.
+        \begin{itemize}
+            \item Halpern figures out the mechanism by which Wilkinson's catalyst works.
+        \end{itemize}
+        \item Knowles and Noyori: Developed asymmetric hydrogenations.
+    \end{itemize}
+    \item Wilkinson's catalyst:
+    \begin{itemize}
+        \item Two methods of synthesizing it are given.
+    \end{itemize}
+    \item Mechanism (for generic catalyzed hydrogenation):
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \schemestart
+                \chemfig{M(-[1]H)(-[7]H)}
+                \arrow{->[\small\chemfig{[:45]=}]}
+                \chemfig{M(-[7]H)(-[1]H)(-[2]\phantom{i}-[4,0.4,,,white]=)}
+                \arrow[-90]
+                \chemfig{M(-[7]H)(-[:30]-[:-30])}
+                \arrow{-U>[][*{0.90}\small\chemfig{[:45]-}][][][90]}[180]
+                \chemfig{M^{\mathit{n}-2}}
+                \arrow{->[*{0}\small\ce{H2}]}[90,1.3]
+            \schemestop
+            \caption{Dihydride mechanism.}
+            \label{fig:mechanism-hydrogenationa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.45\linewidth}
+            \centering
+            \schemestart
+                \chemfig{M-H}
+                \arrow{->[\small\chemfig{[:45]=}]}
+                \chemfig{M(-H)(-[2]\phantom{i}-[4,0.4,,,white]=)}
+                \arrow[-90]
+                \chemfig{M-[:30]-[:-30]}
+                \arrow{->[\small\ce{H2}]}[180]
+                \chemfig{M(-[6]H)(-[7]H)(-[:30]-[:-30])}
+                \arrow{-U>[][*{0}\small\chemfig{[:45]-}][][][120]}[90]
+            \schemestop
+            \caption{Monohydride mechanism.}
+            \label{fig:mechanism-hydrogenationb}
+        \end{subfigure}
+        \caption{Hydrogenation mechanisms.}
+        \label{fig:mechanism-hydrogenation}
+    \end{figure}
+    \item Reactivity trends (for Wilkinson's catalyst):
+    \begin{itemize}
+        \item Rates of hydrogenation for olefins: Cyclic $>$ terminal $>$ doubly substituted $>$ \emph{cis} $>$ \emph{trans} $>$ triply substituted.
+        \begin{itemize}
+            \item This trend can be utilized for \textbf{chemo selectivity}.
+        \end{itemize}
+        \item No reactivity with esters or arenes.
+    \end{itemize}
+    \item \textbf{Chemo selectivity}: The selective hydrogenation of olefins that more readily hydrogenate in a polyolefin compound.
+    \begin{itemize}
+        \item In other words, chemo selectivity relies on the principle that in a compound with multiple types of double bonds, the ones with higher rates will be selectively hydrogenated first.
+    \end{itemize}
+    \item Mechanism (for hydrogenation catalyzed by Wilkinson's catalyst):
+    \begin{equation*}
+        \ce{L3RhCl <=>[{solvent}][L] L2({sol})RhCl <=>[H2] L2({sol})RhClH2 <=>[||] L2(||)RhClH2 -> L2({sol})RhClHEt ->[L][-Et, {sol}] L3RhCl}
+    \end{equation*}
+    \begin{itemize}
+        \item Worked out by Jack Halpern
+        \item No scrambling of \ce{H2}/\ce{D2} (you only observe products with two H's added, and products with two D's added; there are no products with an H \emph{and} a D added).
+        \item No scrambling with solvent.
+        \item The above two observations suggest a dihydride mechanism.
+        \item Note that the solvent is either an alcohol or acetonitrile (\ce{MeCN}).
+        \item Note that the step with no new reactants is the turnover limiting step (it is drawn with a monodirectional arrow because it is virtually irreversible).
+    \end{itemize}
+    \item Catalyst optimization:
+    \begin{itemize}
+        \item Cationic \ce{Rh} complexes react much faster (e.g., \ce{[RhL2H2(sol)2]+}).
+        \begin{itemize}
+            \item In effect, removing the chloride generates a noncoordinating countercation, which is much more reactive.
+        \end{itemize}
+        \item If you use iridium instead, it's Crabtree's catalyst: \ce{[Ir(COD)(PCCh3)(py)]+[PF6]-}.
+    \end{itemize}
+    \item Compares rates of derivatives of Crabtree's and Wilkinson's catalyst at various temperatures in noncoordinating solvents.
+    \begin{itemize}
+        \item We use noncoordinating solvents such as arenes because solvent-binding is a step in some mechanisms, and thus affects the rate.
+        \item Some variations have significantly less reactivity for cyclic olefins than Wilkinson's catalyst.
+        \item Conclusion: By making slight changes to the ligands and metal center, you can finely tune the activity of these catalysts to do the type of hydrogenation you want (regioselectivity).
+    \end{itemize}
+    \item Directed hydrogenation.
+    \begin{itemize}
+        \item We can use solvent binding to dictate the selectivity of a certain hydrogenation.
+        \item If we have a cyclic substrate with a coordinating ligand above one face, the catalyst can coordinate to that ligand and perform the hydrogenation from that face, heavily favoring a certain stereochemistry in the product.
+        \item Note that other ligands can affect the extent of substrate coordination.
+    \end{itemize}
+    \item Other mechanistic details\footnote{An important process is listed, possibly to be returned to later.}.
+    \begin{enumerate}
+        \item The species you observe (the resting state of the catalyst) may not be on the active catalytic pathway.
+        \item To deduce the mechanism, the rates of the individual steps should be determined (recall kinetic competence).
+    \end{enumerate}
+    \item Noyori's bifunctional catalysis (heavily related to Figure \ref{fig:noyorisCatalystMech}).
+    \item $\sigma$-bond metathesis:
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{Cp_2Lu-H}
+            \arrow{->[\small\chemfig{R-[:30]=[:-30]}]}[,1.5]
+            \chemleft{[}
+                \chemfig{Cp_2Lu?-[,,,,dashed]H-[6,,,,dashed]C(-[:-60]R)(-[:15]H)-[4,1.12]C?[,,dashed](<[:-110]H)(>:[:-150]H)}
+            \chemright{]^\ddagger}
+            \arrow[-90]
+            \chemfig{Cp_2Lu-[:30]-[:-30]-[:30]R}
+            \arrow{->[\small\ce{H2}]}[180]
+            \chemleft{[}
+                \chemfig{Cp_2Lu?-[,,,,dashed](-[:45]-[::-60]R)-[6,,,,dashed]H-[4,0.92,,,dashed]H?[,,dashed]}
+            \chemright{]^\ddagger}
+            \arrow{-U>[][*{0.20}\small\chemfig{R-[:30]-[:-30]}][][][135]}[90,1.3]
+        \schemestop
+        \begin{tikzpicture}[remember picture,overlay]
+            \draw [dashed] (-2.4,0.15) -- ++(0.6,0);
+        \end{tikzpicture}
+        \caption{Hydrogenation by $\sigma$-bond metathesis.}
+        \label{fig:sigmaMetathesisHydrogenation}
+    \end{figure}
+    \begin{itemize}
+        \item This mechanism proceeds through two consecutive $\sigma$-bond metatheses.
+        \item Note the use of an early transition metal (lutetium), 4-membered transition states, and the open coordination site (refer to Lecture 7 for the more on the characteristics of $\sigma$-bond metathesis).
+    \end{itemize}
+    \item When catalyzed, the mechanism can be more complicated.
+    \begin{itemize}
+        \item There can be nearly innumerably many offshoots.
+        \item There may only be one on-cycle chain among all of the intermediates. The question is just how to favor this one.
+    \end{itemize}
+    \item Radical hydrogenation.
+    \begin{equation*}
+        \ce{L_nM-H + Ph-= -> L_nM* + Ph-*= -> L_nM-CHMePh ->[H2] -> L_nM-H + Ph--}
+    \end{equation*}
+    \begin{itemize}
+        \item This can happen with porphyrins and \ce{HMn(CO)5}.
+    \end{itemize}
+    \item Noyori's catalyst:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \schemestart
+                \chemfig{Ru(-[:150]P)(-[:-150]P)(=[:30]\chemabove{N}{R})(-[:-30]\chembelow{N}{\,R_2}-[,0.5,,,white])(-[2,1.4]\phantom{i}-[4,0.4,,,white]H-H)}
+                \arrow{->}
+                \chemfig{Ru(-[:150]P)(-[:-150]P-[4,0.5,,,white])(-[:30]\chemabove{N}{\,HR})(-[:-30]\chembelow{N}{\,R_2}-[,0.5,,,white])(-[2]H)}
+                \arrow{->[\small\chemfig{-[:30](=[2]O)(-[:-30])}]}[,1.5]
+                \chemleft{[}
+                    \chemfig{Ru?-N-[2,,,,dashed]H-[:97,,,,dashed]O-[4](-[:150])(-[:-150])(-[:-97,1.2,,,dashed]H?[,,dashed])}
+                \chemright{]^\ddagger}
+                \arrow{->}[-90]
+                \chemfig{Ru(-[:150]P)(-[:-150]P-[4,0.5,,,white])(-[:30]\chemabove{N}{\,HR})(-[:-30]\chembelow{N}{\,R_2})(-[2]O-[:35](-[:65,0.8])(-[:10]))}
+                \arrow{-U>[][*{0.north east}\small\chemfig{-[:30](-[2]OH)(-[:-30])}]}[180,4.2]
+                \chemfig{Ru(-[:150]P)(-[:-150]P)(=[:30]\chemabove{N}{R})(-[:-30]\chembelow{N}{\,R_2}-[,0.5,,,white])}
+                \arrow{->[*{0}\small\ce{H2}]}[90,1.3]
+            \schemestop
+            \begin{tikzpicture}[remember picture,overlay,xshift=-6.35cm,yshift=-6.6cm]
+                \draw (-6.2,6.2) to[bend left=30] ++(0,1);
+                \draw (-3.9,6.2) to[bend right=30] ++(0,1);
+                \draw (-1.6,6.4) to[bend left=30] ++(0,1);
+                \draw (0.7,6.4) to[bend right=30] ++(0,1);
+                \draw (3.8,1.5) to[bend left=30] ++(0,1);
+                \draw (6.1,1.5) to[bend right=30] ++(0,1);
+                \draw (-6.45,2.2) to[bend left=30] ++(0,1);
+                \draw (-4.15,2.2) to[bend right=30] ++(0,1);
+    
+                \draw [dashed] (4.63,7.92) -- ++(0.6,0);
+            \end{tikzpicture}
+            \caption{Regular.}
+            \label{fig:noyorisCatalystMecha}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{0.9\linewidth}
+            \centering
+            \schemestart
+                \chemfig{M(-H)(-[2]H)}
+                \arrow{->[\small\chemfig{-[:30](=[2]O)-[:-30]}]}[,1.5]
+                \chemfig{\charge{45[xshift=1mm,yshift=1mm]=$\ominus$}{M}-[2]H}
+                \arrow{0}[,0]\+{1.5em,,1.5em}
+                \chemfig{-[:30]\charge{45[xshift=1.5mm,yshift=0.5mm]=$\oplus$}{}(-[2]OH)-[:-30]}
+                \arrow
+                \chemfig{M}
+                \arrow{0}[,0]\+{0.7em,,1.5em}
+                \chemfig{-[:30](-[2]OH)-[:-30]}
+            \schemestop\\[1em]
+            \begin{tikzpicture}
+                \draw [-stealth] (4.7,0) -- (4.7,-1) -- node[above]{\small\ce{H2}} (-4.7,-1) -- (-4.7,0);
+            \end{tikzpicture}
+            \caption{Ionic.}
+            \label{fig:noyorisCatalystMechb}
+        \end{subfigure}
+        \caption{Noyori's catalyst mechanism.}
+        \label{fig:noyorisCatalystMech}
+    \end{figure}
+    \begin{itemize}
+        \item Partially reacts via a bifunctional mechanism, but primarily engages in a different mechanistic paradigm called an outer sphere hydrogenation (see Figure \ref{fig:noyorisCatalystMecha}).
+        \item In the extreme, we can achieve an ionic pathway (see Figure \ref{fig:noyorisCatalystMechb}).
+        \begin{itemize}
+            \item An example of a substance that does this is \ce{CpW(CO)2(PPh3)(OCEt2)+}.
+        \end{itemize}
+    \end{itemize}
+    \item Asymmetric catalysis:
+    \begin{itemize}
+        \item At this point in time, hydrogenation is a highly optimized reaction.
+        \begin{itemize}
+            \item We can generate catalysts with millions of turnover numbers, very high ee's, etc.
+            \item Indeed, hydrogenation is one of the most reliable late-stage steps in drug development or natural product synthesis to define chiral centers.
+        \end{itemize}
+        \item Chiral phosphines really shine here.
+        \item Binap, biphenyl scaffolds with sufficiently large \ce{R} groups, tri-chicken foot phos, ferrocene derivatives (e.g., chiral dppf derivatives), alkyl backbones (e.g., DIOP), etc.
+        \item One enantionmer is often bound over the other.
+    \end{itemize}
+    \item Transfer hydrogenations:
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \node (M1) at (0,0) {\chemfig{M}};
+            \node (M2) at (0,4) {\chemfig{M(-H)(-[2]H)}};
+            \node (A1) at (-2.7,0) {\chemfig{R_1-[:30](-[2]OH)-[:-30]}};
+            \node (A2) at (-2.7,4) {\chemfig{R_1-[:30](=[2]O)-[:-30]}};
+            \node (K1) at (2.4,4) {\chemfig{R_2-[:30](=[2]O)-[:-30]}};
+            \node (K2) at (2.4,0) {\chemfig{R_2-[:30](-[2]OH)-[:-30]}};
+    
+            \draw [blx,thick,-stealth] (M1) to[bend left=40] (M2);
+            \draw [blx,thick,-stealth] (M2) to[bend left=40] (M1);
+            \draw [blx,thick,-stealth] (A1) to[bend right=60] (A2);
+            \draw [blx,thick,-stealth] (K1.south west) to[bend right=53] ([xshift=-4mm,yshift=2mm]K2);
+        \end{tikzpicture}
+        \caption{Transfer hydrogenation mechanism.}
+        \label{fig:transferHydrogenations}
+    \end{figure}
+    \begin{itemize}
+        \item Use these if you don't want to use hydrogen gas, e.g., because it's flammable.
+        \item Basically, we use a transition metal catalyst to transfer two hydrogens (e.g., from an alcohol to a ketone) by means of gaining them to become a dihydride and losing them to return to being just a metal center.
+        \item As in any hydrogenation reaction, these are all reversible reactions. As such, since we can't use excess hydrogen to push the reaction, we must rely on the electron richness of the alcohol (electron rich alcohols dehydrogenate more easily).
+        \item The equilibrium can be pushed with Le Ch\^{a}telier's principle, but we mainly have to consider thermodynamics here (the thermodynamics must be favorable).
+        \begin{itemize}
+            \item For example, if $\ce{R2}=\ce{Ar}$, then we will transform the aryl ketone into an alcohol, but not in reverse (because the aryl is electron deficient and thus its alcohol does not dehydrogenate easily).
+        \end{itemize}
+    \end{itemize}
+    \item Halpern's contributions to asymmetric catalysis:
+    \begin{itemize}
+        \item Reviews some papers.
+        \item Increasing hydrogen pressure decreases stereoselectivity, which is often kinetically driven.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
