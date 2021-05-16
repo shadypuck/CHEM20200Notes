@@ -18,23 +18,23 @@
             \begin{center}
                 \begin{tikzpicture}
                     \footnotesize
-                    \node (1) at (90:2) {\ce{L_{n-1}Pd^0}};
-                    \node (2) at (0:2.2) {\chemfig{{\ce{L_{n-1}}Pd^{II}(-[1]Ar)(-[7]Br)}}}
+                    \node (1) at (90:2) {\ce{L2Pd^0}};
+                    \node (2) at (0:2.2) {\chemfig{L_2Pd^{II}(-[1]Ar)(-[7]Br)}}
                         ([yshift=-4mm]2.north) edge [blx,semithick,stealth-,out=90,in=0] node[black,above right]{\ce{Ar-Br}} (1)
                     ;
-                    \node (3) at (180:2.2) {\chemfig{{\ce{L_{n-1}}Pd^{II}(-[1]Ar)(-[7]Ar{'})}}}
-                        ([yshift=4mm]3.south) edge [blx,semithick,stealth-,out=-90,in=-90,looseness=1.4] ([yshift=5mm]2.south)
-                        ([yshift=-4mm]3.north) edge [blx,semithick,-stealth,out=90,in=180] (1)
+                    \node (3) at (180:2.2) {\chemfig{LPd^{II}(-[1]Ar)(-[7]Ar{'})}}
+                        ([xshift=-2mm,yshift=4mm]3.south) edge [blx,semithick,stealth-,out=-90,in=-90,looseness=1.4] node[pos=0.25,below left,black]{\ce{-L}} ([yshift=5mm]2.south)
+                        ([xshift=-2mm,yshift=-4mm]3.north) edge [blx,semithick,-stealth,out=90,in=180] node[black,below right]{\ce{L}} (1)
                     ;
             
-                    \draw [blx,semithick,-stealth] (150:2.35) to[out=60,in=-90] (-1.75,2.5) node[black,above]{\ce{Ar-Ar$'$}};
+                    \draw [blx,semithick,-stealth] (148:2.49) to[out=60,in=-90] (-1.75,2.5) node[black,above]{\ce{Ar-Ar$'$}};
             
-                    \node (4) at (90:3.4) {\ce{L_nPd^0}};
-                    \draw [blx,semithick,arrows={-Stealth[harpoon]}] (1.98) -- node[black,left]{\ce{L}} (4.-98);
-                    \draw [blx,semithick,arrows={-Stealth[harpoon]}] (4.-82) -- node[black,right]{\ce{-L}} (1.82);
+                    \node (4) at (90:3.4) {\ce{L4Pd^0}};
+                    \draw [blx,semithick,arrows={-Stealth[harpoon]}] (1.98) -- node[black,left]{\ce{2L}} (4.-98);
+                    \draw [blx,semithick,arrows={-Stealth[harpoon]}] (4.-82) -- node[black,right]{\ce{-2L}} (1.82);
             
-                    \node (5) [align=center] at (2,-3) {\ce{Ar$'$-Zn}};
-                    \node (6) [align=center] at (-2,-3) {\ce{Zn-Br}}
+                    \node (5) [align=center] at (2,-3.09) {\ce{ZnAr$'$Br}};
+                    \node (6) [align=center] at (-2,-3.09) {\ce{ZnBr2}}
                         (6.25) edge [blx,semithick,stealth-,bend left=35] (5.155)
                     ;
                 \end{tikzpicture}
@@ -91,10 +91,10 @@
     \begin{proof}[Answer]
         I propose the following radical mechanism:
         \begin{align*}
-            \ce{$t${-}BuI + L_nNi^I-NPh2} &\ce{->} \ce{L_nNi^{II}(NPh2)(I$t${-}Bu*)}\\
-            &\ce{->} \ce{L_nNi^{II}(NPh2)(I) + $t${-}Bu*}\\
-            &\ce{->} \ce{$t${-}Bu-NPh2 + L_nNiI}\\
-            &\ce{->[LiNPh2][-LiI]} \ce{$t${-}Bu-NPh2 + L_nNi^I-NPh2}
+            \ce{L_nNi^I-NPh2} &\ce{->[$t${-}BuI]} \ce{L_nNi^{II}(NPh2)(I) + $t${-}Bu*}\\
+            &\ce{->} \ce{L_nNi^{III}(NPh2)(I)($t${-}Bu)}\\
+            &\ce{->[][-$t${-}Bu-NPh2]} \ce{L_nNi^I-I}\\
+            &\ce{->[LiNPh2][-LiI]} \ce{L_nNi^I-NPh2}
         \end{align*}
         First off, aliphatic cross couplings are rare because they depend on alkyl electrophiles, and $\beta$-\ce{H} elimination can be a problem. As such, if they do occur, they generally proceed through a radical mechanism. Thus, since first-row transition metals are more likely to participate in one-electron redox chemistry, the first-row metal nickel is favored as a catalyst over the second-row metal palladium.
     \end{proof}
@@ -136,7 +136,7 @@
                     \chemfig{[:30]*6(=-----)}
                     \arrow{->}
                     \chemleft{(}
-                        \chemfig{=-[:120]-[:60]--[:-60]-[:-120]=}
+                        \chemfig{=[,0.5]-[:120]-[:60]--[:-60]-[:-120]=[,0.5]}
                     \chemright{)_n}
                 \schemestop
             \end{center}
