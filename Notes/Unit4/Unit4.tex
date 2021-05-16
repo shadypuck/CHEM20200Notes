@@ -1,0 +1,192 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{3}
+
+\begin{document}
+
+
+
+
+\chapter{???}
+\section{Lecture 15: Nitrogen Fixation}
+\begin{itemize}
+    \item \marginnote{5/3:}General form:
+    \begin{equation*}
+        \ce{N2 + 6H+ + 6e- -> 2NH3}
+    \end{equation*}
+    \begin{itemize}
+        \item Alternatively, it could be \ce{N2 + 3H2 -> 2NH3}.
+        \item A simple reaction on paper, but in practice and mechanistically, very difficult.
+    \end{itemize}
+    \item Nitrogen is one of the essential elements for life (CHNOPS), but we can't absorb it from the air in its elemental form as \ce{N#N} gas. Indeed, we need it to be \textbf{fixed} before we can incorporate it (i.e., through food sources).
+    \item Main pathways:
+    \begin{itemize}
+        \item Lightning.
+        \begin{align*}
+            \ce{N2 + O2 ->[$h\nu$] NO, NO2^-, NO3-}
+        \end{align*}
+        \begin{itemize}
+            \item 4-10 million tons per year.
+            \item Nitrate can be used by organisms; converted into useful nitrogen.
+        \end{itemize}
+        \item Natural enzymatic fixation.
+        \begin{itemize}
+            \item 100-300 million tons per year (probably closer to the 100 side).
+            \item 40/60 ocean/land ratio.
+            \item Done by the enzyme nitrogenase, with \ce{FeMoCO}\footnote{Literally pronounced as its written, i.e., "fih-MOH-koh."} as a cofactor.
+        \end{itemize}
+        \item Mankind.
+        \begin{itemize}
+            \item About 190 million tons per year.
+            \item Thus, mankind is currently fixing more nitrogen than all natural sources combined by a fair amount right now. This is what allows us to feed the planet at its current population.
+            \item Accomplished by the \textbf{Haber-Bosch process}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Haber-Bosch process}: Humanity's primary method of fixing nitrogen.
+    \begin{equation*}
+        \ce{N2 + 3H2 <=>[$\Delta, P$][Fe/Mg] 2NH3}
+    \end{equation*}
+    \begin{itemize}
+        \item $-\SI{92}{kcal\per\mole}$ (thermodynamically favored but kinetically difficult).
+        \item $\SI{200}{atm}$ of pressure (pushes the equilibrium to the right via Le Ch\^{a}telier's principle).
+        \item $\SI{400}{\celsius}$ (required for the rate).
+        \item Potassium is an activator.
+    \end{itemize}
+    \item 2 Nobel prizes for this: Fritz Haber (1918) and Carl Bosch (1931).
+    \begin{itemize}
+        \item Controversial at the time because the process facilitated the explosives industry and Haber was a Nazi.
+        \item World War I and II would not have been sustainable for Germany without this process.
+    \end{itemize}
+    \item Mechanism:
+    \begin{itemize}
+        \item On the surface of the iron catalyst, the pressure binds \ce{H2} gas as hydrides and \ce{N2} gas as bridging nitrides (between various iron atoms at the surface). It follows in a statistical and thermodynamic manner that amine ligands will be formed on the surface attached to the iron. These can then break off into ammonia gas.
+        \item A solid state heterogeneous process.
+        \item Nobel Prize (2007) to Gerhard Ertl for this mechanism.
+    \end{itemize}
+    \item This process is highly efficient, but very energy intensive as well.
+    \begin{itemize}
+        \item As such, there is a race to find a less energy-intensive catalytic alternative.
+    \end{itemize}
+    \item Molecular systems: The nitrogenase enzyme.
+    \begin{equation*}
+        \ce{N2 + 8H+ + 8e- ->[ATP] 2NH3 + H2}
+    \end{equation*}
+    \begin{itemize}
+        \item Other extant cofactors include \ce{FeVCO} and \ce{FeFeCO}, but they are less common.
+        \item Since ATP is used, this is still a very energy-intensive process.
+        \item \ce{N2} bonds to metal centers in many ways:
+        \begin{itemize}
+            \item Linear, bent, side-on, bridging linear, bridging side-on, multi-metal center bridging, etc.
+        \end{itemize}
+        \item \ce{N2} complexes are much less common than \ce{CO} complexes since \ce{N2} is a terrible ligand.
+        \begin{itemize}
+            \item The HOMO in \ce{N2} makes it a $\sigma$ donor, but \ce{CO}'s negative formal charge on the carbon makes it a better $\sigma$ donor.
+            \item Additionally, \ce{CO} is a much better $\pi$ acid due to its polarization.
+        \end{itemize}
+    \end{itemize}
+    \item Allen and Senoff (in 1965) reported the first dinitrogen complex.
+    \begin{equation*}
+        \ce{RuCl3*3H2O + N2H4*H2O -> [Ru^{II}(N2)(NH3)5]^2+[Cl2]^2-}
+    \end{equation*}
+    \begin{itemize}
+        \item \ce{N2H4} is hydrazine (rocket fuel), and is much more stable as a hydrate.
+        \item The product is $d^6$ with $18\,\e[-]$ and has $\mu_{\ce{N2}}=2170$-$\SI{2115}{\per\centi\meter}$ (the range depends on the anion).
+        \item For reference, free \ce{N2} has a stretching frequency of $\SI{2331}{\per\centi\meter}$.
+    \end{itemize}
+    \item Yamamoto gives the first example of a dinitrogen complex formed from free \ce{N2} (\ce{HCo(PPh3)3(N2)}).
+    \item Joe Chatz, George Leigh, and Dilworth in Sussex (of the British/American camp), and Hidai and Nishibayashi (of the Japanese camp) became interested in nitrogen fixation following Yamamoto's work.
+    \begin{itemize}
+        \item Second and third row Group 6 complexes such as molybdenum were the focus.
+        \item Example: \ce{MoX4L2 ->[N2, L][Na/Hg] Mo(N2)2L4}.
+        \begin{itemize}
+            \item \ce{L} is typically a phosphine.
+            \item With various phosphine ligands, you can get different geometries.
+        \end{itemize}
+        \item Another example: \ce{\emph{cis}{-}W(N2)2(PMe2Ph)4 ->[H2SO4][MeOH] 2NH3 + N2 + W^{VI}({oxo})}.
+        \begin{itemize}
+            \item Works with molybdenum, too, but tungsten gives a better yield.
+            \item The overall reaction is \ce{W^0 + 6H+ + N2 -> 2NH3 + W^{VI}}.
+            \item Some important subreactions/steps are \ce{N2 + 4e- -> N2H4} and \ce{N2 + 2e- -> N2H2}.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism (by Chatt):
+    \begin{align*}
+        \ce{M-N2} &\ce{->[H+]} \ce{M-N=N-H}\\
+        &\ce{->[H+]} \ce{M#N-NH2}\\
+        &\ce{->[H+]} \ce{M(PR3)4(Cl)(#N-NH3)}\\
+        &\ce{->[][-NH3]} \ce{M#N}\\
+        &\ce{->[H+]} \ce{M=NH}\\
+        &\ce{->[H+]} \ce{M-NH2}\\
+        &\ce{->[H+][-NH3]} \ce{M^{6+}}
+    \end{align*}
+    \begin{itemize}
+        \item Very few compounds in the form of the first intermediate (diazene) are known. These compounds are very susceptible to $\beta$-\ce{H} elimination from water, though.
+        \item The second intermediate has a hydrazido ligand.
+        \item The fourth intermediate has a nitride.
+        \item The fifth intermediate has an imide.
+        \item The sixth intermediate has an amide ligand.
+    \end{itemize}
+    \item Hidai uses silanes: \ce{M(N2)2(PR3)4 ->[TMSI] TMS-N=N-MI(PR3)4 ->[Na, THF][N2] M(N2)2(PR3)4 + NH(TMS)2 + NH3 + NaNH2 + NaNH(TMS)}, etc.
+    \item \textcite{bib:SchrockYandulov} creates a well-defined catalyst for nitrogen fixation.
+    \begin{itemize}
+        \item The catalyst is molybdenum bound to dinitrogen and a tridentate TREN scaffold anion (with hexaisopropal \emph{tert}-phenyl (HIPT) aryl groups).
+        \item They add eight equivalents of cobaltocene (\ce{CoCp2}), seven equivalents of lutidinium (a pyridinium acid), and the bulky, noncoordinating counteranion \ce{[BAr^F{}_4]-}.
+        \item They fish out \ce{Mo-NH3 + NH3}. Reducing the former product gives \ce{Mo^{III}(N2)} with a weak reductant.
+        \begin{itemize}
+            \item If you use a slightly stronger reductant (decamethylchromocene; \ce{CrCp^*2}) and a slow addition of acid, you get approximately 8 turnovers.
+        \end{itemize}
+        \item This is not a great yield, but the important part is that it exists and they can observe all of the intermediates.
+        \begin{itemize}
+            \item Observing said intermediates verified the mechanism proposed by Chatt and Hidai.
+        \end{itemize}
+        \item To reiterate, this is the Chatt/Distal\footnote{Note that Chatt and Distal are interchangeable synonyms.} cycle they observed: \ce{Mo-N#N ->[H+,e-] M-N=N-H ->[H+,e-] M#N-NH2 ->[H+,e-] M#N ->[H+,e-]M#NH ->[H+,e-] M-NH2 ->[H+,e-,N2][-NH3] Mo-N#N}.
+        \begin{itemize}
+            \item Note that molybdenum starts in the $3+$ oxidation state at \ce{M-N#N} and goes up to $6+$ at \ce{Mo#N} before cycling back down.
+        \end{itemize}
+    \end{itemize}
+    \item Shilov had a number of systems, but they were poorly defined.
+    \item Other selected examples.
+    \begin{itemize}
+        \item Zirconium can do this catalysis in some cases.
+        \item \textcite{bib:CumminsLaplaza} find that molybdenum trisannelides and dinitrogen can go through a kinked transition state to yield two equivalents of \ce{L3Mo#N}.
+    \end{itemize}
+    \item Iron:
+    \begin{itemize}
+        \item Present in all enzymatic cofactors that mediate nitrogen fixation.
+        \begin{itemize}
+            \item Until 10-15 years ago, they thought it wasn't directly involved though.
+        \end{itemize}
+        \item \ce{(PR3)4Fe(N2) ->[XS H+]} only trace amounts of \ce{NH3}.
+        \item \textcite{bib:NishibayashiIron} finds that simple iron salts and even substituted ferrocenes react with a strong reductant, sodium, and \ce{TMSCl} to make \ce{N(TMS)3} (which is catalytic and can be transformed into ammonia). The yield is about 25 equivalents per iron.
+        \begin{itemize}
+            \item This shows that iron can do this chemistry.
+        \end{itemize}
+        \item Dr. Anderson's thesis work with Jonas Peters finds that \ce{Fe(N2)(B(PR2Ph)3) ->[XS KC8][XS HBAr^F{}_4] NH3}\footnote{Note that the reactant is the same compound discussed in problem 3 of Homework 1.} \parencite{bib:AndersonPeters}.
+        \begin{itemize}
+            \item Seven equivalents per iron. More recent tinkering has brought it up to nearly 100 equivalents per iron.
+            \item Mechanism: \ce{L3FeN2- ->[2H+] L3Fe#N-NH2+ -> -> -> NH3}.
+            \item Suggests a Chatt/Distal mechanism.
+        \end{itemize}
+        \item Differing mechanistic proposal: Alternating mechanism.
+        \begin{align*}
+            \ce{Fe-N2} &\ce{->[H+,e-]} \ce{Fe=N=N-H}\\
+            &\ce{->[H+,e-]} \ce{Fe-NH=N-H}\\
+            &\ce{->[H+,e-]} \ce{Fe-NH-NH2}\\
+            &\ce{->[H+,e-]} \ce{Fe-NH2-NH2}\\
+            &\ce{->[H+,e-][-NH3]} \ce{Fe-NH2}\\
+            &\ce{->[H+,e-,N2][-NH3]} \ce{Fe-N2}
+        \end{align*}
+        \begin{itemize}
+            \item This doesn't require as many oxidation states as the Chatt mechanism (which favors iron, which doesn't easily form oxidation states other than $2+$ and $3+$).
+            \item We also don't see a nitride or imide intermediate, but we do see a diazene, hydrazido $1-$, and hydrazine adducts.
+            \item Enzyme data supports this mechanism.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
