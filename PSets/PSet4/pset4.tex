@@ -1,0 +1,314 @@
+\documentclass[../psets.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\leftmark}{Homework 4}
+
+\begin{document}
+
+
+
+
+\begin{enumerate}
+    \setenumerate[2]{label={\alph*)}}
+    \item \marginnote{5/10:}We have discussed various mechanisms for nitrogen fixation, one of which is a Chatt/distal type of mechanism.
+    \begin{enumerate}
+        \item Using orbital diagrams, explain why \ce{N2} is a much weaker ligand than \ce{CO}.
+        \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{figure}[H]
+                \centering
+                \setcharge{extra sep=3pt}
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \filldraw [semithick,fill=white] (0,0) ellipse (3.3mm and 2mm);
+                        \filldraw [semithick,fill=blz] (-0.92,0) circle (3mm);
+                        \filldraw [semithick,fill=blz] (0.92,0) circle (3mm);
+            
+                        \node{\chemfig{\charge{180=\:}{N}~\charge{0=\:}{N}}};
+                    \end{tikzpicture}
+                    \caption{\ce{N2} HOMO.}
+                    \label{fig:CO-N2-ligandStrengtha}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \filldraw [semithick,fill=white] (0,0) ellipse (3.3mm and 2mm);
+                        \filldraw [semithick,fill=blz] (-1.02,0) circle (4mm);
+                        \filldraw [semithick,fill=blz] (0.82,0) circle (2mm);
+            
+                        \node{\chemfig{\charge{180=\:,90[yshift=2pt]=$\ominus$}{C}~\charge{0=\:,90[yshift=2pt]=$\oplus$}{O}}};
+                    \end{tikzpicture}
+                    \caption{\ce{CO} HOMO.}
+                    \label{fig:CO-N2-ligandStrengthb}
+                \end{subfigure}\\[1em]
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \filldraw [semithick,fill=blz,xshift=-5mm,rotate=-45,xshift=-2mm,scale=1] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=white,xshift=-5mm,rotate=45,xshift=-2mm,scale=1] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=blz,xshift=5mm,rotate=135,xshift=-2mm,scale=1] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=white,xshift=5mm,rotate=-135,xshift=-2mm,scale=1] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+            
+                        \node{\chemfig{N~N}};
+                    \end{tikzpicture}
+                    \caption{\ce{N2} LUMO.}
+                    \label{fig:CO-N2-ligandStrengthc}
+                \end{subfigure}
+                \begin{subfigure}[b]{0.3\linewidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \filldraw [semithick,fill=blz,xshift=-5mm,rotate=-45,xshift=-2mm,scale=1.5] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=white,xshift=-5mm,rotate=45,xshift=-2mm,scale=1.5] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=blz,xshift=5mm,rotate=135,xshift=-2mm,scale=0.7] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+                        \filldraw [semithick,fill=white,xshift=5mm,rotate=-135,xshift=-2mm,scale=0.7] plot [domain=pi/2:3*pi/2,smooth,variable=\thta] ({\thta r}:{15^0.5/4*cos(\thta r)^2});
+            
+                        \node{\chemfig{C~O}};
+            
+                        % \draw [thick,->]
+                        %     (-0.4,0.45) -- (-0.4,0.25)
+                        %     (-0.5,0.35) -- (0.5,0.35)
+                        % ;
+                    \end{tikzpicture}
+                    \caption{\ce{CO} LUMO.}
+                    \label{fig:CO-N2-ligandStrengthd}
+                \end{subfigure}
+                \caption{\ce{CO} vs. \ce{N2} as a ligand.}
+                \label{fig:CO-N2-ligandStrength}
+            \end{figure}
+            First off, we will compare the HOMOs in \ce{N2} and \ce{CO} (see Figures \ref{fig:CO-N2-ligandStrengtha} and \ref{fig:CO-N2-ligandStrengthb}). In \ce{N2}, the triply bonded resonance structure means that it can be a $\sigma$ donor. However, in the analogous resonance of \ce{CO}, there is a negative charge on the carbon, meaning that \ce{CO} is a stronger $\sigma$ donor.\par
+            Additionally, there are differences in the LUMOs (Figures \ref{fig:CO-N2-ligandStrengthc} and \ref{fig:CO-N2-ligandStrengthd}). Whereas the $\pi^*$ orbital coefficients on \ce{N2} are the same for both atoms, they are much larger on the carbon in \ce{CO} due to the polarization of the triple bond. This makes \ce{CO} a better $\pi$ acceptor, too.
+        \end{proof}
+        \item Draw out a Chatt-type mechanism for \ce{Fe} and \ce{Mo}, indicating oxidation states at the metal center.
+        \begin{proof}[Answer]
+            As mentioned in the lecture, molybdenum has an \ce{X3}-type ligand in this type of reaction. However, for the sake of space, this ligand will not be shown and only its effect on the oxidation state (making the oxidation state start at $3+$) will be indicated. As for iron, we can show a Chatt-type mechanism, but it will more likely alternate between $2+$ and $3+$ (iron's most stable oxidation states) via the alternating mechanism.
+            \begin{figure}[H]
+                \centering
+                \setcharge{extra sep=2.5pt}
+                \begin{subfigure}[b]{0.9\linewidth}
+                    \centering
+                    \schemestart
+                        \chemfig{Mo^{III}-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{0=\:}{N}}
+                        \arrow{->[\small\ce{H+, e-}]}
+                        \chemfig{Mo^{IV}-\charge{90=\:}{N}=\charge{90=\:}{N}-H}
+                        \arrow{->[\small\ce{H+, e-}]}
+                        \chemfig{Mo^{V}=\charge{90=\:}{N}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \arrow{->[*{0}\small\ce{H+, e-}][*{0}\small\ce{-NH3}]}[-90]
+                        \chemfig{Mo^{VI}~\charge{0=\:}{N}}
+                        \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
+                        \chemfig{Mo^{V}=\charge{90=\:}{N}-H}
+                        \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.4]
+                        \chemfig{Mo^{IV}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.4]
+                        \chemfig{Mo^{III}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+                        \arrow{->[*{0}\small\ce{N2}][*{0}\small\ce{-NH3}]}[90,2]
+                    \schemestop
+                    \caption{Molybdenum center.}
+                    \label{fig:Chatt-Fe-Moa}
+                \end{subfigure}
+            \end{figure}
+            \begin{figure}[H]
+                \ContinuedFloat
+                \begin{subfigure}[b]{0.9\linewidth}
+                    \centering
+                    \schemestart
+                        \chemfig{Fe^{II}-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{0=\:}{N}}
+                        \arrow{->[\small\ce{H+, e-}]}
+                        \chemfig{Fe^{III}-\charge{90=\:}{N}=\charge{90=\:}{N}-H}
+                        \arrow{->[\small\ce{H+, e-}]}
+                        \chemfig{Fe^{IV}=\charge{90=\:}{N}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \arrow{->[*{0}\small\ce{H+, e-}][*{0}\small\ce{-NH3}]}[-90]
+                        \chemfig{Fe^{V}~\charge{0=\:}{N}}
+                        \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
+                        \chemfig{Fe^{IV}=\charge{90=\:}{N}-H}
+                        \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.4]
+                        \chemfig{Fe^{III}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.4]
+                        \chemfig{Fe^{II}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+                        \arrow{->[*{0}\small\ce{N2}][*{0}\small\ce{-NH3}]}[90,2]
+                    \schemestop
+                    \caption{Iron center.}
+                    \label{fig:Chatt-Fe-Moa}
+                \end{subfigure}\\[2em]
+                \begin{subfigure}[b]{0.9\linewidth}
+                    \centering
+                    \schemestart
+                        \chemfig{Fe^{II}-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{0=\:}{N}}
+                        \arrow{->[\small\ce{H+, e-}]}
+                        \chemfig{Fe^{III}-\charge{90=\:}{N}=\charge{90=\:}{N}-H}
+                        \arrow{->[\small\ce{H+, e-}]}
+                        \chemfig{Fe^{II}-\charge{135[yshift=1mm]=$\oplus$}{N}(=[1]\charge{90=\:}{N}-H)(-[7]H)}
+                        \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
+                        \chemfig{Fe^{III}-\charge{90=\:}{N}(-[1]\charge{90=\:}{N}(-[1]H)(-[7]H))(-[7]H)}
+                        \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
+                        \chemfig{Fe^{II}-\charge{135[yshift=1mm]=$\oplus$}{N}(<[:-115]H)(>:[:-65]H)-[1]\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \arrow{->[*{0.-90}\small\ce{H+, e-}][*{0.90}\small\ce{-NH3}]}[180,1.3]
+                        \chemfig{Fe^{III}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.3]
+                        \chemfig{Fe^{II}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+                        \arrow{->[*{0}\small\ce{N2}][*{0}\small\ce{-NH3}]}[90,3.8]
+                    \schemestop
+                    \caption{Iron center (alternating).}
+                    \label{fig:Chatt-Fe-Moc}
+                \end{subfigure}
+                % \caption{Chatt-type mechanisms for \ce{Mo} and \ce{Fe}.}
+                \label{fig:Chatt-Fe-Mo}
+            \end{figure}
+        \end{proof}
+        \newpage
+        \item Using this mechanism as a template, predict what a similar mechanism for \ce{CO} reduction would look like. Make sure to show which products are formed and to balance the overall reaction.
+        \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{center}
+                \setcharge{circle}
+                \schemestart
+                    \chemfig{M^{\mathit{n}+1}=C=\charge{45=\:,-45=\:}{O}}
+                    \arrow{->[\small\ce{H+, e-}]}
+                    \chemfig{M^{\mathit{n}+2}~C-\charge{90=\:,-90=\:}{O}-H}
+                    \arrow{->[\small\ce{H+, e-}][\small\ce{-H2O}]}
+                    \chemfig{M^{\mathit{n}+3}~\charge{0=\:,90[yshift=1mm]=$\ominus$}{C}}
+                    \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
+                    \chemfig{M^{\mathit{n}+2}~C-H}
+                    \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
+                    \chemfig{M^{\mathit{n}+1}=C(-[1]H)(-[7]H)}
+                    \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.3]
+                    \chemfig{M^{\mathit{n}}-C(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+                    \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.3]
+                    \chemfig{M^{\mathit{n}+1}-\charge{135[yshift=1mm]=$\ominus$}{C}(-[:75]H)(-[:-75]H)(<[:-20]H)(>:[:30]H)}
+                    \arrow{->[*{0}\small\ce{CO}][*{0}\small\ce{-CH4}]}[90,1.9]
+                \schemestop
+            \end{center}
+        \end{proof}
+        \item Using your answer from part (b), why might a distal mechanism be more favorable for \ce{Mo} than for \ce{Fe}?
+        \begin{proof}
+            \ce{Mo} has more readily accessible oxidation states, so it has no problem alternating between $3+$ and $6+$ as well as everywhere in between. \ce{Fe} can only easily access \ce{Fe^2+} and \ce{Fe^3+}.
+        \end{proof}
+    \end{enumerate}
+    \item Write out a detailed mechanism for a transfer hydrogenation between an aldehyde and a ketone. Which way would this reaction be expected to go for the combination of a benzaldehyde/benzyl alcohol and isopropanol/acetone?
+    \begin{proof}
+        ${\color{white}hi}$
+        \begin{center}
+            \begin{tikzpicture}
+                \node (M1) at (0,0) {\chemfig{M}};
+                \node (M2) at (0,4) {\chemfig{M(-H)(-[2]H)}};
+                \node (A1) at (-2.8,0) {\chemfig{R_1-[:30](-[2]OH)-[:-30]H}};
+                \node (A2) at (-2.8,4) {\chemfig{R_1-[:30](=[2]O)-[:-30]H}};
+                \node (K1) at (2.6,4) {\chemfig{R_2-[:30](=[2]O)-[:-30]R_3}};
+                \node (K2) at (2.6,0) {\chemfig{R_2-[:30](-[2]OH)-[:-30]R_3}};
+        
+                \draw [blx,thick,-stealth] (M1) to[bend left=40] (M2);
+                \draw [blx,thick,-stealth] (M2) to[bend left=40] (M1);
+                \draw [blx,thick,-stealth] (A1) to[bend right=60] (A2);
+                \draw [blx,thick,-stealth] (K1.south west) to[bend right=62] ([xshift=-4mm,yshift=2mm]K2);
+            \end{tikzpicture}
+        \end{center}
+        The products benzyl alcohol and acetone are favored because the aryl alcohol will not dehydrogenate as easily as isopropanol (i.e., the thermodynamics are not comparably favorable).
+    \end{proof}
+    \newpage
+    \item Show the mechanism of hydrogenation for the following catalysts.
+    \begin{enumerate}
+        \item \ce{Rh(PR3)3Cl}.
+        \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{center}
+                \schemestart
+                    \chemfig{Rh(-Cl)(-[2]PR_3)(-[4]R_3P)(-[6]PR_3)}
+                    \arrow{<=>[\small{sol}][\small\ce{PR3}]}
+                    \chemfig{Rh(-Cl)(-[2]{sol})(-[4]R_3P)(-[6]PR_3)}
+                    \arrow{<=>[\small\ce{H2}]}
+                    \chemfig{Rh(-Cl)(>:[1]H)(-[2]{sol})(-[4]R_3P)(<[5]R_3P)(-[6]H)}
+                    \arrow{<=>[*{0}\small\ce{||}][*{0}\small{sol}]}[-90,1.2]
+                    \chemfig{Rh(-Cl)(>:[1]H)(-[2]\phantom{i}-[4,0.4,,,white]=)(-[4]R_3P)(<[5]R_3P)(-[6]H)}
+                    \arrow{->[*{0.-90}\small{sol}]}[180,3.5]
+                    \chemfig{Rh(-Cl)(>:[1]H)(-[2]-[1])(-[4]R_3P)(<[5]R_3P)(-[6]{sol})}
+                    \arrow{-U>[*{0}\small\ce{PR3}][*{0}\small\ce{|,\ {sol}}]}[90]
+                \schemestop
+            \end{center}
+        \end{proof}
+        \item \ce{HCo(CO)4}.
+        \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{center}
+                \schemestart
+                    \chemfig{Co(-CO)(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
+                    \arrow{<=>[][*{0}\small\ce{CO}]}[-90]
+                    \chemfig{Co(-CO)(-[6]CO)(-[4]CO)(-[2]H)}
+                    \arrow{<=>[\small\ce{||}]}[,1.1]
+                    \chemfig{Co(-\phantom{i}-[2,0.4,,,white]=[6])(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
+                    \arrow{<=>}[-90]
+                    \chemfig{Co(--[1])(-[6]CO)(-[4]OC)(-[2]CO)}
+                    \arrow{->[*{0.-90}\small\ce{H2}]}[180]
+                    \chemfig{Co(--[1])(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
+                    \arrow{-U>[][*{0}\small\ce{|}]}[90]
+                \schemestop
+            \end{center}
+        \end{proof}
+        \newpage
+        \item Noyori's catalyst.
+        \begin{proof}[Answer]
+            ${\color{white}hi}$
+            \begin{center}
+                \schemestart
+                    \chemfig{Ru(-[:150]P)(-[:-150]P)(=[:30]\chemabove{N}{R})(-[:-30]\chembelow{N}{\,R_2}-[,0.5,,,white])(-[2,1.4]\phantom{i}-[4,0.4,,,white]H-H)}
+                    \arrow{->}
+                    \chemfig{Ru(-[:150]P)(-[:-150]P-[4,0.5,,,white])(-[:30]\chemabove{N}{\,HR})(-[:-30]\chembelow{N}{\,R_2}-[,0.5,,,white])(-[2]H)}
+                    \arrow{->[\small\chemfig{-[:30](=[2]O)(-[:-30])}]}[,1.5]
+                    \chemleft{[}
+                        \chemfig{Ru?-N-[2,,,,dashed]H-[:97,,,,dashed]O-[4](-[:150])(-[:-150])(-[:-97,1.2,,,dashed]H?[,,dashed])}
+                    \chemright{]^\ddagger}
+                    \arrow{->}[-90]
+                    \chemfig{Ru(-[:150]P)(-[:-150]P-[4,0.5,,,white])(-[:30]\chemabove{N}{\,HR})(-[:-30]\chembelow{N}{\,R_2})(-[2]O-[:35](-[:65,0.8])(-[:10]))}
+                    \arrow{-U>[][*{0.north east}\small\chemfig{-[:30](-[2]OH)(-[:-30])}]}[180,4.2]
+                    \chemfig{Ru(-[:150]P)(-[:-150]P)(=[:30]\chemabove{N}{R})(-[:-30]\chembelow{N}{\,R_2}-[,0.5,,,white])}
+                    \arrow{->[*{0}\small\ce{H2}]}[90,1.3]
+                \schemestop
+            
+                \begin{tikzpicture}[remember picture,overlay]
+                    \draw (-6.2,6.2) to[bend left=30] ++(0,1);
+                    \draw (-3.9,6.2) to[bend right=30] ++(0,1);
+                    \draw (-1.6,6.4) to[bend left=30] ++(0,1);
+                    \draw (0.7,6.4) to[bend right=30] ++(0,1);
+                    \draw (3.8,1.5) to[bend left=30] ++(0,1);
+                    \draw (6.1,1.5) to[bend right=30] ++(0,1);
+                    \draw (-6.45,2.2) to[bend left=30] ++(0,1);
+                    \draw (-4.15,2.2) to[bend right=30] ++(0,1);
+
+                    \draw [dashed] (4.63,7.92) -- ++(0.6,0);
+                \end{tikzpicture}
+            \end{center}
+        \end{proof}
+    \end{enumerate}
+    \newpage
+    \item One use of hydroformylation catalysis is the conversion of internal olefins into terminal alcohols. Show a mechanism for this process.
+    \begin{proof}[Answer]
+        ${\color{white}hi}$
+        \begin{figure}[H]
+            \centering
+            \schemestart
+                \chemfig{Co(-CO)(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
+                \arrow{<=>[][*{0}\small\ce{CO}]}[-90]
+                \chemfig{Co(-CO)(-[6]CO)(-[4]CO)(-[2]H)}
+                \arrow{<=>[\small\chemfig{R_1-[:30]=[:-30]-[:30]R_2}]}[,2]
+                \chemfig{Co(-\phantom{i}-[2,0.4,,,white]-[:120,,,,white]R_1-[:-60]=[6]-[:-60]R_2)(-[2]H)(>:[:160]OC)(<[:-150]OC)(-[6]CO)}
+                \arrow{<=>}
+                \chemfig{Co(-(-[:60]R_1)-[:-60]-[:-120]R_2)(-[2]CO)(-[4]OC)(-[6]CO)}
+                \arrow{<=>[*{0.-135}\small\ce{CO}]}[-45]
+                \chemfig{Co(-(-[:60]R_1)-[:-60]-[:-120]R_2)(-[2]CO)(>:[:160]OC)(<[:-150]OC)(-[6]CO)}
+                \arrow{<=>}[-90]
+                \chemfig{Co(-(=[:60]O)-[:-60](-R_1)-[:-120]-[:-60]R_2)(-[2]CO)(-[4]OC)(-[6]CO)}
+                \arrow{->[*{0.-45}\small\ce{H2}]}[-135]
+                \chemfig{Co(-(=[:60]O)-[:-60](-R_1)-[:-120]-[:-60]R_2)(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
+                \arrow{->}[180]
+                \chemfig{Co(-(-[:60]OH)-[:-60](-R_1)-[:-120]-[:-60]R_2)(-[2]CO)(-[4]OC)(-[6]CO)}
+                \arrow{->[*{0.-135}\small\ce{H2}]}[135]
+                \chemfig{Co(-(-[:60]OH)-[:-60](-R_1)-[:-120]-[:-60]R_2)(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
+                \arrow{->[][*{0}\small\chemfig{R_1-[:30](-[2]-[:30]OH)-[:-30]-[:30]R_2}][5mm]}[90,3.2]
+            \schemestop
+        \end{figure}
+    \end{proof}
+\end{enumerate}
+
+
+
+
+\end{document}
