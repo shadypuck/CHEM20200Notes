@@ -1,0 +1,339 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{4}
+
+\begin{document}
+
+
+
+
+\chapter{???}
+\section{Lecture 18: Olefin Polymerization}
+\begin{itemize}
+    \item \marginnote{5/10:}Another huge industrial-scale reaction
+    \item The Great Pacific Garbage Patch is largely composed of plastics made by this process.
+    \begin{itemize}
+        \item Plastics get a bad rep, but they are a remarkable material.
+        \begin{itemize}
+            \item We can melt them, form them, and they have durability properties.
+        \end{itemize}
+        \item However, because of their environmental impact, a big thing in chemistry is the pursuit of materials with similar properties that are biodegradable.
+        \item Inorganic chemistry plays a large role in their synthesis.
+        \item In 2008, the US alone made 58.3 million metric tons of polyethylene and 17 million metric tons of polypropylene.
+    \end{itemize}
+    \item General form:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{R-[:30]=_[:-30]}
+            \arrow{->[\small cat]}
+            \chemleft{(}
+                \chemfig{-[:30,0.5]-[:-30](-[6]R)-[:30,0.5]}
+            \chemright{)_n}
+        \schemestop
+        \caption{The general form of olefin polymerization.}
+        \label{fig:olefinPolymerization}
+    \end{figure}
+    \begin{itemize}
+        \item If $\ce{R}=\ce{H}$, we have polyethylene.
+        \item If $\ce{R}=\ce{Me}$, we have polypropylene.
+    \end{itemize}
+    \item This is a thermodynamically favorable, exothermic reaction since $\pi$ bonds are weaker than $\sigma$ bonds.
+    \item The catalyst is typically \ce{Ti}, \ce{Zr}, \ce{Hf}, \ce{Cr} (early Group 4 transition metals). Sometimes we use \ce{Fe}, \ce{Co}, \ce{Ni}, and \ce{Pd} (these are a bit more specific).
+    \item Most of the materials that mediate this catalysis are called Ziegler-Natta catalysts.
+    \begin{itemize}
+        \item These are heterogeneous, even though they operate via the same kind of catalytic cycle that homogeneous systems use.
+        \item Nobel prize (1963).
+    \end{itemize}
+    \item Polymer terms:
+    \item \textbf{Number averaged molecular weight}: The quantity $\frac{\sum N_xM_x}{\sum N_x}$, where $N_x$ is the number of chains with molecular weight $x$ and $M_x$ is ?. \emph{Also known as} $\bm{M_N}$.
+    \item \textbf{Weight averaged molecular weight}: The quantity $\frac{\sum N_xM_x^2}{\sum N_xM_x}$. \emph{Also known as} $\bm{M_w}$.
+    \item \textbf{Molecular weight distribution}: The quantity $\frac{M_w}{M_N}$. \emph{Also known as} \textbf{polydispersity index}, \textbf{PDI}.
+    \begin{itemize}
+        \item 1 is perfect. This means that you only have one type of chain.
+        \item 1.1 is good.
+        \item Above 1.5 is getting ill-defined.
+    \end{itemize}
+    \item Stereochemistry:
+    \begin{itemize}
+        \item Normally, the methyl groups in polypropylene all insert on the same side, but if one misinserts, then it faces the other direction.
+        \item If the catalyst corrects itself and continues on inserting in the original direction, this is \textbf{site control}.
+    \end{itemize}
+    \item \textbf{Site control}: The catalyst controls the insertion.
+    \begin{itemize}
+        \item More specifically, the direction the methyl groups point is controlled by the catalyst.
+    \end{itemize}
+    \item \textbf{Chain end control}: One misinsertion causes the ensuing insertions to face the same way as the last inserted methyl group.
+    \begin{itemize}
+        \item More specifically, the direction the methyl groups point is controlled by the last inserted methyl group.
+    \end{itemize}
+    \item Mechanism:
+    \begin{equation*}
+        \ce{L_nMR2 ->[LA][-LAR^-] L_nMR+ ->[||] L_nM---R ->[] L_nM-H}
+    \end{equation*}
+    \begin{itemize}
+        \item The three steps are activation, growth, and termination.
+        \item LA stands for Lewis acid. The lewis acid activates the catalyst by abstracting an anionic Lewis acid species.
+        \item Olefin insertion grows the polymer.
+        \item $\beta$-\ce{H} elimination is the simplest way to terminate the chain, even though there are several possibilities.
+    \end{itemize}
+    \item Activation:
+    \begin{itemize}
+        \item \ce{L_nMCl2 ->[AlR3/MAO] L_nMMe2 ->[AlR3/MAO][-AlR4^-] L_nMe+}.
+        \item \ce{L_nMCl2 ->[AlR3/MAO] L_nMMe2 ->[BAr^F{}_3][-MeBAr^F{}_4-] L_nMe+}.
+        \item \ce{L_nMCl2 ->[AlR3/MAO] L_nMMe2 ->[HBAr^F{}_4][-CH4] L_nMe+}.
+        \item MAO is methylated aluminum oxide.
+        \begin{itemize}
+            \item An ill defined, amorphous gunk with some oxygens created by adding a pinch of water to \ce{AlMe3}.
+            \item A cheap reagent that people chuck into their catalyst mixture.
+            \item Functions:
+            \begin{enumerate}
+                \item Alkylating agent.
+                \item Activator (pulls off methyls to generate cationic species).
+                \item Scavenger for water (primarily) and oxygen.
+            \end{enumerate}
+        \end{itemize}
+        \item The fluorinated aryl borates are really good because they're very weakly coordinating, and we really want an open coordination site.
+    \end{itemize}
+    \item Chain growth:
+    \begin{itemize}
+        \item \ce{MR(||) -> M---R ->[||] M(||)(---R) -> M---R -> -> ->}.
+        \item This is called the Cossee Arlman mechanism.
+        \item Sterics determine the rates: Ethylene $>$ propylene $>$ substituted olefins $>$ disubstituted olefins $\approx$ geminal disubstituted olefins $>>>$ trisubstituted or tetrasubstituted olefins.
+    \end{itemize}
+    \item Termination:
+    \begin{itemize}
+        \item How you get variability in chain lengths.
+        \item Control it by adding a chain-transfer reagent (a specific terminating reagent). Examples include\dots
+        \begin{itemize}
+            \item \ce{H2}: \ce{L_nM-pl ->[H2] L_nM-H + H-pl}, where \ce{pl} is a polymer\footnote{Be aware that Anderson uses a capital P in a circle.}.
+            \item $\beta$-\ce{H} elimination: \ce{L_nM---pl -> L_nM(H)(||pl) -> L_nM-H + =-pl}.
+            \item $\beta$-\ce{H} abstraction: \ce{M(||)(---pl) -> M(Et)(||pl) -> MEt + =-pl}.
+        \end{itemize}
+    \end{itemize}
+    \item The relative rates of growth vs. determination dictate the type of material we get.
+    \begin{itemize}
+        \item $K_p$ is the rate of growth/propogation; $K_t$ is the rate of termination.
+        \item $K_p$ vs. $K_t$ dictates the product.
+        \item $K_p>>>K_t$ yields high molecular weight polymers.
+        \item $K_p\approx K_t$ (within the same order of magnitude) yields oligomers.
+        \begin{itemize}
+            \item The geometric weight distribution of oligomers is called a \textbf{Schultz-Flory distribution}.
+        \end{itemize}
+        \item $K_t>>K_p$ yields dimers exclusively.
+        \begin{itemize}
+            \item This can be valuable if you just want to transform ethylene into butadiene (a higher value product), for instance.
+        \end{itemize}
+    \end{itemize}
+    \item Types of polyethylene.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{[:54]M*5([,1.25]-N(-[,0.8]R)=-=N(-[,0.85]R)-)(-[5]X)(-[7]X)}
+            \caption{LDPE catalysts.}
+            \label{fig:catalysts-polyethylenea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{M?(-[3]Cp(-[1]R)-[5]Si(-[3])(-[5])-[7]N?R)(-[1]X)(-[7]X)}
+            \caption{LLDPE catalysts.}
+            \label{fig:catalysts-polyethyleneb}
+        \end{subfigure}
+        \caption{Polyethylene-type catalysts.}
+        \label{fig:catalysts-polyethylene}
+    \end{figure}
+    \item A perfect zig-zag chain is HDPE (high density polyethylene).
+    \begin{itemize}
+        \item High melting point.
+        \item Crystalline.
+        \item Example uses: Helmets for army soldiers, bulletproof plastics.
+        \item Usually formed with Ziegler-Natta catalysis:
+        \begin{itemize}
+            \item \ce{TiCl_x + AlR_x ->} a heterogeneous catalyst that's super active ($>\SI{e9}{\kilo\gram}$ of polymer per gram of catalyst).
+            \item Note that $x=3$ or 4.
+            \item Alternate catalysts: \ce{Cr^{III} + {silica} ->[O2, $\Delta$] CrO4 ->[||]} reduced Cr center (the active catalyst).
+        \end{itemize}
+    \end{itemize}
+    \item A mess with a ton of branching is LDPE (low density polyethylene).
+    \begin{itemize}
+        \item Lower melting point.
+        \item Often made by radical processes.
+        \item Also made by late transition metal catalysts, where there's less control over chain growth:
+        \begin{itemize}
+            \item Square planar, $d^8$, $16\,\e[-]$ species.
+            \item Example metal centers: \ce{Ni}, \ce{Pd}.
+            \item High rates of $\beta$-\ce{H} elimination leads to chain walking and branching.
+        \end{itemize}
+    \end{itemize}
+    \item Longer chain with a few branches is linear low-density polyethylene (LLDPE).
+    \begin{itemize}
+        \item Transition metal catalyzed.
+        \item Formed from a mixture of ethylene and substituted olefins or a controlled rate of branching from catalysts.
+        \item Catalysts:
+        \begin{itemize}
+            \item Constrained geometry catalysts.
+            \item Example metal centers: \ce{Ti}, \ce{Zr}, \ce{Hf}.
+        \end{itemize}
+    \end{itemize}
+    \item Polyethylene gives a single chain, but polypropylene can be chiral depending on the orientation of the methyl groups. The orientation defines \textbf{tacticity}.
+    \item \textbf{Isotactic} (polypropylene): All methyl groups are pointed in the same direction.
+    \begin{itemize}
+        \item The most crystaline, highest melting point material.
+    \end{itemize}
+    \item \textbf{Atactic} (polypropylene): Every methyl group is random.
+    \begin{itemize}
+        \item The least crystaline, lowest melting point material.
+    \end{itemize}
+    \item \textbf{Syndiotactic} (polypropylene): Every methyl group alternates.
+    \begin{itemize}
+        \item Pretty highly ordered.
+    \end{itemize}
+    \item \textbf{Hemiisotactic} (polypropylene): Every other methyl group points the same direction; the remaining ones are random.
+    \item \textbf{Stereoblock} (polypropylene): Alternating blocks of isotactic polypropylene.
+    \item Controlling stereochemistry:
+    \begin{itemize}
+        \item Relies on the fact that propylene is pro-chiral.
+        \item Si (pro-S) and Re (pro-R) faces.
+        \item Catalyst symmetry controls tacticity.
+    \end{itemize}
+    \item Catalyst types:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node {\chemfig{M(<[:-25]\coordsite)(<[:-155]\coordsite)(-[2])(-[6])}};
+    
+                \filldraw [fill=white,semithick] (0.4,0.85) ellipse (7mm and 2.5mm);
+                \draw [semithick] (-0.4,-0.85) ellipse (7mm and 2.5mm);
+            \end{tikzpicture}
+            \caption{$C_2$ symmetry.}
+            \label{fig:catalysts-polypropylenea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node {\chemfig{M(<[:-25]\coordsite)(<[:-155]\coordsite)(-[2])(-[6])}};
+    
+                \filldraw [fill=white,semithick] (0,0.85) ellipse (4mm and 1.5mm);
+                \draw [semithick] (0,-0.85) ellipse (1.1cm and 2.5mm);
+            \end{tikzpicture}
+            \caption{$C_s$ symmetry.}
+            \label{fig:catalysts-polypropyleneb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \begin{tikzpicture}
+                \node {\chemfig{M(<[:-25]\coordsite)(<[:-155]\coordsite)(-[2])(-[6])}};
+    
+                \filldraw [fill=white,semithick] (0,0.85) ellipse (4mm and 1.5mm);
+                \draw (0.4,0.85) -- ++(0.25,0) -- ++(0,0.1) -- ++(0.2,0) -- ++(0,-0.2) -- ++(-0.2,0) -- ++(0,0.1);
+                \draw [semithick] (0,-0.85) ellipse (1.1cm and 2.5mm);
+            \end{tikzpicture}
+            \caption{$C_1$ symmetry.}
+            \label{fig:catalysts-polypropylenec}
+        \end{subfigure}
+        \caption{Polypropylene-type catalysts.}
+        \label{fig:catalysts-polypropylene}
+    \end{figure}
+    \begin{itemize}
+        \item Most well worked out for metallocenes.
+        \item In Figure \ref{fig:catalysts-polypropylene}, boxes are open coordination sites; circles are space-filling ligands.
+        \item Differences help dictate tacticity.
+        \item $C_2$: Both binding sites are the same.
+        \begin{itemize}
+            \item Steric clashing forces the olefin to point in inverted ways; but because the polymer switches sides, this leads to consistency in the direction the methyl is added.
+            \item Generates isotactic polypropylene.
+            \item Si-face selective.
+            \item Example: A diindene metallocene.
+        \end{itemize}
+        \item $C_s$: Binding sites are enantiomers.
+        \begin{itemize}
+            \item Generates syndiotactic polypropylene.
+            \item Two enantiotopic sites will alternate.
+            \item Example: A metallocene with Cp on top and fluorene on bottom.
+        \end{itemize}
+        \item $C_1$: Binding sites are diastereomers.
+        \begin{itemize}
+            \item Generates hemiisotactic polypropylene.
+            \item Example: A metallocene with \ce{Cp-R} on top and fluorene on bottom.
+        \end{itemize}
+    \end{itemize}
+    \item To make this work, the \ce{Cp} rings are often tethered to prevent rotation.
+    \begin{itemize}
+        \item However, rotation can be harnessed to make stereoblock copolymers.
+    \end{itemize}
+    \item Note that stereoblock copolymers can also be synthesized with two isotactic catalysts, relying on chain transfer.
+    \item Late-metals: Chain walking.
+    \begin{itemize}
+        \item A chain can grow or it can chain walk (do $\beta$-\ce{H} elimination followed by a $2,1$-insertion).
+        \item If it chain walks, we'll create a branch.
+    \end{itemize}
+    \item We see this with late metals.
+    \begin{itemize}
+        \item Early metals are terrible backbonders, so they will prefer to be on the alkyl side of the equilibrium.
+        \item Late metals can backbond, and will more readily form an olefin adduct (a necessary intermediate to chain walking).
+    \end{itemize}
+    \item Thus, we use late metals\dots
+    \begin{itemize}
+        \item Because sometimes we want branching, specifically finely tuned branching to a certain degree.
+        \begin{itemize}
+            \item Recall that random branching can be achieved via a radical mechanism.
+        \end{itemize}
+        \item SHOP process:
+        \begin{itemize}
+            \item We react ethylene with a nickel PO-type catalyst (a nickel catalyst with a bidentate ligand that chelates through a phosphorous and an oxygen), an enolate, or related phosphorous/oxygen based donors.
+            \item This creates olefin-terminating oligomers. This doesn't use chain walking, but rather the chain transfer process, which is much faster with late metals.
+            \item Products: \ce{C4{-}C8} ($41\%$), \ce{C10{-}C18} ($40.5\%$), and \ce{C_{20+}} ($18.5\%$).
+            \item The short ones and the long ones can be combined with \ce{Mo2O3/Al2O3} to do olefin metathesis, yielding internal and terminal olefins.
+            \item Then, throwing in the medium-length ones and treating with \ce{HCo(CO)4} (our hydroformylation catalyst) and syn gas yields terminal aldehydes, which with enough hydrogen can give us terminal alcohols, which are commodity chemicals.
+        \end{itemize}
+    \end{itemize}
+    \item Oligomerization mechanism:
+    \begin{figure}[H]
+        \centering
+        \schemestart
+            \chemfig{M-H}
+            \arrow{->[\small\subscheme{2\arrow{0}[,0.1]\chemfig{=[1]}}]}
+            \chemfig{M(-[:30]-[:-30])(-[7]\phantom{i}-[1,0.4,,,white]=[5])}
+            \arrow
+            \chemfig{[:-30]M*6(------)}
+            \arrow[,1.1]
+            \chemfig{M?(-[2]\phantom{i}-[4,0.4,,,white]=-[::-30,1]-[::-50,0.9]-[::-70,0.8]?)(-[6]H)}
+            \arrow{-U>[][*{0.-150}\small\chemfig{-[:30]-[:-30]=^[:30]}][][][135]}[-90]
+            \chemfig{M^{\mathit{n}-2}(-[5]\phantom{i}-[3,0.4,,,white]=[7])(-[7]\phantom{i}-[5,0.4,,,white]=[1])}
+            \arrow[180]
+            \chemfig{M*3([:-100]---)*3([:-140]---)}
+            \arrow[90,1.3]
+        \schemestop
+        \caption{Oligomerization mechanism.}
+        \label{fig:mechanism-oligomerization}
+    \end{figure}
+    \begin{itemize}
+        \item A metathesis-like process.
+        \item Example with nickel.
+    \end{itemize}
+    \item Polar monomer incorporation.
+    \begin{itemize}
+        \item One of the standing grand challenges in olefin polymerization.
+        \item Incorporating vinyl chlorides, vinyl ethers, vinyl esters, vinyl nitriles, etc.
+        \item We can do this with radical polymerizations, but there's no stereocontrol here.
+        \item PVC (pipe) is polyvinylchloride (robust, a great material, but opaque).
+        \begin{itemize}
+            \item It's melting point would be even higher if we could make it isotactic (and it would be clear, which could potentially have applications).
+        \end{itemize}
+        \item The challenge with early metals is that if you $\beta$-\ce{Cl} eliminate, the \ce{M-Cl} bond will be too strong to break and reinsert the chloride. This kills the catalysis.
+        \begin{itemize}
+            \item Additionally, the groups on the polymer adjacent to the metal center can donate to it, making the polymer a kind of chelating ligand and preventing olefin insertion. This also kills the catalysis.
+        \end{itemize}
+        \item Late metals are less halo/oxo-philic, which makes them better at incorporating these monomers.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
