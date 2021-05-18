@@ -65,10 +65,10 @@
             
                         \node{\chemfig{C~O}};
             
-                        % \draw [thick,->]
-                        %     (-0.4,0.45) -- (-0.4,0.25)
-                        %     (-0.5,0.35) -- (0.5,0.35)
-                        % ;
+                        \draw [thick,->]
+                            (-0.4,0.45) -- (-0.4,0.25)
+                            (-0.5,0.35) -- (0.5,0.35)
+                        ;
                     \end{tikzpicture}
                     \caption{\ce{CO} LUMO.}
                     \label{fig:CO-N2-ligandStrengthd}
@@ -112,19 +112,19 @@
                 \begin{subfigure}[b]{0.9\linewidth}
                     \centering
                     \schemestart
-                        \chemfig{Fe^{II}-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{0=\:}{N}}
+                        \chemfig{Fe^{I}-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{0=\:}{N}}
                         \arrow{->[\small\ce{H+, e-}]}
-                        \chemfig{Fe^{III}-\charge{90=\:}{N}=\charge{90=\:}{N}-H}
+                        \chemfig{Fe^{II}-\charge{90=\:}{N}=\charge{90=\:}{N}-H}
                         \arrow{->[\small\ce{H+, e-}]}
-                        \chemfig{Fe^{IV}=\charge{90=\:}{N}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \chemfig{Fe^{III}=\charge{90=\:}{N}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
                         \arrow{->[*{0}\small\ce{H+, e-}][*{0}\small\ce{-NH3}]}[-90]
-                        \chemfig{Fe^{V}~\charge{0=\:}{N}}
+                        \chemfig{Fe^{IV}~\charge{0=\:}{N}}
                         \arrow{->[*{0}\small\ce{H+, e-}]}[-90]
-                        \chemfig{Fe^{IV}=\charge{90=\:}{N}-H}
+                        \chemfig{Fe^{III}=\charge{90=\:}{N}-H}
                         \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.4]
-                        \chemfig{Fe^{III}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
+                        \chemfig{Fe^{II}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
                         \arrow{->[*{0.-90}\small\ce{H+, e-}]}[180,1.4]
-                        \chemfig{Fe^{II}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+                        \chemfig{Fe^{I}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
                         \arrow{->[*{0}\small\ce{N2}][*{0}\small\ce{-NH3}]}[90,2]
                     \schemestop
                     \caption{Iron center.}
@@ -181,7 +181,7 @@
         \end{proof}
         \item Using your answer from part (b), why might a distal mechanism be more favorable for \ce{Mo} than for \ce{Fe}?
         \begin{proof}
-            \ce{Mo} has more readily accessible oxidation states, so it has no problem alternating between $3+$ and $6+$ as well as everywhere in between. \ce{Fe} can only easily access \ce{Fe^2+} and \ce{Fe^3+}.
+            \ce{Mo} has more readily accessible oxidation states, so it has no problem alternating between $3+$ and $6+$ as well as everywhere in between. \ce{Fe} can only easily access \ce{Fe^2+} and \ce{Fe^3+} as a later, first row transition metal.
         \end{proof}
     \end{enumerate}
     \item Write out a detailed mechanism for a transfer hydrogenation between an aldehyde and a ketone. Which way would this reaction be expected to go for the combination of a benzaldehyde/benzyl alcohol and isopropanol/acetone?
@@ -288,21 +288,25 @@
                 \chemfig{Co(-CO)(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
                 \arrow{<=>[][*{0}\small\ce{CO}]}[-90]
                 \chemfig{Co(-CO)(-[6]CO)(-[4]CO)(-[2]H)}
-                \arrow{<=>[\small\chemfig{R_1-[:30]=[:-30]-[:30]R_2}]}[,2]
-                \chemfig{Co(-\phantom{i}-[2,0.4,,,white]-[:120,,,,white]R_1-[:-60]=[6]-[:-60]R_2)(-[2]H)(>:[:160]OC)(<[:-150]OC)(-[6]CO)}
-                \arrow{<=>}
-                \chemfig{Co(-(-[:60]R_1)-[:-60]-[:-120]R_2)(-[2]CO)(-[4]OC)(-[6]CO)}
-                \arrow{<=>[*{0.-135}\small\ce{CO}]}[-45]
-                \chemfig{Co(-(-[:60]R_1)-[:-60]-[:-120]R_2)(-[2]CO)(>:[:160]OC)(<[:-150]OC)(-[6]CO)}
-                \arrow{<=>}[-90]
-                \chemfig{Co(-(=[:60]O)-[:-60](-R_1)-[:-120]-[:-60]R_2)(-[2]CO)(-[4]OC)(-[6]CO)}
-                \arrow{->[*{0.-45}\small\ce{H2}]}[-135]
-                \chemfig{Co(-(=[:60]O)-[:-60](-R_1)-[:-120]-[:-60]R_2)(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
-                \arrow{->}[180]
-                \chemfig{Co(-(-[:60]OH)-[:-60](-R_1)-[:-120]-[:-60]R_2)(-[2]CO)(-[4]OC)(-[6]CO)}
-                \arrow{->[*{0.-135}\small\ce{H2}]}[135]
-                \chemfig{Co(-(-[:60]OH)-[:-60](-R_1)-[:-120]-[:-60]R_2)(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
-                \arrow{->[][*{0}\small\chemfig{R_1-[:30](-[2]-[:30]OH)-[:-30]-[:30]R_2}][5mm]}[90,3.2]
+                \arrow{->[\small\chemfig{R-[:60]=_-[:-60]}]}[,1.6]
+                \chemfig{Co(-\phantom{i}-[2,0.4,,,white](-[:30])=^[6]-[:-30]R)(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
+                \arrow
+                \chemfig{Co(-(-[:60])-[:-60]-R)(-[6]CO)(-[4]CO)(-[2]CO)}
+                \arrow[-90]
+                \chemfig{Co(-\phantom{i}-[2,0.4,,,white]=^[6]-[:-30]-[:30]R)(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
+                \arrow[180]
+                \chemfig{Co(--[:-60]--[:60]R)(-[6]CO)(-[4]CO)(-[2]CO)}
+                \arrow{->[*{0}\small\ce{CO}]}[-90]
+                \chemfig{Co(-(=[:60]O)-[:-60]--[:60]-[:120]R)(-[6]CO)(-[4]CO)(-[2]CO)}
+                \arrow{->[*{0}\small\ce{H2}]}[-90]
+                \chemfig{Co(-(=[:60]O)-[:-60]--[:60]-[:120]R)(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
+                \arrow[180]
+                \chemfig{Co(-\phantom{i}-[2,0.4,,,white]O=_[6]-[:-30]-[:30]-[2]-[:150]R)(-[6]CO)(<[:-150]OC)(>:[:160]OC)(-[2]H)}
+                \arrow[90]
+                \chemfig{Co(-O-[:-60]-[::60]-[::60]-[::60]-[::60]R)(-[6]CO)(-[4]CO)(-[2]CO)}
+                \arrow{->[*{0}\small\ce{H2}]}[90]
+                \chemfig{Co(-O-[:-60]-[::60]-[::60]-[::60]-[::60]R)(>:[1]CO)(-[2]H)(-[4]OC)(<[5]H)(-[6]CO)}
+                \arrow{-U>[][*{0}\small\chemfig{OH-[:120]-[:60]-[:120]-[:60]-[:120]R}][][][120]}[90]
             \schemestop
         \end{figure}
     \end{proof}
