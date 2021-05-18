@@ -372,5 +372,185 @@
 
 
 
+\section{Lecture 19: Oxidative Olefin Functionalization}
+\begin{itemize}
+    \item \marginnote{5/12:}More fine molecule synthesis than industrial, although there are industrial applications.
+    \item General form:
+    \begin{equation*}
+        \ce{R-# ->[HX][{cat}] R-=-X + R-CX=}
+    \end{equation*}
+    \begin{itemize}
+        \item Can also start from a double bond and make singly bonded products.
+    \end{itemize}
+    \item Hydrocyanation:
+    \begin{equation*}
+        \ce{R-= + HCN ->[{cat}] R---CN}
+    \end{equation*}
+    \begin{itemize}
+        \item \ce{HCN} is really toxic, so surrogates are used in some cases.
+        \item Used in the synthesis of adiponitrile, which becomes nylon.
+    \end{itemize}
+    \item Controlling selectivity w/ catalysts:
+    \begin{itemize}
+        \item \ce{Ni(P(o-Tol)3)4}\footnote{\ce{o-Tol} is an ortho-tolyl group.}: Selects for the terminal product, especially with sterically encumbered (i.e., geminal) olefins.
+        \item Styrene: Selects for the branched product.
+    \end{itemize}
+    \item Mechanism:
+    \begin{align*}
+        \ce{L_2Ni(||)} &\ce{->[HCN]} \ce{L_2Ni(H)(CN)(||)}\\
+        &\ce{->[][-L]} \ce{LNi(H)(CN)(||)}\\
+        &\ce{->[||]} \ce{LNi(CN)(Et)(||)}\\
+        &\ce{->[L][-EtCN]} \ce{L2Ni(||)}
+    \end{align*}
+    \begin{itemize}
+        \item The precatalyst is \ce{L3Ni}, and is activated when ethylene kicks out a ligand.
+        \item The reductive elimination step is hard and requires a Lewis acid and a ligand to kick out ethyl cyanide.
+        \item Can also have chain walking.
+    \end{itemize}
+    \item Hydrosilylation:
+    \begin{equation*}
+        \ce{R-= + HSiR3 ->[{cat}] R---SiR3}
+    \end{equation*}
+    \begin{itemize}
+        \item Note that our starting material can also be \ce{R-=X} (where \ce{X} can be oxygen, for instance), giving us \ce{R-CH(SiR3)-XH} as a product.
+        \item Industrially important for making non-stick coatings.
+    \end{itemize}
+    \item Common catalysts: \ce{Pd^0} and Karstedt's catalyst (a bridging mess of siloxanes bound to olefins and chelating).
+    \begin{figure}[h!]
+        \centering
+        \chemfig{Pt(-[:120,1.2]\phantom{i}-[::-90,0.4,,,white]=^[::180]-[4]Si(>:[:60])(<[:120])-[5]O?[1])(-[:-120,1.2]\phantom{i}-[::90,0.4,,,white]=_[::180]-[4]Si?[1](>:[:-60])(<[:-120]))-[:15]\phantom{i}-[::-90,0.4,,,white]=^[::180]-[1]Si(>:[:105])(<[:165])-[1]O-[7]Si(>:[:15])(<[:75])-[7]=^[:-105]-[::180,0.4,,,opacity=0]\phantom{i}-[::-90]Pt(-[:60,1.2]\phantom{i}-[::90,0.4,,,white]=_[::180]-Si(<[:120])(>:[:60])-[7]O?[2])(-[:-60]\phantom{i}-[::-90,0.4,,,white]=^[::180]-Si?[2](<[:-120])(>:[:-60]))}
+        \caption{Karstedt's catalyst.}
+        \label{fig:karstedtCatalyst}
+    \end{figure}
+    \item \ce{H2PtCl6} also works (known as Speier's catalyst).
+    \item We can also observe chain walking to bond a silyl away from where the olefin originally was.
+    \item Mechanism:
+    \begin{align*}
+        \ce{M} &\ce{->[HSIR3]} \ce{M(H)(SiR3)}\\
+        &\ce{->[||]} \ce{M(H)(SiR3)(||)}\\
+        &\ce{->} \ce{M(Et)(SiR3)}\\
+        &\ce{->[][-EtSiR3]} \ce{M}
+    \end{align*}
+    \begin{itemize}
+        \item The above mechanism is called the Chalk-Herrod mechanism.
+        \item However, we can also add the silyl group to the olefin first and the hydrogen second; this is the modified Chalk-Herrod mechanism.
+        \item $\sigma$-bond metathesis is also possible.
+    \end{itemize}
+    \item Hydroboration:
+    \begin{equation*}
+        \ce{R-= + R2BH -> R---BR2}
+    \end{equation*}
+    \begin{itemize}
+        \item We need a catalyst because otherwise we're stuck at the mercy of the electronics of this reaction.
+        \item A catalyst is necessary for less electron-rich boranes.
+    \end{itemize}
+    \item Mechanism:
+    \begin{align*}
+        \ce{L_nM} &\ce{->[HBR2]} \ce{L_nM(H)(BR2)}\\
+        &\ce{->[R-=]} \ce{L_nM(H)(BR2)(||R)}\\
+        &\ce{->} \ce{L_nM(BR2)(---R)}\\
+        &\ce{->[][-R---BR2]} \ce{L_nM}
+    \end{align*}
+    \begin{itemize}
+        \item We could also get from the second intermediate to \ce{L_nM(H)(--C(H)(BR2)(R))}, from which we can reductively eliminate to get \ce{Me-C(H)(BR2)(R)} or $\beta$-\ce{H} eliminate to get \ce{=C(BR2)(R)}.
+        \item Alternate mechanism: \ce{L_nRh(||R)(BR2) -> L_nRh-CRH--BR2 ->[R2BH] L_nRh(H)(BR2)(CRH--BR2)} \ce{->[][-R---BR2] L_nRh(||R)(BR2)}.
+        \item With early metals: \ce{L_nMH ->[||R] L_nM(H)(||R) -> L_nM---R ->[HBR2] L_nM(H)(BR2)(---R) ->[][-R---BR2] L_nMH}.
+        \begin{itemize}
+            \item Done to avoid oxidative addition type processes.
+        \end{itemize}
+    \end{itemize}
+    \item Hydroamination:
+    \begin{equation*}
+        \ce{R-#-H + HNR2 ->[{cat}] R-=-NR2 + =C(R)(NR2)}
+    \end{equation*}
+    \begin{itemize}
+        \item Can also be done from a doubly bonded reactant (remove the double bond from each product).
+    \end{itemize}
+    \item Mechanisms:
+    \begin{enumerate}
+        \item Nucleophilic attack: \ce{L_nM -> L_nM-|| ->[RNH2] M---NH2R ->[][-EtNRH] L_nM}.
+        \item Insertion: \ce{L_nM-NHR ->[||] L_nM(||)(NHR) -> L_nM---NRH ->[RNH2][-EtNRH] L_nM-NRH}.
+        \item $2+2$: \schemestart \chemfig{\ce{L_nM=NR}} \arrow{->[\scriptsize\ce{||}]} \chemfig{\ce{L_n}M?-NR-[6]-[4,1.4]?} \arrow{->[\scriptsize\ce{H2NR}]} \chemfig{\ce{L_nM(NRH)(NREt)}} \arrow{->[][\scriptsize\ce{-EtNRH}]}[,1.2] \chemfig{\ce{L_nM=NR}} \schemestop.
+        \begin{itemize}
+            \item Goes through a 4-membered $2+2$ transition state in the first step, as in Figure \ref{fig:mechanism-olefinMetathesis}.
+        \end{itemize}
+    \end{enumerate}
+    \item Oxidative olefin functionalization.
+    \item Wacker oxidation:
+    \begin{equation*}
+        \ce{|| + \frac{1}{2}O2 ->[cat PdCl2][cat CuCl2] Me-COH}
+    \end{equation*}
+    \begin{itemize}
+        \item Millions of tons per year; acetaldehyde feeds into a lot of processes.
+    \end{itemize}
+    \item Stoichiometry:
+    \begin{itemize}
+        \item It was discovered in the 1950s and 1960s that \ce{|| + H2O + PdCl2 -> Me-COH + Pd^0 + 2HCl}.
+        \item On the role of copper:
+        \begin{itemize}
+            \item It was known that \ce{Pd^0 + 2CuCl2 -> PdCl2 + 2CuCl}. Thus, we can use \ce{CuCl2} to regenerate our palladium catalyst.
+            \item Additionally, \ce{2CuCl + \frac{1}{2}O2 + 2HCl -> 2CuCl2 + H2O}.
+        \end{itemize}
+        \item Summing these three reactions, we have \ce{|| + \frac{1}{2}O2 ->[PdCl2][CuCl2] Me-COH}.
+    \end{itemize}
+    \item Mechanism:
+    \begin{itemize}
+        \item $\text{Rate}=\frac{\ce{[PdCl4^2-][C2H4]}}{\ce{[Cl^-]^2[H^+]}}$.
+        \item \ce{[PdCl4]^2- + || + H2O -> Pd(Cl)2(OH)(||)}.
+        \item \ce{C-O} bond formation: Three main possibilities.
+        \begin{enumerate}
+            \item Insertion:
+            \begin{align*}
+                \ce{Pd(Cl)2(H2O)(||)} &\ce{<=>} \ce{[Pd(Cl)2(OH)(||)]-}\\
+                &\ce{->} \ce{[Pd(Cl)2(L)(---OH)]-}\\
+                &\ce{->} \ce{[Pd(Cl)2(H)(||OH)]-}\\
+                &\ce{->} \ce{[Pd(Cl)2(L)(-CMeHOH)]-}\\
+                &\ce{->} \ce{[Pd(Cl)2(H)(O||Me)]-}\\
+                &\ce{->} \ce{Me-COH + Pd^0 + 2HCl}
+            \end{align*}
+            \item External attack at a ligand: React the starting compound with \ce{OH-} to produce \ce{[Pd(Cl)2(H2O)(---OH)]-}, which then feeds into the third intermediate.
+            \item Water nucleophilic attack: React the starting compound with \ce{H2O} and remove a proton to produce \ce{[Pd(Cl)2(H2O)(---OH)]-}, which then feeds into the third intermediate.
+        \end{enumerate}
+        \item The $\beta$-\ce{H} elimination step can also occur by a \ce{Cl-}-assisted process where the chloride abstracts the \ce{H+} from the alcohol.
+        \item All four hydrogens in acetaldehyde come from ethylene.
+    \end{itemize}
+    \item Stereochemical experiments:
+    \begin{itemize}
+        \item Draws a mechanism yielding stereochemistry consistent with mechanisms 2 and 3, but not 1. This means it's probably actually external attack at a ligand.
+        \item If \ce{[Cl^-]} is high, we activate the following pathway: \ce{[Pd(Cl)2(L)(---OH)]- -> [Pd(Cl)3(---OH)]^2- -> Cl---OH}.
+        \item $\text{Rate}=\frac{\ce{[PdCl4^2-][C2H4]}}{\ce{[Cl-][H+]}}$.
+        \item Therefore, we'll make the chlorinated pathway more than the productive pathway if we add a bunch of chloride.
+    \end{itemize}
+    \item Overall mechanism:
+    \begin{align*}
+        \ce{PdCl4^2-} &\ce{->[||, H2O][-2HCl]} \ce{Pd(Cl)2(H2O)(||)}\\
+        &\ce{->[H2O][-H+]} \ce{[Pd(Cl)2(H2O)(---OH)]^-}\\
+        &\ce{->} \ce{[Pd(Cl)(H)(H2O)(||OH)]-}\\
+        &\ce{->} \ce{[Pd(Cl)2(H2O)(-CMeHOH)]-}\\
+        &\ce{->[][- Me-COH]} \ce{Pd(Cl)(H)(H2O)2}\\
+        &\ce{->[][-HCl]} \ce{Pd^0}\\
+        &\ce{->[2CuCl2][- 2CuCl]} \ce{PdCl2}\\
+        &\ce{->[\frac{1}{2}O2, 2HCl][-H2O]} \ce{PdCl4^2-}
+    \end{align*}
+    \item Other applications:
+    \begin{itemize}
+        \item Higher olefins: \ce{R-= + \frac{1}{2}O2 ->[Pd^{II}, CuCl2, H2] R-COH}.
+        \item The nucleophile need not be \ce{H2O}:
+        \begin{itemize}
+            \item \ce{|| + ROH -> ||OR}.
+            \item \ce{|| + [COOR]- -> C(O)(R)(O||)}.
+        \end{itemize}
+        \item Draws out another few useful processes.
+        \item Useful chemistry with dienes.
+        \begin{itemize}
+            \item Cyclohexadiene can become cyclohexene with para-acetates.
+            \item Useful applications of the above reaction in total synthesis: Setting stereochemistry with a catalytic attack, as used in the synthesis of paenilactane B.
+        \end{itemize}
+        \item This chemistry also works with nitrogen-based nuleophiles.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
