@@ -607,5 +607,139 @@
 
 
 
+\section{Discussion Section}
+\begin{itemize}
+    \item \marginnote{5/18:}Homework 5 today.
+    \item Next Tuesday's discussion section might get moved to this coming Saturday at 1:00 PM CT.
+    \item Sophie will publish a list of midterm 2 topics.
+    \item Homework 5.2:
+    \begin{itemize}
+        \item Early metal resting state: Metal alkyl.
+        \begin{itemize}
+            \item Insertion of olefin is very fast so a bound oleffin is almost never observed for these systems.
+            \item Favors linear polyethylene.
+        \end{itemize}
+        \item Late metals: Metal-olefin adduct.
+        \begin{itemize}
+            \item Olefins are more likely to dissociate.
+            \item Insertion of an olefin is not as fast; this helps lead to more chain transfer.
+            \item Late metal catlysts are more susceptible to $\beta$-\ce{H} elimination so chain walking is also more common than with early metals.
+            \item Favors branched polyethylene via the chain transfer and chain walking mechanisms.
+        \end{itemize}
+        \item Chain transfer mechanism:
+        \begin{itemize}
+            \item Termination mechanisms.
+            \item $\beta$-\ce{H} elimination to form a metal-olefin adduct, and then the olefin dissociates from the metal.
+            \item If you react with ethylene time and time again to create a polymer, there's no reason you can't suddenly interact with another polymer in solution.
+        \end{itemize}
+        \item Chain walking was discussed last week.
+    \end{itemize}
+    \item Homework 5.3:
+    \begin{itemize}
+        \item Some catlysts polymerize ethylene to HDPE that contain a few long branches (ca. 1-2 per chain). \underline{Explain} how long the branches might form. \ul{What distribution of branch lengths do you expect for your mechanism?}
+        \item Which of the two branch forming pathways does the product here most resemble?
+        \begin{itemize}
+            \item Chain transfer.
+        \end{itemize}
+        \item What kind of catalysts lead to this selectivity?
+        \begin{itemize}
+            \item Open sterics, but maybe still some early metals to make sure you don't get shorter  chains, maybe CGCs --- can bind sterically crowded $\alpha$-olefins competitively with ethylene.
+            \item Likely need high temp to keep polymer in solution.
+        \end{itemize}
+    \end{itemize}
+    \item Homework 5.5:
+    \begin{itemize}
+        \item Wacker-type reactions: Generally alkene to ketone, but there are variants with other heteroatoms and other levels of reduction (e.g., allylIN and allylO, \ce{C=N} and \ce{C=O}).
+    \end{itemize}
+    \item Alternate Wacker oxidation mechanism (for an alcohol; see Figure \ref{fig:mechanism-WackerOxidationAlcohol}):
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{Pd(-[5]Cl)(-[7]Cl)}
+            \arrow{->[\small\subscheme{\chemfig{R-[1]O-[7]H}\arrow{0}[,0]\+{,,0.7em}\chemfig{=[1]}}]}[,2.1]
+            \chemfig{Pd(-[1]O(-R)(-[2]H))(-[3]Cl)(-[5]Cl)(-[7]\phantom{i}-[::90,0.4,,,white]=[::180])}
+            \arrow{->[\small\subscheme{2\arrow{0}[,0.1]\chemfig{R-[1]O-[7]H}\arrow(.east--.west){0}[90,0]\+{,,0.1em}\chemfig{B}}][\small\ce{-[HB]Cl}]}[,2.1]
+            \chemfig{Pd(-[1]O(-R)(-[2]H))(-[3]Cl)(-[5]O(-[4]H)(-[6]R))(-[:-30]-[:30]-[:-30]O-[:30]R)}
+            \arrow{-U>[][*{0.-120}\small\chemfig{R-[1]O-[7]H}][][][150]}[-90]
+            \chemfig{Pd(-[1]H)(-[3]Cl)(-[5]O(-[4]H)(-[6]R))(-[7]\phantom{i}-[::90,0.4,,,white]=_[::180]-[::60]O-[::90]R)}
+            \arrow{-U>[\small\chemfig{R-[1]O-[7]H}][\small\chemfig{=_[:30]-[:-30]O-[:30]R}]}[180,2.2]
+            \chemfig{Pd(-[1]H)(-[3]Cl)(-[5]O(-[4]H)(-[6]R))(-[7]O(-[6]H)(-R))}
+            \arrow{-U>[][\small\ce{HCl}][][][90]}[180,1.3]
+            \chemfig{Pd(-[5]O(-[4]H)(-[6]R))(-[7]O(-[6]H)(-R))}
+            \arrow{-U>[*{0}\small\ce{2CuCl2}][*{0}\small\ce{2CuCl}]}[90,1.9]
+        \schemestop
+        \caption{Wacker oxidation mechanism (for an alcohol).}
+        \label{fig:mechanism-WackerOxidationAlcohol}
+    \end{figure}
+    \begin{itemize}
+        \item Look back at the traditional mechanism but be aware of such derivatives. Know the similarities. The starting material should drive you toward the product.
+        \item Does it matter when the ligands are being lost and coordinated.
+        \begin{itemize}
+            \item Not really.
+            \item Anderson's way is probably a bit more realistic.
+        \end{itemize}
+    \end{itemize}
+    \item Brookehart type nickel- and palladium-based polymerization catalysts are introduced in Section 11.3.3 of the text. These catalysts differ from metallocene catalysts in that (1) the resting state is the (diimine)MR(ethylene)+ adduct 1, (2) chain walking is much faster than chain growth, (3) ethylene insertion into secondary alkyl metal species is fast, and (4) a hyper branched polyethylene is producced (ca. 100 branches at $\SI{1000}{\celsius}$).
+    \item A mechanism for polymerization showing how branches are formed (see Figure \ref{fig:BrookehartCatalystPolymerization}).
+    \begin{itemize}
+        \item We start from a precatalyst and go through a couple of activation steps.
+        \item Then we show three possible pathways.
+        \begin{itemize}
+            \item The top one creates no branches but leaves the possibility open for a chain transfer.
+            \item The middle one creates a methyl branch.
+            \item The bottom one creates an ethyl branch.
+        \end{itemize}
+        \item Note that if \ce{R} contains more carbons, we ccan see even more chain walking, leading to longer branches and our ultimate hyperbranched product.
+    \end{itemize}
+    \item What property or properties give rise to the differences in polymerization behavior between (diimine)\ce{PdR+} and \ce{Cp2ZrR} catalysts?
+    \begin{itemize}
+        \item It's Zr(IV) as a cation.
+        \item Palladium(II) is $d^8$ and soft, while zirconium(IV) is $d^0$ and hard. While both are poor backbonders, the soft character of the former leads to stronger metal olefin coordination. This enables $\beta$-\ce{H} elimination of (diimine)\ce{PdCH2CH2R+} to form (diimine)\ce{PdHCH2=CHR+} to compete with trapping by ethylene to form the resting state, and thus enables chain walking to compete with growth.
+        \item Palladium is a much better backbonder because it \emph{has} $d$ electrons.
+    \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \setcharge{extra sep=2.5pt}
+        \small
+        \schemestart
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[1]R)(-[7]\phantom{i}-[::-90,0.4,,,white]=[::180])}
+            \arrow[-90]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7]-[1]-[3]R)}
+            \arrow(--a){<=>}[-90]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[1]H)(-[7]\phantom{i}-[::-90,0.4,,,white]=^[::180]-[::-60]R)}
+            \arrow(@a--b){<=>}[-90]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]))}
+            \arrow(@b--c){<=>}[-90]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]-[::60]))}
+            \arrow(@a--){-U>[\footnotesize\chemfig{=[1]}][*{0.-45}\footnotesize\chemfig{=_[:30]-[:-30]R}]}[,2]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[1]\phantom{i}-[::-90,0.4,,,white]=[::180])(-[7]H)}
+            \arrow
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[:30]-[:-30])}
+            \arrow(@b--){->[\footnotesize\chemfig{=[1]}]}[,2]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]))(-[1]\phantom{i}-[::-90,0.4,,,white]=[::180])}
+            \arrow
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[:30]-[::-60]-[::-60](-[::60]R)(-[::-60]))}
+            \arrow(@c--){->[\footnotesize\chemfig{=[1]}]}[,2]
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]-[::60]))(-[1]\phantom{i}-[::-90,0.4,,,white]=[::180])}
+            \arrow
+            \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[:30]-[::-60]-[::-60](-[::60]R)(-[::-60]-[::60]))}
+        \schemestop
+        \caption{Polymerization with Brookehart catalysts.}
+        \label{fig:BrookehartCatalystPolymerization}
+    \end{figure}
+    \item The isopropal substituents on the aryl rings of the diimine ligand in catalyst 1 are critical for the generation of high molecular weight polymer. These aryl rings are oriented perpendiccular to the palladium square plane as indicated. Catalysts with small groups in these positions, such as 2, produce only low molecular weight oligomeric products. Rationalize the difference. Hint: Consider the mechanism of ligand substitution.
+    \begin{itemize}
+        \item Large substituents inhibit chain transfer! They stop ethylene from knocking out the polymer.
+        \item Charge transfer requires $\beta$-\ce{H} eliminatiom and substitution of \ce{H2C=CH2pl} by \ce{H2C=CH2} to begin substitution at square planar complexes normally proceeds by an associative mechanism in which the incoming ligand binds at an axial site. Large substituents at the ortho positions of the \ce{N-Ar} rings of the Brookhart catalysts disfavor this process, leading to high molecular weight. The ortho-methyl substituents in 2 are too small to inhibit ligand substitution and hence chain transfer, and so a low molecular weight product is formed.
+    \end{itemize}
+    \item Normal polypropylene, which contains only (\ce{-CH2CHMe-}) units, contains 333 \ce{Me} brancches per 1000 carbons. However, ($\alpha$-diimine)\ce{PdR+} catalysts polymerize polypropylene to a chain straightened polypropylene that contains only about 200 branches per 1000 carbons, indicating the presence of many \ce{CH2CH2CH2} units. Explain these results. (Hint: Consider insertion regiochemistry.)
+    \begin{itemize}
+        \item A 2,1-insertion followed by chain walking leads to a net 1,3 insertion, i.e., incorporation of a linear \ce{C3} unit in the polymer. About a third of the time the catalyst undergoes 2,1-insertion, resulting in a chain-straightened polypropylene.
+    \end{itemize}
+    \item \ce{CF3} is a strong electron withdrawing group, and will affect the electrons of the phenyl group. \ce{C-F} bonds are also stronger than \ce{C-H} bonds. Fluorine makes organic compounds more lipophilic, and more hydrophobic.
+\end{itemize}
+
+
+
 
 \end{document}
