@@ -334,5 +334,390 @@
 
 
 
+\section{Lecture 21: \ce{C-H} Activation}
+\begin{itemize}
+    \item \marginnote{5/21:}A really active area within the last ten years, and a really powerful synthetic technique for functionalizing molecules.
+    \begin{itemize}
+        \item The major problem with selectivity is not yet solved though.
+    \end{itemize}
+    \item General form:
+    \begin{equation*}
+        \ce{R-H + A ->[{cat}] R-FG + B}
+    \end{equation*}
+    \begin{itemize}
+        \item \ce{A} is a functionalizing reagent, \ce{FG} is a functional group, and \ce{B} is a byproduct that usually accepts the proton.
+    \end{itemize}
+    \item Examples from organic chemistry:
+    \begin{itemize}
+        \item \ce{C4H10 ->[Br2] C4H9Br}.
+        \item \ce{C4H10 ->[O2][\Delta] CO2 + H2O}.
+    \end{itemize}
+    \item The real challenge from an organometallic perspective is selectivity:
+    \begin{enumerate}
+        \item Internal \ce{C-H} bonds are typically more reactive.
+        \item The product is typically more reactive than the starting material.
+        \begin{itemize}
+            \item We need to prevent over-oxidation.
+        \end{itemize}
+    \end{enumerate}
+    \item Another challenge is the thermodynamics of this process.
+    \item For example:
+    \begin{itemize}
+        \item \ce{C6H6 + CO -> C6H5(COH)} has $\Delta H=\SI{1.7}{kcal\per\mole}$.
+        \item \ce{R-H + H-X -> R-X + H2} has $\Delta H= \SI{22}{kcal\per\mole}$ when $\ce{X}=\ce{OH}$.
+        \item \ce{R-- -> R-= + H2} has $\Delta H=\SI{30}{kcal\per\mole}$.
+        \item You will get some entropic favorability, but you need to put in a lot of driving force --- and whenever you do this, selectivity and over-oxidation become problems.
+    \end{itemize}
+    \item Classic studies (Shilov's catalyst):
+    \begin{itemize}
+        \item \ce{K2PtCl6 + CH3CO2D + D2O} can be mixed with alkanes to incorporate deuterium into said alkanes.
+        \begin{itemize}
+            \item Note that \ce{K2PtCl6} is an oxidant.
+        \end{itemize}
+        \item Data listed.
+        \item Conclusion: Higher degrees of substitution at less substituted carbons.
+        \item Basically, you can do this: \ce{R-H ->[K2PtCl4 (12\%)][DClO4, CH3CO2D, D2O] R-D}.
+        \item Also: \ce{C5H12 + H2PtCl6 ->[NaPtCl4][H2O] C5H11Cl} on both the 1- and 2-carbons.
+    \end{itemize}
+    \item Mechanism (monooxidation to form alcohols [very useful]):
+    \begin{equation*}
+        \ce{[PtCl4]^2- <=>[][{aqueous}] ({sol})2PtCl2 ->[MeH][-HCl] ({sol})2PtCl(CH3) ->[Pt^{IV}Cl2] ({sol})2PtCl3(CH3) ->[H2O][-CH3OH, HCl] ({sol})2PtCl2}
+    \end{equation*}
+    \begin{itemize}
+        \item The fact that this process activates methane (\ce{MeH}) is very good because we have a lot of it and the only thing it's good for is burning.
+        \begin{itemize}
+            \item It's not economically viable to capture all the extra methane on oil fields and transport it (instead, they flair it off because that's better for the environment than just releasing it).
+            \item However, if they could functionalize it immediately and turn it into methanol liquid, which can be transported, that would be a huge boon to industry and the environment.
+        \end{itemize}
+        \item In the last step, water attacks the methyl group on the platinum catalyst, releasing methanol and then reductively eliminating \ce{HCl}.
+        \item However, the challenge with this is the second step (with \ce{Pt^{IV}Cl})
+        \begin{itemize}
+            \item For whatever reason, the only oxidant that kinetically works is \ce{Pt^{VI}}. But we need a lower oxidation state oxidant to solve this problem. Yet we haven't despite decades of research.
+        \end{itemize}
+    \end{itemize}
+    \item The closest we've come to a solution is work by Periana: \ce{CH4 + H2SO4 ->[{cat}] CH3SO4H + 2H2O + SO2}.
+    \begin{itemize}
+        \item \ce{CH3SO4H} is methyl sulfuric acid.
+        \item The catalyst is a dichloride platinum species with a bidentate chelating dipyrmidine species.
+        \item $\text{TOF}=\SI{e-2}{\per\second}$.
+        \item $\text{TON}\approx 7500$.
+        \item The TOF and TON are not viable for a large scale industrial process with platinum, but are pretty good.
+    \end{itemize}
+    \item Thus, in principle, we could do this industrially with the following.
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{CH_4}
+            \+\arrow(--SA1){0}[,0.1]
+            \chemfig{H_2SO_4}
+            \arrow{0}[,0.1]\+\arrow(--SO1){0}[,0.1]
+            \chemfig{SO_3}
+            \arrow(--MSA)
+            \chemfig{CH_3SO_4H}
+            \arrow{0}[,0.1]\+
+            \chemfig{H_2O}
+            \+\arrow(--SO){0}[,0.1]
+            \chemfig{SO_2}
+            \arrow(@MSA--){->[*{0}\small\ce{H2O}]}[-90]
+            \subscheme{
+                \arrow(--SA2){0}[,0.1]
+                \chemfig{H_2SO_4}
+                \arrow{0}[,0.1]\+
+                \chemfig{CH_3OH}
+            }
+            \arrow(@SA2--@SA1)
+            \arrow(@SO--SO2){->[*{0}\small\ce{\frac{1}{2}O2}]}[90]
+            \chemfig{SO_3}
+            \arrow(@SO2--@SO1)
+        \schemestop
+        \caption{An industrial version of Shilov's monooxidation to form alcohols.}
+        \label{fig:ShilovAlcoholFormation}
+    \end{figure}
+    \begin{itemize}
+        \item This is pretty powerful, but there are problems:
+        \item \ce{H2SO4} is corrosive, which means that this process is hard to scale up.
+        \item Separation of \ce{CH3OH} from \ce{H2SO4} is also hard (adds cost).
+        \item The platinum catalyst is also expensive, so you would need a much higher turnover number to make it viable.
+        \begin{itemize}
+            \item This is more of a solvable issue; the others, not so much.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism:
+    \begin{itemize}
+        \item \ce{N2Pt(OS)2 <=> [N2PtOS]+ ->[CH4, OS][-HOS] N2Pt(OS)(CH3) ->[SO3, 2HOS][SO2, H2O] [N2Pt(OS)2(CH3)]OS ->[][-CH3OS] [N2PtOS]+}.
+        \begin{itemize}
+            \item Sulfate and related species are abbreviated to \ce{OS}.
+        \end{itemize}
+        \item This is the closest we've gotten to a catalytic process for converting methane into methanol so far.
+        \item Mechanistic notes:
+        \begin{enumerate}
+            \item $\sigma$ adducts.
+            \begin{itemize}
+                \item A key step is binding methane, but methane is a terrible ligand.
+                \item \ce{M(H|CH3) -> M(H)(CH3)}.
+                \item There exist other platinum systems where we can study this process in some detail, such as: \ce{($\kappa^2${-}Ph2B(CH2PR2)2)Pt(THF)(CH3) ->[C6H6, \SI{50}{\celsius}][-CH4] Pt(THF)(C6H5)}.
+                \begin{itemize}
+                    \item This presumably proceeds through benzene as a $\sigma$ adduct.
+                \end{itemize}
+            \end{itemize}
+            \item Oxidation.
+            \begin{itemize}
+                \item In the Shilov system, if you use labels, quenching \ce{{}^195PtCl6^2-}, you get no \ce{{}^195PtMe} complexes.
+                \item Indeed, it appears that \ce{PtCl6^2-} is acting purely as a \ce{Cl2} source.
+            \end{itemize}
+            \item Reductive elimination.
+            \begin{itemize}
+                \item An external nucleophilic attack, as generally supported by mechanistic studies.
+                \item \ce{($\kappa^2${-}PR2CH2CH2PR2)Pt(CH3)3OR <=> [($\kappa^2${-}PR2CH2CH2PR2)Pt(CH3)3]OR ->[OR$'$]}\\ \ce{($\kappa^2${-}PR2CH2CH2PR2)Pt(CH3)2 + CH3OR + CH3OR$'$}.
+                \item \ce{[PtCl5(CH3)]^2- ->[][-Cl^-] [PtCl4Me]^-Cl^- ->[H2O] PtCl4^2- + MeOH + H+}.
+                \item \ce{[PtCl5(CH3)]^2- ->[][-Cl^-] [PtCl4Me]^-Cl^- ->[Cl] PtCl4^2- + CH3Cl}.
+                \item Labeling studies also support the inversion of stereochemistry.
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+    \item While methane activation may not yet be feasible industrially, it is in the pharmaceutical industry.
+    \item Directed \ce{C-H} activation.
+    \item Examples:
+    \begin{itemize}
+        \item Early: \ce{($i${-}Pr)(H2N)(H)C-COOH ->[{cat} / {ox}] H2 +} the cyclized product.
+        \begin{itemize}
+            \item Catalyst is \ce{K2PtCl4}.
+            \item Using \ce{PtCl6^2-} ($10\%$) as an oxidant gives a $21\%$ yield.
+            \item Using \ce{CoCl2} ($10\%$) as an oxidant and a lower catalyst loading gives a $67\%$ yield.
+            \item Using \ce{CoCl2} ($5\%$) as an oxidant and a dramatically lower catalyst loading gives a $20\%$ yield.
+            \item Because this is giving a higher yield than catalytically, something else is probably going on.
+        \end{itemize}
+        \item Palladium has started to dominate over platinum.
+        \item Sanford: \ce{(Me)(CH3N)C-CMe3 ->[Pd(OAc)2] [(Me)(CH3N)C-CMe2CH2Pd($\mu${-}OAc)]2 ->[PhI(OAc)2]}\\ \ce{(Me)(CH3N)C-C(CH2X)(CH2Y)(MeOAc)} where \ce{X} and \ce{Y} are functional groups.
+        \begin{itemize}
+            \item This gives a picture of where palladium can directly activate a \ce{C-H} bond.
+        \end{itemize}
+        \item Further examples from Jin-Quan Yu and Guangbin Dong (UChicago).
+        \item The key in all of these examples is a directing nitrogen, to which the palladium catalyst bonds, bringing it close to the hydrogen that we want to activate.
+        \begin{figure}[h!]
+            \centering
+            \schemestart
+                \chemfig{(-[:30](-[2]H)(-[:-30]R))(-[6]R)(-[:150](-[2]NH_2)(>:[:-150])(<[:-110]))}
+                \arrow{->[\small\ce{PdX2, ArX}][\footnotesize\chemfig[atom sep=1.3em]{**6(--**6(----N-)--(-=_[:30]O)--)}]}[,1.5]
+                \chemfig{(-[:30](-[2]H)(-[:-30]R))(-[6]R)(-[:150](-[2]N*6(-Pd-N**6(----**6(----)-)---=))(>:[:-150])(<[:-110]))}
+                \arrow
+                \chemfig{(-[:30](-[2]Ar)(-[:-30]R))(-[6]R)(-[:150](-[2]NH_2)(>:[:-150])(<[:-110]))}
+            \schemestop
+            \caption{Dong's directed \ce{C-H} activation.}
+            \label{fig:CHactivation-Dong}
+        \end{figure}
+        \begin{itemize}
+            \item This is nicely demonstrated by Guangbin Dong's example, as seen in Figure \ref{fig:CHactivation-Dong}.
+            \item By placing the palladium and hydrogen close together, we can facilitate the oxidative addition even if it is unfavorable or has a high barrier. The chelate effect really helps here.
+            \item One of the key features of \ce{C-H} activation is \ce{C-H}'s are terrible ligands, so tricks like this are essential to get a high effective concentration to drive the forward reaction.
+        \end{itemize}
+    \end{itemize}
+    \item You can also intercept \ce{C-H} activations to do carbonylations.
+    \item Examples:
+    \begin{itemize}
+        \item \ce{C6H6 + CO ->[Pd(OAc)2 (10\%)][K2S2O8 / TFA] C6H5CO2H (100\%)}\footnote{Note that TFA is \underline{t}ri\underline{f}luoro \underline{a}cetic acid.}.
+        \begin{itemize}
+            \item Persulfate is our oxidant here.
+            \item Run at room temperature for 20 hours.
+        \end{itemize}
+        \item \ce{C6H12 + CO ->[RT (10\%)] C6H11CO2H (4\%)}.
+        \item \ce{CH4 + CO ->[VO(acac)2, \SI{80}{\celsius}][K2S2O8 / TFA] HC2H3O2 (93\%)}\footnote{\ce{VO(acac)2} is vanadyl acetylacetanate.}.
+        \begin{itemize}
+            \item Run at $\SI{80}{\celsius}$ for 20 hours.
+            \item $\text{TON}=18$.
+            \item We can also do this without persulfate:
+        \end{itemize}
+        \item \ce{CH4 + CO + \frac{1}{2}O2 ->[RhCl3][H2O] HC2H3O2}.
+        \begin{itemize}
+            \item Run at $\SI{100}{\celsius}$.
+        \end{itemize}
+        \item \ce{2CH4 + H2SO4 ->[Pd^{II}] CH3CO2H + 4SO2 + 6H2O}.
+        \begin{itemize}
+            \item Work by Periana.
+            \item \ce{C-C} coupling reactivity (related to Fischer-Tropsch).
+            \item Can pretty easily be pushed to make methane: Reverse water-gas shift to syn gas, Fischer-Tropsch to methane, couple methane to an acetic acid product, to make a chain, to make higher order \ce{C-C}-coupled products, to feed into other industrial processes.
+            \item Mechanism shown (not a ton is known, but there are a lot of proposed possible interconversions).
+        \end{itemize}
+    \end{itemize}
+    \item The key equilibrium that one needs to control for \ce{C-H} activation: \ce{M + H-CR3 <<=> M(H|CR3) <=> M(H)(CR3)}.
+    \begin{itemize}
+        \item Typically, the first step is the hard step because \ce{C-H} ligands are very poor ligands.
+        \begin{itemize}
+            \item Even if the \ce{C-H} activation is thermodynamically stable, you're stuck without the adduct.
+        \end{itemize}
+        \item How to control these equilibria:
+        \begin{enumerate}
+            \item Ligands that are good $\sigma$-donors (i.e., electron-rich metal centers) favor the products.
+            \item \ce{M^{n+2}} $d^6$ is common, e.g., \ce{Ir^{I/III}}, \ce{Pt^{II/IV}}, \ce{Pd^{II/IV}}.
+            \item Most common for $4d$ and $5d$ metals because higher oxidation states are more stable as you go down a column and there are stronger bonds that will push the equilibrium toward the right.
+            \item Small(ish) \ce{R}'s help.
+            \item Less sterically hindered metals.
+            \item Electronically unsaturated metals ($\leq 16\,\e[-]$) help.
+        \end{enumerate}
+        \item Thermodynamics of activating \ce{C-H} bonds.
+        \begin{itemize}
+            \item Data listed.
+            \item Conclusion 1: Thermodynamically, it's more favorable to activate secondary and tertiary \ce{C-H}'s, but sterically, it's more favorable to activate primary ones.
+            \item Conclusion 2: Thermodynamically, it's more favorable to activate $\ce{H3C-H}>\ce{Ph-H}>\ce{RC#C-H}$. It's easier to activate \ce{Ph-H} bonds over \ce{H3C-H} bonds despite the inverse difference in bond strengths because metals can form $\pi$ adducts with arenes. This bypasses the hard step, allowing the oxidative addition to \ce{HMPh} to proceed relatively easily.
+        \end{itemize}
+    \end{itemize}
+    \item Thinking more about $\sigma$ adducts and oxidative addition:
+    \item Bob Bergman: \ce{Cp^*IrH2(PMe3) ->[h\nu][-H2] [Cp^*Ir(PMe3)] ->[C6H12] Cp^*Ir(PMe3)($\kappa^2${-}C6H12) ->[h\nu][chromatography] Cp^*Ir(PMe3)(Cy)(H) ->[C5H12][-C6H12] Cp^*Ir(PMe3)(H)(C5H11)}\footnote{Note that Cy is an abbreviation for cyclohexyl.}.
+    \begin{itemize}
+        \item There could also be $\sigma$-bond metathesis pathways, but it's likely a reductive elimination type process.
+    \end{itemize}
+    \item Isotope effects:
+    \begin{itemize}
+        \item Kinetic isotope effects (KIEs) are common mechanistic probes.
+        \item Data listed.
+        \item In a primary KIE, you would expect protons to react faster than deuterium because they're lighter, they tunnel faster, etc.
+        \begin{itemize}
+            \item Symbolically, you would expect $\frac{k_{\ce{H}}}{k_{\ce{D}}}>1$.
+        \end{itemize}
+        \item However, tungsten and iridium have an inverse KIE (deuterium is faster than hydrogen).
+        \item Explaining KIEs (in terms of vibrational energy).
+        \item Normal KIEs:
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.45\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    xscale=1.5,
+                    every node/.style=black
+                ]
+                    \draw [blx,thick] (0,0) node[below]{\chemfig{M(-[1]Z)(-[7]R)}}
+                        to[out=0,in=180] (1,0.7) node[above]{\chemfig{M*3([:-60,1.4,,,dashed]-R-Z-)}}
+                        to[out=0,in=180] (2,-0.4) node[below]{\chemfig{M-\phantom{i}-[2,0.3,,,white]Z-[6]R}}
+                        to[out=0,in=180] (3,-0.2)
+                        to[out=0,in=180] (4,-1.1) node[below]{\ce{M + Z-R}}
+                    ;
+                \end{tikzpicture}
+                \caption{Reaction coordinate diagram.}
+                \label{fig:KIE-normala}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.45\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    yscale=0.75,
+                    every node/.style={black,font=\footnotesize}
+                ]
+                    \draw [blx,thick] (0,4) parabola bend (1,0) (2,4);
+                    \draw [blx,thick] (1,4.5) parabola bend (2,3.5) (3,4.5);
+        
+                    \draw [grx,thick]
+                        (0.5,1) -- (1.5,1)
+                        (0.293,2) -- (1.707,2)
+                        (0.134,3) -- (1.866,3)
+        
+                        (1.5,3.75) -- (2.5,3.75)
+                        (1.293,4) -- (2.707,4)
+                        (1.134,4.25) -- (2.866,4.25)
+                    ;
+                    \draw [rex,thick]
+                        (0.646,0.5) -- (1.354,0.5)
+                        (0.388,1.5) -- (1.612,1.5)
+                        (0.209,2.5) -- (1.791,2.5)
+        
+                        (1.646,3.625) -- (2.354,3.625)
+                        (1.388,3.875) -- (2.612,3.875)
+                        (1.209,4.125) -- (2.791,4.125)
+                    ;
+        
+                    \draw [rex,<->] (3.5,0.5) -- node[left]{$\Delta G^\ddagger_{\ce{D}}$}  (3.5,3.625);
+                    \draw [grx,<->] (4,1)    -- node[right]{$\Delta G^\ddagger_{\ce{H}}$} (4,3.75);
+                \end{tikzpicture}
+                \caption{Energy wells.}
+                \label{fig:KIE-normalb}
+            \end{subfigure}
+            \caption{Normal KIE.}
+            \label{fig:KIE-normal}
+        \end{figure}
+        \begin{itemize}
+            \item In Figure \ref{fig:KIE-normala}, \ce{Z} is either a proton or deuterium.
+            \item Notice that this is a downhill reaction.
+            \item The key transition state is the first one.
+            \item Because we're eliminating a strong bond (a \ce{C-H} bond), we have a transition state with a weaker bond.
+            \item Recall that $E=h\nu$ and $\nu\propto\sqrt{1/\nu}$, where $\mu$ is the effective mass of the oscillators and the transition state. Thus, energy decreases as effective mass increases.
+            \item Now think of vibrational wells for the reactant and the transition state (see Figure \ref{fig:KIE-normalb}). A proton and deuterium will have identical vibrational spacing, but the levels for deuterium will be lower because deuterium has lower energy. Note also that the spacing is closer together in the wider well because it is wider.
+            \item Thus, we have here that $\Delta G^\ddagger_{\ce{H}}<\Delta G^\ddagger_{\ce{D}}$ due to zero-point energy effects.
+            \item Essentially, if the transition state has weaker bonds than the starting material, a normal KIE is expected.
+        \end{itemize}
+        \item Inverse KIE:
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.45\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    xscale=1.5,
+                    every node/.style=black
+                ]
+                    \draw [blx,thick] (0,0) node[below]{\chemfig{M(-[1]Z)(-[7]R)}}
+                        to[out=0,in=180] (1,1)
+                        to[out=0,in=180] (2,0.7) node[below]{\chemfig{M-\phantom{i}-[2,0.3,,,white]Z-[6]R}}
+                        to[out=0,in=180] (3,1.4) node[above]{\chemfig{M-[,,,,dashed]\phantom{i}-[2,0.3,,,white]Z-[6]R}}
+                        to[out=0,in=180] (4,-0.7) node[below]{\ce{M + Z-R}}
+                    ;
+                \end{tikzpicture}
+                \caption{Reaction coordinate diagram.}
+                \label{fig:KIE-inversea}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.45\linewidth}
+                \centering
+                \begin{tikzpicture}[
+                    yscale=0.75,
+                    every node/.style={black,font=\footnotesize}
+                ]
+                    \draw [blx,thick] (1,4.5) parabola bend (2,0.5) (3,4.5);
+                    \draw [blx,thick] (0,1) parabola bend (1,0) (2,1);
+        
+                    \draw [grx,thick]
+                        (1.5,1.5)   -- (2.5,1.5)
+                        (1.293,2.5) -- (2.707,2.5)
+                        (1.134,3.5) -- (2.866,3.5)
+        
+                        (0.5,0.25)   -- (1.5,0.25)
+                        (0.293,0.5)  -- (1.707,0.5)
+                        (0.134,0.75) -- (1.866,0.75)
+                    ;
+                    \draw [rex,thick]
+                        (1.646,1) -- (2.354,1)
+                        (1.388,2) -- (2.612,2)
+                        (1.209,3) -- (2.791,3)
+        
+                        (0.646,0.125) -- (1.354,0.125)
+                        (0.388,0.375) -- (1.612,0.375)
+                        (0.209,0.625) -- (1.791,0.625)
+                    ;
+        
+                    \draw [rex,<->] (3.5,0.125) -- node[left]{$\Delta G^\ddagger_{\ce{D}}$}  (3.5,1);
+                    \draw [grx,<->] (4,0.25)    -- node[right]{$\Delta G^\ddagger_{\ce{H}}$} (4,1.5);
+                \end{tikzpicture}
+                \caption{Energy wells.}
+                \label{fig:KIE-inverseb}
+            \end{subfigure}
+            \caption{Inverse KIE.}
+            \label{fig:KIE-inverse}
+        \end{figure}
+        \begin{itemize}
+            \item Notice that this is an uphill reaction.
+            \item The key transition state is the second one.
+            \item Here, we have a transition state with a stronger bond.
+            \item Thus, we have here that $\Delta G^\ddagger_{\ce{D}}<\Delta G^\ddagger_{\ce{h}}$.
+            \item Essentially, an inverse KIE originates from a transition state having stronger bonds than the starting material, i.e., "later" transition states.
+        \end{itemize}
+        \item This can also arise from equilibrium isotope effects.
+    \end{itemize}
+    \item \textcite{bib:BernskoetterBrookhart}: Observed $\sigma$ adducts with \ce{CH4}.
+    \begin{itemize}
+        \item Took rhodium bound to a pincer ligand and a methyl group.
+        \item Treated it with an acid (\ce{[HBAr^F]*2Et2O} [an etherate]) and a funky solvent (\ce{CD2Cl2F}) at a very cold temperature ($\SI{-110}{\celsius}$) to make a rhodium $\kappa^2$ methane complex.
+        \item With NMR spectroscopy, they can tell that the methane is rapidly spinning around, so all hydrides are bonding now and then (equilibrating).
+        \item Comparing the \ce{C-H} coupling constants for the adduct vs. free methane reveals a slight weakening of the \ce{C-H} bond, but more importantly, the \ce{Rh-H} coupling constant is quite a bit weaker than you would expect for a full hydride.
+    \end{itemize}
+    \item Primary take away: Directed \ce{C-H} activation is a very powerful technique because you can put these \ce{C-H} bonds in close proximity, but one of the biggest challenges is forming $\sigma$ adducts; in doing this, we can observe the weird inverse KIEs of Figures \ref{fig:KIE-normal} and \ref{fig:KIE-inverse}.
+\end{itemize}
+
+
+
 
 \end{document}
