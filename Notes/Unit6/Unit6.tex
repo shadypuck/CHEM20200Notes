@@ -9,7 +9,7 @@
 
 
 
-\chapter{???}
+\chapter{More Catalytic Processes 3}
 \section{Lecture 20: Fischer-Tropsch}
 \begin{itemize}
     \item \marginnote{5/19:}Industrial process mainly, but also has applications to renewable energy.
@@ -768,6 +768,167 @@
         \item Squiggly methyl means methyl bound with either/unknown stereochemistry.
     \end{itemize}
     \item TEMPO is a well-known radical trap.
+\end{itemize}
+
+
+
+\section{Lecture 22: Allylic Substitution}
+\begin{itemize}
+    \item \marginnote{5/24:}General form:
+    \begin{equation*}
+        \ce{-=-CHMeX + NuH ->[M][base] -=-CHMeNu}
+    \end{equation*}
+    \begin{itemize}
+        \item We feed in an allylic olefin.
+        \item You don't always need a base.
+        \item Seems like a simple S\textsubscript{N}2, but there is also other regiochemistry (for instance, the double bond can migrate; see the two products in Figure \ref{fig:mechanism-allylicSubstitution}).
+        \item Additonally, the mechanism is quite different than that of S\textsubscript{N}2, which grants alternative selectivity in terms of both enantiocontrol and regiocontrol.
+    \end{itemize}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{\ce{L_n}M^0}
+            \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{-[:30]=^[:-30]-[:30](-[2]X)-[:-30]}]}[,3.8]
+            \chemfig{\ce{L_n}M-[:60]\phantom{i}-[::90,0.4,,,white](-[::60])=_[::180]-[::60](-[::60]X)-[::-60]}
+            \arrow[-90]
+            \chemleft{[}
+                \chemfig{L_nM--[,0.6,,,white](-[:120]-[::-60])(-[:-120]-[::60])}
+            \chemright{]^+}
+            \chemleft{[}
+                \chemfig{X}
+            \chemright{]^-}
+            \arrow{-U>[\small\ce{NuH}][\small\ce{HX}][][][80]}[180,2]
+            \chemfig{\ce{L_n}M-[:60]\phantom{i}-[::90,0.4,,,white](-[::60])=_[::180]-[::60](-[::60]Nu)-[::-60]}
+            \+{,,3em}
+            \chemfig{\ce{L_n}M-[:120,,2]\phantom{i}-[::-90,0.4,,,white](-[::60])=^[::180]-[::-60](-[::-60]Nu)-[::60]}
+            \arrow{-U>[][*{0}\footnotesize\subscheme{
+                \chemfig[atom sep=1.4em]{-[:30]=^[:-30]-[:30](-[2]Nu)-[:-30]}
+                \arrow{0[*{0.90}+]}[-90,0.5]
+                \chemfig[atom sep=1.4em]{-[:30](-[2]Nu)-[:-30]=^[:30]-[2]}
+            }][][][110]}[90,1.7]
+        \schemestop
+        \begin{tikzpicture}[overlay]
+            \draw [-stealth] (-7,-5.5) arc(-170:-10:1.16cm) node[below,pos=0.5]{\small base} ;
+            \draw [dashed] (-2.25,-4.55) arc (-30:30:1cm);
+        \end{tikzpicture}
+        \vspace{4em}
+        \caption{Allylic substitution mechanism.}
+        \label{fig:mechanism-allylicSubstitution}
+    \end{figure}
+    \begin{itemize}
+        \item \ce{M} is frequently palladium.
+        \item \ce{X} can be an ester, carbonate, phosphonate, hydroxyl, acetate, etc.
+        \item \ce{Nu} can be an aryl oxide, amine, malonate, etc.
+        \item \ce{L_nPd} can be \ce{Pd(PPh3)4} or \ce{Pd(acac)2(PPh3)}.
+        \item The second step is an oxidative addition to form an allylic species.
+        \item Most cases are an external attack opposite of the metal.
+    \end{itemize}
+    \item Tsuji:
+    \begin{equation*}
+        \ce{[(\eta^3{-}All)Pd(\mu{-}Cl)]2 + DEM ->[NaH][DMSO] EtO-CO-CH(\eta^1{-}All)-CO-OEt + Pd^0 + NaCl}\footnotemark
+    \end{equation*}
+    \footnotetext{All is an allyl group. DEM is diethyl malonate (see the second reactant in Figure \ref{fig:allylicSubstitution-epoxidea}).}
+    \begin{itemize}
+        \item One of the earliest stoichiometric examples.
+        \item Taking a process that is not catalytic and making it catalytic.
+    \end{itemize}
+    \item Trost pioneers enantioselectivity for this process, which is highly sought after.
+    \begin{itemize}
+        \item Achieves $24\%$ ee at first with a chiral ligand at $\SI{-40}{\celsius}$.
+        \item Enantioselectivity is easy because you're erasing any enantioselectivity of the starting material when you planarize into an allyl group and then you can selectively install the enantiochemistry you want in the second step by controlling which face binds to the metal center.
+    \end{itemize}
+    \item Nucleophile reactivity: $\text{Allyl carbonates}>\text{phosphates}>\text{acetates}$.
+    \begin{itemize}
+        \item Between an allyl acetate and an allyl carbonate, we might expect the acetate species to be more reactive on the basis of sterics.
+        \begin{itemize}
+            \item Note that sterics do have some effect: Using bulkier ligands favors allyl acetates.
+        \end{itemize}
+        \item However, the allyl carbonate is more reactive since they make it so that you don't need a base:
+        \begin{align*}
+            \ce{L_nPd} &\ce{->[(\eta^1{-}All)OCO2R]} \ce{L_nPd(\eta^3{-}All)(OCO2R)}\\
+            &\ce{->[][-CO2]} \ce{L_nPd(\eta^3{-}All)(OR)}\\
+            &\ce{->[NuH][-ROH]} \ce{[L_nPd(\eta^3{-}All)]Nu}\\
+            &\ce{->[][-(\eta^1{-}All)Nu]} \ce{L_nPd}
+        \end{align*}
+        \begin{itemize}
+            \item The loss of \ce{CO2} and the subsequent formation of an alkoxide generates base in situ.
+            \item Normally, you would eliminate \ce{HX}, but here you don't so you don't have to deal with it.
+        \end{itemize}
+    \end{itemize}
+    \item Epoxides are similar in that they don't need a base.
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]*3(-(-=^[:30])-O-)}
+                \+{,,1.5em}
+                \chemfig{-[:30]-[:-30]O-[:30](=[2]O)-[:-30]-[:30](=[2]O)-[:-30]O-[:30]-[:-30]}
+                \arrow{->[\small\ce{Pd(PPh3)4}]}[,1.4]
+                \chemfig{-[:30]-[:-30]O-[:30](=[2]O)-[:-30](-[6]-[:-30]=^[6]-[:-30](-[:30]OH)(-[6]R))-[:30](=[2]O)-[:-30]O-[:30]-[:-30]}
+            \schemestop
+            \caption{General form.}
+            \label{fig:allylicSubstitution-epoxidea}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{Pd^0}
+                \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{=^[:-30]-[:30]*3(--O-)}]}[,2.1]
+                \chemfig{Pd-[:60]\phantom{i}-[::90,0.4,,,white]=^[::180]-[::60]*3(--O-)}
+                \arrow[-90]
+                \chemfig{Pd-[6]-[6,0.6,,,white](-[:150]@{3C1})(-[:30]@{3C2}-[:-30]-[:30]O{^-})}
+                \arrow{->[\small\ce{NuH}]}[180]
+                \subscheme{
+                    \chemleft{[}
+                        \chemfig{Nu}
+                    \chemright{]^-}
+                    \arrow{0}[180,0.1]
+                    \chemleft{[}
+                        \chemfig{Pd--[,0.6,,,white](-[:120]@{4C1})(-[:-120]@{4C2}-[:-60]-[:-120]HO)}
+                    \chemright{]}
+                }
+                \arrow{-U>[][*{0}\footnotesize\hbox{\chemfig[atom sep=1.4em]{Nu-[6]-[:-30]=^[:30]-[:-30]-[:30]OH}}][][][110]}[90]
+            \schemestop
+            \chemmove{
+                \draw [dashed,-] ([xshift=2pt,yshift=1.5pt]3C1.center) to[bend right=30] ([xshift=-2pt,yshift=1.5pt]3C2);
+                \draw [dashed,-] ([xshift=-1.5pt,yshift=-2pt]4C1.center) to[bend left=30] ([xshift=-1.5pt,yshift=2pt]4C2);
+            }
+            \caption{Mechanism.}
+            \label{fig:allylicSubstitution-epoxideb}
+        \end{subfigure}
+        \caption{Epoxide allylic substitution.}
+        \label{fig:allylicSubstitution-epoxide}
+    \end{figure}
+    \begin{itemize}
+        \item The reaction in Figure \ref{fig:allylicSubstitution-epoxidea} has an $84\%$ yield.
+    \end{itemize}
+    \item Nucleophiles:
+    \begin{itemize}
+        \item Very broad scope of possible ones.
+        \begin{itemize}
+            \item Less common with hard, anionic nucleophiles (e.g., amines, amides, imides, aryl oxides).
+            \item Softer nucleophiles are preferred (malonates, enolates, malononitriles).
+            \item These preferences originate from the softness of the palladium center.
+        \end{itemize}
+        \item Thus, very useful.
+    \end{itemize}
+    \item One last example (electrophile and nucleophile in the same substrate):
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{-[:30](=[2]O)-[:-30](<[:-110])(>:[:-70])-[:30](=[2]O)-[:-30]O-[:30]-[:-30]=^[:30]}
+            \arrow{->[\small\ce{Pd(OAc)2(PPh3)3}]}[,2]
+            \chemfig{-[:30](=[2]O)-[:-30](<[:-110])(>:[:-70])-[:30]-[:-30]=^[:30]}
+        \schemestop
+        \caption{Decarbonylization using allylic substitution chemistry.}
+        \label{fig:decarbonylization-allylicSubstitution}
+    \end{figure}
+    \begin{itemize}
+        \item A decarbonylative proccess that proceeds through allylic chemistry.
+        \item Mechanism shown.
+    \end{itemize}
 \end{itemize}
 
 
