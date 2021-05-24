@@ -1,0 +1,338 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{5}
+
+\begin{document}
+
+
+
+
+\chapter{???}
+\section{Lecture 20: Fischer-Tropsch}
+\begin{itemize}
+    \item \marginnote{5/19:}Industrial process mainly, but also has applications to renewable energy.
+    \item Mechanism of the industrial catalysis in the first video; more on the molecular chemistry in the second video.
+    \item General form:
+    \begin{equation*}
+        \ce{\{CO + H2\} -> {fuel (gasoline)}}
+    \end{equation*}
+    \begin{itemize}
+        \item Clearly, the reactants are Syn gas.
+    \end{itemize}
+    \item Thermodynamics of \ce{CO + $x$ H2 -> {stuff}}.
+    \begin{itemize}
+        \item As $x$ increases, $\Delta H$ and $\Delta G$ decrease.
+        \item Conclusion: The more \ce{C-H} bonds you make, the more thermodynamically favorable the process is.
+        \begin{itemize}
+            \item A lot of this comes from the thermodynamic reducing power of hydrogen.
+        \end{itemize}
+    \end{itemize}
+    \item History:
+    \begin{itemize}
+        \item 1914: \ce{CO + 2H2 ->[Fe][silica supports] \frac{1}{n}C_nH_{2n} + H2O}.
+        \begin{itemize}
+            \item The ratio of the reactants can be tuned.
+            \item Iron is a solid-state catalyst here. Note that other metals can be used, but iron was the most common.
+            \item The products are a mixture of medium to long chain alkanes, alkenes, and methane.
+            \item The challenge and limitation of this process is that it yields a mixture (a Schultz-Flory distribution) of products.
+            \item This means that there is no real selectivity, although \ce{C7} is most common.
+            \item This is also why chemists became interested in homogeneous catalysis for this area, because in principle it could give you better selectivity here.
+        \end{itemize}
+    \end{itemize}
+    \item Industrially:
+    \begin{equation*}
+        \ce{{coal} ->[steam][reformed] CO + H2}
+    \end{equation*}
+    \begin{itemize}
+        \item This is commonly done in South Africa because they have a lot of coal.
+        \begin{itemize}
+            \item \ce{CH4} can also be used as a reactant.
+        \end{itemize}
+        \item The ratio of the product gasses can be tuned by the water-gas shift reaction (see Lecture 17), which is \ce{CO + H2O <=> H2 + CO2} (in the forward direction).
+        \begin{itemize}
+            \item \ce{CO2} can then be removed.
+            \item One potentially interesting exciting direction that's not been industrially accomplished due to cost is the reverse water-gas shift reaction, which is just the reverse direction.
+            \item The reverse water-gas shift reaction is interesting because if you could convert \ce{CO2} into \ce{CO + H2O} and remove the water, you could feed the \ce{CO} back into the original process to make gasoline.
+        \end{itemize}
+        \item Challenges:
+        \begin{itemize}
+            \item Selectivity in the Fischer-Tropsch process.
+            \item Source of \ce{H2} (right now we get it from fossil fuels). There is research into how to reduce \ce{CO2} into fuels, but if we can get \ce{H2} from somewhere other than fossil fuels, it's a solved problem.
+        \end{itemize}
+    \end{itemize}
+    \item Conditions (for the following reaction):
+    \begin{equation*}
+        \ce{\{CO + H2\} -> C_nH_{2n} + $n$H2O}
+    \end{equation*}
+    \begin{itemize}
+        \item High temperatures (150-$\SI{300}{\celsius}$).
+        \begin{itemize}
+            \item Favor faster rates and better conversion yield percentages, but more methane (the least valuable product).
+        \end{itemize}
+        \item High pressure (1-$\SI{30}{atm}$).
+        \begin{itemize}
+            \item Favors longer chain alkanes and better conversion since methane is a gas (lower likelihood of eliminating it).
+        \end{itemize}
+        \item Optimal \ce{CO} / \ce{H2} concentration.
+        \begin{itemize}
+            \item Cobalt catalysts use $1:2$.
+            \item Iron catalysts should have relatively more \ce{CO}.
+        \end{itemize}
+    \end{itemize}
+    \item Product (Schultz-Flory) distribution:
+    \begin{equation*}
+        \frac{W_n}{n} = (1-\alpha)^2\alpha^{n-1}
+    \end{equation*}
+    \begin{itemize}
+        \item $\frac{W_n}{n}$ is the average molecular weight?
+        \item $W_n$ is the weight fraction of hydrocarbons containing $n$ carbon atoms and $\alpha$ is the chain growth probability (controlled by the catalyst and the conditions).
+        \item If $\alpha<0.5$, then methane dominates.
+        \item However, as $\alpha\to 1$, the methane fraction decreases relative to the sum of heavy products.
+        \item Sasol (a South African company) mediates this process.
+        \item We can use the products for a variety of different things (heptane for fuel, heavier ones for wax [you can buy Sasol wax], etc.).
+        \item If we were going to do this globally for fuel, we'd have a lot of wax as a byproduct, which we neither have a place to store nor can afford to do since it's so wasteful. Thus, there is great interest in selectivity for \ce{C6}, \ce{C7}, \ce{C8}, or even butene, from which we could do olefin metathesis to make hexanes.
+        \item Two necessary things to use this process for renewable energy:
+        \begin{enumerate}
+            \item Find a good source of hydrogen so that we could run the reverse water-gas shift reaction.
+            \begin{itemize}
+                \item The reaction might need to be optimized a bit as well, but in principle that can be done; hydrogen is the real problem.
+            \end{itemize}
+            \item Improve the selectivity of the Fischer-Tropsch chemistry.
+        \end{enumerate}
+    \end{itemize}
+    \item As with the Haber-Bosch process, this is solid support chemistry.
+    \item Mechanism (initial proposal):
+    \begin{itemize}
+        \item Solid-state iron binds hydrides and \ce{CO} on its surface, leading the formation of a formyl species before adding another hydrogen to go to a bound alcohol species, losing \ce{H2O} to go to a bound carbene (the carbene is important because it facilitates chain growth), and then proceeding to a bound methyl species. With enough methyl species, you could do other things.
+        \item Gerhardt Ertl proves this wrong.
+    \end{itemize}
+    \item Mechanism (actual):
+    \begin{itemize}
+        \item Solid-state iron binds hydrides and carbonyls on its surface. Next, we split \ce{CO} to make bound carbides and bound oxides. With more \ce{H2}, we can mix and scramble the carbides, oxides, and hydrides, kicking out \ce{H2O} and making bound carbene species, which can then go on and form the product that we want as described in the initial proposal.
+        \item Proven with in situ studies performed on the surface of these materials.
+    \end{itemize}
+    \item Another key contribution to the proof came from molecular chemistry, which showed that formyl species are generally unstable:
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{\ce{L_n}M(-[1]CO)(-[7]H)}
+                \arrow{<<->}
+                \chemfig{\ce{L_n}M-[:30](=[2]O)-[:-30]H}
+                \+{,,1.8em}
+                \chemfig{\ce{L_n}@{M}M-[:30](=[2]@{O}\charge{180=\:}{O})-[:-30]H}
+            \schemestop
+            \chemmove{\draw [blx,semithick,shorten >=1pt,shorten <=4pt] (O) to[out=180,in=90] (M);}
+            \caption{Formyl species.}
+            \label{fig:formylInstabilitya}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{\ce{L_n}M(-[1]CO)(-[7]CH_3)}
+                \arrow{<->>}
+                \chemfig{\ce{L_n}M-[:30](=[2]O)-[:-30]}
+            \schemestop
+            \caption{Acyl species.}
+            \label{fig:formylInstabilityb}
+        \end{subfigure}
+        \caption{Stability of metal-carbonyl derivatives.}
+        \label{fig:formylInstability}
+    \end{figure}
+    \begin{itemize}
+        \item In Figure \ref{fig:formylInstabilitya}, the reactant is generally favored because it has two bonds instead of one, and metal-hydride bonds are highly thermodynamically favored over metal alkyl bonds.
+        \item In Figure \ref{fig:formylInstabilityb}, the product is generally favored.
+        \item Think about the equilibrium in terms of the nucleophilicity of the X group. Hydrides are not nucleophilic, whereas alkyl species are.
+    \end{itemize}
+    \item The synthesis of metal formyl species was pioneered by Jim Collman in 1973.
+    \begin{equation*}
+        \ce{Fe(CO)5 ->[Na][-HOC-O-COMe] Fe(CO)4^2- ->[][-OAc^-] Fe(CO)4(COH)- ->[][-CO] HFe(CO)4-}
+    \end{equation*}
+    \begin{itemize}
+        \item The first step is ill defined, and the products of it are a messy mixture of carbon-containing products.
+        \item The second intermediate (the formyl species) is unstable and will decompose over time to form the final product.
+    \end{itemize}
+    \item Chuck Casey and John Gladys found stable formyl species (the product of the following reaction):
+    \begin{equation*}
+        \ce{CpRe(CO)(NO)(L) ->[HBR3^-] CpRe(NO)(L)(COH)}
+    \end{equation*}
+    \begin{itemize}
+        \item The reactant is a chiral, $18\,\e[-]$, $d^6$ species.
+    \end{itemize}
+    \item John Bercaw did more with metal-formyl species:
+    \begin{equation*}
+        \ce{Cp^*2ZrH2 + O#C-ML_n ->[][fast] L_nM=CH-O-ZrCp^*2H}
+    \end{equation*}
+    \begin{itemize}
+        \item The first species is an extremely hydridic metal hydride that has very similar properties to \ce{LiAlH}. It is a $16\,\e[-]$, $d^0$ species.
+        \item This chemistry is driven by the strength of the zirconium bond ($\approx\SI{130}{kcal\per\mole}$).
+        \item Note that although this is technically a formyl species, it's in practice more of a Fischer carbene structure.
+        \begin{itemize}
+            \item The bonding is very different and the Lewis acid activation of that strong \ce{Zr^{IV}} Lewis acid makes this more of a carbene structure.
+            \item This is useful in \ce{C-C} coupling reactions.
+        \end{itemize}
+        \item One example of \ce{ML_n} is \ce{Cp2W}.
+        \item Another one is \ce{Cp2Nb(H)(CO) + Cp^*2ZrH2 -> Cp2Nb(H)(CH-O-ZrCp^*2H) <=>[fast]}\\ \ce{Cp2Nb(H)(CH2-O-ZrCp^*2) ->[H2] Cp2NbH3 + Cp^*2Zr(H)(OCH3) ->[][no rxn]}.
+        \begin{itemize}
+            \item \ce{Nb} is niobium.
+            \item A major problem is once we form that extremely strong metal-oxygen bond, it will not break, so it's very hard to get \ce{H2O} off of these species.
+        \end{itemize}
+    \end{itemize}
+    \item How we think about the molecular systems that form \ce{C-C} bonds.
+    \begin{itemize}
+        \item This is ultimately what happens on solid support surfaces in industrial catalysis.
+        \item The challenge is that those industrial systems don't have selectivity; molecular systems could in principle provide this (this is an area of active research).
+    \end{itemize}
+    \item To recap, we just talked about the potential of early metal hydrides to activate \ce{CO} (Bercaw's niobium system took it all the way to a methanol equivalent).
+    \item Bercaw (a titan of organometallic chemistry):
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{\ce{Cp^*2}Zr(-[1]Me)(-[7]Me)}
+            \arrow{->[\small\ce{CO}]}
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{\ce{Cp^*2}@{Zr1}Zr(-[1]Me)(-[7]C(-[6])=[1]@{O1}\charge{[extra sep=2.5pt]180=\:}{O})}
+                    \arrow{<->}
+                    \chemfig{\ce{Cp^*2}@{Zr2}Zr(-[1]Me)(-[7]O-[5]@{C2}\charge{[extra sep=2.5pt]90=\:}{C}-[6])}
+                }
+            \chemright{]}
+            \arrow{->[\small\ce{CO}][
+                \footnotesize
+                \chemleft{[}
+                    \chemfig{\ce{Cp^*2}@{Zr3}Zr*5([:-36]-O-@{C3b}\charge{150=\:}{C}(-)-[,,,,white]@{C3a}\charge{-150=\:}{C}(-)-O-)}
+                \chemright{]^\ddagger}
+            ]}[,2.3]
+            \chemfig{\ce{Cp^*2}Zr*5([:-36]-O-(-)=(-)-O-)}
+        \schemestop
+        \chemmove{
+            \draw [blx,semithick,shorten <=5pt,shorten >=2pt] (O1)  to[bend right=20]  (Zr1);
+            \draw [blx,semithick,shorten <=5pt,shorten >=2pt] (C2)  to[bend left=20]   (Zr2);
+            \draw [blx,semithick,shorten <=5pt,shorten >=2pt] (C3a) to[out=-150,in=15] (Zr3);
+            \draw [blx,semithick,shorten <=5pt,shorten >=2pt] (C3b) to[out=150,in=-15] (Zr3);
+            \draw [blx,shorten <=2pt,shorten >=2pt,stealth-stealth] (C3a) to[bend left=20] (C3b);
+        }
+        \caption{Bercaw's first \ce{C-C} coupling.}
+        \label{fig:CCcoupling-Bercaw}
+    \end{figure}
+    \begin{itemize}
+        \item The first ever \ce{C-C} coupling that was observed in a well-defined and pretty clean way from \ce{CO}.
+        \begin{itemize}
+            \item Using methyl groups makes it imperfect.
+            \item The mechanism isn't entirely clear.
+        \end{itemize}
+        \item The second step proceeds from the second resonance structure.
+        \item Additionally, Bercaw studied reactions with \ce{Cp^*2ZrH2CO}, a compound with virtually no $\pi$ backbonding:
+        \begin{itemize}
+            \item \ce{Cp^*2ZrH2CO ->[H2] Cp^*2Zr(H)(OCH3)}, where \ce{-OCH3} is a methanol equivalent.
+            \item \ce{Cp^*2ZrH2CO ->[CO] Cp^*2Zr(H)-O-=-O-Zr(H)(Cp^*2)}. Here, we actually see \ce{C-C} coupling.
+            \item \ce{Cp^*2ZrH2CO ->[CO, H2] Cp^*2Zr(H)-O---O-Zr(H)(Cp^*2)}. This is even closer to ethylene glycol, but the \ce{Zr-O} bonds are still an issue.
+            \item \ce{Cp^*2ZrH2 + Cp^*2Zr(CO)2 -> Cp^*2Zr(H)-O-=-O-Zr(H)(Cp^*2)}
+        \end{itemize}
+    \end{itemize}
+    \item Similarly, Tobin Marks looked at \ce{Cp^*2Th(OR)(H)} (thorium hydride alkoxides), where $\ce{R}=\ce{CH($t${-}Bu)2}$ is a pretty bulky super-isopropal ligand abbreviated \ce{$i${-}Pr^*}:
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{\ce{Cp^*2}Th(-[1]H)(-[7]OR)}
+            \arrow{->[\small\ce{CO}]}
+            \chemfig{\ce{Cp^*2}Th(-[2,,2]CO)(-H)(-[6,,2]OR)}
+            \arrow
+            \chemfig{\ce{Cp^*2}@{Th}Th(-[7]OR)(-[:30](=[2]@{O}\charge{180=\:}{O})-[:-30]H)}
+            \arrow{->[][\SI{25}{\celsius}]}
+            \chemfig{Th(-[7]OR)-[1]O-[1]=_-[7]O-[7]Th(-[5]RO)}
+        \schemestop
+        \chemmove{\draw [blx,semithick,shorten <=4pt,shorten >=2pt] (O) to[out=180,in=90] (Th);}
+        \caption{Marks' \ce{C-C} coupling.}
+        \label{fig:CCcoupling-Marks}
+    \end{figure}
+    \begin{itemize}
+        \item The theme with early metals: If you can get to the Fischer carbene type structure, you can get coupling.
+    \end{itemize}
+    \item Pete Wolczanski worked with tantalum silox complexes.
+    \begin{itemize}
+        \item \ce{Ta(OSi($t${-}Bu)3)3 + 2CO -> 2({silox})3TaO + ({silox})3Ta=C=C=Ta({silox})3}.
+        \item This is \ce{C-C} coupling \emph{and} complete deoxygenation.
+    \end{itemize}
+    \item Challenge with all of this chemistry: early-metal oxygen bonds are an extreme thermodynamic sink.
+    \begin{itemize}
+        \item Unfortunately, the transition from metal-carbon bonds to metal-oxygen bonds is also the driving force of this reactivity.
+        \item We can get around this issue by trapping the oxygen with other electrophiles.
+    \end{itemize}
+    \item Kit Cummins: \ce{MoL3 ->[CO] L3MoCO ->[1Na] Na[L3MoCO] ->[Bu^t-COCl][-NaCl] L3Mo#C-O-COBu^t ->[\Delta][-CO2,H2C=CMe2] L3Mo#C-H ->[KBn] [L3Mo#C]-}.
+    \begin{itemize}
+        \item $\ce{L}=\ce{N($t${-}Bu)({xylyl})}$.
+        \item The third step is more explained in organic chemistry, where an electrophile like the one added (pivaloyl chloride) should create an ester speies and lose \ce{NaCl}.
+        \item Note that \ce{KBn} is benzyl potassium.
+        \item There are very few examples of terminal carbides, but note that this is similar to what happens on the surface of the solid state iron catalyst.
+        \item This isn't perfect because we're releasing \ce{CO2}, but it is a step where the oxygen isn't trapped on the metal center.
+    \end{itemize}
+    \item Theodor Agapie (with his graduate student Joshua Buss):
+    \begin{figure}[h!]
+        \centering
+        \schemestart
+            \chemfig{Mo?[Mo](-[,1.3]PR_2-[:-60,,1]**6(-(-**6(-?[Mo,,dashed]-?[Mo,,dashed]-?[L]---))-----))(-[4,1.3]R_2P-[:-120,,2]?[close]-[:-60]?[L]-[::-60]-[::-60]-[::-60]-[::-60]?[close]**6([::-120]))(>:[:65]CO)(<[:115]OC)}
+            \arrow{0}[,0.1]\+
+            $4\,\e[-]$
+            \+
+            $4\,\text{E}^+$
+            \arrow
+            \chemfig{LMo{(}N_2{)}}
+            \+
+            \chemfig{E_2O}
+            \+\arrow{0}[,0.1]
+            \chemfig{E-[:60]O-C~C-E}
+        \schemestop
+        \caption{Agapie's \ce{C-C} coupling.}
+        \label{fig:CCcoupling-Agapie}
+    \end{figure}
+    \begin{itemize}
+        \item \ce{KC8} yields the $4\,\e[-]$.
+        \item The electrophile $\text{E}^+$ is something like TMSCl, a silane, or another silyl electrophile.
+        \item This also proceeds through carbides.
+    \end{itemize}
+    \item Jonas Peters (on iron): \ce{Fe#C-O + TMSCl -> Fe#C-OTMS}.
+    \begin{itemize}
+        \item We are trapping the oxygen with an oxygen-silion bond, which thermodynamially are quite strong.
+        \item Problem: While a silyl electrophile is substantially better than trapping the metal center (which entirely precludes catalysis), the silyl electrophiles generate stoichiometric waste. We need to trap the oxygen with water, not a silyl ether.
+        \item Thus, what you ultimately want to do is use later metals (like iron), but use hydrogen instead.
+    \end{itemize}
+    \item Dan Suess (graduate student of Jonas Peters):
+    \begin{figure}[h!]
+        \centering
+        \chemfig{M?[M](-[2,1.7]P(-Pr^i)(-[2]Pr^i)-[4,1.7]**6(-----(-[6]B?[M,,dashed]?[B]>:[1]?[M,,dashed]**6([:45,0.5]------))-))(-[6,1.7]P(-Pr^i)(-[6]Pr^i)-[4,1.7]**6(-?[B]-----))}
+        \caption{The DPB ligand.}
+        \label{fig:DPB}
+    \end{figure}
+    \begin{itemize}
+        \item Investigates various reactions of DPB-bound irons.
+        \item \ce{DPBFe-N#N-FeDPBB ->[4CO] DPBFe(CO)2 ->[XS CO] FeP2B(CO)3}.
+        \begin{itemize}
+            \item The product here is formally \ce{Fe^0}, but actually slightly higher than that.
+        \end{itemize}
+        \item \ce{DPBFe-N#N-FeDPBB ->[4CO] DPBFe(CO)2 ->[H2] FeP2($\kappa^2${-}BH)H(CO)2}.
+        \item \ce{DPBFe-N#N-FeDPBB ->[4CO] DPBFe(CO)2 ->[1K^0] [FeP2($\kappa^2${-}PhB)(CO)2]- ->[XS K^0] [FeP2B(CO)2]^2- ->[2TMSOTf]} a very weird product.
+        \begin{itemize}
+            \item The third intermediate is highly activated and somewhat analogous to \ce{Fe(CO)5^2-}.
+            \item The product has a \ce{-C-OTMS} substituent, as well as a tridentate derivative of the DPB ligand that still bonds through the two phosphines, but instead of partially bonding through the boron and the ipso-carbon of the phenyl ring, the boron binds to an additional \ce{C-OTMS} ligand through the carbon, which in turn binds back to the iron center.
+            \item This product has many resonance structures; one with particular merit is \ce{Fe(#C-OTMS)2} with one of the triple bonds bonding datively to the boron, although it implies an \ce{Fe^{VI}} oxidation state that is likely an overestimation, even though the iron is certainly high-valent here.
+            \item Note that if the product is treated with hydrogen, we selectively create (Z)-\ce{TMSO-=-OTMS}.
+            \item This is not catalytic, but it is one of the few examples where we don't generate an intractable metal-oxide, and we do generate a \ce{C-C} coupled product.
+        \end{itemize}
+    \end{itemize}
+    \item Conclusion: There's a lot of interesting organometallic chemistry surrounding \ce{C-O} activation and getting that prepped for functionalization, specifically via \ce{C-C} bond formation.
+    \item This is not a solved problems.
+    \begin{itemize}
+        \item While molecular chemistry offers the promise of selectivity, there are real challenges with activating it and getting \ce{H2O} out instead of trapping the oxygen with silyl electrophiles.
+        \item Part of the issue is the stability of the molecular complexes (they're not as stable as a solid iron surface) and you need a lot of energy to split \ce{C#O} bonds. On the other hand, if you apply that energy thermally, it will hurt your selectivity.
+    \end{itemize}
+    \item There's some extra molecular chemistry in the notes.
+\end{itemize}
+
+
+
+
+\end{document}
