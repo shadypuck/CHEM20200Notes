@@ -2,14 +2,17 @@
 
 \usepackage[margin=0.5in,headsep=2mm]{geometry}
 \usepackage{mathptmx}
+\usepackage{csquotes}
 \usepackage{setspace}
 \usepackage{fancyhdr}
-\usepackage[style=apa]{biblatex}
+\usepackage[style=chem-acs]{biblatex}
 \usepackage{subcaption}
 \usepackage{tikz}
 \usepackage{chemfig}
 \usepackage{mhchem}
 \usepackage[hidelinks]{hyperref}
+
+\MakeOuterQuote{"}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -44,13 +47,13 @@
 
 
 
-Nitrogen must be fixed in order to be biologically useful, and nature does not fix enough nitrogen on its own to sustain the current human population. Thus, in order to fertilize humanity’s food, the Haber-Bosch process is employed to artificially fix nitrogen. However, the Haber-Bosch process is ridiculously energy intensive, so an easier catalytic process is highly sought after. The pursuit of such a commodity began with the recognition of the fact that nitrogenase enzymes biologically catalyze the process with transition metals (esp. iron, molybdenum, or vanadium) at ambient temperatures and pressures. From there, \textcite{bib:AllenSenoff} and \textcite{bib:Yamamoto} kickstarted the search by synthesizing some of the first transition metal dinitrogen complexes abiotically. Since then, intermediates had been verified, but no complete catalytic reaction had been discovered. However, in \textcite{bib:SchrockYandulov}, the authors outline their discovery of the first well-defined catalyst.
+Nitrogen must be fixed in order to be biologically useful, and nature does not fix enough nitrogen on its own to sustain the current human population. Thus, in order to fertilize humanity’s food, the Haber-Bosch process is employed to artificially fix nitrogen. However, since it is only one (albeit extremely effective) process, there is great interest in understanding other potential methods of nitrogen fixation. The first big step came when researchers synthesized some of the first abiotic transition metal dinitrogen complexes, loosely modeling them after nitrogenase enzymes\textsuperscript{[}\autocite{bib:AllenSenoff}\textsuperscript{]\,[}\autocite{bib:Yamamoto}\textsuperscript{]}. From there, potential catalytic intermediates were characterized, but a complete catalytic reaction remained elusive. However, Yandulov and Schrock outline in \emph{Catalytic Reduction of Dinitrogen to Ammonia at a Single Molybdenum Center} their discovery\textsuperscript{[}\autocite{bib:SchrockYandulov}\textsuperscript{]} of the first catalytic system with observable intermediates analogous to those proposed by Chatt\textsuperscript{[}\autocite{bib:Chatt}\textsuperscript{]}.
 
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.49\linewidth}
         \centering
-        \chemfig{-[,,,,{decorate,decoration={snake,segment length=2.1mm}}]-[4,0.4,,,opacity=0]\phantom{i}-[2]**6(--(-?[1]-[::-30,0.8](<[::-100,0.6]Pr^i)-[::30,0.8]-[::30,0.8](-[::-30]Pr^i)-[::120,0.8]-[::30,0.8]?[1](>:[::-50,0.6]Pr^i))--(-?[2]-[::-30,0.8](>:[::-100,0.6]Pr^i)-[::30,0.8]-[::30,0.8](-[::-30]Pr^i)-[::120,0.8]-[::30,0.8]?[2](<[::-50,0.6]Pr^i))--)}
+        \chemfig{-[,,,,{decorate,decoration={snake,segment length=2.1mm}}]-[4,0.4,,,opacity=0]\phantom{i}-[2]**6(--(-?[1]-[::-30,0.8](<[::-100,0.6]iPr)-[::30,0.8]-[::30,0.8](-[::-30]iPr)-[::120,0.8]-[::30,0.8]?[1](<:[::-50,0.6]iPr))--(-?[2]-[::-30,0.8](<:[::-100,0.6]iPr)-[::30,0.8]-[::30,0.8](-[::-30]iPr)-[::120,0.8]-[::30,0.8]?[2](<[::-50,0.6]iPr))--)}
         \begin{tikzpicture}[remember picture,overlay]
             \draw [rotate=30] (-0.25,3.78) ellipse (6mm and 2.5mm);
             \draw [rotate=-30] (-7.3,-0.6) ellipse (6mm and 2.5mm);
@@ -60,11 +63,13 @@ Nitrogen must be fixed in order to be biologically useful, and nature does not f
     \end{subfigure}
     \begin{subfigure}[b]{0.49\linewidth}
         \centering
-        \chemfig{Mo?[1](-N(-[:53]HIPT)-[::-74]-[::-63]-[::-63]N?[1,,{stealth-}]?[2])(>:[:160]N(-[::-53]HIPT)-[::74]-[::67,1.3]?[2])(<[:-150]N(-[::-75,,,,{white,ultra thick,double=black,double distance=3pt}]HIPT)-[::30,,,,{white,ultra thick,double=black,double distance=3pt}]-[::91,,,,line width=3pt]?[2,5])-[2,,,,{stealth-}]N~[2]N}
-        \begin{tikzpicture}[remember picture,overlay]
-            \fill (-4.533,-1.385) circle (1.5pt);
-            \fill (-3.8,-1.8) circle (1.5pt);
-        \end{tikzpicture}
+        \chemfig{Mo?[1](-N(-[:53]HIPT)-[::-74]-[::-63]-[::-63]N?[1,,{stealth-}]?[2])(<:[:160]N(-[::-53]HIPT)-[::74]-[::67,1.3]?[2])(<[:-150]N(-[::-75,,,,{white,ultra thick,double=black,double distance=3pt}]HIPT)-[::30,,,,{white,ultra thick,double=black,double distance=3pt}]@{C1}-[::91,,,,line width=3pt]?[2,5]@{C2})-[2,,,,{stealth-}]N~[2]N}
+        \chemmove{
+            \fill
+                (C1) circle (1.5pt)
+                ([xshift=0.17pt,yshift=0pt]C2.center) circle (1.59pt)
+            ;
+        }
         \caption{The full monomeric species.}
         \label{fig:catalystb}
     \end{subfigure}
@@ -72,8 +77,9 @@ Nitrogen must be fixed in order to be biologically useful, and nature does not f
     \label{fig:catalyst}
 \end{figure}
 
-Having studied nitrogen fixation for 20 years, Yandulov and Schrock were fairly confident before conducting the specific reported experiment that the key lay in high oxidation state molybdenum and tungsten species. However, what motivated the final step (the addition of the HIPT ligand) was the theory that they needed to make the molybdenum center sufficiently sterically encumbered (see Figure \ref{fig:catalyst}) so as to inhibit the formation of stable and unreactive bimetallic dimers. Indeed, their prediction panned out, and they were able to synthesize from \ce{\textbf{Mo}Cl} (where $\ce{\textbf{Mo}}=\ce{[HIPTN3N]Mo}$) the six boxed intermediates in Figure \ref{fig:mechanism}, as characterized by NMR and x-ray studies. In support of a catalytic mechanism, they were additionally able to show that some of these intermediates were interconvertible (i.e., could be prepared from others). As for optimizing the initial results, using a stronger reducing agent (decamethylcobaltocene instead of cobaltocene) enabled the reduction of \ce{[\textbf{Mo}(NH3)]+}, a step that must be completed before returning to the \ce{\textbf{Mo}(N2)} resting state. However, to prevent the stronger reducing agent from interacting more with the proton source than the catalyst intermediates, it was also necessary to choose heptane as a solvent (a substance in which the proton source is sparingly soluble but the \ce{BAr^F{}_4} salt intermediates were more soluble).\par
-With this result, Yandulov and Schrock introduced the first well-defined abiological system capable of transition-metal catalyzed nitrogen fixation, albeit one that only turned over four to eight times at best. Years earlier, \textcite{bib:Chatt} proposed a hypothetical mechanism for catalytic nitrogen fixation. Since many of Yandulov and Schrock’s intermediates are analogous to Chatt et al.’s it is likely just from that that their system is catalytic. However, they also went a step further, demonstrating that their intermediates can be synthesized from each other. Lastly, to eliminate the possibility that their nitrogen-containing tetradentate HIPT ligand was furnishing  the nitrogen that was moving around the intermediates, they conducted a study where the HIPT ligands were radiolabeled differently than all of the other nitrogen in solution. This established that no radioactive nitrogen was exchanged between the HIPT ligand and the substrate. Thus, they concluded that their \ce{[HIPTN3N]Mo} molecule was (1) accepting nitrogen from the environment, (2) forming intermediates in a plausible theoretical catalytic cycle, and (3) converting between said intermediates. In other words, they concluded that their molecule was a catalyst, as desired.
+Having studied nitrogen fixation for 20 years, Yandulov and Schrock suspected that the key to a well-defined molecular nitrogen fixation catalyst lay in high oxidation state molybdenum and tungsten species. In order to isolate and study some of these high oxidation state intermediates, the previously semi-successful triamidoamine ligand \ce{[(ArNCH2CH2)3N]^3-} (see Figure \ref{fig:catalystb}) was modified to incorporate the extremely bulky ligand motif HIPT (hexa-iso-propyl-terphenyl or \ce{{3,5-(2,4,6-}iPr3C6H2)2C6H3}; see Figure \ref{fig:catalysta}). These ligands, they hoped, would sterically inhibit formation of previously observed, unreactive bimetallic \ce{N2}-bridging species. Indeed, they were able to synthesize from \ce{\textbf{Mo}Cl} (where $\ce{\textbf{Mo}}=\ce{[HIPTN3N]Mo}$) the six boxed intermediates in Figure \ref{fig:mechanism}, as characterized by NMR and x-ray studies\textsuperscript{[}\autocite{bib:Intermediates146}\textsuperscript{]\,[}\autocite{bib:Intermediates235}\textsuperscript{]}. To support these "intermediates'" relevance to the predicted Chatt-type mechanism, they were additionally able to show that some of them are interconvertible (i.e., could be prepared from others).\par
+% As for optimizing the initial results, using a stronger reducing agent (decamethyl chromocene instead of cobaltocene) enabled the reduction of \ce{[\textbf{Mo}(NH3)]+}, a step that must be completed before returning to the \ce{\textbf{Mo}(N2)} resting state. However, to prevent the stronger reducing agent from interacting more with the proton source than the catalyst intermediates, it was also necessary to choose heptane as a solvent (a substance in which the proton source is sparingly soluble but the \ce{BAr^F{}_4} salt intermediates were more soluble, thus, to reiterate, ensuring that the reagents interacted with the catalytic intermediates instead of each other).\par
+With this result, Yandulov and Schrock introduced the first well-defined abiological nitrogen-fixation system with relatively high yields and observable, interconvertible intermediates. Additionally, to eliminate the possibility that their nitrogen-containing tetradentate \ce{[HIPTN3N]^3-} ligand or acid was furnishing the nitrogen that was moving around the intermediates, they conducted a study with radiolabeled dinitrogen. Having established that all intermediates and products contained only \ce{{}^15N} at the proposed active site pocket, they concluded that no isotopically labeled nitrogen was exchanged between the HIPT ligand and acid, and the substrate, as would be expected in a true catalytic mechanism. Thus, they reported that their \ce{[HIPTN3N]Mo} species was (1) accepting nitrogen from the atmosphere, (2) likely forming well-defined, isolable intermediates in a plausible theoretical catalytic cycle, and (3) converting between said intermediates.
 
 \begin{figure}[h!]
     \centering
@@ -98,7 +104,7 @@ With this result, Yandulov and Schrock introduced the first well-defined abiolog
         \chemfig{\mathbf{Mo}^{V}=\charge{90=\:}{N}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
         \arrow{->[*{0}\small\ce{H+}]}[-90,1.3]
         \chemleft{[}
-            \chemfig{\mathbf{Mo}^{V}=\charge{90=\:}{N}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+            \chemfig{\mathbf{Mo}^{V}=\charge{90=\:}{N}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(<:[:-20]H)}
         \chemright{]^+}
         \arrow{->[*{0}\small\ce{e-}][*{0}\small\ce{-NH3}]}[-90,1.3]
         \chemfig{\mathbf{Mo}^{VI}~\charge{0=\:}{N}}
@@ -116,17 +122,20 @@ With this result, Yandulov and Schrock introduced the first well-defined abiolog
         \chemfig{\mathbf{Mo}^{IV}-\charge{90=\:}{N}(-[1]H)(-[7]H)}
         \arrow{->[*{0}\small\ce{H+}]}[90]
         \chemleft{[}
-            \chemfig{\mathbf{Mo}^{IV}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+            \chemfig{\mathbf{Mo}^{IV}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(<:[:-20]H)}
         \chemright{]^+}
         \arrow{->[*{0}\small\ce{e-}]}[90]
-        \chemfig{\mathbf{Mo}^{III}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(>:[:-20]H)}
+        \chemfig{\mathbf{Mo}^{III}-\charge{135[yshift=1mm]=$\oplus$}{N}(-[:60]H)(<[:-60]H)(<:[:-20]H)}
         \arrow{->[*{0}\small\ce{N2}][*{0}\small\ce{-NH3}]}[90]
     \schemestop
-    \caption{The mechanism.}
+    \caption{The mechanism. All boxed intermediates were isolated and characterized. The remaining intermediates are proposed to exist by Chatt, but have yet to be detected.}
     \label{fig:mechanism}
 \end{figure}
 
-Toward the end of their paper, Yandulov and Schrock noted that the question remains as to whether or not their system is limited to four turnovers. If past results are anything to go by, it probably is not (for example, \textcite{bib:AndersonPeters} originally reported seven turnovers for a similar nitrogen fixation system, but follow up studies that further purified their reagents and also tinkered with the catalyst and conditions brought the system up to nearly 100 turnovers). As such, there is likely ample room for improvement. Follow up studies should focus on the conversion from \ce{\textbf{Mo}(NH3)} to \ce{\textbf{Mo}(N2)}, as that was the most difficult step of the catalytic cycle, likely due to the inferiority of dinitrogen as a ligand. However, perhaps the catalyst could be modified in such a way that an \ce{NH3} ligand forces a shape change that makes \ce{NH3} binding much less favorable. Conformation changes are critical to the functioning of most enzymes, so it stands to reason that, if properly utilized, they could also aid in abiological systems.
+In introducing the first well-defined catalytic system for nitrogen fixation with observable Chatt-type intermediates, Yandulov and Schrock demonstrated that catalytic nitrogen fixation likely is possible, thus motivating continued research in this field. Although their present system does not approach the turnover numbers and frequencies necessary for it to be industrially viable, it represents a validation of Chatt's preexisting theory and exhibits the potential of high oxidation state transition metals as well as sterically bulky ligands for nitrogen fixation purposes. Additionally, if other, more recent results are anything to go by, the problems of rate and efficiency are likely solvable: For example, Anderson et al. originally reported seven turnovers for a similar nitrogen fixation system, but follow up studies that further purified their reagents and also tinkered with the catalyst and conditions brought the system up to nearly 100 turnovers\textsuperscript{[}\autocite{bib:AndersonPeters}\textsuperscript{]}. However, a somewhat problematic hole in Yandulov and Schrock's results is their inability to characterize Chatt's other five proposed intermediates (see the unboxed species in Figure \ref{fig:mechanism}), especially considering the fact that they were able to characterize species as unstable and rare as the diazine adduct. Their verification of the interconvertibility of their characterized intermediates does support the existence of the other proposed intermediates, but it does not rule out the possibility of something else going on.
+
+
+% Toward the end of their paper, Yandulov and Schrock noted that the question remains as to whether or not their system is limited to four turnovers. If other, more recent results are anything to go by, it probably is not (for example, Anderson et al. originally reported seven turnovers for a similar nitrogen fixation system, but follow up studies that further purified their reagents and also tinkered with the catalyst and conditions to bring the system up to nearly 100 turnovers\textsuperscript{[}\autocite{bib:AndersonPeters}\textsuperscript{]}). As such, there is likely ample room for improvement. Follow up studies should focus on the conversion from \ce{\textbf{Mo}(NH3)} to \ce{\textbf{Mo}(N2)}, as that was the most difficult step of the catalytic cycle, likely due to the inferiority of dinitrogen as a ligand. However, perhaps the catalyst could be modified in such a way that an \ce{NH3} ligand forces a shape change that makes \ce{NH3} binding much less favorable. Conformation changes are critical to the functioning of most enzymes, so it stands to reason that, if properly utilized, they could also aid in abiological systems.
 \newpage
 
 
