@@ -39,7 +39,7 @@
     \begin{figure}[H]
         \centering
         \schemestart
-            \chemfig{R-[:30]=[:-30]}
+            \chemfig{R-[:30]=_[:-30]}
             \arrow{->[\small\ce{HB(OR)2}]}[,1.4]
             \chemfig{R-[:30](-[2]H)-[:-30]-[:30]B{(}OR{)_2}}
         \schemestop
@@ -60,14 +60,15 @@
                 \draw [blx,thick] (0,0)
                     -- node[below]{
                         \schemestart
-                            \chemfig{R-[:30]=[:-30]}
+                            \chemfig{R-[:30]=_[:-30]}
                             \arrow(.south--.north){0[*{90}+]}[-90,0.4]
-                            \chemfig{HB{(}OR{)_2}}
+                            \chemfig{\ce{HB(OR)2}}
                         \schemestop
                     } (1,0)
                     to[out=0,in=180] (2,0.6)
                     to[out=0,in=180] (3,-0.2) node[below]{
-                        \chemfig{R-[:30]=[:-30]-[:150,0.4,,,white]\phantom{i}-[:60,,,,dashed]B{(}OR{)_2}-[:160,,1,,dashed]H}
+                        \chemfig{R-[:30]@{C1}-[:-30]@{C2}-[:150,0.4,,,white]\phantom{i}-[:60,,,,dashed]B{(}OR{)_2}-[:160,,1,,dashed]H}
+                        \chemmove{\draw [dashed,-] ([xshift=1pt,yshift=2pt]C1.center) -- ([xshift=1pt,yshift=2pt]C2.center);}
                     }
                     to[out=0,in=180,out looseness=0.6,in looseness=0.8] (4.8,2.2)
                     to[out=0,in=180,out looseness=0.8] (7,-1.5)
@@ -93,7 +94,7 @@
                 \draw [rex,thick] (0,0)
                     -- node[below]{
                         \schemestart
-                            \chemfig{R-[:30]=[:-30]}
+                            \chemfig{R-[:30]=_[:-30]}
                             \arrow(.south--.north){0[*{90}+]}[-90,0.4]
                             \chemfig{HB{(}OR{)_2}}
                             \arrow(.south--.north){0[*{90}+]}[-90,0.4]
@@ -103,14 +104,14 @@
                     to[out=0,in=180] (2,0.6)
                     to[out=0,in=180] (3,-0.3) node[below]{
                         \schemestart
-                            \chemfig{R-[:30]=[:-30]}
+                            \chemfig{R-[:30]=_[:-30]}
                             \arrow(.south--.north){0[*{90}+]}[-90,0.4]
                             \chemfig{M(-[1]B{(}OR{)_2})(-[7]H)}
                         \schemestop
                     }
                     to[out=0,in=180] (4,0.4)
                     to[out=0,in=180] (5,-0.7) node[below]{
-                        \chemfig{M(-[1]B{(}OR{)_2})(-[7]H)(-[6]\phantom{i}-[,0.4,,,white]=[4]-[:-120]R)}
+                        \chemfig{M(-[1]B{(}OR{)_2})(-[7]H)(-[6]\phantom{i}-[,0.4,,,white]=_[4]-[:-120]R)}
                     }
                     to[out=0,in=180] (6,-0.1)
                     to[out=0,in=180] (7,-1.1) node[below]{
@@ -148,7 +149,7 @@
                 \footnotesize
                 \node (1) at (90:2) {\ce{L_nM}};
                 \node (2) at (0:2.2) {\ce{L_nM*S}}
-                    edge [stealth-,out=90,in=0] (1)
+                    edge [stealth-,out=90,in=0] node[above right]{\ce{S}} (1)
                 ;
                 \node (3) at (-90:2) {\ce{L_nM*I}}
                     edge [stealth-,out=0,in=-90] (2)
@@ -422,7 +423,7 @@
     \begin{itemize}
         \item Mizoroki-Heck cross couplings are characterized by a migratory insertion into an olefin in place of transmetallation.
         \item In transmetallation, we typically use Grignards, boronic acids (Negishi), tin reagents (Stille), or silylethers.
-        \item $\alpha$ and $\beta$ elimination (commonly hydride) can give competing reactions with the $\beta$-hydrogens especially.
+        \item $\alpha$- and $\beta$-elimination (commonly hydride) can give competing reactions with the $\beta$-hydrogens especially.
     \end{itemize}
     \item Alkyls (such as ethyl groups) are more electron-rich than aryls (such as phenyl groups).
     \begin{itemize}
@@ -503,21 +504,20 @@
         \item An alkyl/aryl halide plus that same substance but as a Grignard forming a "dimer" at the place where the Grignard is attached.
         \item Use nickel as a catalyst here.
     \end{itemize}
-    \item Heteroarene coupling partners:
+    \item Heteroarene coupling partners\footnote{Note that \ce{TfO} is triflate, an abbreviation of trifluoromethanesulfonate, which is an excellent leaving group.}:
     \begin{figure}[h!]
         \centering
         \schemestart
             \chemfig{[:-18]*5(-X-=--)}
             \+
             \chemfig{PhOTf}
-            \arrow{->[Pd][base]}
+            \arrow{->[\small\ce{Pd}][\small{base}]}
             \chemfig{[:-18]*5(-X-(-Ph)-=-)}
         \schemestop
         \caption{Heteroarene coupling partners.}
         \label{fig:heteroareneCoupling}
     \end{figure}
     \begin{itemize}
-        \item Note that \ce{TfO} is triflate, an abbreviation of trifluoromethanesulfonate, which is an excellent leaving group.
         \item Also with enolates.
     \end{itemize}
     \item Mechanism:
@@ -556,10 +556,10 @@
             \begin{tikzpicture}
                 \footnotesize
                 \node (1) at (90:2) {\ce{L_nNi^IX}};
-                \node (2) at (0:2.2) {\chemfig{{\ce{L_n}Ni^{III}(-[:30]Ar)(-[6,,2]X)(-[:-30]X)}}}
+                \node (2) at (0:2.2) {\chemfig{{\ce{L_n}Ni^{III}(>:[:30]Ar)(-[6,,2]X)(<[:-30]X)}}}
                     ([yshift=-4mm]2.north) edge [blx,semithick,stealth-,out=90,in=0] node[black,above right]{\ce{Ar-X}} (1)
                 ;
-                \node (3) at (180:2) {\chemfig{{\ce{L_n}Ni^{III}(-[:30]Ar)(-[6,,2]X)(-[:-30]Ar)}}}
+                \node (3) at (180:2) {\chemfig{{\ce{L_n}Ni^{III}(>:[:30]Ar)(-[6,,2]X)(<[:-30]Ar)}}}
                     (3.south) edge [blx,semithick,stealth-,out=-90,in=-90,looseness=1.4] (2.south)
                     ([yshift=-4mm]3.north) edge [blx,semithick,-stealth,out=90,in=180] (1)
                 ;
@@ -591,8 +591,8 @@
                 \node (2) at (18:3) {\chemfig{{\ce{L_{n-1}}Pd(-[1]Ar)(-[7]X)}}}
                     edge [blx,semithick,stealth-,bend right=30] node[black,above right]{\ce{Ar-X}} (1)
                 ;
-                \node (3) at (-54:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30]Ar)(-[6,,2]\phantom{i}-[4,0.4,,,white]=-[:-60]R)(-[:-30]X)}}}
-                    edge [blx,semithick,stealth-,bend right=15] node[black,left]{\ce{-L}} node[black,thin,-,right]{\chemfig{[:-30]=[:30]-R}} (2)
+                \node (3) at (-54:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30]Ar)(-[6,,2]\phantom{i}-[4,0.4,,,white]=^-[:-60]R)(-[:-30]X)}}}
+                    edge [blx,semithick,stealth-,bend right=15] node[black,left]{\ce{-L}} node[black,thin,-,right]{\chemfig{[:-30]=_[:30]-R}} (2)
                 ;
                 \node (4) at (-126:3) {\chemfig{{\ce{L_{n-2}}Pd(-[:30](-[2]R)-[:-30]-[:30]Ar)(-[7]X)}}}
                     edge [blx,semithick,stealth-,bend right=15] (3)
@@ -602,7 +602,7 @@
                     edge [blx,semithick,-stealth,bend left=30] node[black,below right]{L, base} (1)
                 ;
     
-                \draw [blx,semithick,-stealth] (-162:2.924) to[out=110,in=-15] (-4,0) node[black,thin,-,left]{\chemfig{R-[:30]=[:-30]-[:30]Ar}};
+                \draw [blx,semithick,-stealth] (-162:2.924) to[out=110,in=-15] (-4,0) node[black,thin,-,left]{\chemfig{R-[:30]=^[:-30]-[:30]Ar}};
     
                 \draw [blx,semithick,-stealth] (140:3.08) to[out=58,in=-87] (-1.8,3.8) node[black,above]{\ce{H-X}};
     
@@ -622,7 +622,7 @@
             \item We must first activate our palladium catalyst by causing it to lose a ligand, thus becoming lower-coordinate.
             \item Our aryl hydride will now oxidatively add to the activated catalyst.
             \item Next, we have transmetallation (the most complicated step of the cycle). There are two possible paths by which we can introduce our nucleophile into the system and remove an X (to make space for it). First, we can use a hydride of the nucleophile which will do what we want and then form an acid with \ce{X-}; this acid can then be neutralized by the base. Alternatively, we can bond a metal to the nucleophile and simply have the metal swap \ce{Nu-} for \ce{X-} with the palladium center, forming a metal salt as a byproduct.
-            \item The last step is reductive elimination, which (re)generates our product and starting material.
+            \item The last step is reductive elimination, which (re)generates our product and catalyst.
         \end{itemize}
         \item Homocoupling (see Figure \ref{fig:mechanismCCb}):
         \begin{itemize}
@@ -641,6 +641,7 @@
             \item Note that this reaction must be carried out in basic media.
         \end{itemize}
     \end{itemize}
+    \pagebreak
     \item Oxidative addition:
     \begin{itemize}
         \item Occurs from a coordinatively and electronically unsaturated metal center
@@ -686,7 +687,7 @@
             \label{fig:transmetallationReaction}
         \end{figure}
         \item Some examples listed.
-        \item On the subject of boronic acids, Negishi proposes the following: \ce{L2PhPdBr ->[KOH] [LPhPd($\mu${-}OH)]2 ->[Ar(BOH)2] Ar-Ph}, $70\%$.
+        \item On the subject of boronic acids, Negishi proposes the following: \ce{L2PdPhBr ->[KOH] [LPhPd($\mu${-}OH)]2 ->[Ar(BOH)2] Ar-Ph}, $70\%$.
         \begin{itemize}
             \item Negishi's conclusion: You typically need a base/nucleophile (such as hydroxide, water, or fluoride) to do the transfer of aryl boronic acids.
         \end{itemize}
@@ -708,7 +709,7 @@
         \item Tri(\emph{tert}-butyl)phosphine is also known as tri(chicken foot)phosphine!
         \item Each ligand has very specific properties (better for one cross coupling than another).
         \item Very bulky phosphines tend to be good for these reactions, but chelating phosphines can be good, too.
-        \item The reaction of a butyl Grignard in a cross coupling reaction gives us a couple of products (i.e., 1-Rbutane, 2-Rbutane).
+        \item The reaction of a butyl Grignard in a cross coupling reaction gives us a couple of products (i.e., 1-(R)butane, 2-(R)butane).
         \begin{itemize}
             \item Yields are poor with phosphines as \ce{L} ligands.
             \item Yields are much better with dppf.
@@ -740,7 +741,7 @@
     \item Alternate mechanisms: Radicals.
     \begin{itemize}
         \item Happens more with first-row transition metals (they're better at 1-electron redox chemistry).
-        \item Ullmann coupling (often with copper, but sometimes with nickel, too): \ce{2Ph-X ->[Cu][$>\SI{200}{\celsius}$] Ph2} Cu salts, diamines, diols.
+        \item Ullmann coupling (often with copper, but sometimes with nickel, too): \ce{2Ph-X ->[Cu][$>\SI{200}{\celsius}$] Ph2}, Cu salts, diamines, diols.
         \begin{itemize}
             \item The temperature can be lowered with an appropriate ligand.
         \end{itemize}
@@ -798,18 +799,18 @@
             \centering
             \schemestart
                 \subscheme{
-                    \chemfig{R_1-[:30]=[:-30]-[:30]R_2}
+                    \chemfig{R_1-[:30]=^[:-30]-[:30]R_2}
                     \arrow(.south--.north){0[*{180}+]}[-90,0.4]
-                    \chemfig{R_3-[:30]=[:-30]-[:30]R_4}
+                    \chemfig{R_3-[:30]=^[:-30]-[:30]R_4}
                 }
                 \arrow{<=>}\subscheme{
-                    \chemfig{R_1-[:30]=[:-30]-[:30]R_3}
+                    \chemfig{R_1-[:30]=^[:-30]-[:30]R_3}
                     \arrow(.south--.north){0[*{180}+]}[-90,0.4]
-                    \chemfig{R_2-[:30]=[:-30]-[:30]R_4}
+                    \chemfig{R_2-[:30]=^[:-30]-[:30]R_4}
                     \arrow(.south--.north){0[*{180}+]}[-90,0.4]
-                    \chemfig{R_1-[:30]=[:-30]-[:30]R_4}
+                    \chemfig{R_1-[:30]=^[:-30]-[:30]R_4}
                     \arrow(.south--.north){0[*{180}+]}[-90,0.4]
-                    \chemfig{R_2-[:30]=[:-30]-[:30]R_3}
+                    \chemfig{R_2-[:30]=^[:-30]-[:30]R_3}
                 }
             \schemestop
             \caption{Olefin metathesis classes: Distribution.}
@@ -831,9 +832,13 @@
                 \chemfig{[:30]*6(=-----)}
                 \arrow{->}
                 \chemleft{(}
-                    \chemfig{=[,0.5]-[:120]-[:60]--[:-60]-[:-120]=[,0.5]}
+                    \chemfig{@{C1}-[,0.5]@{C2}-[:120]-[:60]--[:-60]-[:-120]@{C3}-[,0.5]@{C4}}
                 \chemright{)_n}
             \schemestop
+            \chemmove{
+                \draw [-] ([yshift=2pt]C1.center) -- ([xshift=-3.5pt,yshift=2pt]C2.center);
+                \draw [-] ([xshift=3.5pt,yshift=2pt]C3.center) -- ([yshift=2pt]C4.center);
+            }
             \caption{Olefin metathesis classes: ROMP.}
             \label{fig:olefinMetathesis-ROMP}
         \end{figure}
@@ -846,10 +851,10 @@
         \begin{figure}[h!]
             \centering
             \schemestart
-                \chemfig{=[:30]-[:-30]-[:30]-[:-30]=[:30]}
+                \chemfig{=_[:30]-[:-30]-[:30]-[:-30]=^[:30]}
                 \arrow
                 \chemleft{(}
-                    \chemfig{=[:30,0.5]-[:-30]-[:30]-[:-30]=[:30,0.5]}
+                    \chemfig{=_[:30,0.5]-[:-30]-[:30]-[:-30]=^[:30,0.5]}
                 \chemright{)_n}
                 \arrow{0}[,0]\+{,,0.5em}
                 \chemfig{[:45]=}
@@ -865,7 +870,7 @@
         \begin{figure}[h!]
             \centering
             \schemestart
-                \chemfig{=[:-30]-[:30]-[:-30]X-[:30]-[:-30]=[:30]}
+                \chemfig{=^[:-30]-[:30]-[:-30]X-[:30]-[:-30]=^[:30]}
                 \arrow{->}
                 \chemfig{[:18]*5(=--X--)}
                 \arrow{0}[,0]\+{,,0.6em}
@@ -883,11 +888,11 @@
         \begin{figure}[h!]
             \centering
             \schemestart
-                \chemfig{R-[:30]=[:-30]}
+                \chemfig{R-[:30]=_[:-30]}
                 \+{,,0.6em}
-                \chemfig{R'-[:30]=[:-30]}
+                \chemfig{R'-[:30]=_[:-30]}
                 \arrow{->}
-                \chemfig{R-[:30]=[:-30]-[:30]R'}
+                \chemfig{R-[:30]=^[:-30]-[:30]R'}
                 \+{,,0.6em}
                 \chemfig{[:45]=}
             \schemestop
@@ -942,19 +947,19 @@
         \centering
         \begin{subfigure}[b]{0.25\linewidth}
             \centering
-            \chemfig{Mo(~[2]N-[2]Ar)(=[:-30]-[:30]Bu^\emph{t})(<[:-110]RO)(>:[:-150]RO)}
+            \chemfig{Mo(~[2]N-[2]Ar)(=^[:-30]-[:30]Bu^\emph{t})(<[:-110]RO)(>:[:-150]RO)}
             \caption{A Schrock catalyst.}
             \label{fig:olefinMetathesisCatalystsa}
         \end{subfigure}
         \begin{subfigure}[b]{0.2\linewidth}
             \centering
-            \chemfig{Ru(=-[:-60]Ph)(>:[1]Cl)(-[2]PR_3)(<[5]Cl)(-[6]PR_3)}
+            \chemfig{Ru(=_-[:-60]Ph)(>:[1]Cl)(-[2]PR_3)(<[5]Cl)(-[6]PR_3)}
             \caption{Grubbs I.}
             \label{fig:olefinMetathesisCatalystsb}
         \end{subfigure}
         \begin{subfigure}[b]{0.26\linewidth}
             \centering
-            \chemfig{Ru(=-[:-60])(>:[1]Cl)(-[2]*5(-N(-Ar)---N(-Ar)-))(<[5]Cl)(-[6]PR_3)}
+            \chemfig{Ru(=_-[:-60])(>:[1]Cl)(-[2]*5(-N(-Ar)---N(-Ar)-))(<[5]Cl)(-[6]PR_3)}
             \begin{tikzpicture}[remember picture,overlay]
                 \draw [dashed] (-2.21,1.27) arc (-130:-50:0.5);
             \end{tikzpicture}
@@ -963,7 +968,7 @@
         \end{subfigure}
         \begin{subfigure}[b]{0.27\linewidth}
             \centering
-            \chemfig{Ru?(=-[:-60]**6(-(-[,1.13]O?-[:-120]R)--(-R)---))(>:[1]Cl)(-[2]L)(<[5]Cl)}
+            \chemfig{Ru?(=_-[:-60]**6(-(-[,1.13]O?-[:-120]R)--(-R)---))(>:[1]Cl)(-[2]L)(<[5]Cl)}
             \caption{Grubbs-Hoveyda.}
             \label{fig:olefinMetathesisCatalystsd}
         \end{subfigure}
@@ -1005,23 +1010,27 @@
     \begin{figure}[h!]
         \centering
         \schemestart
-            \chemfig{L_{\emph{n}}M=-[:60]R}
-            \arrow{->[\small\chemfig{R'-[:30]=[:-30]}]}[,1.5]
+            \chemfig{\ce{L_n}M=^-[:60]R}
+            \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{R'-[:30]=_[:-30]}]}[,1.5]
             \chemleft{[}
-                \chemfig{L_{\emph{n}}M?=(<[:-30,0.8]R)-[6,1.2,,,dashed](>:[:-20,0.7]R')=[4,1.23]?[,,dashed]}
+                \chemfig{\ce{L_n}@{M}M?-@{C1}(<[:-30,0.8]R)-[6,1.2,,,dashed]@{C2}(>:[:-20,0.7]R')-[4,1.23]?[,,dashed]@{C3}}
             \chemright{]^\ddagger}
             \arrow
-            \chemfig{[7]L_{\emph{n}}M*4(--(>:R')-(<[2]R)-)}
-            \arrow{-U>[][*{0.-160}\small\subscheme{
-                \chemfig{R-[:-60]=-[:60]R'}
+            \chemfig{[7]\ce{L_n}M*4(--(>:R')-(<[2]R)-)}
+            \arrow{-U>[][*{0.-160}\footnotesize\subscheme{
+                \chemfig[atom sep=1.4em]{R-[:-60]=^-[:60]R'}
                 \arrow{0[*{0.135}or]}[-90,0.4]
-                \chemfig{R-[:30]=[:-30]-[:30]R'}
+                \chemfig[atom sep=1.4em]{R-[:30]=^[:-30]-[:30]R'}
             }][][][135]}[-90,2]
-            \chemfig{L_{\emph{n}}M=CH_2}
-            \arrow{->[\small\chemfig{R-[:30]=[:-30]}]}[180,4.5]
-            \chemfig{[7]L_{\emph{n}}M*4(-(-R)---)}
-            \arrow{-U>[][*{0.-20}\small\chemfig{[:45]=}][][][110]}[90,1.8]
+            \chemfig{\ce{L_n}M=CH_2}
+            \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{R-[:30]=_[:-30]}]}[180,4.5]
+            \chemfig{[7]\ce{L_n}M*4(-(-R)---)}
+            \arrow{-U>[][*{0.-20}\footnotesize\hbox{\chemfig[atom sep=1.4em]{=[1]}}][][][110]}[90,1.8]
         \schemestop
+        \chemmove{
+            \draw [dashed,-] ([xshift=3pt,yshift=-2pt]M.east) -- ([xshift=-2pt,yshift=-2pt]C1.center);
+            \draw [dashed,-] ([xshift=-2pt,yshift=2pt]C2.center) -- ([xshift=2pt,yshift=2pt]C3.center);
+        }
         \caption{Olefin metathesis mechanism.}
         \label{fig:mechanism-olefinMetathesis}
     \end{figure}
@@ -1085,7 +1094,7 @@
             \centering
             \schemestart
                 \chemfig{W?(>:[:30]Cl)(~[2]-[2]Bu^\emph{t})(>:[:150]O(-[2])-[:-160,0.9]-[6,0.8]-[:-20,0.9]O?[,5](-[6]))(-[6]Cl)(<[:-30]Cl)}
-                \arrow{->[\small\chemfig{R-~-R}]}[,2.5]
+                \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{R-~-R}]}[,1.6]
                 \chemfig{W(-[2]Cl)(-[4]Cl)(-[6]Cl)**4(-(-R)-(-R)-(-Bu^\emph{t})-)}
             \schemestop
             \caption{The likely mechanism.}
@@ -1095,7 +1104,7 @@
             \centering
             \schemestart
                 \chemfig{\ce{L_n}M}
-                \arrow{->[\small\chemfig{R-~-R}]}[,2.5]
+                \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{R-~-R}]}[,1.6]
                 \chemfig{[:-36]\ce{L_n}M*5(-(-B)=(-B)-(-A)=(-A)-)}
                 \arrow
                 \chemfig{**4((-[:-120]B)-(-[:-60]B)-(-[:60]A)-(-[:120]A)-)-[1,0.7,,,opacity=0]-[4,1.5]\ce{L_n}M}
@@ -1126,16 +1135,16 @@
     \begin{figure}[h!]
         \centering
         \schemestart
-            \chemfig{\ce{L_n}Ru=-[:60]R}
-            \arrow{->[\small\chemfig{~-R'}]}[,1.5]
-            \chemfig{\ce{L_n}Ru(=-[:60]R)-[6]\phantom{i}-[,0.4,,,white]~[4]-[4]R'}
+            \chemfig{\ce{L_n}Ru=^-[:60]R}
+            \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{~-R'}]}[,1.3]
+            \chemfig{\ce{L_n}Ru(=^-[:60]R)-[6,,2]\phantom{i}-[,0.4,,,white]~[4]-[4]R'}
             \arrow
             \chemfig{*4((-R')=-(-R)-\ce{L_n}Ru-[,,2])}
             \arrow[-90,1.5]
-            \chemfig{\ce{L_n}Ru=[6,,2](-[:-150]R')-[:-30]=[:30]-[:-30]R}
-            \arrow{->[\small\chemfig{R-[:30]=[:-30]}]}[180,4]
-            \chemfig{*4((-[:-150]R')(-[:-80,0.9]=[0]-[:-60]R)--(-R)-\ce{L_n}Ru-[,,2])}
-            \arrow{-U>[][*{0.40}\small\chemfig{R'-[:30](=[2])-[:-30]=[:30]-[:-30]R}][][][135]}[90,1.5]
+            \chemfig{\ce{L_n}Ru=[6,,2](-[:-150]R')-[:-30]=^[:30]-[:-30]R}
+            \arrow{->[\footnotesize\chemfig[atom sep=1.4em]{R-[:30]=_[:-30]}]}[180,3.9]
+            \chemfig{*4((-[:-150]R')(-[:-80,0.9]=^[0]-[:-60]R)--(-R)-\ce{L_n}Ru-[,,2])}
+            \arrow{-U>[][*{0.40}\footnotesize\hbox{\chemfig[atom sep=1.4em]{R'-[:30](=[2])-[:-30]=^[:30]-[:-30]R}}][][][135]}[90,1.5]
         \schemestop
         \caption{Enyne metathesis mechanism.}
         \label{fig:mechanism-enyneMet}

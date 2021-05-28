@@ -81,9 +81,9 @@
     \end{itemize}
     \item Activation:
     \begin{itemize}
-        \item \ce{L_nMCl2 ->[AlR3/MAO] L_nMMe2 ->[AlR3/MAO][-AlR4^-] L_nMe+}.
-        \item \ce{L_nMCl2 ->[AlR3/MAO] L_nMMe2 ->[BAr^F{}_3][-MeBAr^F{}_4-] L_nMe+}.
-        \item \ce{L_nMCl2 ->[AlR3/MAO] L_nMMe2 ->[HBAr^F{}_4][-CH4] L_nMe+}.
+        \item \ce{L_nMCl2 ->[AlR3 / MAO] L_nMMe2 ->[AlR3 / MAO][-AlR4^-] L_nMe+}.
+        \item \ce{L_nMCl2 ->[AlR3 / MAO] L_nMMe2 ->[BAr^F{}_3][-MeBAr^F{}_4-] L_nMe+}.
+        \item \ce{L_nMCl2 ->[AlR3 / MAO] L_nMMe2 ->[HBAr^F{}_4][-CH4] L_nMe+}.
         \item MAO is methylated aluminum oxide.
         \begin{itemize}
             \item An ill defined, amorphous gunk with some oxygens created by adding a pinch of water to \ce{AlMe3}.
@@ -113,7 +113,7 @@
             \item $\beta$-\ce{H} abstraction: \ce{M(||)(---pl) -> M(Et)(||pl) -> MEt + =-pl}.
         \end{itemize}
     \end{itemize}
-    \item The relative rates of growth vs. determination dictate the type of material we get.
+    \item The relative rates of growth vs. termination dictate the type of material we get.
     \begin{itemize}
         \item $K_p$ is the rate of growth/propogation; $K_t$ is the rate of termination.
         \item $K_p$ vs. $K_t$ dictates the product.
@@ -288,7 +288,7 @@
             \item We react ethylene with a nickel PO-type catalyst (a nickel catalyst with a bidentate ligand that chelates through a phosphorous and an oxygen), an enolate, or related phosphorous/oxygen based donors.
             \item This creates olefin-terminating oligomers. This doesn't use chain walking, but rather the chain transfer process, which is much faster with late metals.
             \item Products: \ce{C4{-}C8} ($41\%$), \ce{C10{-}C18} ($40.5\%$), and \ce{C_{20+}} ($18.5\%$).
-            \item The short ones and the long ones can be combined with \ce{Mo2O3/Al2O3} to do olefin metathesis, yielding internal and terminal olefins.
+            \item The short ones and the long ones can be combined with \ce{Mo2O3 / Al2O3} to do olefin metathesis, yielding internal and terminal olefins.
             \item Then, throwing in the medium-length ones and treating with \ce{HCo(CO)4} (our hydroformylation catalyst) and syn gas yields terminal aldehydes, which with enough hydrogen can give us terminal alcohols, which are commodity chemicals.
         \end{itemize}
     \end{itemize}
@@ -297,13 +297,13 @@
         \centering
         \schemestart
             \chemfig{M-H}
-            \arrow{->[\small\subscheme{2\arrow{0}[,0.1]\chemfig{=[1]}}]}
+            \arrow{->[\small\subscheme{2\arrow{0}[,0.1]\footnotesize\chemfig[atom sep=1.4em]{=[1]}}]}
             \chemfig{M(-[:30]-[:-30])(-[7]\phantom{i}-[1,0.4,,,white]=[5])}
             \arrow
             \chemfig{[:-30]M*6(------)}
             \arrow[,1.1]
             \chemfig{M?(-[2]\phantom{i}-[4,0.4,,,white]=-[::-30,1]-[::-50,0.9]-[::-70,0.8]?)(-[6]H)}
-            \arrow{-U>[][*{0.-150}\small\chemfig{-[:30]-[:-30]=^[:30]}][][][135]}[-90]
+            \arrow{-U>[][*{0.-150}\footnotesize\hbox{\chemfig[atom sep=1.4em]{-[:30]-[:-30]=^[:30]}}][][][135]}[-90]
             \chemfig{M^{\mathit{n}-2}(-[5]\phantom{i}-[3,0.4,,,white]=[7])(-[7]\phantom{i}-[5,0.4,,,white]=[1])}
             \arrow[180]
             \chemfig{M*3([:-100]---)*3([:-140]---)}
@@ -392,7 +392,7 @@
     \end{itemize}
     \item Controlling selectivity w/ catalysts:
     \begin{itemize}
-        \item \ce{Ni(P(o-Tol)3)4}\footnote{\ce{o-Tol} is an ortho-tolyl group.}: Selects for the terminal product, especially with sterically encumbered (i.e., geminal) olefins.
+        \item \ce{Ni(P(o-Tol)3)4}\footnote{Note that \ce{o-Tol} is an ortho-tolyl group.}: Selects for the terminal product, especially with sterically encumbered (i.e., geminal) olefins.
         \item Styrene: Selects for the branched product.
     \end{itemize}
     \item Mechanism:
@@ -426,7 +426,7 @@
     \item We can also observe chain walking to bond a silyl away from where the olefin originally was.
     \item Mechanism:
     \begin{align*}
-        \ce{M} &\ce{->[HSIR3]} \ce{M(H)(SiR3)}\\
+        \ce{M} &\ce{->[HSiR3]} \ce{M(H)(SiR3)}\\
         &\ce{->[||]} \ce{M(H)(SiR3)(||)}\\
         &\ce{->} \ce{M(Et)(SiR3)}\\
         &\ce{->[][-EtSiR3]} \ce{M}
@@ -656,15 +656,15 @@
         \centering
         \schemestart
             \chemfig{Pd(-[5]Cl)(-[7]Cl)}
-            \arrow{->[\small\subscheme{\chemfig{R-[1]O-[7]H}\arrow{0}[,0]\+{,,0.7em}\chemfig{=[1]}}]}[,2.1]
+            \arrow{->[\footnotesize\subscheme{\chemfig[atom sep=1.4em]{R-[1]O-[7]H}\arrow{0}[,0]\+{,,0.5em}\chemfig[atom sep=1.4em]{=[1]}}]}[,2.1]
             \chemfig{Pd(-[1]O(-R)(-[2]H))(-[3]Cl)(-[5]Cl)(-[7]\phantom{i}-[::90,0.4,,,white]=[::180])}
-            \arrow{->[\small\subscheme{2\arrow{0}[,0.1]\chemfig{R-[1]O-[7]H}\arrow(.east--.west){0}[90,0]\+{,,0.1em}\chemfig{B}}][\small\ce{-[HB]Cl}]}[,2.1]
+            \arrow{->[\small\subscheme{2\arrow{0}[,0.1]\footnotesize\chemfig[atom sep=1.4em]{R-[1]O-[7]H}\arrow(.east--.west){0}[90,0]\+{,,0.1em}\small\chemfig{B}}][\small\ce{-[HB]Cl}]}[,2.1]
             \chemfig{Pd(-[1]O(-R)(-[2]H))(-[3]Cl)(-[5]O(-[4]H)(-[6]R))(-[:-30]-[:30]-[:-30]O-[:30]R)}
-            \arrow{-U>[][*{0.-120}\small\chemfig{R-[1]O-[7]H}][][][150]}[-90]
+            \arrow{-U>[][*{0.-100}\footnotesize\hbox{\chemfig[atom sep=1.4em]{R-[1]O-[7]H}}][][][150]}[-90]
             \chemfig{Pd(-[1]H)(-[3]Cl)(-[5]O(-[4]H)(-[6]R))(-[7]\phantom{i}-[::90,0.4,,,white]=_[::180]-[::60]O-[::90]R)}
-            \arrow{-U>[\small\chemfig{R-[1]O-[7]H}][\small\chemfig{=_[:30]-[:-30]O-[:30]R}]}[180,2.2]
+            \arrow{-U>[\footnotesize\chemfig[atom sep=1.4em]{R-[1]O-[7]H}][\footnotesize\chemfig[atom sep=1.4em]{=_[:30]-[:-30]O-[:30]R}]}[180,2.2]
             \chemfig{Pd(-[1]H)(-[3]Cl)(-[5]O(-[4]H)(-[6]R))(-[7]O(-[6]H)(-R))}
-            \arrow{-U>[][\small\ce{HCl}][][][90]}[180,1.3]
+            \arrow{-U>[][\small\ce{HCl}][][][90]}[180,1.4]
             \chemfig{Pd(-[5]O(-[4]H)(-[6]R))(-[7]O(-[6]H)(-R))}
             \arrow{-U>[*{0}\small\ce{2CuCl2}][*{0}\small\ce{2CuCl}]}[90,1.9]
         \schemestop
@@ -711,15 +711,15 @@
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]))}
             \arrow(@b--c){<=>}[-90]
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]-[::60]))}
-            \arrow(@a--){-U>[\footnotesize\chemfig{=[1]}][*{0.-45}\footnotesize\chemfig{=_[:30]-[:-30]R}]}[,2]
+            \arrow(@a--){-U>[\footnotesize\chemfig[atom sep=1.4em]{=[1]}][*{0.-45}\footnotesize\hbox{\chemfig[atom sep=1.4em]{=_[:30]-[:-30]R}}]}[,2]
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[1]\phantom{i}-[::-90,0.4,,,white]=[::180])(-[7]H)}
             \arrow
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[:30]-[:-30])}
-            \arrow(@b--){->[\footnotesize\chemfig{=[1]}]}[,2]
+            \arrow(@b--){->[\footnotesize\chemfig[atom sep=1.4em]{=[1]}]}[,2]
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]))(-[1]\phantom{i}-[::-90,0.4,,,white]=[::180])}
             \arrow
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[:30]-[::-60]-[::-60](-[::60]R)(-[::-60]))}
-            \arrow(@c--){->[\footnotesize\chemfig{=[1]}]}[,2]
+            \arrow(@c--){->[\footnotesize\chemfig[atom sep=1.4em]{=[1]}]}[,2]
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[7](-[::60]R)(-[::-60]-[::60]))(-[1]\phantom{i}-[::-90,0.4,,,white]=[::180])}
             \arrow
             \chemfig{\charge{90[yshift=1mm]=$+$}{Pd}*5([:144,1.25]-N(-[,0.8]Ar)=(-[,0.9])-(-[,0.9])=N(-[,0.8]Ar)-)(-[:30]-[::-60]-[::-60](-[::60]R)(-[::-60]-[::60]))}

@@ -632,7 +632,7 @@
         \centering
         \begin{subfigure}[b]{0.3\linewidth}
             \centering
-            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]{\emph{t}-}Bu)-(<[:60]H)(>:[:20]D)-[:-60]OTs}
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]{\emph{t}-}Bu)-(>:[:60]D)(<[:20]H)-[:-60]OTs}
             \vspace{2em}
             \caption{The reactant.}
             \label{fig:SN2-stereochemistrya}
@@ -681,13 +681,13 @@
     \begin{figure}[h!]
         \centering
         \schemestart
-            \chemfig{(<[:-120]D)(>:[:-160]H)(-[:120]TsO)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
-            \arrow{->[{Pd\textsuperscript{0}}]}
-            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Pd-[1]OTs)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
-            \arrow{->[PhMgBr]}
-            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Pd-[1]Ph)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
-            \arrow{->[red. elim.]}
-            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Ph)-(<[:60]D)(>:[:20]H)-[:-60]{\emph{t}-}Bu}
+            \chemfig{(<[:-120]D)(>:[:-160]H)(-[:120]TsO)-(>:[:60]H)(<[:20]D)-[:-60]{\emph{t}-}Bu}
+            \arrow{->[\small\ce{Pd^0}]}
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Pd-[1]OTs)-(>:[:60]H)(<[:20]D)-[:-60]{\emph{t}-}Bu}
+            \arrow{->[\small\ce{PhMgBr}]}[,1.2]
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Pd-[1]Ph)-(>:[:60]H)(<[:20]D)-[:-60]{\emph{t}-}Bu}
+            \arrow{->[][\footnotesize{red. elim.}]}[,1.2]
+            \chemfig{(<[:-120]H)(>:[:-160]D)(-[:120]Ph)-(>:[:60]H)(<[:20]D)-[:-60]{\emph{t}-}Bu}
         \schemestop
         \caption{An additional way of probing S\textsubscript{N}2 addition/elimination.}
         \label{fig:SN2-additionalSynthesis}
@@ -756,7 +756,7 @@
             \centering
             \schemestart
                 \chemfig{Pt?(-[3]\chemabove{P}{Ph_2}-[:-150]-[6,0.9]-[:-30]\chembelow{P}{Ph_2}?)(-[7]Me)(-[1]OMe)}
-                \arrow(.east--.-173){->[CO]}
+                \arrow(.east--.-173){->[\small\ce{CO}]}
                 \chemfig{{(dppe)}Pt(-[7]Me)(-[:30](=[2,0.7]O)-[:-30]OMe)}
             \schemestop
             \vspace{1em}
@@ -789,8 +789,8 @@
         \schemestart
             \chemfig{Pt?(-[3]\chemabove{P}{R_2}-[:-150]-[6,0.9]-[:-30]\chembelow{P}{R_2}?)(-[1]SiAr_2(-[:120,0.7,1]H))(-[7]Me)}
             \+
-            \chemfig{B{(C_6F_5)_3}}
-            \arrow(.-7--.west){->[][\small{-MeB(ArF)\textsubscript{3}\textsuperscript{--}}]}[0,1.5]
+            \chemfig{\ce{B(C6F5)3}}
+            \arrow(.-7--.west){->[][\small\ce{-MeB(ArF)3^-}]}[0,1.7]
             \chemleft{[}
                 \chemfig{\charge{120[yshift=1mm]=$\oplus$}{Pt}?-[1]\chemabove{Si}{Ar_2}-[7]H?[,,dashed]}
             \chemright{]^\ddagger}
@@ -807,17 +807,17 @@
         \centering
         \ce{L_nM^Q=X + Nu- <=> [L_nM^{Q-2}-X-Nu]-}\\[1em]
         \schemestart
-            \chemfig{L_{\emph{n}}M^{\emph{Q}}-\phantom{i}-[6,0.3]Y=[2]X}
-            \arrow{->[Nu\textsuperscript{--}]}
+            \chemfig{\ce{L_n}M^{\emph{Q}}-\phantom{i}-[6,0.3]Y=[2]X}
+            \arrow{->[\small\ce{Nu-}]}
             \chemleft{[}
-                \chemfig{L_{\emph{n}}M^{\emph{Q}}-[:30]X-[:-30]Y-[:30]Nu}
+                \chemfig{\ce{L_n}M^{\emph{Q}}-[:30]X-[:-30]Y-[:30]Nu}
             \chemright{]^-}
         \schemestop\\[1em]
         \schemestart
-            \chemfig{L_{\emph{n}}M^{\emph{Q}}-X~Y}
-            \arrow{->[Nu\textsuperscript{--}]}
+            \chemfig{\ce{L_n}M^{\emph{Q}}-X~Y}
+            \arrow{->[\small\ce{Nu-}]}
             \chemleft{[}
-                \chemfig{L_{\emph{n}}M^{\emph{Q}}-[:30]X(=[2]Y)-[:-30]Nu}
+                \chemfig{\ce{L_n}M^{\emph{Q}}-[:30]X(=[2]Y)-[:-30]Nu}
             \chemright{]^-}
         \schemestop
         \caption{Types of external attack at a ligand.}
@@ -1021,7 +1021,7 @@
             \item Redraw as a legitimate Lewis structure.
             \begin{center}
                 \chemleft{[}
-                    \chemfig{Pd?(-[:150]-[:-110]=[:-60]-[:120,0.3,,,white]\phantom{i}?[,,{stealth-}])(-[1]PCy_3)(-[7]OEt_2)}
+                    \chemfig{Pd?(-[:150]-[:-110]=^[:-60]-[:120,0.3,,,white]\phantom{i}?[,,{stealth-}])(-[1]PCy_3)(-[7]OEt_2)}
                 \chemright{]^+}
             \end{center}
             \item Allyl is 1 covalent, 1 dative; the other two ligands are each dative donors.
@@ -1129,7 +1129,7 @@
         \item First quasi-stable example: \ce{FeCp(CO)2Et} has $18\,\e[-]$. Over time, however, UV light causes it to lose a carbonyl group and form an ethylene olefin hydride (as from a reverse 1,2-migration).
         \item They began to use alkyl ligands with no $\beta$-hydrogens or unreactive $\beta$-hydrogens.
         \begin{itemize}
-            \item They made compounds such as \ce{W(CH3)6}, \ce{M-CH2-Ph}, \ce{M-CH2-{$t$-}Bu}, and \ce{M-CH2-TMS}\footnote{TMS is \underline{t}ri\underline{m}ethyl\underline{s}ilyl, a ligand of the structure \ce{SiMe3}.}.
+            \item They made compounds such as \ce{W(CH3)6}, \ce{M-CH2-Ph}, \ce{M-CH2-{$t$-}Bu}, and \ce{M-CH2-TMS}\footnote{Note that TMS is \underline{t}ri\underline{m}ethyl\underline{s}ilyl, a ligand of the structure \ce{SiMe3}.}.
             \item 1-adamantyl, norbornyl have $\beta$-hydrogens, but elimination is disfavored by ring strain.
             \item Fluoroalkyls and metallacycles were also attractive. A fluoroalkyl will not undergo hydride elimination [obviously], but halide elimination is a possible issue. Metallacycles cannot adopt a syn-coplanar arrangement to eliminate.
             \item \ce{M-C#C-H} as well (the $\beta$-hydrogen is once again in the wrong position).
@@ -1253,15 +1253,15 @@
         \centering
         \schemestart
             \chemfig{W(-Cl)(-[1]Cl)(-[2]Cl)(-[4]MeO)(-[5]MeO)(-[6]OMe)}
-            \arrow{->[\small 6 ClMgNp]}[,1.5]
+            \arrow{->[\small\ce{6ClMgNp}]}[,1.4]
             \chemfig{W(-[2]Np)(~[:-30]-[::0]{\emph{t}-}Bu)(<[:-110]Np)(>:[:-150]Np)}
-            \arrow{->[\small 3 HCl][\footnotesize\chemfig{MeO-[1]--[7]OMe}]}[,2]
+            \arrow{->[\small\ce{3HCl}][\footnotesize\chemfig[atom sep=1.4em]{MeO-[1]--[7]OMe}]}[,1.8]
             \chemfig{W?(~-{\emph{t}-}Bu)(-[1]Cl)(-[2]Cl)(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
-            \arrow{->[][*{0}\footnotesize\chemfig{**6(---(-(-[2])(-[:-30]))-(-[,,,2]HNTMS)-(-(-[2])(-[:-150]))-)}]}[-90,2]
+            \arrow{->[][*{0}\footnotesize\hbox{\chemfig[atom sep=1.8em]{**6(---(-(-[2])(-[:-30]))-(-[,,,2]HNTMS)-(-(-[2])(-[:-150]))-)}}]}[-90,2]
             \chemfig{W?(~-{\emph{t}-}Bu)(-[1]Cl)(-[2,,,2]HNAr)(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
             \arrow{->[\small\ce{NEt3}]}[180]
-            \chemfig{W?(=[:30]-[:-30]{\emph{t}-}Bu)(=[2]\chemabove{N}{Ar})(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
-            \arrow{->[\small MOR]}[180]
+            \chemfig{W?(=_[:30]-[:-30]{\emph{t}-}Bu)(=[2]\chemabove{N}{Ar})(-[4]O(-[:120])-[:-150,0.6]-[:-60,0.5]-[:-20,0.7]O?(-[:-60]))(-[6]Cl)}
+            \arrow{->[\small\ce{NOR}]}[180]
             \chemfig{W(=[2]\chemabove{N}{Ar})(=[:-30]X)(<[:-110]RO)(>:[:-150]RO)}
         \schemestop
         \caption{Tungsten olefin metathesis.}
@@ -1448,7 +1448,7 @@
     \item Example: Butadiene.
     \begin{figure}[h!]
         \centering
-        \chemfig{M-[2]-[:-157,0.85,,,white]=[1]-=[5]}
+        \chemfig{M-[2]-[:-157,0.85,,,white]=_[1]-=^[5]}
         \caption{Butadiene.}
         \label{fig:butadiene}
     \end{figure}
@@ -1615,7 +1615,7 @@
     \end{itemize}
 \end{itemize}
 \begin{tchart}{1.4}{Linear}{Bent}
-    \chemfig[atom sep=1.2em]{M-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{90[yshift=1mm]=$\oplus$,0=\:}{O}} & \chemfig[atom sep=1.2em]{M-[:30]\charge{90=\:}{N}=[:-30]\charge{0=\:,-90=\:}{O}}\rule{0pt}{0.9cm}\\
+    \setcharge{extra sep=2.5pt}\chemfig[atom sep=1.2em]{M-\charge{90[yshift=1mm]=$\oplus$}{N}~\charge{90[yshift=1mm]=$\oplus$,0=\:}{O}} & \setcharge{extra sep=2.5pt}\chemfig[atom sep=1.2em]{M-[:30]\charge{90=\:}{N}=[:-30]\charge{0=\:,-90=\:}{O}}\rule{0pt}{0.9cm}\\
     LX-type. & X-type.\\
     $3\,\e[-]$ donor. & $1\,\e[-]$ donor.\\
     3 CO's provide similar stability to 2 NO's (in terms of electron counting). & \\
@@ -1670,7 +1670,7 @@
         \centering
         \begin{subfigure}[b]{0.3\linewidth}
             \centering
-            \chemfig{=[:30]-[:-30]\charge{-90[yshift=-1.5mm]=$\ominus$}{}}
+            \chemfig{=_[:30]-[:-30]\charge{-90[yshift=-1.5mm]=$\ominus$}{}}
             \vspace{1em}
             \caption{The ligand.}
             \label{fig:ligand-Allyla}
@@ -1717,9 +1717,9 @@
                 \node{
                     \schemestart
                         \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
-                        \arrow{->[$\ce{Nu}^-$]}
+                        \arrow{->[\small\ce{Nu-}]}
                         \chemleft{[}
-                            \chemfig{M-\phantom{i}-[2,0.35,,,white]=[6]-[:-60]-[6]Nu}
+                            \chemfig{M-\phantom{i}-[2,0.35,,,white]=_[6]-[:-60]-[6]Nu}
                         \chemright{]^-}
                     \schemestop
                 };
@@ -1735,9 +1735,9 @@
                 \node{
                     \schemestart
                         \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
-                        \arrow{->[$\ce{E}^+$]}
+                        \arrow{->[\small\ce{E+}]}
                         \chemleft{[}
-                            \chemfig{M-\phantom{i}-[2,0.35,,,white]=[6]-[:-60]-[6]E}
+                            \chemfig{M-\phantom{i}-[2,0.35,,,white]=_[6]-[:-60]-[6]E}
                         \chemright{]^+}
                     \schemestop
                 };
@@ -1753,8 +1753,8 @@
                 \node{
                     \schemestart
                         \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
-                        \arrow{->[\ce{CO2}]}
-                        \chemfig{M-O-[:30](=[2]O)-[:-30]-[:30]=[:-30]}
+                        \arrow{->[\small\ce{CO2}]}
+                        \chemfig{M-O-[:30](=[2]O)-[:-30]-[:30]=_[:-30]}
                     \schemestop
                 };
                 \draw [dashed] (-2.53,-0.56) arc (-35:35:1);
@@ -1768,8 +1768,8 @@
                 \node{
                     \schemestart
                         \chemfig{M-\phantom{i}-[:-100,0.7,,,white]-[:60]-[:120]}
-                        \arrow{->[\ce{CO}]}
-                        \chemfig{M-[:30](=[2]O)-[:-30]-[:30]=[:-30]}
+                        \arrow{->[\small\ce{CO}]}
+                        \chemfig{M-[:30](=[2]O)-[:-30]-[:30]=_[:-30]}
                     \schemestop
                 };
                 \draw [dashed] (-2.05,-0.56) arc (-35:35:1);
@@ -1780,19 +1780,17 @@
         \vspace{1em}
         \begin{subfigure}[b]{0.9\linewidth}
             \centering
-            \begin{tikzpicture}
-                \node{
-                    \schemestart
-                        \chemfig{M(-[1]\phantom{i}-[::-100,0.7,,,white]-[::160]-[::60]-[::-60]R)(-[7]\phantom{i}-[::-100,0.7,,,white](-[::40]R)-[::160]-[::60])}
-                        \arrow{->}
-                        \chemfig{M^0}
-                        \arrow{0}[,0]\+{,,1.6cm}
-                        \chemfig{R-[2]=[:150]-[2]=[:30]-[2]R}
-                    \schemestop
-                };
-                \draw [dashed,xshift=9.3mm,rotate=45] (-1.5,1.71) arc (-35:35:1);
-                \draw [dashed,xshift=9.3mm,rotate=-45] (-1.47,-2.78) arc (-35:35:1);
-            \end{tikzpicture}
+            \schemestart
+                \chemfig{M(-[1]\phantom{i}-[1,0.3,,,white]-[::-120,,,,white]@{1C1}-[::180]-[::60]@{1C2}-[::-60]R)(-[7]\phantom{i}-[7,0.3,,,white]-[::120,,,,white]@{2C1}-[::180]-[::-60]@{2C2}-[::60]R)}
+                \arrow{->}
+                \chemfig{M^0}
+                \arrow{0}[,0]\+{,,1.6cm}
+                \chemfig{R-[2]=_[:150]-[2]=_[:30]-[2]R}
+            \schemestop
+            \chemmove{
+                \draw [dashed,-] ([xshift=-2pt,yshift=-0.6pt]1C1.center) to[bend right=30] ([xshift=-2pt,yshift=-2pt]1C2.center);
+                \draw [dashed,-] ([xshift=-2pt,yshift=0.6pt]2C1.center) to[bend left=30] ([xshift=-2pt,yshift=2pt]2C2.center);
+            }
             \caption{Coupling/reductive elimination.}
             \label{fig:allylReactivitye}
         \end{subfigure}
@@ -1917,12 +1915,12 @@
     \begin{figure}[H]
         \centering
         \schemestart
-            \chemfig{R-N=[:-60]-=[:60]N-R}
+            \chemfig{R-N=^[:-60]-=^[:60]N-R}
             \arrow{0}[,0]\+{,,6.7mm}
             \chemfig{H-[:30](=[2]O)-[:-30]H}
             \arrow
             \chemfig{[:18]*5(-=N(-R)-(-H)=N(-R)=)}
-            \arrow{->[\ce{-H+}]}
+            \arrow{->[\small\ce{-H+}]}
             \chemfig{[:18]*5(=-NR-\charge{90=\:}{}-RN-)}
         \schemestop
         \caption{Synthesis of N-heterocyclic carbenes.}
@@ -2184,13 +2182,13 @@
         \centering
         \begin{subfigure}[b]{0.3\linewidth}
             \centering
-            \chemfig{L_{\emph{n}}M(-[1]H)(-[7]H)}
+            \chemfig{\ce{L_n}M(-[1]H)(-[7]H)}
             \caption{General dihydride.}
             \label{fig:nonclassicalHydridea}
         \end{subfigure}
         \begin{subfigure}[b]{0.3\linewidth}
             \centering
-            \chemfig{L_{\emph{n}}M-[,,,,{stealth-}]\phantom{i}-[2,0.33,,,white]H-[6]H}
+            \chemfig{\ce{L_n}M-[,,,,{stealth-}]\phantom{i}-[2,0.3,,,white]H-[6]H}
             \caption{General \ce{H2} adduct.}
             \label{fig:nonclassicalHydrideb}
         \end{subfigure}

@@ -31,7 +31,7 @@
     \end{itemize}
     \item History:
     \begin{itemize}
-        \item 1914: \ce{CO + 2H2 ->[Fe][silica supports] \frac{1}{n}C_nH_{2n} + H2O}.
+        \item 1914: \ce{CO + 2H2 ->[Fe][{silica supports}] \frac{1}{n}C_nH_{2n} + H2O}.
         \begin{itemize}
             \item The ratio of the reactants can be tuned.
             \item Iron is a solid-state catalyst here. Note that other metals can be used, but iron was the most common.
@@ -175,9 +175,8 @@
             \item This is useful in \ce{C-C} coupling reactions.
         \end{itemize}
         \item One example of \ce{ML_n} is \ce{Cp2W}.
-        \item Another one is \ce{Cp2Nb(H)(CO) + Cp^*2ZrH2 -> Cp2Nb(H)(CH-O-ZrCp^*2H) <=>[fast]}\\ \ce{Cp2Nb(H)(CH2-O-ZrCp^*2) ->[H2] Cp2NbH3 + Cp^*2Zr(H)(OCH3) ->[][no rxn]}.
+        \item Another one is \ce{Cp2Nb(H)(CO) + Cp^*2ZrH2 -> Cp2Nb(H)(CH-O-ZrCp^*2H) <=>[fast]}\\ \ce{Cp2Nb(H)(CH2-O-ZrCp^*2) ->[H2] Cp2NbH3 + Cp^*2Zr(H)(OCH3) ->[][no rxn]}\footnote{Note that \ce{Nb} is niobium.}.
         \begin{itemize}
-            \item \ce{Nb} is niobium.
             \item A major problem is once we form that extremely strong metal-oxygen bond, it will not break, so it's very hard to get \ce{H2O} off of these species.
         \end{itemize}
     \end{itemize}
@@ -242,7 +241,7 @@
             \chemfig{\ce{Cp^*2}Th(-[2,,2]CO)(-H)(-[6,,2]OR)}
             \arrow
             \chemfig{\ce{Cp^*2}@{Th}Th(-[7]OR)(-[:30](=[2]@{O}\charge{180=\:}{O})-[:-30]H)}
-            \arrow{->[][\SI{25}{\celsius}]}
+            \arrow{->[][\small\SI{25}{\celsius}]}
             \chemfig{Th(-[7]OR)-[1]O-[1]=_-[7]O-[7]Th(-[5]RO)}
         \schemestop
         \chemmove{\draw [blx,semithick,shorten <=4pt,shorten >=2pt] (O) to[out=180,in=90] (Th);}
@@ -262,11 +261,10 @@
         \item Unfortunately, the transition from metal-carbon bonds to metal-oxygen bonds is also the driving force of this reactivity.
         \item We can get around this issue by trapping the oxygen with other electrophiles.
     \end{itemize}
-    \item Kit Cummins: \ce{MoL3 ->[CO] L3MoCO ->[1Na] Na[L3MoCO] ->[Bu^t-COCl][-NaCl] L3Mo#C-O-COBu^t ->[\Delta][-CO2,H2C=CMe2] L3Mo#C-H ->[KBn] [L3Mo#C]-}.
+    \item Kit Cummins: \ce{MoL3 ->[CO] L3MoCO ->[1Na] Na[L3MoCO] ->[Bu^t-COCl][-NaCl] L3Mo#C-O-COBu^t ->[\Delta][-CO2,H2C=CMe2] L3Mo#C-H ->[KBn] [L3Mo#C]-}\footnote{Note that \ce{KBn} is benzyl potassium.}.
     \begin{itemize}
         \item $\ce{L}=\ce{N($t${-}Bu)({xylyl})}$.
         \item The third step is more explained in organic chemistry, where an electrophile like the one added (pivaloyl chloride) should create an ester speies and lose \ce{NaCl}.
-        \item Note that \ce{KBn} is benzyl potassium.
         \item There are very few examples of terminal carbides, but note that this is similar to what happens on the surface of the solid state iron catalyst.
         \item This isn't perfect because we're releasing \ce{CO2}, but it is a step where the oxygen isn't trapped on the metal center.
     \end{itemize}
@@ -521,7 +519,7 @@
             \item Run at room temperature for 20 hours.
         \end{itemize}
         \item \ce{C6H12 + CO ->[RT (10\%)] C6H11CO2H (4\%)}.
-        \item \ce{CH4 + CO ->[VO(acac)2, \SI{80}{\celsius}][K2S2O8 / TFA] HC2H3O2 (93\%)}\footnote{\ce{VO(acac)2} is vanadyl acetylacetanate.}.
+        \item \ce{CH4 + CO ->[VO(acac)2, \SI{80}{\celsius}][K2S2O8 / TFA] HC2H3O2 (93\%)}\footnote{Note that \ce{VO(acac)2} is vanadyl acetylacetanate.}.
         \begin{itemize}
             \item Run at $\SI{80}{\celsius}$ for 20 hours.
             \item $\text{TON}=18$.
@@ -809,7 +807,7 @@
             }][][][110]}[90,1.7]
         \schemestop
         \begin{tikzpicture}[overlay]
-            \draw [-stealth] (-7,-5.5) arc(-170:-10:1.16cm) node[below,pos=0.5]{\small base} ;
+            \draw [-stealth,blx,semithick] (-7,-5.5) arc(-170:-10:1.16cm) node[black,below,pos=0.5]{\small base} ;
             \draw [dashed] (-2.25,-4.55) arc (-30:30:1cm);
         \end{tikzpicture}
         \vspace{4em}
@@ -828,7 +826,7 @@
     \begin{equation*}
         \ce{[(\eta^3{-}All)Pd(\mu{-}Cl)]2 + DEM ->[NaH][DMSO] EtO-CO-CH(\eta^1{-}All)-CO-OEt + Pd^0 + NaCl}\footnotemark
     \end{equation*}
-    \footnotetext{All is an allyl group. DEM is diethyl malonate (see the second reactant in Figure \ref{fig:allylicSubstitution-epoxidea}).}
+    \footnotetext{Note that All is an allyl group. Also note that DEM is diethyl malonate (see the second reactant in Figure \ref{fig:allylicSubstitution-epoxidea}).}
     \begin{itemize}
         \item One of the earliest stoichiometric examples.
         \item Taking a process that is not catalytic and making it catalytic.
@@ -935,14 +933,12 @@
 
 \section{Office Hours (Anderson)}
 \begin{itemize}
-    \item Is $\frac{W_n}{n}$ is the average molecular weight?
     \item Using heptane as a fuel?
     \begin{itemize}
         \item You can burn just about anything, but it's just a matter of efficiency.
         \item Octane is the best.
         \item Heptane is too explosive and causes a lot of knocking.
     \end{itemize}
-    \item Lecture 21: Contradiction between "Internal \ce{C-H} bonds are typically more reactive" and Shilov's conclusion that you get "higher degrees of substitution at less substituted carbons."
     \item What is regiochemistry?
     \begin{itemize}
         \item Selection between two constitutional isomers.
@@ -957,8 +953,6 @@
         \item Since the face is so sterically encumbered, we'll need a not very encumbered catalyst.
         \item Such a catalyst will be more susceptible to the directing group.
     \end{itemize}
-    \item $C_i$ vs. $C_1$ (Quiz 6.1)?
-    \item How does Problem 3 have two cycles?
     \item Do we need to know the mechanism for the Cativa process (you said we don't in the lecture, but it's asked about in HW 5.1-a and Problem 3)?
     \begin{itemize}
         \item We don't have to memorize it, but we may need to discuss it.
@@ -969,12 +963,10 @@
         \item He reserves the right to give us a 0 for submitting late, so don't.
         \item Every year, the first midterm is too long and people flunk it and the next midterm's average is like 30 points higher.
     \end{itemize}
-    \item How can we answer questions like worksheet 6-1 (Brookhart type catalysts)?
     \item You briefly mentioned \ce{H2} as a method of termination for olefin polymerization, but it seems like we've only ever used $\beta$-\ce{H} elimination. When would we use \ce{H2}? Or did you just mention it so that we're aware of it?
     \begin{itemize}
         \item True dissociative substitutions are pretty rare and unfavorable.
     \end{itemize}
-    \item Worksheet 6-3: How does "Wacker oxidation for an alcohol" refer to generating \ce{R-OR}?
     \item Does it matter where you start when drawing your catalytic cycle?
     \begin{itemize}
         \item As long as you can string together a catalytic sequence, it doesn't matter where you start.
@@ -984,7 +976,7 @@
         \item 21, 22 not on this midterm.
         \item 20 is fair game.
     \end{itemize}
-    \item When drawing mechanisms for an exam, should we show oxidation states and charge?
+    \item When drawing mechanisms for an exam, should we show oxidation states and charge, label steps, and use actual ligands instead of \ce{L}?
     \begin{itemize}
         \item Yes we should.
         \item Considering time, draw a bare bones mechanism (whatever you can pull out of your head) as fast as possible and then fill in specifics later.
@@ -1002,6 +994,20 @@
         \item Forwards/backwards.
     \end{itemize}
     \item No logistical differences between this exam and the last one.
+\end{itemize}
+
+
+
+\section{Office Hours (Whitmeyer)}
+\begin{itemize}
+    \item \marginnote{5/25:}Is $\frac{W_n}{n}$ is the average molecular weight?
+    \item Lecture 21: Contradiction between "Internal \ce{C-H} bonds are typically more reactive" and Shilov's conclusion that you get "higher degrees of substitution at less substituted carbons."
+    \item $C_i$ vs. $C_1$ (Quiz 6.1)?
+    \item How does Problem 3 have two cycles?
+    \item How can we answer questions like worksheet 6-1 (Brookhart type catalysts)?
+    \item Worksheet 6-3: How does "Wacker oxidation for an alcohol" refer to generating \ce{R-OR}?
+    \item Questions about heterogeneous vs. homogeneous catalysis and the test to distinguish between them?
+    \item What is asymmetric catalysis?
 \end{itemize}
 
 
